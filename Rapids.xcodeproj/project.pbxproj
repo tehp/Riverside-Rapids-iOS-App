@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		268C3B531C725248002A35EC /* Announcements.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 268C3B521C725248002A35EC /* Announcements.storyboard */; };
+		268C3B551C725463002A35EC /* AnnouncementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268C3B541C725463002A35EC /* AnnouncementsViewController.swift */; };
+		268C3B571C725585002A35EC /* Calendar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 268C3B561C725585002A35EC /* Calendar.storyboard */; };
+		268C3B591C725594002A35EC /* BellSchedule.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 268C3B581C725594002A35EC /* BellSchedule.storyboard */; };
+		268C3B5B1C7255A1002A35EC /* Homework.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 268C3B5A1C7255A1002A35EC /* Homework.storyboard */; };
+		268C3B5D1C7255AC002A35EC /* More.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 268C3B5C1C7255AC002A35EC /* More.storyboard */; };
 		4F9D619A1C643C4400CA406F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9D61991C643C4400CA406F /* AppDelegate.swift */; };
 		4F9D619C1C643C4400CA406F /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9D619B1C643C4400CA406F /* FirstViewController.swift */; };
 		4F9D619E1C643C4400CA406F /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9D619D1C643C4400CA406F /* SecondViewController.swift */; };
@@ -27,6 +33,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		268C3B521C725248002A35EC /* Announcements.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Announcements.storyboard; path = ../Announcements.storyboard; sourceTree = "<group>"; };
+		268C3B541C725463002A35EC /* AnnouncementsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnnouncementsViewController.swift; sourceTree = "<group>"; };
+		268C3B561C725585002A35EC /* Calendar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Calendar.storyboard; path = ../Calendar.storyboard; sourceTree = "<group>"; };
+		268C3B581C725594002A35EC /* BellSchedule.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = BellSchedule.storyboard; path = ../BellSchedule.storyboard; sourceTree = "<group>"; };
+		268C3B5A1C7255A1002A35EC /* Homework.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Homework.storyboard; path = ../Homework.storyboard; sourceTree = "<group>"; };
+		268C3B5C1C7255AC002A35EC /* More.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = More.storyboard; path = ../More.storyboard; sourceTree = "<group>"; };
 		4F9D61961C643C4400CA406F /* Rapids.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rapids.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F9D61991C643C4400CA406F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4F9D619B1C643C4400CA406F /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -79,13 +91,19 @@
 		4F9D61981C643C4400CA406F /* Rapids */ = {
 			isa = PBXGroup;
 			children = (
+				268C3B5A1C7255A1002A35EC /* Homework.storyboard */,
+				268C3B581C725594002A35EC /* BellSchedule.storyboard */,
+				268C3B561C725585002A35EC /* Calendar.storyboard */,
+				268C3B5C1C7255AC002A35EC /* More.storyboard */,
+				268C3B521C725248002A35EC /* Announcements.storyboard */,
+				4F9D619F1C643C4500CA406F /* Main.storyboard */,
 				4F9D61991C643C4400CA406F /* AppDelegate.swift */,
 				4F9D619B1C643C4400CA406F /* FirstViewController.swift */,
 				4F9D619D1C643C4400CA406F /* SecondViewController.swift */,
-				4F9D619F1C643C4500CA406F /* Main.storyboard */,
 				4F9D61A21C643C4500CA406F /* Assets.xcassets */,
 				4F9D61A41C643C4500CA406F /* LaunchScreen.storyboard */,
 				4F9D61A71C643C4500CA406F /* Info.plist */,
+				268C3B541C725463002A35EC /* AnnouncementsViewController.swift */,
 			);
 			path = Rapids;
 			sourceTree = "<group>";
@@ -181,7 +199,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F9D61A61C643C4500CA406F /* LaunchScreen.storyboard in Resources */,
+				268C3B5D1C7255AC002A35EC /* More.storyboard in Resources */,
+				268C3B531C725248002A35EC /* Announcements.storyboard in Resources */,
 				4F9D61A31C643C4500CA406F /* Assets.xcassets in Resources */,
+				268C3B571C725585002A35EC /* Calendar.storyboard in Resources */,
+				268C3B5B1C7255A1002A35EC /* Homework.storyboard in Resources */,
+				268C3B591C725594002A35EC /* BellSchedule.storyboard in Resources */,
 				4F9D61A11C643C4500CA406F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -203,6 +226,7 @@
 				4F9D619E1C643C4400CA406F /* SecondViewController.swift in Sources */,
 				4F9D619A1C643C4400CA406F /* AppDelegate.swift in Sources */,
 				4F9D619C1C643C4400CA406F /* FirstViewController.swift in Sources */,
+				268C3B551C725463002A35EC /* AnnouncementsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,6 +416,7 @@
 				4F9D61B71C643C4500CA406F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4F9D61B81C643C4500CA406F /* Build configuration list for PBXNativeTarget "RapidsTests" */ = {
 			isa = XCConfigurationList;
@@ -400,6 +425,7 @@
 				4F9D61BA1C643C4500CA406F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
