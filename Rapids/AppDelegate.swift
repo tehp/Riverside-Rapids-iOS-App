@@ -12,6 +12,7 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
 
 
     // Custom color used for Navigation bar -Mac
@@ -20,13 +21,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        
+    
         
         // Customizations for Navigation Bar -Mac
         UINavigationBar.appearance().barTintColor = navColor
         
-        let navBgImage:UIImage = UIImage(named: "rapids_white.png")!
-        UINavigationBar.appearance().setBackgroundImage(navBgImage, forBarMetrics: .Default)
+
+        //let navBgImage:UIImage = UIImage(named: "rapids_white_small.png")!
+        //UINavigationBar.appearance().setBackgroundImage(navBgImage, forBarMetrics: .Default)
         
         
         

@@ -12,6 +12,7 @@
 		267161991C72FBF20041098F /* HomeworkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267161981C72FBF20041098F /* HomeworkViewController.swift */; };
 		2671619B1C72FC0D0041098F /* BellScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2671619A1C72FC0D0041098F /* BellScheduleViewController.swift */; };
 		2671619D1C730AD10041098F /* rapids_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 2671619C1C730AD10041098F /* rapids_white.png */; };
+		2671619F1C73A3980041098F /* rapids_white_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 2671619E1C73A3980041098F /* rapids_white_small.png */; };
 		268C3B531C725248002A35EC /* Announcements.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 268C3B521C725248002A35EC /* Announcements.storyboard */; };
 		268C3B551C725463002A35EC /* AnnouncementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268C3B541C725463002A35EC /* AnnouncementsViewController.swift */; };
 		268C3B571C725585002A35EC /* Calendar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 268C3B561C725585002A35EC /* Calendar.storyboard */; };
@@ -43,6 +44,7 @@
 		267161981C72FBF20041098F /* HomeworkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeworkViewController.swift; sourceTree = "<group>"; };
 		2671619A1C72FC0D0041098F /* BellScheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BellScheduleViewController.swift; sourceTree = "<group>"; };
 		2671619C1C730AD10041098F /* rapids_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = rapids_white.png; path = assets/rapids_white.png; sourceTree = SOURCE_ROOT; };
+		2671619E1C73A3980041098F /* rapids_white_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = rapids_white_small.png; path = assets/rapids_white_small.png; sourceTree = SOURCE_ROOT; };
 		268C3B521C725248002A35EC /* Announcements.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Announcements.storyboard; path = ../Announcements.storyboard; sourceTree = "<group>"; };
 		268C3B541C725463002A35EC /* AnnouncementsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnnouncementsViewController.swift; sourceTree = "<group>"; };
 		268C3B561C725585002A35EC /* Calendar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Calendar.storyboard; path = ../Calendar.storyboard; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 				267161981C72FBF20041098F /* HomeworkViewController.swift */,
 				2671619A1C72FC0D0041098F /* BellScheduleViewController.swift */,
 				2671619C1C730AD10041098F /* rapids_white.png */,
+				2671619E1C73A3980041098F /* rapids_white_small.png */,
 			);
 			path = Rapids;
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 				4F9D61A31C643C4500CA406F /* Assets.xcassets in Resources */,
 				268C3B571C725585002A35EC /* Calendar.storyboard in Resources */,
 				2671619D1C730AD10041098F /* rapids_white.png in Resources */,
+				2671619F1C73A3980041098F /* rapids_white_small.png in Resources */,
 				268C3B5B1C7255A1002A35EC /* Homework.storyboard in Resources */,
 				268C3B591C725594002A35EC /* BellSchedule.storyboard in Resources */,
 				4F9D61A11C643C4500CA406F /* Main.storyboard in Resources */,
