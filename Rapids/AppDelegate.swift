@@ -14,10 +14,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
 
+    // Custom color used for Navigation bar -Mac
+    let navColor = UIColor(red: 65/255, green: 149/255, blue: 68/255, alpha: 1)
+    
+    
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        
+        
+        // Customizations for Navigation Bar -Mac
+        UINavigationBar.appearance().barTintColor = navColor
+        
+        let navBgImage:UIImage = UIImage(named: "rapids_white.png")!
+        UINavigationBar.appearance().setBackgroundImage(navBgImage, forBarMetrics: .Default)
+        
+        
+        
         // Override point for customization after application launch.
         return true
     }
+    
 
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

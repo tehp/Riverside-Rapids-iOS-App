@@ -81,7 +81,7 @@
         <scene sceneID="CQo-oJ-K1k">
             <objects>
                 <navigationController id="kRh-Yd-jAw" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Announcements" id="djI-cY-a68"/>
+                    <tabBarItem key="tabBarItem" title="Announcements" image="first" id="djI-cY-a68"/>
                     <navigationItem key="navigationItem" id="bMi-pl-UdC"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Zbs-1I-hEG">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -169,4 +169,7 @@
             <point key="canvasLocation" x="-408" y="244"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="first" width="30" height="30"/>
+    </resources>
 </document>
