@@ -1,0 +1,6 @@
+framework module Pods_Rapids {
+  umbrella header "Pods-Rapids-umbrella.h"
+
+  export *
+  module * { export * }
+}
