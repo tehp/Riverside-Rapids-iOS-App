@@ -20,8 +20,6 @@
 		268C3B591C725594002A35EC /* BellSchedule.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 268C3B581C725594002A35EC /* BellSchedule.storyboard */; };
 		268C3B5B1C7255A1002A35EC /* Homework.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 268C3B5A1C7255A1002A35EC /* Homework.storyboard */; };
 		268C3B5D1C7255AC002A35EC /* More.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 268C3B5C1C7255AC002A35EC /* More.storyboard */; };
-		4F6B34521C73A89F002AFC1A /* GetListItemsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6B34511C73A89F002AFC1A /* GetListItemsRequest.swift */; };
-		4F6B34551C73AA61002AFC1A /* SoapCamlBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6B34541C73AA61002AFC1A /* SoapCamlBuilder.swift */; };
 		4F9D619A1C643C4400CA406F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9D61991C643C4400CA406F /* AppDelegate.swift */; };
 		4F9D619C1C643C4400CA406F /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9D619B1C643C4400CA406F /* FirstViewController.swift */; };
 		4F9D619E1C643C4400CA406F /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9D619D1C643C4400CA406F /* SecondViewController.swift */; };
@@ -56,8 +54,6 @@
 		268C3B5A1C7255A1002A35EC /* Homework.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Homework.storyboard; path = ../Homework.storyboard; sourceTree = "<group>"; };
 		268C3B5C1C7255AC002A35EC /* More.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = More.storyboard; path = ../More.storyboard; sourceTree = "<group>"; };
 		2E85ADB8E6D35AFF697648B9 /* Pods-RapidsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RapidsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RapidsTests/Pods-RapidsTests.release.xcconfig"; sourceTree = "<group>"; };
-		4F6B34511C73A89F002AFC1A /* GetListItemsRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetListItemsRequest.swift; sourceTree = "<group>"; };
-		4F6B34541C73AA61002AFC1A /* SoapCamlBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoapCamlBuilder.swift; sourceTree = "<group>"; };
 		4F9D61961C643C4400CA406F /* Rapids.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rapids.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F9D61991C643C4400CA406F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4F9D619B1C643C4400CA406F /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -124,7 +120,6 @@
 		4F6B34501C73A87F002AFC1A /* GetListItems */ = {
 			isa = PBXGroup;
 			children = (
-				4F6B34511C73A89F002AFC1A /* GetListItemsRequest.swift */,
 			);
 			name = GetListItems;
 			sourceTree = "<group>";
@@ -132,7 +127,6 @@
 		4F6B34531C73AA22002AFC1A /* CAML */ = {
 			isa = PBXGroup;
 			children = (
-				4F6B34541C73AA61002AFC1A /* SoapCamlBuilder.swift */,
 			);
 			name = CAML;
 			sourceTree = "<group>";
@@ -423,10 +417,8 @@
 			files = (
 				267161951C72FBB40041098F /* CalendarViewController.swift in Sources */,
 				4F9D619E1C643C4400CA406F /* SecondViewController.swift in Sources */,
-				4F6B34521C73A89F002AFC1A /* GetListItemsRequest.swift in Sources */,
 				267161991C72FBF20041098F /* HomeworkViewController.swift in Sources */,
 				4F9D619A1C643C4400CA406F /* AppDelegate.swift in Sources */,
-				4F6B34551C73AA61002AFC1A /* SoapCamlBuilder.swift in Sources */,
 				2671619B1C72FC0D0041098F /* BellScheduleViewController.swift in Sources */,
 				267161971C72FBE20041098F /* MoreViewController.swift in Sources */,
 				4F9D619C1C643C4400CA406F /* FirstViewController.swift in Sources */,

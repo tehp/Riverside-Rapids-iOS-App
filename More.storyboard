@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,19 +18,82 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="more" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UVU-Zi-qNQ">
-                                <rect key="frame" x="279" y="253" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1My-e3-Kv5">
+                                <rect key="frame" x="171" y="542" width="91" height="42"/>
+                                <color key="backgroundColor" red="0.35686274509999999" green="0.54901960780000003" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="35g-5L-nh4"/>
+                                </constraints>
+                                <state key="normal" title="Sign in/out">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.35686274509999999" green="0.54901960780000003" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Omz-XL-Njg">
+                                <rect key="frame" x="171" y="442" width="91" height="42"/>
+                                <color key="backgroundColor" red="0.35686274509999999" green="0.54901960780000003" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Np2-7b-ndK"/>
+                                </constraints>
+                                <state key="normal" title="School Map">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.35686274509999999" green="0.54901960780000003" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d03-tS-XDV" userLabel="about">
+                                <rect key="frame" x="171" y="492" width="91" height="42"/>
+                                <color key="backgroundColor" red="0.35686274509999999" green="0.54901960780000003" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Hcm-Rx-Nbg"/>
+                                </constraints>
+                                <state key="normal" title="About">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.35686274509999999" green="0.54901960780000003" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="rapids_white_small.png" translatesAutoresizingMaskIntoConstraints="NO" id="rHD-bJ-l8F">
+                                <rect key="frame" x="96" y="69" width="240" height="128"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="1My-e3-Kv5" secondAttribute="trailing" constant="30" id="3Ly-wn-hyD"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="d03-tS-XDV" secondAttribute="trailing" constant="30" id="Eev-6g-CqO"/>
+                            <constraint firstItem="rHD-bJ-l8F" firstAttribute="top" secondItem="5VD-oG-Vgk" secondAttribute="bottom" constant="50" id="FZe-6x-YFT"/>
+                            <constraint firstItem="d03-tS-XDV" firstAttribute="top" secondItem="Omz-XL-Njg" secondAttribute="bottom" constant="10" id="GFc-Gk-SaI"/>
+                            <constraint firstItem="1My-e3-Kv5" firstAttribute="leading" secondItem="Cbt-zM-Z7G" secondAttribute="leadingMargin" constant="30" id="Q8L-5m-W9S"/>
+                            <constraint firstItem="rHD-bJ-l8F" firstAttribute="leading" secondItem="Cbt-zM-Z7G" secondAttribute="leadingMargin" constant="30" id="UPk-Pd-Hbs"/>
+                            <constraint firstItem="TvT-Uu-q05" firstAttribute="top" secondItem="1My-e3-Kv5" secondAttribute="bottom" constant="10" id="ZiK-Wk-yKp"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rHD-bJ-l8F" secondAttribute="trailing" constant="30" id="fYS-cf-BYX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Omz-XL-Njg" secondAttribute="trailing" constant="30" id="gBp-0v-glE"/>
+                            <constraint firstItem="1My-e3-Kv5" firstAttribute="top" secondItem="d03-tS-XDV" secondAttribute="bottom" constant="10" id="sR4-5l-zR4"/>
+                            <constraint firstItem="Omz-XL-Njg" firstAttribute="leading" secondItem="Cbt-zM-Z7G" secondAttribute="leadingMargin" constant="30" id="xxL-S1-6t1"/>
+                            <constraint firstItem="d03-tS-XDV" firstAttribute="leading" secondItem="Cbt-zM-Z7G" secondAttribute="leadingMargin" constant="30" id="z3w-6F-RIu"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ece-t3-9x4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="241" y="362"/>
+            <point key="canvasLocation" x="207" y="388"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="rapids_white_small.png" width="1000" height="300"/>
+    </resources>
+    <color key="tintColor" red="0.35686274509999999" green="0.54901960780000003" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
 </document>
