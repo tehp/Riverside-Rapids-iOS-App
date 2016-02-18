@@ -15,14 +15,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
 
 
-    // Custom color used for Navigation bar -Mac
+    //Define custom green color
     let navColor = UIColor(red: 0/255, green: 69/255, blue: 41/255, alpha: 1)
     
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
     
         
-        
+    //Set status bar text to white
+    UIApplication.sharedApplication().statusBarStyle = .LightContent
+
         
         
         
@@ -30,24 +32,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().barTintColor = navColor
         
         
-        UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: navColor], forState:.Normal)
-        UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: navColor], forState:.Selected)
-        
-        
-        
-    
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+        //UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: navColor], forState:.Normal)
+        //UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: navColor], forState:.Selected)
         
         
         
