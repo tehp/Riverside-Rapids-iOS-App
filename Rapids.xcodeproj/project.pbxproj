@@ -8,23 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		1A266A3DEE779FE65CEA599D /* Pods_Rapids.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D59BBB7AC39BC0B377D6E6 /* Pods_Rapids.framework */; };
-		267161951C72FBB40041098F /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267161941C72FBB40041098F /* CalendarViewController.swift */; };
-		267161971C72FBE20041098F /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267161961C72FBE20041098F /* MoreViewController.swift */; };
-		267161991C72FBF20041098F /* HomeworkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267161981C72FBF20041098F /* HomeworkViewController.swift */; };
-		2671619B1C72FC0D0041098F /* BellScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2671619A1C72FC0D0041098F /* BellScheduleViewController.swift */; };
-		2671619D1C730AD10041098F /* rapids_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 2671619C1C730AD10041098F /* rapids_white.png */; };
-		2671619F1C73A3980041098F /* rapids_white_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 2671619E1C73A3980041098F /* rapids_white_small.png */; };
-		268C3B531C725248002A35EC /* Announcements.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 268C3B521C725248002A35EC /* Announcements.storyboard */; };
-		268C3B551C725463002A35EC /* AnnouncementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268C3B541C725463002A35EC /* AnnouncementsViewController.swift */; };
-		268C3B571C725585002A35EC /* Calendar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 268C3B561C725585002A35EC /* Calendar.storyboard */; };
-		268C3B591C725594002A35EC /* BellSchedule.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 268C3B581C725594002A35EC /* BellSchedule.storyboard */; };
-		268C3B5B1C7255A1002A35EC /* Homework.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 268C3B5A1C7255A1002A35EC /* Homework.storyboard */; };
-		268C3B5D1C7255AC002A35EC /* More.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 268C3B5C1C7255AC002A35EC /* More.storyboard */; };
-		4F6B34521C73A89F002AFC1A /* GetListItemsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6B34511C73A89F002AFC1A /* GetListItemsRequest.swift */; };
-		4F6B34551C73AA61002AFC1A /* SoapCamlBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6B34541C73AA61002AFC1A /* SoapCamlBuilder.swift */; };
+		269689851C763C4A00845C1D /* icons in Resources */ = {isa = PBXBuildFile; fileRef = 269689841C763C4A00845C1D /* icons */; };
+		269689931C76472E00845C1D /* Announcements.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2696898E1C76472E00845C1D /* Announcements.storyboard */; };
+		269689941C76472E00845C1D /* BellSchedule.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2696898F1C76472E00845C1D /* BellSchedule.storyboard */; };
+		269689951C76472E00845C1D /* Calendar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 269689901C76472E00845C1D /* Calendar.storyboard */; };
+		269689961C76472E00845C1D /* Homework.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 269689911C76472E00845C1D /* Homework.storyboard */; };
+		269689971C76472E00845C1D /* More.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 269689921C76472E00845C1D /* More.storyboard */; };
+		269689A01C76475A00845C1D /* AnnouncementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269689991C76475A00845C1D /* AnnouncementsViewController.swift */; };
+		269689A11C76475A00845C1D /* BellScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2696899A1C76475A00845C1D /* BellScheduleViewController.swift */; };
+		269689A21C76475A00845C1D /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2696899B1C76475A00845C1D /* CalendarViewController.swift */; };
+		269689A31C76475A00845C1D /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2696899C1C76475A00845C1D /* FirstViewController.swift */; };
+		269689A41C76475A00845C1D /* HomeworkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2696899D1C76475A00845C1D /* HomeworkViewController.swift */; };
+		269689A51C76475A00845C1D /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2696899E1C76475A00845C1D /* MoreViewController.swift */; };
+		269689A61C76475A00845C1D /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2696899F1C76475A00845C1D /* SecondViewController.swift */; };
+		269689A81C76480400845C1D /* rapids_large.png in Resources */ = {isa = PBXBuildFile; fileRef = 269689A71C76480400845C1D /* rapids_large.png */; };
 		4F9D619A1C643C4400CA406F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9D61991C643C4400CA406F /* AppDelegate.swift */; };
-		4F9D619C1C643C4400CA406F /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9D619B1C643C4400CA406F /* FirstViewController.swift */; };
-		4F9D619E1C643C4400CA406F /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9D619D1C643C4400CA406F /* SecondViewController.swift */; };
 		4F9D61A11C643C4500CA406F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F9D619F1C643C4500CA406F /* Main.storyboard */; };
 		4F9D61A31C643C4500CA406F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F9D61A21C643C4500CA406F /* Assets.xcassets */; };
 		4F9D61A61C643C4500CA406F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F9D61A41C643C4500CA406F /* LaunchScreen.storyboard */; };
@@ -43,25 +41,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		267161941C72FBB40041098F /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
-		267161961C72FBE20041098F /* MoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
-		267161981C72FBF20041098F /* HomeworkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeworkViewController.swift; sourceTree = "<group>"; };
-		2671619A1C72FC0D0041098F /* BellScheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BellScheduleViewController.swift; sourceTree = "<group>"; };
-		2671619C1C730AD10041098F /* rapids_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = rapids_white.png; path = assets/rapids_white.png; sourceTree = SOURCE_ROOT; };
-		2671619E1C73A3980041098F /* rapids_white_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = rapids_white_small.png; path = assets/rapids_white_small.png; sourceTree = SOURCE_ROOT; };
-		268C3B521C725248002A35EC /* Announcements.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Announcements.storyboard; path = ../Announcements.storyboard; sourceTree = "<group>"; };
-		268C3B541C725463002A35EC /* AnnouncementsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnnouncementsViewController.swift; sourceTree = "<group>"; };
-		268C3B561C725585002A35EC /* Calendar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Calendar.storyboard; path = ../Calendar.storyboard; sourceTree = "<group>"; };
-		268C3B581C725594002A35EC /* BellSchedule.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = BellSchedule.storyboard; path = ../BellSchedule.storyboard; sourceTree = "<group>"; };
-		268C3B5A1C7255A1002A35EC /* Homework.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Homework.storyboard; path = ../Homework.storyboard; sourceTree = "<group>"; };
-		268C3B5C1C7255AC002A35EC /* More.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = More.storyboard; path = ../More.storyboard; sourceTree = "<group>"; };
+		269689841C763C4A00845C1D /* icons */ = {isa = PBXFileReference; lastKnownFileType = folder; name = icons; path = assets/icons; sourceTree = SOURCE_ROOT; };
+		2696898E1C76472E00845C1D /* Announcements.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Announcements.storyboard; sourceTree = "<group>"; };
+		2696898F1C76472E00845C1D /* BellSchedule.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BellSchedule.storyboard; sourceTree = "<group>"; };
+		269689901C76472E00845C1D /* Calendar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Calendar.storyboard; sourceTree = "<group>"; };
+		269689911C76472E00845C1D /* Homework.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Homework.storyboard; sourceTree = "<group>"; };
+		269689921C76472E00845C1D /* More.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = More.storyboard; sourceTree = "<group>"; };
+		269689991C76475A00845C1D /* AnnouncementsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnnouncementsViewController.swift; sourceTree = "<group>"; };
+		2696899A1C76475A00845C1D /* BellScheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BellScheduleViewController.swift; sourceTree = "<group>"; };
+		2696899B1C76475A00845C1D /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		2696899C1C76475A00845C1D /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		2696899D1C76475A00845C1D /* HomeworkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeworkViewController.swift; sourceTree = "<group>"; };
+		2696899E1C76475A00845C1D /* MoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
+		2696899F1C76475A00845C1D /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		269689A71C76480400845C1D /* rapids_large.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rapids_large.png; sourceTree = "<group>"; };
 		2E85ADB8E6D35AFF697648B9 /* Pods-RapidsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RapidsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RapidsTests/Pods-RapidsTests.release.xcconfig"; sourceTree = "<group>"; };
-		4F6B34511C73A89F002AFC1A /* GetListItemsRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetListItemsRequest.swift; sourceTree = "<group>"; };
-		4F6B34541C73AA61002AFC1A /* SoapCamlBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoapCamlBuilder.swift; sourceTree = "<group>"; };
 		4F9D61961C643C4400CA406F /* Rapids.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rapids.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F9D61991C643C4400CA406F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4F9D619B1C643C4400CA406F /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		4F9D619D1C643C4400CA406F /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		4F9D61A01C643C4500CA406F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4F9D61A21C643C4500CA406F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4F9D61A51C643C4500CA406F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -96,6 +92,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2696898D1C76472E00845C1D /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				2696898E1C76472E00845C1D /* Announcements.storyboard */,
+				2696898F1C76472E00845C1D /* BellSchedule.storyboard */,
+				269689901C76472E00845C1D /* Calendar.storyboard */,
+				269689911C76472E00845C1D /* Homework.storyboard */,
+				269689921C76472E00845C1D /* More.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		269689981C76475A00845C1D /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				269689991C76475A00845C1D /* AnnouncementsViewController.swift */,
+				2696899A1C76475A00845C1D /* BellScheduleViewController.swift */,
+				2696899B1C76475A00845C1D /* CalendarViewController.swift */,
+				2696899C1C76475A00845C1D /* FirstViewController.swift */,
+				2696899D1C76475A00845C1D /* HomeworkViewController.swift */,
+				2696899E1C76475A00845C1D /* MoreViewController.swift */,
+				2696899F1C76475A00845C1D /* SecondViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		4F6B344D1C73A48E002AFC1A /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -124,7 +146,6 @@
 		4F6B34501C73A87F002AFC1A /* GetListItems */ = {
 			isa = PBXGroup;
 			children = (
-				4F6B34511C73A89F002AFC1A /* GetListItemsRequest.swift */,
 			);
 			name = GetListItems;
 			sourceTree = "<group>";
@@ -132,7 +153,6 @@
 		4F6B34531C73AA22002AFC1A /* CAML */ = {
 			isa = PBXGroup;
 			children = (
-				4F6B34541C73AA61002AFC1A /* SoapCamlBuilder.swift */,
 			);
 			name = CAML;
 			sourceTree = "<group>";
@@ -160,26 +180,16 @@
 		4F9D61981C643C4400CA406F /* Rapids */ = {
 			isa = PBXGroup;
 			children = (
+				269689981C76475A00845C1D /* ViewControllers */,
+				2696898D1C76472E00845C1D /* Storyboards */,
 				4F6B344D1C73A48E002AFC1A /* Network */,
-				268C3B5A1C7255A1002A35EC /* Homework.storyboard */,
-				268C3B581C725594002A35EC /* BellSchedule.storyboard */,
-				268C3B561C725585002A35EC /* Calendar.storyboard */,
-				268C3B5C1C7255AC002A35EC /* More.storyboard */,
-				268C3B521C725248002A35EC /* Announcements.storyboard */,
 				4F9D619F1C643C4500CA406F /* Main.storyboard */,
 				4F9D61991C643C4400CA406F /* AppDelegate.swift */,
-				4F9D619B1C643C4400CA406F /* FirstViewController.swift */,
-				4F9D619D1C643C4400CA406F /* SecondViewController.swift */,
 				4F9D61A21C643C4500CA406F /* Assets.xcassets */,
 				4F9D61A41C643C4500CA406F /* LaunchScreen.storyboard */,
 				4F9D61A71C643C4500CA406F /* Info.plist */,
-				268C3B541C725463002A35EC /* AnnouncementsViewController.swift */,
-				267161941C72FBB40041098F /* CalendarViewController.swift */,
-				267161961C72FBE20041098F /* MoreViewController.swift */,
-				267161981C72FBF20041098F /* HomeworkViewController.swift */,
-				2671619A1C72FC0D0041098F /* BellScheduleViewController.swift */,
-				2671619C1C730AD10041098F /* rapids_white.png */,
-				2671619E1C73A3980041098F /* rapids_white_small.png */,
+				269689A71C76480400845C1D /* rapids_large.png */,
+				269689841C763C4A00845C1D /* icons */,
 			);
 			path = Rapids;
 			sourceTree = "<group>";
@@ -301,16 +311,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				269689951C76472E00845C1D /* Calendar.storyboard in Resources */,
 				4F9D61A61C643C4500CA406F /* LaunchScreen.storyboard in Resources */,
-				268C3B5D1C7255AC002A35EC /* More.storyboard in Resources */,
-				268C3B531C725248002A35EC /* Announcements.storyboard in Resources */,
+				269689931C76472E00845C1D /* Announcements.storyboard in Resources */,
+				269689941C76472E00845C1D /* BellSchedule.storyboard in Resources */,
+				269689961C76472E00845C1D /* Homework.storyboard in Resources */,
 				4F9D61A31C643C4500CA406F /* Assets.xcassets in Resources */,
-				268C3B571C725585002A35EC /* Calendar.storyboard in Resources */,
-				2671619D1C730AD10041098F /* rapids_white.png in Resources */,
-				2671619F1C73A3980041098F /* rapids_white_small.png in Resources */,
-				268C3B5B1C7255A1002A35EC /* Homework.storyboard in Resources */,
-				268C3B591C725594002A35EC /* BellSchedule.storyboard in Resources */,
+				269689851C763C4A00845C1D /* icons in Resources */,
 				4F9D61A11C643C4500CA406F /* Main.storyboard in Resources */,
+				269689A81C76480400845C1D /* rapids_large.png in Resources */,
+				269689971C76472E00845C1D /* More.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,16 +431,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				267161951C72FBB40041098F /* CalendarViewController.swift in Sources */,
-				4F9D619E1C643C4400CA406F /* SecondViewController.swift in Sources */,
-				4F6B34521C73A89F002AFC1A /* GetListItemsRequest.swift in Sources */,
-				267161991C72FBF20041098F /* HomeworkViewController.swift in Sources */,
+				269689A61C76475A00845C1D /* SecondViewController.swift in Sources */,
+				269689A51C76475A00845C1D /* MoreViewController.swift in Sources */,
+				269689A31C76475A00845C1D /* FirstViewController.swift in Sources */,
+				269689A21C76475A00845C1D /* CalendarViewController.swift in Sources */,
+				269689A41C76475A00845C1D /* HomeworkViewController.swift in Sources */,
 				4F9D619A1C643C4400CA406F /* AppDelegate.swift in Sources */,
-				4F6B34551C73AA61002AFC1A /* SoapCamlBuilder.swift in Sources */,
-				2671619B1C72FC0D0041098F /* BellScheduleViewController.swift in Sources */,
-				267161971C72FBE20041098F /* MoreViewController.swift in Sources */,
-				4F9D619C1C643C4400CA406F /* FirstViewController.swift in Sources */,
-				268C3B551C725463002A35EC /* AnnouncementsViewController.swift in Sources */,
+				269689A11C76475A00845C1D /* BellScheduleViewController.swift in Sources */,
+				269689A01C76475A00845C1D /* AnnouncementsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
