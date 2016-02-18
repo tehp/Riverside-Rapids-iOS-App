@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="7sp-0s-eu9">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -20,10 +19,11 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1My-e3-Kv5">
                                 <rect key="frame" x="171" y="542" width="91" height="42"/>
-                                <color key="backgroundColor" red="0.35686274509999999" green="0.54901960780000003" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.27058823529411763" blue="0.16078431372549018" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="35g-5L-nh4"/>
                                 </constraints>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Sign in/out">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" red="0.35686274509999999" green="0.54901960780000003" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -36,10 +36,11 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Omz-XL-Njg">
                                 <rect key="frame" x="171" y="442" width="91" height="42"/>
-                                <color key="backgroundColor" red="0.35686274509999999" green="0.54901960780000003" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.27058823529411763" blue="0.16078431372549018" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Np2-7b-ndK"/>
                                 </constraints>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="School Map">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" red="0.35686274509999999" green="0.54901960780000003" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -52,10 +53,11 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d03-tS-XDV" userLabel="about">
                                 <rect key="frame" x="171" y="492" width="91" height="42"/>
-                                <color key="backgroundColor" red="0.35686274509999999" green="0.54901960780000003" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.27058823529411763" blue="0.16078431372549018" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Hcm-Rx-Nbg"/>
                                 </constraints>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="About">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" red="0.35686274509999999" green="0.54901960780000003" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -66,19 +68,20 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="rapids_white_small.png" translatesAutoresizingMaskIntoConstraints="NO" id="rHD-bJ-l8F">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="rapids_large.png" translatesAutoresizingMaskIntoConstraints="NO" id="rHD-bJ-l8F">
                                 <rect key="frame" x="96" y="69" width="240" height="128"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Omz-XL-Njg" firstAttribute="top" secondItem="rHD-bJ-l8F" secondAttribute="bottom" constant="30" id="1Ir-cD-tfG"/>
                             <constraint firstAttribute="trailingMargin" secondItem="1My-e3-Kv5" secondAttribute="trailing" constant="30" id="3Ly-wn-hyD"/>
                             <constraint firstAttribute="trailingMargin" secondItem="d03-tS-XDV" secondAttribute="trailing" constant="30" id="Eev-6g-CqO"/>
                             <constraint firstItem="rHD-bJ-l8F" firstAttribute="top" secondItem="5VD-oG-Vgk" secondAttribute="bottom" constant="50" id="FZe-6x-YFT"/>
                             <constraint firstItem="d03-tS-XDV" firstAttribute="top" secondItem="Omz-XL-Njg" secondAttribute="bottom" constant="10" id="GFc-Gk-SaI"/>
                             <constraint firstItem="1My-e3-Kv5" firstAttribute="leading" secondItem="Cbt-zM-Z7G" secondAttribute="leadingMargin" constant="30" id="Q8L-5m-W9S"/>
                             <constraint firstItem="rHD-bJ-l8F" firstAttribute="leading" secondItem="Cbt-zM-Z7G" secondAttribute="leadingMargin" constant="30" id="UPk-Pd-Hbs"/>
-                            <constraint firstItem="TvT-Uu-q05" firstAttribute="top" secondItem="1My-e3-Kv5" secondAttribute="bottom" constant="10" id="ZiK-Wk-yKp"/>
+                            <constraint firstItem="TvT-Uu-q05" firstAttribute="top" secondItem="1My-e3-Kv5" secondAttribute="bottom" constant="30" id="ZiK-Wk-yKp"/>
                             <constraint firstAttribute="trailingMargin" secondItem="rHD-bJ-l8F" secondAttribute="trailing" constant="30" id="fYS-cf-BYX"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Omz-XL-Njg" secondAttribute="trailing" constant="30" id="gBp-0v-glE"/>
                             <constraint firstItem="1My-e3-Kv5" firstAttribute="top" secondItem="d03-tS-XDV" secondAttribute="bottom" constant="10" id="sR4-5l-zR4"/>
@@ -93,7 +96,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="rapids_white_small.png" width="1000" height="300"/>
+        <image name="rapids_large.png" width="2350" height="2350"/>
     </resources>
     <color key="tintColor" red="0.35686274509999999" green="0.54901960780000003" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
 </document>

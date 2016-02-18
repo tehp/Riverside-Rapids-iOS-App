@@ -16,17 +16,44 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     // Custom color used for Navigation bar -Mac
-    let navColor = UIColor(red: 65/255, green: 149/255, blue: 68/255, alpha: 1)
-    
+    let navColor = UIColor(red: 0/255, green: 69/255, blue: 41/255, alpha: 1)
     
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
     
         
+        
+        
+        
+        
         // Customizations for Navigation Bar -Mac
         UINavigationBar.appearance().barTintColor = navColor
         
-
+        
+        UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.magentaColor()], forState:.Normal)
+        UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.redColor()], forState:.Selected)
+        
+        
+        
+    
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         //let navBgImage:UIImage = UIImage(named: "rapids_white_small.png")!
         //UINavigationBar.appearance().setBackgroundImage(navBgImage, forBarMetrics: .Default)
         
