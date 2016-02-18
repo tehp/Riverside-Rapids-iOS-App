@@ -21,6 +21,7 @@
 		269689A41C76475A00845C1D /* HomeworkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2696899D1C76475A00845C1D /* HomeworkViewController.swift */; };
 		269689A51C76475A00845C1D /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2696899E1C76475A00845C1D /* MoreViewController.swift */; };
 		269689A61C76475A00845C1D /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2696899F1C76475A00845C1D /* SecondViewController.swift */; };
+		269689A81C76480400845C1D /* rapids_large.png in Resources */ = {isa = PBXBuildFile; fileRef = 269689A71C76480400845C1D /* rapids_large.png */; };
 		4F9D619A1C643C4400CA406F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9D61991C643C4400CA406F /* AppDelegate.swift */; };
 		4F9D61A11C643C4500CA406F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F9D619F1C643C4500CA406F /* Main.storyboard */; };
 		4F9D61A31C643C4500CA406F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F9D61A21C643C4500CA406F /* Assets.xcassets */; };
@@ -53,6 +54,7 @@
 		2696899D1C76475A00845C1D /* HomeworkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeworkViewController.swift; sourceTree = "<group>"; };
 		2696899E1C76475A00845C1D /* MoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		2696899F1C76475A00845C1D /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		269689A71C76480400845C1D /* rapids_large.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rapids_large.png; sourceTree = "<group>"; };
 		2E85ADB8E6D35AFF697648B9 /* Pods-RapidsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RapidsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RapidsTests/Pods-RapidsTests.release.xcconfig"; sourceTree = "<group>"; };
 		4F9D61961C643C4400CA406F /* Rapids.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rapids.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F9D61991C643C4400CA406F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 				4F9D61A21C643C4500CA406F /* Assets.xcassets */,
 				4F9D61A41C643C4500CA406F /* LaunchScreen.storyboard */,
 				4F9D61A71C643C4500CA406F /* Info.plist */,
+				269689A71C76480400845C1D /* rapids_large.png */,
 				269689841C763C4A00845C1D /* icons */,
 			);
 			path = Rapids;
@@ -316,6 +319,7 @@
 				4F9D61A31C643C4500CA406F /* Assets.xcassets in Resources */,
 				269689851C763C4A00845C1D /* icons in Resources */,
 				4F9D61A11C643C4500CA406F /* Main.storyboard in Resources */,
+				269689A81C76480400845C1D /* rapids_large.png in Resources */,
 				269689971C76472E00845C1D /* More.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
