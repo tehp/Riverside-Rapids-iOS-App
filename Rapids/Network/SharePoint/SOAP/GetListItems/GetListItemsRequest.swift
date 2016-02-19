@@ -34,10 +34,10 @@ class GetListItemsRequest: SoapRequest {
     }
     
     override func populateRequestParams(request: SoapObject) {
-        request.addProperty("", name: "listName", value: listName)
+        request.addProperty(nil, name: "listName", value: listName)
         
         if let actualViewName = viewName {
-            request.addProperty("", name: "viewName", value: actualViewName)
+            request.addProperty(nil, name: "viewName", value: actualViewName)
         }
         
         if let actualQuery = query {
@@ -49,7 +49,7 @@ class GetListItemsRequest: SoapRequest {
         }
         
         if let actualRowLimit = rowLimit {
-            request.addProperty("", name: "rowLimit", value: actualRowLimit)
+            request.addProperty(nil, name: "rowLimit", value: actualRowLimit)
         }
         
         if let actualQueryOptions = queryOptions {
@@ -57,7 +57,7 @@ class GetListItemsRequest: SoapRequest {
         }
         
         if let actualWebID = webID {
-            request.addProperty("", name: "webID", value: actualWebID)
+            request.addProperty(nil, name: "webID", value: actualWebID)
         }
     }
     

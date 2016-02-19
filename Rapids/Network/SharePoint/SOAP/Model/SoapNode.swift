@@ -8,19 +8,32 @@
 
 import Foundation
 
+import AEXML
+
 class SoapNode {
     
-    var namespace: String
+    var namespace: String?
     var name: String
     var attributes = [String: String]()
     
-    init(namespace: String, name: String) {
+    init(namespace: String?, name: String) {
         self.namespace = namespace
         self.name = name
     }
     
+    func getFullName() -> String {
+        if let actualNamespace = namespace {
+            return "\(actualNamespace):\(self.name)"
+        }
+        return name
+    }
+    
     func getAttribute(name: String) -> String? {
         return attributes[name]
+    }
+    
+    func getAttributes() -> [String: String] {
+        return attributes
     }
     
     func setAttribute(name: String, value: String) {
@@ -29,6 +42,10 @@ class SoapNode {
     
     func removeAttribute(name: String) {
         attributes[name] = nil
+    }
+    
+    func toXMLElement() -> AEXMLElement {
+        return AEXMLElement(getFullName(), value: nil, attributes: attributes)
     }
     
 }

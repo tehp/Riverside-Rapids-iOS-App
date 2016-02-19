@@ -15,7 +15,7 @@ class SoapViewFieldsBuilder: SoapCamlBuilder {
     }
     
     func fieldRef(name: String) -> SoapViewFieldsBuilder {
-        let fieldRef = SoapObject(namespace: "", name: "FieldRef")
+        let fieldRef = SoapObject(namespace: nil, name: "FieldRef")
         fieldRef.setAttribute("Name", value: name)
         getCurrentObj().addElement(fieldRef)
         return self

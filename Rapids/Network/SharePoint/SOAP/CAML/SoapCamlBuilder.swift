@@ -20,10 +20,10 @@ class SoapCamlBuilder {
     
     init(rootName: String, firstChildName: String) {
         // Create the root object
-        self.root = SoapObject(namespace: "", name: rootName)
+        self.root = SoapObject(namespace: nil, name: rootName)
         
         // Create the first child object and add it to the current
-        let firstChild = SoapObject(namespace: "", name: firstChildName)
+        let firstChild = SoapObject(namespace: nil, name: firstChildName)
         self.root.addElement(firstChild)
         
         // Add the first child to the stack so we are pointing to it to start
@@ -40,7 +40,7 @@ class SoapCamlBuilder {
     
     func createParentNode(name: String, attributes: [String: String]?) -> SoapCamlBuilder {
         // Create the node
-        let node = SoapObject(namespace: "", name: name)
+        let node = SoapObject(namespace: nil, name: name)
         
         // Fill in any provided attributes
         if let actualAttributes = attributes {
@@ -59,7 +59,7 @@ class SoapCamlBuilder {
     
     func createChildNode(name: String, value: String, attributes: [String: String]?) -> SoapCamlBuilder {
         // Create the node
-        let node = SoapPrimitive(namespace: "", name: name)
+        let node = SoapPrimitive(namespace: nil, name: name)
         
         // Fill in any provided attributes
         if let actualAttributes = attributes {

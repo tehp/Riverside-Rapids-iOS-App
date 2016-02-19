@@ -8,8 +8,16 @@
 
 import Foundation
 
+import AEXML
+
 class SoapPrimitive: SoapNode {
     
     var text = ""
+    
+    override func toXMLElement() -> AEXMLElement {
+        let element = super.toXMLElement()
+        element.value = text
+        return element
+    }
     
 }
