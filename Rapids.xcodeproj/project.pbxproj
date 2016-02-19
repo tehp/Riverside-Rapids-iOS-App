@@ -28,6 +28,10 @@
 		4F9D61A31C643C4500CA406F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F9D61A21C643C4500CA406F /* Assets.xcassets */; };
 		4F9D61A61C643C4500CA406F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F9D61A41C643C4500CA406F /* LaunchScreen.storyboard */; };
 		4F9D61B11C643C4500CA406F /* RapidsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9D61B01C643C4500CA406F /* RapidsTests.swift */; };
+		4FD9EA511C78D8E0002D6FD1 /* SoapRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD9EA501C78D8E0002D6FD1 /* SoapRequest.swift */; };
+		4FD9EA531C78D90A002D6FD1 /* SoapResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD9EA521C78D90A002D6FD1 /* SoapResponse.swift */; };
+		4FD9EA551C78D92F002D6FD1 /* SoapResponseDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD9EA541C78D92F002D6FD1 /* SoapResponseDelegate.swift */; };
+		4FD9EA571C7A414D002D6FD1 /* GetListItemsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD9EA561C7A414C002D6FD1 /* GetListItemsResponse.swift */; };
 		4FE47E551C76A82400CBBE85 /* SoapCamlBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE47E4A1C76A82400CBBE85 /* SoapCamlBuilder.swift */; };
 		4FE47E561C76A82400CBBE85 /* SoapQueryBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE47E4B1C76A82400CBBE85 /* SoapQueryBuilder.swift */; };
 		4FE47E571C76A82400CBBE85 /* SoapQueryOptionsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE47E4C1C76A82400CBBE85 /* SoapQueryOptionsBuilder.swift */; };
@@ -36,7 +40,6 @@
 		4FE47E5A1C76A82400CBBE85 /* SoapNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE47E511C76A82400CBBE85 /* SoapNode.swift */; };
 		4FE47E5B1C76A82400CBBE85 /* SoapObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE47E521C76A82400CBBE85 /* SoapObject.swift */; };
 		4FE47E5C1C76A82400CBBE85 /* SoapPrimitive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE47E531C76A82400CBBE85 /* SoapPrimitive.swift */; };
-		4FE47E5D1C76A82400CBBE85 /* SoapRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE47E541C76A82400CBBE85 /* SoapRequest.swift */; };
 		B044DA70F6CEE20B97EE761D /* Pods_RapidsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF00632CDD4356C2FEF56A07 /* Pods_RapidsTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +79,10 @@
 		4F9D61AC1C643C4500CA406F /* RapidsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RapidsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F9D61B01C643C4500CA406F /* RapidsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RapidsTests.swift; sourceTree = "<group>"; };
 		4F9D61B21C643C4500CA406F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4FD9EA501C78D8E0002D6FD1 /* SoapRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoapRequest.swift; sourceTree = "<group>"; };
+		4FD9EA521C78D90A002D6FD1 /* SoapResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoapResponse.swift; sourceTree = "<group>"; };
+		4FD9EA541C78D92F002D6FD1 /* SoapResponseDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoapResponseDelegate.swift; sourceTree = "<group>"; };
+		4FD9EA561C7A414C002D6FD1 /* GetListItemsResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetListItemsResponse.swift; sourceTree = "<group>"; };
 		4FE47E4A1C76A82400CBBE85 /* SoapCamlBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoapCamlBuilder.swift; sourceTree = "<group>"; };
 		4FE47E4B1C76A82400CBBE85 /* SoapQueryBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoapQueryBuilder.swift; sourceTree = "<group>"; };
 		4FE47E4C1C76A82400CBBE85 /* SoapQueryOptionsBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoapQueryOptionsBuilder.swift; sourceTree = "<group>"; };
@@ -84,7 +91,6 @@
 		4FE47E511C76A82400CBBE85 /* SoapNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoapNode.swift; sourceTree = "<group>"; };
 		4FE47E521C76A82400CBBE85 /* SoapObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoapObject.swift; sourceTree = "<group>"; };
 		4FE47E531C76A82400CBBE85 /* SoapPrimitive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoapPrimitive.swift; sourceTree = "<group>"; };
-		4FE47E541C76A82400CBBE85 /* SoapRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoapRequest.swift; sourceTree = "<group>"; };
 		5BA7F3A4B6426F26585F34A6 /* Pods-Rapids.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rapids.release.xcconfig"; path = "Pods/Target Support Files/Pods-Rapids/Pods-Rapids.release.xcconfig"; sourceTree = "<group>"; };
 		84D59BBB7AC39BC0B377D6E6 /* Pods_Rapids.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rapids.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9960CA7554EF199872A65C2E /* Pods-RapidsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RapidsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RapidsTests/Pods-RapidsTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -184,6 +190,16 @@
 			path = RapidsTests;
 			sourceTree = "<group>";
 		};
+		4FD9EA4F1C78D8A3002D6FD1 /* Transport */ = {
+			isa = PBXGroup;
+			children = (
+				4FD9EA501C78D8E0002D6FD1 /* SoapRequest.swift */,
+				4FD9EA521C78D90A002D6FD1 /* SoapResponse.swift */,
+				4FD9EA541C78D92F002D6FD1 /* SoapResponseDelegate.swift */,
+			);
+			path = Transport;
+			sourceTree = "<group>";
+		};
 		4FE47E461C76A82400CBBE85 /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -203,10 +219,10 @@
 		4FE47E481C76A82400CBBE85 /* SOAP */ = {
 			isa = PBXGroup;
 			children = (
+				4FD9EA4F1C78D8A3002D6FD1 /* Transport */,
 				4FE47E491C76A82400CBBE85 /* CAML */,
 				4FE47E4E1C76A82400CBBE85 /* GetListItems */,
 				4FE47E501C76A82400CBBE85 /* Model */,
-				4FE47E541C76A82400CBBE85 /* SoapRequest.swift */,
 			);
 			path = SOAP;
 			sourceTree = "<group>";
@@ -226,6 +242,7 @@
 			isa = PBXGroup;
 			children = (
 				4FE47E4F1C76A82400CBBE85 /* GetListItemsRequest.swift */,
+				4FD9EA561C7A414C002D6FD1 /* GetListItemsResponse.swift */,
 			);
 			path = GetListItems;
 			sourceTree = "<group>";
@@ -469,10 +486,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4FE47E5D1C76A82400CBBE85 /* SoapRequest.swift in Sources */,
 				269689A61C76475A00845C1D /* SecondViewController.swift in Sources */,
 				4FE47E591C76A82400CBBE85 /* GetListItemsRequest.swift in Sources */,
 				269689A51C76475A00845C1D /* MoreViewController.swift in Sources */,
+				4FD9EA571C7A414D002D6FD1 /* GetListItemsResponse.swift in Sources */,
 				269689A31C76475A00845C1D /* FirstViewController.swift in Sources */,
 				269689A21C76475A00845C1D /* CalendarViewController.swift in Sources */,
 				269689A41C76475A00845C1D /* HomeworkViewController.swift in Sources */,
@@ -482,10 +499,13 @@
 				4F80D9D21C76E8610052496B /* SoapEnvelope.swift in Sources */,
 				269689A01C76475A00845C1D /* AnnouncementsViewController.swift in Sources */,
 				4FE47E5C1C76A82400CBBE85 /* SoapPrimitive.swift in Sources */,
+				4FD9EA551C78D92F002D6FD1 /* SoapResponseDelegate.swift in Sources */,
 				4FE47E551C76A82400CBBE85 /* SoapCamlBuilder.swift in Sources */,
 				4FE47E581C76A82400CBBE85 /* SoapViewFieldsBuilder.swift in Sources */,
+				4FD9EA511C78D8E0002D6FD1 /* SoapRequest.swift in Sources */,
 				4FE47E5B1C76A82400CBBE85 /* SoapObject.swift in Sources */,
 				4FE47E5A1C76A82400CBBE85 /* SoapNode.swift in Sources */,
+				4FD9EA531C78D90A002D6FD1 /* SoapResponse.swift in Sources */,
 				4FE47E571C76A82400CBBE85 /* SoapQueryOptionsBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

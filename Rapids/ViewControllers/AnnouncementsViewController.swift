@@ -12,7 +12,7 @@ import UIKit
 
 import Alamofire
 
-class AnnouncementsViewController: UIViewController {
+class AnnouncementsViewController: UIViewController, SoapResponseDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,20 +22,25 @@ class AnnouncementsViewController: UIViewController {
         viewFields
             .fieldRef("LinkTitle")
         
+        let today = NSDate()
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        let dateStr = dateFormatter.stringFromDate(today)
+        
         let query = SoapQueryBuilder()
         query
             .orderBy(nil)
-            .fieldRef("Categories", attributes: ["Ascending": SoapCamlBuilder.BOOL_TRUE])
-            .fieldRef("Created", attributes: ["Ascending": SoapCamlBuilder.BOOL_TRUE])
-            .up()
+                .fieldRef("Categories", attributes: ["Ascending": SoapCamlBuilder.BOOL_TRUE])
+                .fieldRef("Created", attributes: ["Ascending": SoapCamlBuilder.BOOL_TRUE])
+                .up()
             ._where()
-            .or()
-            .isNull()
-            .fieldRef("Expires", attributes: nil)
-            .up()
-            .geq()
-            .fieldRef("Expires", attributes: nil)
-            .value("DateTime", value: "2016-02-16", attributes: ["IncludeTimeValue": SoapCamlBuilder.BOOL_FALSE])
+                .or()
+                    .isNull()
+                    .fieldRef("Expires", attributes: nil)
+                    .up()
+                .geq()
+                    .fieldRef("Expires", attributes: nil)
+                    .value("DateTime", value: dateStr, attributes: ["IncludeTimeValue": SoapCamlBuilder.BOOL_FALSE])
         
         let url = "https://my43.sd43.bc.ca/schools/riverside/_vti_bin/lists.asmx"
         let listName = "{6B015937-2798-4C8F-B654-F49E28A71851}"
@@ -52,15 +57,10 @@ class AnnouncementsViewController: UIViewController {
             viewFields: viewFields.complete(),
             rowLimit: "50",
             queryOptions: nil,
-            webID: nil)
+            webID: nil,
+            responseDelegate: self)
         
         request.sendRequest()
-        
-        let credential = NSURLCredential(user: username, password: password, persistence: .None)
-        
-        Alamofire.request(.GET, url)
-            .authenticate(usingCredential: credential)
-            .response(completionHandler: { (request, response, data, error) in print("\(String(response)), \(String(data)), \(String(error))")})
     }
     
     override func didReceiveMemoryWarning() {
@@ -69,5 +69,17 @@ class AnnouncementsViewController: UIViewController {
     }
     
     
+    // MARK: SoapResponseDelegate
+    typealias ResponseType = GetListItemsResponse
+    func didReceiveResponse(response: GetListItemsResponse) {
+        print(response.rows.count)
+        for row in response.rows {
+            print(row["ows_LinkTitle"]!)
+        }
+    }
+    
+    func didReceiveError(error: ErrorType) {
+        print("SoapResponseError")
+    }
 }
 

@@ -8,7 +8,7 @@
 
 import Foundation
 
-class GetListItemsRequest: SoapRequest {
+class GetListItemsRequest<DelegateType:SoapResponseDelegate where DelegateType.ResponseType == GetListItemsResponse>: SoapRequest<GetListItemsResponse, DelegateType> {
     
     let METHOD_NAME = "GetListItems"
     
@@ -20,7 +20,7 @@ class GetListItemsRequest: SoapRequest {
     var queryOptions: SoapObject?
     var webID: String?
     
-    init(url: String, username: String, password: String?, listName: String, viewName: String?, query: SoapObject?, viewFields: SoapObject?, rowLimit: String?, queryOptions: SoapObject?, webID: String?) {
+    init(url: String, username: String, password: String?, listName: String, viewName: String?, query: SoapObject?, viewFields: SoapObject?, rowLimit: String?, queryOptions: SoapObject?, webID: String?, responseDelegate: DelegateType) {
         
         self.listName = listName
         self.viewName = viewName
@@ -30,7 +30,7 @@ class GetListItemsRequest: SoapRequest {
         self.queryOptions = queryOptions
         self.webID = webID
         
-        super.init(methodName: METHOD_NAME, url: url, username: username, password: password)
+        super.init(methodName: METHOD_NAME, url: url, username: username, password: password, responseDelegate: responseDelegate)
     }
     
     override func populateRequestParams(request: SoapObject) {
@@ -59,6 +59,10 @@ class GetListItemsRequest: SoapRequest {
         if let actualWebID = webID {
             request.addProperty(nil, name: "webID", value: actualWebID)
         }
+    }
+    
+    override func generateResponse(responseData: NSData?) throws -> GetListItemsResponse {
+        return try GetListItemsResponse(responseData: responseData)
     }
     
 }
