@@ -27,6 +27,15 @@
 		4F9D61A31C643C4500CA406F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F9D61A21C643C4500CA406F /* Assets.xcassets */; };
 		4F9D61A61C643C4500CA406F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F9D61A41C643C4500CA406F /* LaunchScreen.storyboard */; };
 		4F9D61B11C643C4500CA406F /* RapidsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9D61B01C643C4500CA406F /* RapidsTests.swift */; };
+		4FE47E551C76A82400CBBE85 /* SoapCamlBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE47E4A1C76A82400CBBE85 /* SoapCamlBuilder.swift */; };
+		4FE47E561C76A82400CBBE85 /* SoapQueryBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE47E4B1C76A82400CBBE85 /* SoapQueryBuilder.swift */; };
+		4FE47E571C76A82400CBBE85 /* SoapQueryOptionsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE47E4C1C76A82400CBBE85 /* SoapQueryOptionsBuilder.swift */; };
+		4FE47E581C76A82400CBBE85 /* SoapViewFieldsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE47E4D1C76A82400CBBE85 /* SoapViewFieldsBuilder.swift */; };
+		4FE47E591C76A82400CBBE85 /* GetListItemsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE47E4F1C76A82400CBBE85 /* GetListItemsRequest.swift */; };
+		4FE47E5A1C76A82400CBBE85 /* SoapNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE47E511C76A82400CBBE85 /* SoapNode.swift */; };
+		4FE47E5B1C76A82400CBBE85 /* SoapObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE47E521C76A82400CBBE85 /* SoapObject.swift */; };
+		4FE47E5C1C76A82400CBBE85 /* SoapPrimitive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE47E531C76A82400CBBE85 /* SoapPrimitive.swift */; };
+		4FE47E5D1C76A82400CBBE85 /* SoapRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE47E541C76A82400CBBE85 /* SoapRequest.swift */; };
 		B044DA70F6CEE20B97EE761D /* Pods_RapidsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF00632CDD4356C2FEF56A07 /* Pods_RapidsTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +74,15 @@
 		4F9D61AC1C643C4500CA406F /* RapidsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RapidsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F9D61B01C643C4500CA406F /* RapidsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RapidsTests.swift; sourceTree = "<group>"; };
 		4F9D61B21C643C4500CA406F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4FE47E4A1C76A82400CBBE85 /* SoapCamlBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoapCamlBuilder.swift; sourceTree = "<group>"; };
+		4FE47E4B1C76A82400CBBE85 /* SoapQueryBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoapQueryBuilder.swift; sourceTree = "<group>"; };
+		4FE47E4C1C76A82400CBBE85 /* SoapQueryOptionsBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoapQueryOptionsBuilder.swift; sourceTree = "<group>"; };
+		4FE47E4D1C76A82400CBBE85 /* SoapViewFieldsBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoapViewFieldsBuilder.swift; sourceTree = "<group>"; };
+		4FE47E4F1C76A82400CBBE85 /* GetListItemsRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetListItemsRequest.swift; sourceTree = "<group>"; };
+		4FE47E511C76A82400CBBE85 /* SoapNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoapNode.swift; sourceTree = "<group>"; };
+		4FE47E521C76A82400CBBE85 /* SoapObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoapObject.swift; sourceTree = "<group>"; };
+		4FE47E531C76A82400CBBE85 /* SoapPrimitive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoapPrimitive.swift; sourceTree = "<group>"; };
+		4FE47E541C76A82400CBBE85 /* SoapRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoapRequest.swift; sourceTree = "<group>"; };
 		5BA7F3A4B6426F26585F34A6 /* Pods-Rapids.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rapids.release.xcconfig"; path = "Pods/Target Support Files/Pods-Rapids/Pods-Rapids.release.xcconfig"; sourceTree = "<group>"; };
 		84D59BBB7AC39BC0B377D6E6 /* Pods_Rapids.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rapids.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9960CA7554EF199872A65C2E /* Pods-RapidsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RapidsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RapidsTests/Pods-RapidsTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -118,45 +136,6 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
-		4F6B344D1C73A48E002AFC1A /* Network */ = {
-			isa = PBXGroup;
-			children = (
-				4F6B344E1C73A84D002AFC1A /* SharePoint */,
-			);
-			name = Network;
-			sourceTree = "<group>";
-		};
-		4F6B344E1C73A84D002AFC1A /* SharePoint */ = {
-			isa = PBXGroup;
-			children = (
-				4F6B344F1C73A853002AFC1A /* SOAP */,
-			);
-			name = SharePoint;
-			sourceTree = "<group>";
-		};
-		4F6B344F1C73A853002AFC1A /* SOAP */ = {
-			isa = PBXGroup;
-			children = (
-				4F6B34531C73AA22002AFC1A /* CAML */,
-				4F6B34501C73A87F002AFC1A /* GetListItems */,
-			);
-			name = SOAP;
-			sourceTree = "<group>";
-		};
-		4F6B34501C73A87F002AFC1A /* GetListItems */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = GetListItems;
-			sourceTree = "<group>";
-		};
-		4F6B34531C73AA22002AFC1A /* CAML */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = CAML;
-			sourceTree = "<group>";
-		};
 		4F9D618D1C643C4400CA406F = {
 			isa = PBXGroup;
 			children = (
@@ -180,9 +159,9 @@
 		4F9D61981C643C4400CA406F /* Rapids */ = {
 			isa = PBXGroup;
 			children = (
+				4FE47E461C76A82400CBBE85 /* Network */,
 				269689981C76475A00845C1D /* ViewControllers */,
 				2696898D1C76472E00845C1D /* Storyboards */,
-				4F6B344D1C73A48E002AFC1A /* Network */,
 				4F9D619F1C643C4500CA406F /* Main.storyboard */,
 				4F9D61991C643C4400CA406F /* AppDelegate.swift */,
 				4F9D61A21C643C4500CA406F /* Assets.xcassets */,
@@ -201,6 +180,62 @@
 				4F9D61B21C643C4500CA406F /* Info.plist */,
 			);
 			path = RapidsTests;
+			sourceTree = "<group>";
+		};
+		4FE47E461C76A82400CBBE85 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				4FE47E471C76A82400CBBE85 /* SharePoint */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		4FE47E471C76A82400CBBE85 /* SharePoint */ = {
+			isa = PBXGroup;
+			children = (
+				4FE47E481C76A82400CBBE85 /* SOAP */,
+			);
+			path = SharePoint;
+			sourceTree = "<group>";
+		};
+		4FE47E481C76A82400CBBE85 /* SOAP */ = {
+			isa = PBXGroup;
+			children = (
+				4FE47E491C76A82400CBBE85 /* CAML */,
+				4FE47E4E1C76A82400CBBE85 /* GetListItems */,
+				4FE47E501C76A82400CBBE85 /* Model */,
+				4FE47E541C76A82400CBBE85 /* SoapRequest.swift */,
+			);
+			path = SOAP;
+			sourceTree = "<group>";
+		};
+		4FE47E491C76A82400CBBE85 /* CAML */ = {
+			isa = PBXGroup;
+			children = (
+				4FE47E4A1C76A82400CBBE85 /* SoapCamlBuilder.swift */,
+				4FE47E4B1C76A82400CBBE85 /* SoapQueryBuilder.swift */,
+				4FE47E4C1C76A82400CBBE85 /* SoapQueryOptionsBuilder.swift */,
+				4FE47E4D1C76A82400CBBE85 /* SoapViewFieldsBuilder.swift */,
+			);
+			path = CAML;
+			sourceTree = "<group>";
+		};
+		4FE47E4E1C76A82400CBBE85 /* GetListItems */ = {
+			isa = PBXGroup;
+			children = (
+				4FE47E4F1C76A82400CBBE85 /* GetListItemsRequest.swift */,
+			);
+			path = GetListItems;
+			sourceTree = "<group>";
+		};
+		4FE47E501C76A82400CBBE85 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4FE47E511C76A82400CBBE85 /* SoapNode.swift */,
+				4FE47E521C76A82400CBBE85 /* SoapObject.swift */,
+				4FE47E531C76A82400CBBE85 /* SoapPrimitive.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		70ADE053AC51C321A245A047 /* Frameworks */ = {
@@ -431,14 +466,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FE47E5D1C76A82400CBBE85 /* SoapRequest.swift in Sources */,
 				269689A61C76475A00845C1D /* SecondViewController.swift in Sources */,
+				4FE47E591C76A82400CBBE85 /* GetListItemsRequest.swift in Sources */,
 				269689A51C76475A00845C1D /* MoreViewController.swift in Sources */,
 				269689A31C76475A00845C1D /* FirstViewController.swift in Sources */,
 				269689A21C76475A00845C1D /* CalendarViewController.swift in Sources */,
 				269689A41C76475A00845C1D /* HomeworkViewController.swift in Sources */,
 				4F9D619A1C643C4400CA406F /* AppDelegate.swift in Sources */,
 				269689A11C76475A00845C1D /* BellScheduleViewController.swift in Sources */,
+				4FE47E561C76A82400CBBE85 /* SoapQueryBuilder.swift in Sources */,
 				269689A01C76475A00845C1D /* AnnouncementsViewController.swift in Sources */,
+				4FE47E5C1C76A82400CBBE85 /* SoapPrimitive.swift in Sources */,
+				4FE47E551C76A82400CBBE85 /* SoapCamlBuilder.swift in Sources */,
+				4FE47E581C76A82400CBBE85 /* SoapViewFieldsBuilder.swift in Sources */,
+				4FE47E5B1C76A82400CBBE85 /* SoapObject.swift in Sources */,
+				4FE47E5A1C76A82400CBBE85 /* SoapNode.swift in Sources */,
+				4FE47E571C76A82400CBBE85 /* SoapQueryOptionsBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
