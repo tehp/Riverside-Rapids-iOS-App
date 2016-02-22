@@ -6,6 +6,7 @@ use_frameworks!
 target 'Rapids' do
     pod 'Alamofire', '~> 3.0'
     pod 'AEXML'
+    pod 'CVCalendar', '~> 1.2.8'
 end
 
 target 'RapidsTests' do
