@@ -4,25 +4,45 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>AEXML.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Alamofire.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>1</integer>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>CVCalendar.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Pods-Rapids.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>2</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Pods-RapidsTests.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>3</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>30A9BA4553D863F046F484B25C9938F5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>4151A0A8F2AD34F7749B6B1FF80BD8D2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6B9813D7E7E5E2BAC2903B82EC58E643</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -32,7 +52,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A4E506F26F58F6712D5DF2978FA0460F</key>
+		<key>BA14B622689766F6B8A4F42FD9DE552F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
