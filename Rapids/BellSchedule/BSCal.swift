@@ -7,3 +7,17 @@
 //
 
 import Foundation
+
+class BSCal {
+    
+    var schoolStart: NSDate
+    var schoolEnd: NSDate
+    var days: [BSDay]
+    
+    init(schoolStart: NSDate, schoolEnd: NSDate, days: [BSDay]) {
+        self.schoolStart = schoolStart
+        self.schoolEnd = schoolEnd
+        self.days = days
+    }
+    
+}

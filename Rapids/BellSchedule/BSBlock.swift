@@ -7,3 +7,21 @@
 //
 
 import Foundation
+
+class BSBlock {
+    
+    var block: Int
+    var startH: Int
+    var startM: Int
+    var endH: Int
+    var endM: Int
+    
+    init(block: Int, startH: Int, startM: Int, endH: Int, endM: Int) {
+        self.block = block
+        self.startH = startH
+        self.startM = startM
+        self.endH = endH
+        self.endM = endM
+    }
+    
+}
