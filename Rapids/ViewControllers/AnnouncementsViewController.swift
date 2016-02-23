@@ -12,12 +12,14 @@ import UIKit
 
 import Alamofire
 
-class AnnouncementsViewController: UIViewController, SoapResponseDelegate {
+class AnnouncementsViewController: UITableViewController, SoapResponseDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        
+        /* start EXAMPLE SOAP REQUEST */
         let viewFields = SoapViewFieldsBuilder()
         viewFields
             .fieldRef("LinkTitle")
@@ -61,6 +63,9 @@ class AnnouncementsViewController: UIViewController, SoapResponseDelegate {
             responseDelegate: self)
         
         request.sendRequest()
+        /* end ExampleSoapRequest */
+        
+        
     }
     
     override func didReceiveMemoryWarning() {

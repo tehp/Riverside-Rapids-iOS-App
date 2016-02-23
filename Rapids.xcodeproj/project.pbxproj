@@ -33,6 +33,7 @@
 		4F9D61A31C643C4500CA406F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F9D61A21C643C4500CA406F /* Assets.xcassets */; };
 		4F9D61A61C643C4500CA406F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F9D61A41C643C4500CA406F /* LaunchScreen.storyboard */; };
 		4F9D61B11C643C4500CA406F /* RapidsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9D61B01C643C4500CA406F /* RapidsTests.swift */; };
+		4FC6578E1C7CE2E500635111 /* AnnouncementTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC6578D1C7CE2E500635111 /* AnnouncementTableViewCell.swift */; };
 		4FD9EA511C78D8E0002D6FD1 /* SoapRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD9EA501C78D8E0002D6FD1 /* SoapRequest.swift */; };
 		4FD9EA531C78D90A002D6FD1 /* SoapResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD9EA521C78D90A002D6FD1 /* SoapResponse.swift */; };
 		4FD9EA551C78D92F002D6FD1 /* SoapResponseDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD9EA541C78D92F002D6FD1 /* SoapResponseDelegate.swift */; };
@@ -89,6 +90,7 @@
 		4F9D61AC1C643C4500CA406F /* RapidsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RapidsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F9D61B01C643C4500CA406F /* RapidsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RapidsTests.swift; sourceTree = "<group>"; };
 		4F9D61B21C643C4500CA406F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4FC6578D1C7CE2E500635111 /* AnnouncementTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnnouncementTableViewCell.swift; sourceTree = "<group>"; };
 		4FD9EA501C78D8E0002D6FD1 /* SoapRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoapRequest.swift; sourceTree = "<group>"; };
 		4FD9EA521C78D90A002D6FD1 /* SoapResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoapResponse.swift; sourceTree = "<group>"; };
 		4FD9EA541C78D92F002D6FD1 /* SoapResponseDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoapResponseDelegate.swift; sourceTree = "<group>"; };
@@ -196,6 +198,7 @@
 		4F9D61981C643C4400CA406F /* Rapids */ = {
 			isa = PBXGroup;
 			children = (
+				4FC6578C1C7CE27500635111 /* Views */,
 				4F99D20E1C7B99450031BCC0 /* BellSchedule */,
 				4FE47E461C76A82400CBBE85 /* Network */,
 				269689981C76475A00845C1D /* ViewControllers */,
@@ -218,6 +221,14 @@
 				4F9D61B21C643C4500CA406F /* Info.plist */,
 			);
 			path = RapidsTests;
+			sourceTree = "<group>";
+		};
+		4FC6578C1C7CE27500635111 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4FC6578D1C7CE2E500635111 /* AnnouncementTableViewCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		4FD9EA4F1C78D8A3002D6FD1 /* Transport */ = {
@@ -528,6 +539,7 @@
 				4F9D619A1C643C4400CA406F /* AppDelegate.swift in Sources */,
 				269689A11C76475A00845C1D /* BellScheduleViewController.swift in Sources */,
 				4FE47E561C76A82400CBBE85 /* SoapQueryBuilder.swift in Sources */,
+				4FC6578E1C7CE2E500635111 /* AnnouncementTableViewCell.swift in Sources */,
 				4F80D9D21C76E8610052496B /* SoapEnvelope.swift in Sources */,
 				269689A01C76475A00845C1D /* AnnouncementsViewController.swift in Sources */,
 				4FE47E5C1C76A82400CBBE85 /* SoapPrimitive.swift in Sources */,
