@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Calendar View Controller-->
         <scene sceneID="q6A-8x-WG7">
             <objects>
-                <viewController id="dB4-lU-pge" sceneMemberID="viewController">
+                <viewController id="dB4-lU-pge" customClass="CalendarViewController" customModule="Rapids" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LGB-bg-l1h"/>
                         <viewControllerLayoutGuide type="bottom" id="aKc-Pt-hE8"/>
@@ -17,15 +17,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mls-Dt-kC7">
-                                <rect key="frame" x="261" y="311" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="68j-nJ-2sG" customClass="CVCalendarMenuView" customModule="CVCalendar">
+                                <rect key="frame" x="0.0" y="38" width="600" height="40"/>
+                                <color key="backgroundColor" red="0.91491082700000004" green="0.0" blue="0.064259959290000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pzd-dk-WuM" customClass="CVCalendarView" customModule="CVCalendar">
+                                <rect key="frame" x="0.0" y="97" width="600" height="431"/>
+                                <color key="backgroundColor" red="0.35686274509999999" green="0.54901960780000003" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="calendarView" destination="pzd-dk-WuM" id="AF4-mP-jDi"/>
+                        <outlet property="menuView" destination="68j-nJ-2sG" id="3i9-id-JoE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xRq-Vh-1X4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
