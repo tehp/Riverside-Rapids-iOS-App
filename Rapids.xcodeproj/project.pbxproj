@@ -23,6 +23,11 @@
 		269689A61C76475A00845C1D /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2696899F1C76475A00845C1D /* SecondViewController.swift */; };
 		269689A81C76480400845C1D /* rapids_large.png in Resources */ = {isa = PBXBuildFile; fileRef = 269689A71C76480400845C1D /* rapids_large.png */; };
 		4F80D9D21C76E8610052496B /* SoapEnvelope.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F80D9D11C76E8610052496B /* SoapEnvelope.swift */; };
+		4F99D2111C7B99640031BCC0 /* BSCal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F99D2101C7B99640031BCC0 /* BSCal.swift */; };
+		4F99D2131C7B99720031BCC0 /* BSDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F99D2121C7B99720031BCC0 /* BSDay.swift */; };
+		4F99D2151C7B997C0031BCC0 /* BSBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F99D2141C7B997C0031BCC0 /* BSBlock.swift */; };
+		4F99D2171C7B99900031BCC0 /* GetBellScheduleRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F99D2161C7B99900031BCC0 /* GetBellScheduleRequest.swift */; };
+		4F99D2191C7B999A0031BCC0 /* GetBellScheduleResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F99D2181C7B999A0031BCC0 /* GetBellScheduleResponse.swift */; };
 		4F9D619A1C643C4400CA406F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9D61991C643C4400CA406F /* AppDelegate.swift */; };
 		4F9D61A11C643C4500CA406F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F9D619F1C643C4500CA406F /* Main.storyboard */; };
 		4F9D61A31C643C4500CA406F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F9D61A21C643C4500CA406F /* Assets.xcassets */; };
@@ -70,6 +75,11 @@
 		269689A71C76480400845C1D /* rapids_large.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rapids_large.png; sourceTree = "<group>"; };
 		2E85ADB8E6D35AFF697648B9 /* Pods-RapidsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RapidsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RapidsTests/Pods-RapidsTests.release.xcconfig"; sourceTree = "<group>"; };
 		4F80D9D11C76E8610052496B /* SoapEnvelope.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoapEnvelope.swift; sourceTree = "<group>"; };
+		4F99D2101C7B99640031BCC0 /* BSCal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BSCal.swift; sourceTree = "<group>"; };
+		4F99D2121C7B99720031BCC0 /* BSDay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BSDay.swift; sourceTree = "<group>"; };
+		4F99D2141C7B997C0031BCC0 /* BSBlock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BSBlock.swift; sourceTree = "<group>"; };
+		4F99D2161C7B99900031BCC0 /* GetBellScheduleRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetBellScheduleRequest.swift; sourceTree = "<group>"; };
+		4F99D2181C7B999A0031BCC0 /* GetBellScheduleResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetBellScheduleResponse.swift; sourceTree = "<group>"; };
 		4F9D61961C643C4400CA406F /* Rapids.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rapids.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F9D61991C643C4400CA406F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4F9D61A01C643C4500CA406F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -144,6 +154,25 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
+		4F99D20E1C7B99450031BCC0 /* BellSchedule */ = {
+			isa = PBXGroup;
+			children = (
+				4F99D2101C7B99640031BCC0 /* BSCal.swift */,
+				4F99D2121C7B99720031BCC0 /* BSDay.swift */,
+				4F99D2141C7B997C0031BCC0 /* BSBlock.swift */,
+			);
+			path = BellSchedule;
+			sourceTree = "<group>";
+		};
+		4F99D20F1C7B99520031BCC0 /* BellSchedule */ = {
+			isa = PBXGroup;
+			children = (
+				4F99D2161C7B99900031BCC0 /* GetBellScheduleRequest.swift */,
+				4F99D2181C7B999A0031BCC0 /* GetBellScheduleResponse.swift */,
+			);
+			path = BellSchedule;
+			sourceTree = "<group>";
+		};
 		4F9D618D1C643C4400CA406F = {
 			isa = PBXGroup;
 			children = (
@@ -167,6 +196,7 @@
 		4F9D61981C643C4400CA406F /* Rapids */ = {
 			isa = PBXGroup;
 			children = (
+				4F99D20E1C7B99450031BCC0 /* BellSchedule */,
 				4FE47E461C76A82400CBBE85 /* Network */,
 				269689981C76475A00845C1D /* ViewControllers */,
 				2696898D1C76472E00845C1D /* Storyboards */,
@@ -203,6 +233,7 @@
 		4FE47E461C76A82400CBBE85 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				4F99D20F1C7B99520031BCC0 /* BellSchedule */,
 				4FE47E471C76A82400CBBE85 /* SharePoint */,
 			);
 			path = Network;
@@ -486,6 +517,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F99D2151C7B997C0031BCC0 /* BSBlock.swift in Sources */,
 				269689A61C76475A00845C1D /* SecondViewController.swift in Sources */,
 				4FE47E591C76A82400CBBE85 /* GetListItemsRequest.swift in Sources */,
 				269689A51C76475A00845C1D /* MoreViewController.swift in Sources */,
@@ -500,11 +532,15 @@
 				269689A01C76475A00845C1D /* AnnouncementsViewController.swift in Sources */,
 				4FE47E5C1C76A82400CBBE85 /* SoapPrimitive.swift in Sources */,
 				4FD9EA551C78D92F002D6FD1 /* SoapResponseDelegate.swift in Sources */,
+				4F99D2131C7B99720031BCC0 /* BSDay.swift in Sources */,
 				4FE47E551C76A82400CBBE85 /* SoapCamlBuilder.swift in Sources */,
+				4F99D2171C7B99900031BCC0 /* GetBellScheduleRequest.swift in Sources */,
 				4FE47E581C76A82400CBBE85 /* SoapViewFieldsBuilder.swift in Sources */,
 				4FD9EA511C78D8E0002D6FD1 /* SoapRequest.swift in Sources */,
 				4FE47E5B1C76A82400CBBE85 /* SoapObject.swift in Sources */,
 				4FE47E5A1C76A82400CBBE85 /* SoapNode.swift in Sources */,
+				4F99D2111C7B99640031BCC0 /* BSCal.swift in Sources */,
+				4F99D2191C7B999A0031BCC0 /* GetBellScheduleResponse.swift in Sources */,
 				4FD9EA531C78D90A002D6FD1 /* SoapResponse.swift in Sources */,
 				4FE47E571C76A82400CBBE85 /* SoapQueryOptionsBuilder.swift in Sources */,
 			);
