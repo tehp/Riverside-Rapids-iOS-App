@@ -20,13 +20,7 @@ class CalendarViewController: UIViewController {
     
     @IBOutlet weak var calendarView: CVCalendarView!
     @IBOutlet weak var menuView: CVCalendarMenuView!
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        
-        calendarView.commitCalendarViewUpdate()
-        menuView.commitMenuViewUpdate()
-    }
+
     
     
     
