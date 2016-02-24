@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "Megaphone-50.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "Megaphone-50@2x.png",
       "scale" : "2x"
     },
     {
