@@ -10,7 +10,20 @@ import Foundation
 
 import UIKit
 
+import CVCalendar
+
+
 class CalendarViewController: UIViewController {
+    
+    
+
+    
+    @IBOutlet weak var calendarView: CVCalendarView!
+    @IBOutlet weak var menuView: CVCalendarMenuView!
+
+    
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
