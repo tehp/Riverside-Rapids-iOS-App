@@ -47,6 +47,7 @@
 		4FE47E5B1C76A82400CBBE85 /* SoapObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE47E521C76A82400CBBE85 /* SoapObject.swift */; };
 		4FE47E5C1C76A82400CBBE85 /* SoapPrimitive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE47E531C76A82400CBBE85 /* SoapPrimitive.swift */; };
 		B044DA70F6CEE20B97EE761D /* Pods_RapidsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF00632CDD4356C2FEF56A07 /* Pods_RapidsTests.framework */; };
+		D5CD8E8D1C7F8D1A00E4FC34 /* D.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CD8E8C1C7F8D1A00E4FC34 /* D.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +107,7 @@
 		5BA7F3A4B6426F26585F34A6 /* Pods-Rapids.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rapids.release.xcconfig"; path = "Pods/Target Support Files/Pods-Rapids/Pods-Rapids.release.xcconfig"; sourceTree = "<group>"; };
 		84D59BBB7AC39BC0B377D6E6 /* Pods_Rapids.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rapids.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9960CA7554EF199872A65C2E /* Pods-RapidsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RapidsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RapidsTests/Pods-RapidsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D5CD8E8C1C7F8D1A00E4FC34 /* D.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = D.swift; sourceTree = "<group>"; };
 		ED83042674159A794ECC7F77 /* Pods-Rapids.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rapids.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Rapids/Pods-Rapids.debug.xcconfig"; sourceTree = "<group>"; };
 		FF00632CDD4356C2FEF56A07 /* Pods_RapidsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RapidsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -210,6 +212,7 @@
 				4F9D61A71C643C4500CA406F /* Info.plist */,
 				269689A71C76480400845C1D /* rapids_large.png */,
 				269689841C763C4A00845C1D /* icons */,
+				D5CD8E8C1C7F8D1A00E4FC34 /* D.swift */,
 			);
 			path = Rapids;
 			sourceTree = "<group>";
@@ -550,6 +553,7 @@
 				4FE47E581C76A82400CBBE85 /* SoapViewFieldsBuilder.swift in Sources */,
 				4FD9EA511C78D8E0002D6FD1 /* SoapRequest.swift in Sources */,
 				4FE47E5B1C76A82400CBBE85 /* SoapObject.swift in Sources */,
+				D5CD8E8D1C7F8D1A00E4FC34 /* D.swift in Sources */,
 				4FE47E5A1C76A82400CBBE85 /* SoapNode.swift in Sources */,
 				4F99D2111C7B99640031BCC0 /* BSCal.swift in Sources */,
 				4F99D2191C7B999A0031BCC0 /* GetBellScheduleResponse.swift in Sources */,
