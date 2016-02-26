@@ -10,7 +10,7 @@ import Foundation
 
 import UIKit
 
-class BellScheduleViewController: UIViewController {
+class BellScheduleViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
