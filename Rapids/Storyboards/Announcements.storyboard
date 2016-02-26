@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="mLy-ci-cGk">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="mLy-ci-cGk">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Announcements View Controller-->
@@ -21,17 +23,33 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="89"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gg2-Qz-OGP">
-                                            <rect key="frame" x="0.0" y="0.0" width="89" height="89"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" placeholderIntrinsicWidth="44" placeholderIntrinsicHeight="44" translatesAutoresizingMaskIntoConstraints="NO" id="gg2-Qz-OGP">
+                                            <rect key="frame" x="8" y="24" width="44" height="44"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="25" id="5CC-H1-OXf"/>
+                                                <constraint firstAttribute="width" constant="25" id="QwO-Q8-7Gv"/>
+                                            </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O7t-8F-XwN">
-                                            <rect key="frame" x="97" y="34" width="495" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" layoutMarginsFollowReadableWidth="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O7t-8F-XwN">
+                                            <rect key="frame" x="60" y="8" width="524" height="81"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="O7t-8F-XwN" firstAttribute="bottom" secondItem="LfP-eT-JsO" secondAttribute="bottomMargin" id="3d7-lf-oSe"/>
+                                        <constraint firstItem="O7t-8F-XwN" firstAttribute="leading" secondItem="gg2-Qz-OGP" secondAttribute="trailing" constant="16" id="AKA-3Q-dMq"/>
+                                        <constraint firstItem="gg2-Qz-OGP" firstAttribute="leading" secondItem="LfP-eT-JsO" secondAttribute="leadingMargin" constant="8" id="RNB-pN-kiE"/>
+                                        <constraint firstAttribute="centerYWithinMargins" secondItem="gg2-Qz-OGP" secondAttribute="centerY" id="SVQ-DL-Wmd"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="O7t-8F-XwN" secondAttribute="trailing" constant="8" id="ZHZ-a7-GSi"/>
+                                        <constraint firstItem="O7t-8F-XwN" firstAttribute="top" secondItem="LfP-eT-JsO" secondAttribute="topMargin" id="aMN-mB-lGf"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="nameLabel" destination="O7t-8F-XwN" id="eDC-6b-9nx"/>
+                                    <outlet property="photoImageView" destination="gg2-Qz-OGP" id="x9A-8f-jog"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -42,7 +60,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eDs-RI-QtA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="127" y="-848"/>
+            <point key="canvasLocation" x="-129" y="-977"/>
         </scene>
     </scenes>
 </document>

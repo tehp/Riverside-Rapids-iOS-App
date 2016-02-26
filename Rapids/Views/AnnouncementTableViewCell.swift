@@ -9,10 +9,17 @@
 import UIKit
 
 class AnnouncementTableViewCell: UITableViewCell {
-
+    
+    // MARK: Properties
+    
+    @IBOutlet weak var nameLabel: UILabel!
+    
+    @IBOutlet weak var photoImageView: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
@@ -20,5 +27,6 @@ class AnnouncementTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+
 
 }
