@@ -48,6 +48,7 @@
 		4FE47E5C1C76A82400CBBE85 /* SoapPrimitive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE47E531C76A82400CBBE85 /* SoapPrimitive.swift */; };
 		B044DA70F6CEE20B97EE761D /* Pods_RapidsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF00632CDD4356C2FEF56A07 /* Pods_RapidsTests.framework */; };
 		D5CD8E8D1C7F8D1A00E4FC34 /* D.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CD8E8C1C7F8D1A00E4FC34 /* D.swift */; };
+		D5EFC8381C84CF91009FCD94 /* BlockTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EFC8371C84CF91009FCD94 /* BlockTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +109,7 @@
 		84D59BBB7AC39BC0B377D6E6 /* Pods_Rapids.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rapids.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9960CA7554EF199872A65C2E /* Pods-RapidsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RapidsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RapidsTests/Pods-RapidsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D5CD8E8C1C7F8D1A00E4FC34 /* D.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = D.swift; sourceTree = "<group>"; };
+		D5EFC8371C84CF91009FCD94 /* BlockTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlockTableViewCell.swift; sourceTree = "<group>"; };
 		ED83042674159A794ECC7F77 /* Pods-Rapids.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rapids.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Rapids/Pods-Rapids.debug.xcconfig"; sourceTree = "<group>"; };
 		FF00632CDD4356C2FEF56A07 /* Pods_RapidsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RapidsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -230,6 +232,7 @@
 			isa = PBXGroup;
 			children = (
 				4FC6578D1C7CE2E500635111 /* AnnouncementTableViewCell.swift */,
+				D5EFC8371C84CF91009FCD94 /* BlockTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -556,6 +559,7 @@
 				D5CD8E8D1C7F8D1A00E4FC34 /* D.swift in Sources */,
 				4FE47E5A1C76A82400CBBE85 /* SoapNode.swift in Sources */,
 				4F99D2111C7B99640031BCC0 /* BSCal.swift in Sources */,
+				D5EFC8381C84CF91009FCD94 /* BlockTableViewCell.swift in Sources */,
 				4F99D2191C7B999A0031BCC0 /* GetBellScheduleResponse.swift in Sources */,
 				4FD9EA531C78D90A002D6FD1 /* SoapResponse.swift in Sources */,
 				4FE47E571C76A82400CBBE85 /* SoapQueryOptionsBuilder.swift in Sources */,
