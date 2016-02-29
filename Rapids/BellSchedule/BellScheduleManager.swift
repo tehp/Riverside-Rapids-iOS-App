@@ -113,6 +113,16 @@ class BellScheduleManager {
         }
     }
     
+    func getDayType(date: NSDate, inBSCal: BSCal) -> String {
+        let calendar = NSCalendar.currentCalendar();
+        for day in inBSCal.days {
+            if calendar.compareDate(date, toDate: day.date, toUnitGranularity: NSCalendarUnit.Day) == .OrderedSame {
+                return day.dayType
+            }
+        }
+        return "day1"
+    }
+    
     func getScheduleForDate(date: NSDate, inBSCal: BSCal) -> [BSBlock]? {
         let calendar = NSCalendar.currentCalendar();
         for day in inBSCal.days {
