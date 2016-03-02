@@ -32,7 +32,7 @@ public final class CVCalendarMenuView: UIView {
         }
     }
     
-    public weak var delegate: MenuViewDelegate? {
+    public var delegate: MenuViewDelegate? {
         didSet {
             setupAppearance()
             setupWeekdaySymbols()

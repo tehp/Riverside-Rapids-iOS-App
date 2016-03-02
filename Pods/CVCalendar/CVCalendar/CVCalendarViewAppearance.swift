@@ -61,7 +61,7 @@ public final class CVCalendarViewAppearance: NSObject {
     // Default dot marker color.
     public var dotMarkerColor: UIColor? = .whiteColor()
     
-    public weak var delegate: CVCalendarViewAppearanceDelegate? {
+    public var delegate: CVCalendarViewAppearanceDelegate? {
         didSet {
             self.setupAppearance()
         }
