@@ -6,10 +6,11 @@ use_frameworks!
 target 'Rapids' do
     pod 'Alamofire', '~> 3.0'
     pod 'AEXML'
-    pod 'CVCalendar', '~> 1.2.8'
+    pod 'EPCalendarPicker'
 end
 
 target 'RapidsTests' do
     pod 'Alamofire', '~> 3.0'
+    pod 'EPCalendarPicker'
 end
 

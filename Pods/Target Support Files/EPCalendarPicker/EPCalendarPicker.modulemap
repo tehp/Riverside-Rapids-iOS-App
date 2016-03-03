@@ -1,0 +1,6 @@
+framework module EPCalendarPicker {
+  umbrella header "EPCalendarPicker-umbrella.h"
+
+  export *
+  module * { export * }
+}

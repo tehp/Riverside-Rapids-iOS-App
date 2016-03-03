@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1A266A3DEE779FE65CEA599D /* Pods_Rapids.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D59BBB7AC39BC0B377D6E6 /* Pods_Rapids.framework */; };
+		2692A4A51C877873001BA69D /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2696899B1C76475A00845C1D /* CalendarViewController.swift */; };
 		269689851C763C4A00845C1D /* icons in Resources */ = {isa = PBXBuildFile; fileRef = 269689841C763C4A00845C1D /* icons */; };
 		269689931C76472E00845C1D /* Announcements.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2696898E1C76472E00845C1D /* Announcements.storyboard */; };
 		269689941C76472E00845C1D /* BellSchedule.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2696898F1C76472E00845C1D /* BellSchedule.storyboard */; };
@@ -22,6 +23,7 @@
 		269689A51C76475A00845C1D /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2696899E1C76475A00845C1D /* MoreViewController.swift */; };
 		269689A61C76475A00845C1D /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2696899F1C76475A00845C1D /* SecondViewController.swift */; };
 		269689A81C76480400845C1D /* rapids_large.png in Resources */ = {isa = PBXBuildFile; fileRef = 269689A71C76480400845C1D /* rapids_large.png */; };
+		26A6B6581C881D1100629FDF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9D61991C643C4400CA406F /* AppDelegate.swift */; };
 		4F80D9D21C76E8610052496B /* SoapEnvelope.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F80D9D11C76E8610052496B /* SoapEnvelope.swift */; };
 		4F99D2111C7B99640031BCC0 /* BSCal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F99D2101C7B99640031BCC0 /* BSCal.swift */; };
 		4F99D2131C7B99720031BCC0 /* BSDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F99D2121C7B99720031BCC0 /* BSDay.swift */; };
@@ -570,6 +572,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26A6B6581C881D1100629FDF /* AppDelegate.swift in Sources */,
+				2692A4A51C877873001BA69D /* CalendarViewController.swift in Sources */,
 				4F9D61B11C643C4500CA406F /* RapidsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

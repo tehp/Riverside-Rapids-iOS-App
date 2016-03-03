@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Calendar View Controller-->
@@ -13,28 +14,42 @@
                         <viewControllerLayoutGuide type="top" id="LGB-bg-l1h"/>
                         <viewControllerLayoutGuide type="bottom" id="aKc-Pt-hE8"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="unh-0u-lef">
+                    <view key="view" contentMode="scaleToFill" id="2zR-Qk-FfR">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="68j-nJ-2sG" customClass="CVCalendarMenuView" customModule="CVCalendar">
-                                <rect key="frame" x="0.0" y="38" width="600" height="40"/>
-                                <color key="backgroundColor" red="0.91491082700000004" green="0.0" blue="0.064259959290000002" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pzd-dk-WuM" customClass="CVCalendarView" customModule="CVCalendar">
-                                <rect key="frame" x="0.0" y="97" width="600" height="414"/>
-                                <color key="backgroundColor" red="0.35686274509999999" green="0.54901960780000003" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Ep6-2k-Hva">
+                                <rect key="frame" x="180" y="321" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dRj-4I-fvM">
+                                <rect key="frame" x="170" y="155" width="260" height="66"/>
+                                <state key="normal" title="Select some days to view events."/>
+                                <connections>
+                                    <action selector="onTouchShowMeCalendarButton:" destination="dB4-lU-pge" eventType="touchUpInside" id="WZF-Xr-5Ji"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ep6-2k-Hva" firstAttribute="top" secondItem="dRj-4I-fvM" secondAttribute="bottom" constant="200" id="7Se-f4-s2S"/>
+                            <constraint firstItem="Ep6-2k-Hva" firstAttribute="leading" secondItem="2zR-Qk-FfR" secondAttribute="leadingMargin" id="LQr-UE-sCl"/>
+                            <constraint firstItem="dRj-4I-fvM" firstAttribute="top" secondItem="LGB-bg-l1h" secondAttribute="bottom" constant="100" id="Rhs-Ka-AgQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ep6-2k-Hva" secondAttribute="trailing" id="TK3-y7-4tf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dRj-4I-fvM" secondAttribute="trailing" id="tia-Z7-uIa"/>
+                            <constraint firstItem="dRj-4I-fvM" firstAttribute="leading" secondItem="2zR-Qk-FfR" secondAttribute="leadingMargin" id="wXV-yo-zLc"/>
+                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="menuView" destination="68j-nJ-2sG" id="3i9-id-JoE"/>
+                        <outlet property="btnShowMeCalendar" destination="dRj-4I-fvM" id="7SS-Fb-Grb"/>
+                        <outlet property="txtViewDetail" destination="Ep6-2k-Hva" id="tbG-Fj-LNZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xRq-Vh-1X4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="220" y="257"/>
+            <point key="canvasLocation" x="62" y="333"/>
         </scene>
     </scenes>
 </document>

@@ -85,7 +85,11 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-RapidsTests/Alamofire.framework"
+  install_framework "Pods-RapidsTests/CVCalendar.framework"
+  install_framework "Pods-RapidsTests/EPCalendarPicker.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-RapidsTests/Alamofire.framework"
+  install_framework "Pods-RapidsTests/CVCalendar.framework"
+  install_framework "Pods-RapidsTests/EPCalendarPicker.framework"
 fi
