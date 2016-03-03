@@ -11,10 +11,7 @@ import UIKit
 import EPCalendarPicker
 
 class CalendarViewController: UIViewController, EPCalendarPickerDelegate {
-    
-        //Define custom colors
-        let navColor = UIColor(red: 0/255, green: 69/255, blue: 41/255, alpha: 1)
-        let navColorLight = UIColor(red: 0/255, green: 120/255, blue: 41/255, alpha: 1)
+
     
     @IBOutlet weak var txtViewDetail: UITextView!
     @IBOutlet weak var btnShowMeCalendar: UIButton!
@@ -31,17 +28,17 @@ class CalendarViewController: UIViewController, EPCalendarPickerDelegate {
     
     @IBAction func onTouchShowMeCalendarButton(sender: AnyObject) {
         let calendarPicker = EPCalendarPicker(startYear: 2016, endYear: 2017, multiSelection: true, selectedDates: [])
-        calendarPicker.weekdayTintColor = navColor
-        calendarPicker.weekendTintColor = navColor
-        calendarPicker.monthTitleColor = navColor
-        calendarPicker.todayTintColor = navColor
-        calendarPicker.dateSelectionColor = navColorLight
+        calendarPicker.weekdayTintColor = AppDelegate.navColor
+        calendarPicker.weekendTintColor = AppDelegate.navColor
+        calendarPicker.monthTitleColor = AppDelegate.navColor
+        calendarPicker.todayTintColor = AppDelegate.navColor
+        calendarPicker.dateSelectionColor = AppDelegate.navColorLight
         calendarPicker.calendarDelegate = self
         calendarPicker.startDate = NSDate()
         calendarPicker.hightlightsToday = true
         calendarPicker.showsTodaysButton = true
         calendarPicker.hideDaysFromOtherMonth = false
-        calendarPicker.tintColor = navColor
+        calendarPicker.tintColor = AppDelegate.navColor
         //        calendarPicker.barTintColor = UIColor.greenColor()
         calendarPicker.dayDisabledTintColor = UIColor.grayColor()
         calendarPicker.title = "Riverside Calendar"
