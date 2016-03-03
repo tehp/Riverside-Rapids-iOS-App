@@ -121,7 +121,7 @@ public final class CVCalendarView: UIView {
         }
     }
     
-    public weak var delegate: CVCalendarViewDelegate? {
+    public var delegate: CVCalendarViewDelegate? {
         didSet {
             if manager == nil {
                 manager = Manager(calendarView: self)

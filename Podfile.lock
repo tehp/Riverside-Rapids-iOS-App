@@ -2,15 +2,18 @@ PODS:
   - AEXML (2.1.0)
   - Alamofire (3.2.0)
   - CVCalendar (1.2.9)
+  - EPCalendarPicker (1.0.8)
 
 DEPENDENCIES:
   - AEXML
   - Alamofire (~> 3.0)
-  - CVCalendar (~> 1.2.8)
+  - CVCalendar (~> 1.2.9)
+  - EPCalendarPicker
 
 SPEC CHECKSUMS:
   AEXML: 0e2f657fdc67e17905682a06d55583a863d80803
   Alamofire: 4da478599fccddff361205c8929333d7fe18dceb
   CVCalendar: 0799256e0bc3b43e83b7e86c0729ce9ff0624cb6
+  EPCalendarPicker: 0348fe754a7650582665ecc5ac98f4c0a0db0e91
 
 COCOAPODS: 0.39.0

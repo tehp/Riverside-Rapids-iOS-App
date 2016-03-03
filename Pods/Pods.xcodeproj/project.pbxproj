@@ -7,91 +7,94 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		095406039B4D371E48D08B38A2975AC8 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1388013BB1445809FDFFE9FC651B3057 /* Error.swift */; };
-		1473E95D20A8550117266D4493AF9C6C /* CVCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BB69EE37EA868B111D849051B59A4B /* CVCalendarView.swift */; };
-		16102E4E35FAA0FC4161282FECE56469 /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61476F9065CDB9CD0CD04F35C2095C6A /* Timeline.swift */; };
-		27EDCBA933ABC5D70ECF3F562A63D31D /* CVCalendarMonthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924B9DDD03EEC81526A4200C41C74745 /* CVCalendarMonthView.swift */; };
-		2CD83CDD80950801E1E8E9A7854B795D /* CVRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3995504B2F46181641ED5B74DD9A3A8F /* CVRange.swift */; };
-		2D3405986FC586FA6C0A5E0B6BA7E64E /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F474A54CEA710A61E6246769C922BC7 /* Validation.swift */; };
-		33B12555139B2C0FAB72FF64E286A812 /* CVCalendarViewAnimatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DDB65D397B1DB0FC90C166D1D9C9A9 /* CVCalendarViewAnimatorDelegate.swift */; };
-		34CCDCA848A701466256BC2927DA8856 /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EA1DEE6D5202F9DB3C8D3ED732E4C5 /* NetworkReachabilityManager.swift */; };
-		3705C2AE52E45691AFF860C3CEDD7441 /* CVCalendarMonthContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35176886EDA7B59610AF3F4CCFE24691 /* CVCalendarMonthContentViewController.swift */; };
-		3B87DC7F8BDF75B46E61FA884B289577 /* CVCalendar-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F2C03CF92D061740AF658387B5F75A2 /* CVCalendar-dummy.m */; };
-		3EA8F215C9C1432D74E5CCA4834AA8C0 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D741DF0F0563A5F064C510CA03FF8B /* ResponseSerialization.swift */; };
-		4081EA628AF0B73AC51FFB9D7AB3B89E /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE6D2D395CB1A117F15AEB906251822 /* Manager.swift */; };
-		40CB3875B30C9203B08807A16064A92A /* CVWeekdaySymbolType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2517920793AAD973D87576DD6FD41F70 /* CVWeekdaySymbolType.swift */; };
-		438D67D809EBC2AC950710622C6D48E5 /* AEXML-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E8901C2452215A32BB02653EB7C0FC55 /* AEXML-dummy.m */; };
-		461789AA9602F827AF415551B6EDE0B2 /* CVCalendarMenuViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB686527D94998D10C838496AA1BC02 /* CVCalendarMenuViewDelegate.swift */; };
-		4E4F17DE924825CE5D480D0E8A05E3CD /* CVCalendarViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CAC8F006BB2A92B3C40D82849CD6C2 /* CVCalendarViewDelegate.swift */; };
-		551E9EE718FB2628ECBA3954D837BCE5 /* CVDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BC8293B9DCC09287476F2BF5435836 /* CVDate.swift */; };
-		57A71A8F4D5FCC79FE401287E197E7B3 /* CVCalendarWeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C5747D62316ABBCFFEBD104762E3EB9 /* CVCalendarWeekView.swift */; };
-		5BC19E6E0F199276003F0AF96838BCE5 /* Upload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80865DE7EBE048286C26D07D681AD5EF /* Upload.swift */; };
-		5CB05FBCB32D21E194B5ECF680CB6AE0 /* Download.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CA52BB32C905B7A8DDD88FC5838EE0 /* Download.swift */; };
-		5E4E07F5AA458FA65DF01816F721468A /* CVCalendarWeekday.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875F2CEC3F76AE6F0D59C8022E4CDD24 /* CVCalendarWeekday.swift */; };
-		6216E52EED65FFA771AD682DE96BC3B2 /* CVCalendarDayViewControlCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F544A1E2E55B1C7EC1C75FCF873070D8 /* CVCalendarDayViewControlCoordinator.swift */; };
-		62D9E7D63B75A2CD4A423744C9D29DB3 /* CVScrollDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9679601F755DDDF84A870DB02F4ED565 /* CVScrollDirection.swift */; };
-		62E8346F03C03E7F4D631361F325689E /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D9ECE86F8286FA3A7704E073636B93 /* Response.swift */; };
-		647875A2D006AB11BF61A9271B54D30D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
-		6637B96C6BD4B5532AA3B69133DE4055 /* CVCalendarViewPresentationMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341E21F408ED0E1832BBBFEA62EC52D5 /* CVCalendarViewPresentationMode.swift */; };
-		6891101D8D1D37D2A990F6B398A992D3 /* CVShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2811FB0DD1373F3777982D0F4271038D /* CVShape.swift */; };
-		6A42CA1CA26852DF60F79E5748490DA8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
-		6CB822F35D76353193BFA86DD7BC2963 /* CVCalendarTouchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FF54EA6EECDBBB8DBF777A14B2EABC /* CVCalendarTouchController.swift */; };
-		6DA361F78BD4FE4C1D91F3B4888D2D48 /* CVCalendarViewAppearanceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4813BA63811CEDCD9B3E9B96C197E8F3 /* CVCalendarViewAppearanceDelegate.swift */; };
-		7B48852C4D848FA2DA416A98F6425869 /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2CF5B5E82EFC0D85A44E039009C69C /* ServerTrustPolicy.swift */; };
-		7FE567382B46982C01C4AF4F95A6093D /* CVSelectionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D135A8A7E7B5EF8ED671CF20E1960C /* CVSelectionType.swift */; };
-		8D9742399F82BBE355D278CCF4A43CB6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
-		8EB11202167FCDDF1257AAAB1D1FB244 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AC3EF0CA0791D96719B1DF3C87C834 /* Alamofire.swift */; };
-		930FF546793F64C7593928879FE96516 /* Pods-RapidsTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FC1CBCBC803017306D7BE673DC616C5A /* Pods-RapidsTests-dummy.m */; };
-		9469DF81ECB494E84675969B5E13374C /* Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D0D9D9EB8FA8AF46652539FFAAD9F873 /* Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		95BBCAAE65C6668992593E20D80452DA /* CVCalendarViewAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1819D0F1F5CD172F338739EAA0972A7E /* CVCalendarViewAnimator.swift */; };
-		9F596692858960FCDD3C7E648896FCFF /* CVCalendarWeekContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03C7EF233063D20100EC56E69FEE02B /* CVCalendarWeekContentViewController.swift */; };
-		A28551B81C776683877C518EB783F4C3 /* Pods-RapidsTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FF88CD906DA916A051841BD047C93922 /* Pods-RapidsTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AA314156AC500125F4078EE968DB14C6 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4DB4B6311391FBF7562B5A095B4022 /* Result.swift */; };
-		ADF19C953CE2A7D0B72EC93A81FCCC26 /* Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8402C7FEA8F4E4427CEAE02AD8ECCE9F /* Alamofire-dummy.m */; };
-		AE4CF87C02C042DF13ED5B21C4FDC1E0 /* Stream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FCD7E763A2B17522430C225D6F757A /* Stream.swift */; };
-		AF021721AB2F970368E622EABFB9651F /* CVAuxiliaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1544BA9DF8D942732CA10D2868BEF495 /* CVAuxiliaryView.swift */; };
-		B218F1BF6AEF7D9295EC4850457C40C1 /* CVCalendarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B876F19C479DF4E79FF568DDB5E19A /* CVCalendarManager.swift */; };
-		B34367EF1C0015A2234F6C7FBF125196 /* AEXML-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 659C5DA3412F7AD5206727E7446DEC6E /* AEXML-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B3D4E56896D3187D07A37D1C0BB4463F /* CVCalendarMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3921E6959FA10CCA64A84BF5E36FE8BC /* CVCalendarMenuView.swift */; };
-		BA2171175CEB329626AC8C4287F870A9 /* CVSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B072B73CB3165F12C329A141185A2713 /* CVSet.swift */; };
-		BE0B0240A82684DBEFC5DFB88809FA86 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
-		BE41196F6A3903E59C3306FE3F8B43FE /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944407E22C14A462469F641BA7754D2C /* Notifications.swift */; };
-		C0DB70AB368765DC64BFB5FEA75E0696 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D69ED53058D11AFA7D590A1D66A136C /* ParameterEncoding.swift */; };
-		C68D88393AB99D8587329B61229CAA10 /* CVCalendarContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83FB4C9C183269F594C722A1523FF1B /* CVCalendarContentViewController.swift */; };
-		C6992CA742228E5F6D7FF1111F0124C7 /* AEXML.swift in Sources */ = {isa = PBXBuildFile; fileRef = E266ED5922D3B78CA291B2BEF5F4AACB /* AEXML.swift */; };
-		C7B6DD7C0456C50289A2C381DFE9FA3F /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E161CA40EEC9CCEF1AC03F890851B803 /* MultipartFormData.swift */; };
-		C8F505E2C3284B4BA389F0B4C7377A12 /* CVCalendarDayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F20273D15A5F9B01FC35DC96CBA3AE /* CVCalendarDayView.swift */; };
-		CE114C0BA0616DD8F7DA95F85B8D2E81 /* Pods-Rapids-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F6F72122047625B7883C1621CD1FDE75 /* Pods-Rapids-dummy.m */; };
-		D05AE7FA99ED4EF3966A6C64C6C05ACF /* Pods-Rapids-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 40492DDB81C0ED3C55B9064954870605 /* Pods-Rapids-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D9A86BFF9617EE2BAF83EA6D36B50B96 /* CVCalendar-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2ABE993582D2DA67215FB7EA7CA21B21 /* CVCalendar-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EFE92E8D3813DD26E78E93EEAF6D7E7E /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FEE7AD78CAF9FC3024D0ABAA620138 /* Request.swift */; };
-		F809213B24C125C576D1A8D28D242A4F /* CVCalendarViewAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B467EFE422BAB93C50468AA27A30D25 /* CVCalendarViewAppearance.swift */; };
-		F82198F34DD14753A42F4328CD5E7A6B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		00CD87A4506139F0458E7D9F3B2AC919 /* EPCalendarCell1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDFFA2F9699D4976D8D96939BBA2D22 /* EPCalendarCell1.swift */; };
+		095406039B4D371E48D08B38A2975AC8 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24439ACB66A9524D5C12A952A15F2C22 /* Error.swift */; };
+		0B65591FD4EC9C080FBDC347EF476D49 /* EPCalendarHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E373A5747C450F9BAE9F14589FD080E /* EPCalendarHeaderView.xib */; };
+		16102E4E35FAA0FC4161282FECE56469 /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D880381315B58716182A243E25CC74 /* Timeline.swift */; };
+		1CCC8052793A03ED012B0C3F1D6A8546 /* EPCalendarCell1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 906BF77199FFE53611699AF732DBFBED /* EPCalendarCell1.xib */; };
+		2D3405986FC586FA6C0A5E0B6BA7E64E /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745387C9CF8074AFEC52E25D8CB97B98 /* Validation.swift */; };
+		34CCDCA848A701466256BC2927DA8856 /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC211AE76E571016264A13B1AC5BA1C /* NetworkReachabilityManager.swift */; };
+		3EA8F215C9C1432D74E5CCA4834AA8C0 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F94E80B6DDC6E64FECE13120CF819DE /* ResponseSerialization.swift */; };
+		4081EA628AF0B73AC51FFB9D7AB3B89E /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E948EA843C0D30882C4AE23C2E9FEC9 /* Manager.swift */; };
+		438D67D809EBC2AC950710622C6D48E5 /* AEXML-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 05F19C1500791BA5E0D7DC94CF05E654 /* AEXML-dummy.m */; };
+		486C627CFD70A24ABD6591AA944A6FC8 /* EPCalendarPicker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EF30962CC0144044BCD2DA26765EC47F /* EPCalendarPicker-dummy.m */; };
+		5BC19E6E0F199276003F0AF96838BCE5 /* Upload.swift in Sources */ = {isa = PBXBuildFile; fileRef = D188748694F67B5C97C5A1548DA42972 /* Upload.swift */; };
+		5CB05FBCB32D21E194B5ECF680CB6AE0 /* Download.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A373181BAA23233F3DC9906CB06EE7 /* Download.swift */; };
+		5D8457A67972E43390F9C569DF1C808F /* Pods-RapidsTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FC1CBCBC803017306D7BE673DC616C5A /* Pods-RapidsTests-dummy.m */; };
+		62E8346F03C03E7F4D631361F325689E /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3938A534CAC70057054DB8F6ACF4A5 /* Response.swift */; };
+		647875A2D006AB11BF61A9271B54D30D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7E5AF37923BFA48D6994B9BFC6535F /* Foundation.framework */; };
+		6A42CA1CA26852DF60F79E5748490DA8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7E5AF37923BFA48D6994B9BFC6535F /* Foundation.framework */; };
+		6E5876C4AB9AA8CC9F41D45547CE1564 /* EPCalendarConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C96022729CB9260CEBBF6584928E9B /* EPCalendarConstants.swift */; };
+		74F8D0F5FE5444B09C53313E7FA91A5D /* EPCalendarPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05A003AA3DA20186EEC032C60F3FBD9 /* EPCalendarPicker.swift */; };
+		7B48852C4D848FA2DA416A98F6425869 /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4683EC7C9BD42964642DB591523CE3 /* ServerTrustPolicy.swift */; };
+		81E68242737D1F57A52B901062158E9D /* Pods-Rapids-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F6F72122047625B7883C1621CD1FDE75 /* Pods-Rapids-dummy.m */; };
+		8EB11202167FCDDF1257AAAB1D1FB244 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50115597CC796CE8D2581A6A5362BF1 /* Alamofire.swift */; };
+		9469DF81ECB494E84675969B5E13374C /* Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 705B503F9C2AA7E62E7B9E6F3CCA27B9 /* Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA314156AC500125F4078EE968DB14C6 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72FC3AF599946D8BFEA43FABFC059CF /* Result.swift */; };
+		ADF19C953CE2A7D0B72EC93A81FCCC26 /* Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C3D99E1EC2C6ABBBB18B362064817B /* Alamofire-dummy.m */; };
+		AE4CF87C02C042DF13ED5B21C4FDC1E0 /* Stream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1692446E6B290A57CD43F79AC57A47E3 /* Stream.swift */; };
+		B34367EF1C0015A2234F6C7FBF125196 /* AEXML-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B406C69678CB3033A8509BF31A4181DE /* AEXML-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B5FBE09FEEEA3E1EB0A0A10D64514BB6 /* Pods-Rapids-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 40492DDB81C0ED3C55B9064954870605 /* Pods-Rapids-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BDE521933B317671B003EE364D8F16E7 /* EPExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6691D946D596BCA560DB0D1D04603716 /* EPExtensions.swift */; };
+		BE41196F6A3903E59C3306FE3F8B43FE /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476C3506CBD4A966D2696C43B397BE33 /* Notifications.swift */; };
+		C0DB70AB368765DC64BFB5FEA75E0696 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5B84487A86E80193CC62F818EFD9A0 /* ParameterEncoding.swift */; };
+		C523FA7BC34889E4D8A0E28BC3F2D854 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7E5AF37923BFA48D6994B9BFC6535F /* Foundation.framework */; };
+		C6992CA742228E5F6D7FF1111F0124C7 /* AEXML.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0879D93F74E262A4DF74049B6FBD98F /* AEXML.swift */; };
+		C7B6DD7C0456C50289A2C381DFE9FA3F /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200E2BF8F5DFB2961F5E73ABEB064F72 /* MultipartFormData.swift */; };
+		C8C19E85B76CC11880399ADD32336175 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7E5AF37923BFA48D6994B9BFC6535F /* Foundation.framework */; };
+		C95D0CDF0C9425DD2D8C1899F759E0B3 /* Pods-RapidsTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FF88CD906DA916A051841BD047C93922 /* Pods-RapidsTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D31E83DFCD8D5E28CEE3DC2068A2906A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3B7BDF5CE5CB8F095FE12DA55D9A9BB /* UIKit.framework */; };
+		E3C6C682E98FF128634A30FFEC438787 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7E5AF37923BFA48D6994B9BFC6535F /* Foundation.framework */; };
+		EC267F0D033BC68C6DC0391448ABB94E /* EPCalendarPicker-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F0F3B90009102588F29F779DD354E094 /* EPCalendarPicker-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EFE92E8D3813DD26E78E93EEAF6D7E7E /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBFC64ED2A4CAD9CAFE43D270673D01 /* Request.swift */; };
+		F2B833CA2C58782077AC3FC1ACCC5EE0 /* EPCalendarHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB05264D203B7C497F8395C4BA60CDF /* EPCalendarHeaderView.swift */; };
+		F82198F34DD14753A42F4328CD5E7A6B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7E5AF37923BFA48D6994B9BFC6535F /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		4D7D83056409A455449F923DACACC715 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = BA14B622689766F6B8A4F42FD9DE552F;
-			remoteInfo = CVCalendar;
-		};
-		5A0C1F2E672E17D95720CBF4F54275AA /* PBXContainerItemProxy */ = {
+		58B2CA0EDFC381952B5DE7C2F4804E18 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 6B9813D7E7E5E2BAC2903B82EC58E643;
 			remoteInfo = AEXML;
 		};
-		954320C5E9B2BD6DB9425CC5759925EF /* PBXContainerItemProxy */ = {
+		7A4A0547DA69598FEC14F3B342056519 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 79C040AFDDCE1BCBF6D8B5EB0B85887F;
 			remoteInfo = Alamofire;
 		};
-		E3B4126A5345B1508D12A162E0851CF5 /* PBXContainerItemProxy */ = {
+		D878D7A45FBF51E3582BD74F6083B345 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3F4ED3136065D01037865D960C84E133;
+			remoteInfo = EPCalendarPicker;
+		};
+		DDAC96A1AB7A872B56C8A6F3BA385453 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BA14B622689766F6B8A4F42FD9DE552F;
+			remoteInfo = CVCalendar;
+		};
+		E44283106F5FF16D0CE644BAFA2C9430 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3F4ED3136065D01037865D960C84E133;
+			remoteInfo = EPCalendarPicker;
+		};
+		E9AABF836570FF0B2488928ED573825A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BA14B622689766F6B8A4F42FD9DE552F;
+			remoteInfo = CVCalendar;
+		};
+		FC682DEC2DF1B65E9628513AAD0DD084 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
@@ -101,104 +104,103 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0C5747D62316ABBCFFEBD104762E3EB9 /* CVCalendarWeekView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CVCalendarWeekView.swift; path = CVCalendar/CVCalendarWeekView.swift; sourceTree = "<group>"; };
+		05F19C1500791BA5E0D7DC94CF05E654 /* AEXML-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AEXML-dummy.m"; sourceTree = "<group>"; };
+		0908EEDD90EA4D52C9569670EFB0AE04 /* AEXML.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AEXML.xcconfig; sourceTree = "<group>"; };
 		0DA3BEAEE3EFCA65B51968502F024267 /* Pods-Rapids.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Rapids.debug.xcconfig"; sourceTree = "<group>"; };
-		0F9D3608C53A4FDECDC50947E9E907C1 /* CVCalendar-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CVCalendar-prefix.pch"; sourceTree = "<group>"; };
-		109F183488CB3E398BBB3792D67BC239 /* Pods_RapidsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RapidsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		10F20273D15A5F9B01FC35DC96CBA3AE /* CVCalendarDayView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CVCalendarDayView.swift; path = CVCalendar/CVCalendarDayView.swift; sourceTree = "<group>"; };
-		12AC3EF0CA0791D96719B1DF3C87C834 /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
-		1388013BB1445809FDFFE9FC651B3057 /* Error.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Error.swift; path = Source/Error.swift; sourceTree = "<group>"; };
-		13B876F19C479DF4E79FF568DDB5E19A /* CVCalendarManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CVCalendarManager.swift; path = CVCalendar/CVCalendarManager.swift; sourceTree = "<group>"; };
-		14D9ECE86F8286FA3A7704E073636B93 /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Source/Response.swift; sourceTree = "<group>"; };
-		1544BA9DF8D942732CA10D2868BEF495 /* CVAuxiliaryView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CVAuxiliaryView.swift; path = CVCalendar/CVAuxiliaryView.swift; sourceTree = "<group>"; };
-		170761A45963DDDB5458DB4BA0A7B3AF /* AEXML.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AEXML.xcconfig; sourceTree = "<group>"; };
-		1819D0F1F5CD172F338739EAA0972A7E /* CVCalendarViewAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CVCalendarViewAnimator.swift; path = CVCalendar/CVCalendarViewAnimator.swift; sourceTree = "<group>"; };
+		1692446E6B290A57CD43F79AC57A47E3 /* Stream.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Stream.swift; path = Source/Stream.swift; sourceTree = "<group>"; };
 		1B332CBD1D99DB7D9121CEE30E1B6D80 /* Pods-RapidsTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RapidsTests-frameworks.sh"; sourceTree = "<group>"; };
-		2517920793AAD973D87576DD6FD41F70 /* CVWeekdaySymbolType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CVWeekdaySymbolType.swift; path = CVCalendar/CVWeekdaySymbolType.swift; sourceTree = "<group>"; };
-		25FF54EA6EECDBBB8DBF777A14B2EABC /* CVCalendarTouchController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CVCalendarTouchController.swift; path = CVCalendar/CVCalendarTouchController.swift; sourceTree = "<group>"; };
-		2811FB0DD1373F3777982D0F4271038D /* CVShape.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CVShape.swift; path = CVCalendar/CVShape.swift; sourceTree = "<group>"; };
-		28FEE7AD78CAF9FC3024D0ABAA620138 /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Request.swift; sourceTree = "<group>"; };
-		2ABE993582D2DA67215FB7EA7CA21B21 /* CVCalendar-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CVCalendar-umbrella.h"; sourceTree = "<group>"; };
-		2BB686527D94998D10C838496AA1BC02 /* CVCalendarMenuViewDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CVCalendarMenuViewDelegate.swift; path = CVCalendar/CVCalendarMenuViewDelegate.swift; sourceTree = "<group>"; };
-		341E21F408ED0E1832BBBFEA62EC52D5 /* CVCalendarViewPresentationMode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CVCalendarViewPresentationMode.swift; path = CVCalendar/CVCalendarViewPresentationMode.swift; sourceTree = "<group>"; };
-		35176886EDA7B59610AF3F4CCFE24691 /* CVCalendarMonthContentViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CVCalendarMonthContentViewController.swift; path = CVCalendar/CVCalendarMonthContentViewController.swift; sourceTree = "<group>"; };
-		35D135A8A7E7B5EF8ED671CF20E1960C /* CVSelectionType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CVSelectionType.swift; path = CVCalendar/CVSelectionType.swift; sourceTree = "<group>"; };
-		38CA52BB32C905B7A8DDD88FC5838EE0 /* Download.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Download.swift; path = Source/Download.swift; sourceTree = "<group>"; };
-		3921E6959FA10CCA64A84BF5E36FE8BC /* CVCalendarMenuView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CVCalendarMenuView.swift; path = CVCalendar/CVCalendarMenuView.swift; sourceTree = "<group>"; };
-		3995504B2F46181641ED5B74DD9A3A8F /* CVRange.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CVRange.swift; path = CVCalendar/CVRange.swift; sourceTree = "<group>"; };
-		3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		4026AD136FFA21E94E55880B1AD64D47 /* Alamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-prefix.pch"; sourceTree = "<group>"; };
+		200E2BF8F5DFB2961F5E73ABEB064F72 /* MultipartFormData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartFormData.swift; path = Source/MultipartFormData.swift; sourceTree = "<group>"; };
+		24439ACB66A9524D5C12A952A15F2C22 /* Error.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Error.swift; path = Source/Error.swift; sourceTree = "<group>"; };
+		264129D011820C86F4298CF6ED566379 /* EPCalendarPicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EPCalendarPicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BB8383B970272AFAB84F8E867C873E9 /* AEXML.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = AEXML.modulemap; sourceTree = "<group>"; };
+		2C9488D44726D87CF17F47C4652665E4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		34D880381315B58716182A243E25CC74 /* Timeline.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Timeline.swift; path = Source/Timeline.swift; sourceTree = "<group>"; };
 		40492DDB81C0ED3C55B9064954870605 /* Pods-Rapids-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Rapids-umbrella.h"; sourceTree = "<group>"; };
-		45CAC8F006BB2A92B3C40D82849CD6C2 /* CVCalendarViewDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CVCalendarViewDelegate.swift; path = CVCalendar/CVCalendarViewDelegate.swift; sourceTree = "<group>"; };
-		4709C6A78C91C98CC37F69532AEC37DA /* CVCalendar.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CVCalendar.xcconfig; sourceTree = "<group>"; };
-		4813BA63811CEDCD9B3E9B96C197E8F3 /* CVCalendarViewAppearanceDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CVCalendarViewAppearanceDelegate.swift; path = CVCalendar/CVCalendarViewAppearanceDelegate.swift; sourceTree = "<group>"; };
+		476C3506CBD4A966D2696C43B397BE33 /* Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Notifications.swift; path = Source/Notifications.swift; sourceTree = "<group>"; };
+		49A373181BAA23233F3DC9906CB06EE7 /* Download.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Download.swift; path = Source/Download.swift; sourceTree = "<group>"; };
 		4A51C89B34DCA9AF2DECDE1DFC34A19C /* Pods-Rapids-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Rapids-frameworks.sh"; sourceTree = "<group>"; };
-		4F474A54CEA710A61E6246769C922BC7 /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
+		4FB05264D203B7C497F8395C4BA60CDF /* EPCalendarHeaderView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EPCalendarHeaderView.swift; path = EPCalendar/EPCalendarPicker/EPCalendarHeaderView.swift; sourceTree = "<group>"; };
 		52F7111B6214D1046691BDDC88B13B02 /* Pods-Rapids-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Rapids-resources.sh"; sourceTree = "<group>"; };
 		56C1E097D29632136B6B770738FB975D /* Pods-Rapids.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Rapids.release.xcconfig"; sourceTree = "<group>"; };
-		5A4DB4B6311391FBF7562B5A095B4022 /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Source/Result.swift; sourceTree = "<group>"; };
-		5D69ED53058D11AFA7D590A1D66A136C /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/ParameterEncoding.swift; sourceTree = "<group>"; };
-		5EB4DA9B0B98A7771DDE4E5AFEC60AFF /* AEXML.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = AEXML.modulemap; sourceTree = "<group>"; };
-		5F2C03CF92D061740AF658387B5F75A2 /* CVCalendar-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CVCalendar-dummy.m"; sourceTree = "<group>"; };
-		61476F9065CDB9CD0CD04F35C2095C6A /* Timeline.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Timeline.swift; path = Source/Timeline.swift; sourceTree = "<group>"; };
-		62BC8293B9DCC09287476F2BF5435836 /* CVDate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CVDate.swift; path = CVCalendar/CVDate.swift; sourceTree = "<group>"; };
+		5D4683EC7C9BD42964642DB591523CE3 /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustPolicy.swift; path = Source/ServerTrustPolicy.swift; sourceTree = "<group>"; };
+		5EDFFA2F9699D4976D8D96939BBA2D22 /* EPCalendarCell1.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EPCalendarCell1.swift; path = EPCalendar/EPCalendarPicker/EPCalendarCell1.swift; sourceTree = "<group>"; };
+		5F94E80B6DDC6E64FECE13120CF819DE /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/ResponseSerialization.swift; sourceTree = "<group>"; };
+		61C96022729CB9260CEBBF6584928E9B /* EPCalendarConstants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EPCalendarConstants.swift; path = EPCalendar/EPCalendarPicker/EPCalendarConstants.swift; sourceTree = "<group>"; };
 		65126A5800C30F51AA2B1F29ED9A3153 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		659C5DA3412F7AD5206727E7446DEC6E /* AEXML-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AEXML-umbrella.h"; sourceTree = "<group>"; };
-		6B467EFE422BAB93C50468AA27A30D25 /* CVCalendarViewAppearance.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CVCalendarViewAppearance.swift; path = CVCalendar/CVCalendarViewAppearance.swift; sourceTree = "<group>"; };
+		6691D946D596BCA560DB0D1D04603716 /* EPExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EPExtensions.swift; path = EPCalendar/EPCalendarPicker/EPExtensions.swift; sourceTree = "<group>"; };
+		6E7E5AF37923BFA48D6994B9BFC6535F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		705B503F9C2AA7E62E7B9E6F3CCA27B9 /* Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-umbrella.h"; sourceTree = "<group>"; };
 		713D45DE24B943063BD5C676BF16CEED /* Pods-RapidsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RapidsTests.release.xcconfig"; sourceTree = "<group>"; };
-		75FCD7E763A2B17522430C225D6F757A /* Stream.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Stream.swift; path = Source/Stream.swift; sourceTree = "<group>"; };
+		745387C9CF8074AFEC52E25D8CB97B98 /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
 		785C98F523CB1D1ADE2661E3C69CBF89 /* Pods-RapidsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RapidsTests.debug.xcconfig"; sourceTree = "<group>"; };
-		7CE6D2D395CB1A117F15AEB906251822 /* Manager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Manager.swift; path = Source/Manager.swift; sourceTree = "<group>"; };
-		80865DE7EBE048286C26D07D681AD5EF /* Upload.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Upload.swift; path = Source/Upload.swift; sourceTree = "<group>"; };
-		8402C7FEA8F4E4427CEAE02AD8ECCE9F /* Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-dummy.m"; sourceTree = "<group>"; };
-		84BFB5729F5B2712102FC11859167797 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		84F400B560D55C50865ECDAE454123EC /* CVCalendar.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = CVCalendar.modulemap; sourceTree = "<group>"; };
-		85EA1DEE6D5202F9DB3C8D3ED732E4C5 /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkReachabilityManager.swift; path = Source/NetworkReachabilityManager.swift; sourceTree = "<group>"; };
-		875F2CEC3F76AE6F0D59C8022E4CDD24 /* CVCalendarWeekday.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CVCalendarWeekday.swift; path = CVCalendar/CVCalendarWeekday.swift; sourceTree = "<group>"; };
-		8B91684C192E84A8588E07B1A429E084 /* AEXML-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AEXML-prefix.pch"; sourceTree = "<group>"; };
-		924B9DDD03EEC81526A4200C41C74745 /* CVCalendarMonthView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CVCalendarMonthView.swift; path = CVCalendar/CVCalendarMonthView.swift; sourceTree = "<group>"; };
+		7B0960EE2DC55127A91E8E680245AA9B /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Alamofire.modulemap; sourceTree = "<group>"; };
+		7BBFC64ED2A4CAD9CAFE43D270673D01 /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Request.swift; sourceTree = "<group>"; };
+		7E373A5747C450F9BAE9F14589FD080E /* EPCalendarHeaderView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = EPCalendarHeaderView.xib; path = EPCalendar/EPCalendarPicker/EPCalendarHeaderView.xib; sourceTree = "<group>"; };
+		7EC211AE76E571016264A13B1AC5BA1C /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkReachabilityManager.swift; path = Source/NetworkReachabilityManager.swift; sourceTree = "<group>"; };
+		883DA7BEE086465929FB5BF7B7AE065C /* Alamofire.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.xcconfig; sourceTree = "<group>"; };
+		8E948EA843C0D30882C4AE23C2E9FEC9 /* Manager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Manager.swift; path = Source/Manager.swift; sourceTree = "<group>"; };
+		906BF77199FFE53611699AF732DBFBED /* EPCalendarCell1.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = EPCalendarCell1.xib; path = EPCalendar/EPCalendarPicker/EPCalendarCell1.xib; sourceTree = "<group>"; };
 		940B6CDE3B7D4AA66904816A4E440FB3 /* Pods-RapidsTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RapidsTests-resources.sh"; sourceTree = "<group>"; };
-		944407E22C14A462469F641BA7754D2C /* Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Notifications.swift; path = Source/Notifications.swift; sourceTree = "<group>"; };
 		96136E341D36C8A7D38FB47E35336341 /* Pods-RapidsTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-RapidsTests.modulemap"; sourceTree = "<group>"; };
-		9679601F755DDDF84A870DB02F4ED565 /* CVScrollDirection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CVScrollDirection.swift; path = CVCalendar/CVScrollDirection.swift; sourceTree = "<group>"; };
 		97289834CF3EFDE44141E8E2333B6C94 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9F2CF5B5E82EFC0D85A44E039009C69C /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustPolicy.swift; path = Source/ServerTrustPolicy.swift; sourceTree = "<group>"; };
-		A3D741DF0F0563A5F064C510CA03FF8B /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/ResponseSerialization.swift; sourceTree = "<group>"; };
-		A7E964B9C89A6AAF193697BF9A31324C /* Alamofire.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.xcconfig; sourceTree = "<group>"; };
-		AAD626840BBAC51DC704AA2E6F6B679D /* Pods_Rapids.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rapids.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BC4FCBEE7D53DF48022FA8465720AEA /* CVCalendar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CVCalendar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A50115597CC796CE8D2581A6A5362BF1 /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
 		ADD6F47E6BFCF326A7F76255844DFE47 /* Pods-RapidsTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RapidsTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		AF62C8A48B2F08150982BC8C0A275107 /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Alamofire.modulemap; sourceTree = "<group>"; };
-		B03C7EF233063D20100EC56E69FEE02B /* CVCalendarWeekContentViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CVCalendarWeekContentViewController.swift; path = CVCalendar/CVCalendarWeekContentViewController.swift; sourceTree = "<group>"; };
-		B072B73CB3165F12C329A141185A2713 /* CVSet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CVSet.swift; path = CVCalendar/CVSet.swift; sourceTree = "<group>"; };
+		AF1FC5DEEA6527D5F65FBE0847572780 /* EPCalendarPicker.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = EPCalendarPicker.xcconfig; sourceTree = "<group>"; };
 		B39B0B0469E693107566F782D73F8EC5 /* Pods-Rapids.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Rapids.modulemap"; sourceTree = "<group>"; };
+		B406C69678CB3033A8509BF31A4181DE /* AEXML-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AEXML-umbrella.h"; sourceTree = "<group>"; };
+		B419DD22206DD2F8B5233E7EFAA0DCC8 /* AEXML-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AEXML-prefix.pch"; sourceTree = "<group>"; };
+		B72FC3AF599946D8BFEA43FABFC059CF /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Source/Result.swift; sourceTree = "<group>"; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		C60AFD2BBA7C8DDDE65D839D75E2F93D /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D0D9D9EB8FA8AF46652539FFAAD9F873 /* Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-umbrella.h"; sourceTree = "<group>"; };
+		BC7B918FB820F2ABC87962494B418283 /* Alamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-prefix.pch"; sourceTree = "<group>"; };
+		C3B7BDF5CE5CB8F095FE12DA55D9A9BB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		CA464D2A07632747566C4DDF744D01D1 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D05A003AA3DA20186EEC032C60F3FBD9 /* EPCalendarPicker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EPCalendarPicker.swift; path = EPCalendar/EPCalendarPicker/EPCalendarPicker.swift; sourceTree = "<group>"; };
+		D188748694F67B5C97C5A1548DA42972 /* Upload.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Upload.swift; path = Source/Upload.swift; sourceTree = "<group>"; };
+		D275DCB84791A0CA0B9C8AB967556131 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D2BAC5A2C30DC92A596909AB39730D19 /* Pods-Rapids-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Rapids-acknowledgements.plist"; sourceTree = "<group>"; };
 		D51449975FBD5CB648637B75AD5F624F /* Pods-RapidsTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-RapidsTests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		DA14D0D7D73937913EE9EA1F9ACF8F1A /* AEXML.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AEXML.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DD1AC3259DB84300C7A1E431A44C543D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DE09D47BC8490A769DF1E99461DAB531 /* CVCalendar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CVCalendar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E161CA40EEC9CCEF1AC03F890851B803 /* MultipartFormData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartFormData.swift; path = Source/MultipartFormData.swift; sourceTree = "<group>"; };
-		E266ED5922D3B78CA291B2BEF5F4AACB /* AEXML.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AEXML.swift; path = Source/AEXML.swift; sourceTree = "<group>"; };
+		DA0F9E4AA1646BC6D57CEE34F47266FC /* Pods_Rapids.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rapids.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF3165B877511BDA6F5468BBF3CFB967 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E0879D93F74E262A4DF74049B6FBD98F /* AEXML.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AEXML.swift; path = Source/AEXML.swift; sourceTree = "<group>"; };
+		E6C3D99E1EC2C6ABBBB18B362064817B /* Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-dummy.m"; sourceTree = "<group>"; };
 		E77DE4462AD4F04D3937A86184F4A919 /* Pods-Rapids-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Rapids-acknowledgements.markdown"; sourceTree = "<group>"; };
-		E8901C2452215A32BB02653EB7C0FC55 /* AEXML-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AEXML-dummy.m"; sourceTree = "<group>"; };
-		F3DDB65D397B1DB0FC90C166D1D9C9A9 /* CVCalendarViewAnimatorDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CVCalendarViewAnimatorDelegate.swift; path = CVCalendar/CVCalendarViewAnimatorDelegate.swift; sourceTree = "<group>"; };
-		F4BB69EE37EA868B111D849051B59A4B /* CVCalendarView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CVCalendarView.swift; path = CVCalendar/CVCalendarView.swift; sourceTree = "<group>"; };
-		F544A1E2E55B1C7EC1C75FCF873070D8 /* CVCalendarDayViewControlCoordinator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CVCalendarDayViewControlCoordinator.swift; path = CVCalendar/CVCalendarDayViewControlCoordinator.swift; sourceTree = "<group>"; };
+		EF30962CC0144044BCD2DA26765EC47F /* EPCalendarPicker-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "EPCalendarPicker-dummy.m"; sourceTree = "<group>"; };
+		EF4F210AEB4E7271ED460EE5237DADA5 /* EPCalendarPicker-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EPCalendarPicker-prefix.pch"; sourceTree = "<group>"; };
+		EFD5E3BCDCBCC5BA5E9F032E0788CDD0 /* AEXML.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AEXML.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0F3B90009102588F29F779DD354E094 /* EPCalendarPicker-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EPCalendarPicker-umbrella.h"; sourceTree = "<group>"; };
 		F6F72122047625B7883C1621CD1FDE75 /* Pods-Rapids-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Rapids-dummy.m"; sourceTree = "<group>"; };
-		F83FB4C9C183269F594C722A1523FF1B /* CVCalendarContentViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CVCalendarContentViewController.swift; path = CVCalendar/CVCalendarContentViewController.swift; sourceTree = "<group>"; };
+		F75398FA9C2DB56CC87F94BFE0D1B94D /* Pods_RapidsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RapidsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC1CBCBC803017306D7BE673DC616C5A /* Pods-RapidsTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-RapidsTests-dummy.m"; sourceTree = "<group>"; };
-		FD84CE070576C7A81306F4B4838A4BC0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC65EE1CD920798C975353D35AC37F65 /* EPCalendarPicker.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = EPCalendarPicker.modulemap; sourceTree = "<group>"; };
+		FD5B84487A86E80193CC62F818EFD9A0 /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/ParameterEncoding.swift; sourceTree = "<group>"; };
+		FF3938A534CAC70057054DB8F6ACF4A5 /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Source/Response.swift; sourceTree = "<group>"; };
 		FF88CD906DA916A051841BD047C93922 /* Pods-RapidsTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-RapidsTests-umbrella.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		211255B4CEEA51DBD0686B86EBB15C4C /* Frameworks */ = {
+		4E9D3F8F2B8D53FEA05E0B6032817483 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D9742399F82BBE355D278CCF4A43CB6 /* Foundation.framework in Frameworks */,
+				C8C19E85B76CC11880399ADD32336175 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5384D668EC2A3AE83D46FDBEA26A78BE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C523FA7BC34889E4D8A0E28BC3F2D854 /* Foundation.framework in Frameworks */,
+				D31E83DFCD8D5E28CEE3DC2068A2906A /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B5808D392EE0B3145659ECFB5EB9329 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3C6C682E98FF128634A30FFEC438787 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,14 +209,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F82198F34DD14753A42F4328CD5E7A6B /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B8258630F2B1F827241DD61C806862EB /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BE0B0240A82684DBEFC5DFB88809FA86 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,28 +231,67 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3B7A66B8FB0A08ACBB2B6884F48EF289 /* Pods */ = {
+		0398BBD4D3A75AC4C5ADB60EA6A11393 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				99541E6D21CF0612ABEDD1170CAAEC44 /* AEXML */,
-				E9FD32174B072368A6E9D5A848BCD154 /* Alamofire */,
-				CC37D30C5B4EF5B69946119CBB5DE321 /* CVCalendar */,
+				7B0960EE2DC55127A91E8E680245AA9B /* Alamofire.modulemap */,
+				883DA7BEE086465929FB5BF7B7AE065C /* Alamofire.xcconfig */,
+				E6C3D99E1EC2C6ABBBB18B362064817B /* Alamofire-dummy.m */,
+				BC7B918FB820F2ABC87962494B418283 /* Alamofire-prefix.pch */,
+				705B503F9C2AA7E62E7B9E6F3CCA27B9 /* Alamofire-umbrella.h */,
+				CA464D2A07632747566C4DDF744D01D1 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Alamofire";
+			sourceTree = "<group>";
+		};
+		18340F12838DEE43507667CC74401EB1 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6E7E5AF37923BFA48D6994B9BFC6535F /* Foundation.framework */,
+				C3B7BDF5CE5CB8F095FE12DA55D9A9BB /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		27A568DA31FA16712AC9867DD3BDFD9A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3B6EABB475B7195E902CAC60C32BB3A4 /* AEXML */,
+				FC874304A4547C3D94D3B71E3F67FF85 /* Alamofire */,
+				F49045C7B598F9638BF2FA7DFBBB57E5 /* EPCalendarPicker */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		6207C87B4F9577CFD2C32E7C35A75592 /* Support Files */ = {
+		3B6EABB475B7195E902CAC60C32BB3A4 /* AEXML */ = {
 			isa = PBXGroup;
 			children = (
-				AF62C8A48B2F08150982BC8C0A275107 /* Alamofire.modulemap */,
-				A7E964B9C89A6AAF193697BF9A31324C /* Alamofire.xcconfig */,
-				8402C7FEA8F4E4427CEAE02AD8ECCE9F /* Alamofire-dummy.m */,
-				4026AD136FFA21E94E55880B1AD64D47 /* Alamofire-prefix.pch */,
-				D0D9D9EB8FA8AF46652539FFAAD9F873 /* Alamofire-umbrella.h */,
-				84BFB5729F5B2712102FC11859167797 /* Info.plist */,
+				E0879D93F74E262A4DF74049B6FBD98F /* AEXML.swift */,
+				91CD86F9231EB086D0A47CD7A6F1AA28 /* Support Files */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/Alamofire";
+			path = AEXML;
+			sourceTree = "<group>";
+		};
+		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				18340F12838DEE43507667CC74401EB1 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		434684D622481632668FB0DECF0EB6F3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EFD5E3BCDCBCC5BA5E9F032E0788CDD0 /* AEXML.framework */,
+				DF3165B877511BDA6F5468BBF3CFB967 /* Alamofire.framework */,
+				9BC4FCBEE7D53DF48022FA8465720AEA /* CVCalendar.framework */,
+				264129D011820C86F4298CF6ED566379 /* EPCalendarPicker.framework */,
+				DA0F9E4AA1646BC6D57CEE34F47266FC /* Pods_Rapids.framework */,
+				F75398FA9C2DB56CC87F94BFE0D1B94D /* Pods_RapidsTests.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		72FE0821EE99AED88CAD1CC96CCB13FE /* Pods-Rapids */ = {
@@ -283,22 +316,36 @@
 			isa = PBXGroup;
 			children = (
 				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
-				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				3B7A66B8FB0A08ACBB2B6884F48EF289 /* Pods */,
-				E09F4AE9D52D9C1D70BDAA4176EDFC8B /* Products */,
+				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
+				27A568DA31FA16712AC9867DD3BDFD9A /* Pods */,
+				434684D622481632668FB0DECF0EB6F3 /* Products */,
 				94721FDEFBB6B124BE132F1DEC86A65E /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		93D77520C173CD9FF2EDCC9BE680E1F2 /* Support Files */ = {
+		8339B1F61806552FEFE15B94E5665EF5 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				5EB4DA9B0B98A7771DDE4E5AFEC60AFF /* AEXML.modulemap */,
-				170761A45963DDDB5458DB4BA0A7B3AF /* AEXML.xcconfig */,
-				E8901C2452215A32BB02653EB7C0FC55 /* AEXML-dummy.m */,
-				8B91684C192E84A8588E07B1A429E084 /* AEXML-prefix.pch */,
-				659C5DA3412F7AD5206727E7446DEC6E /* AEXML-umbrella.h */,
-				DD1AC3259DB84300C7A1E431A44C543D /* Info.plist */,
+				FC65EE1CD920798C975353D35AC37F65 /* EPCalendarPicker.modulemap */,
+				AF1FC5DEEA6527D5F65FBE0847572780 /* EPCalendarPicker.xcconfig */,
+				EF30962CC0144044BCD2DA26765EC47F /* EPCalendarPicker-dummy.m */,
+				EF4F210AEB4E7271ED460EE5237DADA5 /* EPCalendarPicker-prefix.pch */,
+				F0F3B90009102588F29F779DD354E094 /* EPCalendarPicker-umbrella.h */,
+				2C9488D44726D87CF17F47C4652665E4 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/EPCalendarPicker";
+			sourceTree = "<group>";
+		};
+		91CD86F9231EB086D0A47CD7A6F1AA28 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				2BB8383B970272AFAB84F8E867C873E9 /* AEXML.modulemap */,
+				0908EEDD90EA4D52C9569670EFB0AE04 /* AEXML.xcconfig */,
+				05F19C1500791BA5E0D7DC94CF05E654 /* AEXML-dummy.m */,
+				B419DD22206DD2F8B5233E7EFAA0DCC8 /* AEXML-prefix.pch */,
+				B406C69678CB3033A8509BF31A4181DE /* AEXML-umbrella.h */,
+				D275DCB84791A0CA0B9C8AB967556131 /* Info.plist */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/AEXML";
@@ -311,29 +358,6 @@
 				B401E494DA1CD88A6F78843930D9A4B9 /* Pods-RapidsTests */,
 			);
 			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		99541E6D21CF0612ABEDD1170CAAEC44 /* AEXML */ = {
-			isa = PBXGroup;
-			children = (
-				E266ED5922D3B78CA291B2BEF5F4AACB /* AEXML.swift */,
-				93D77520C173CD9FF2EDCC9BE680E1F2 /* Support Files */,
-			);
-			path = AEXML;
-			sourceTree = "<group>";
-		};
-		A57F252560A951ACFD29A51C46419FFB /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				84F400B560D55C50865ECDAE454123EC /* CVCalendar.modulemap */,
-				4709C6A78C91C98CC37F69532AEC37DA /* CVCalendar.xcconfig */,
-				5F2C03CF92D061740AF658387B5F75A2 /* CVCalendar-dummy.m */,
-				0F9D3608C53A4FDECDC50947E9E907C1 /* CVCalendar-prefix.pch */,
-				2ABE993582D2DA67215FB7EA7CA21B21 /* CVCalendar-umbrella.h */,
-				FD84CE070576C7A81306F4B4838A4BC0 /* Info.plist */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/CVCalendar";
 			sourceTree = "<group>";
 		};
 		B401E494DA1CD88A6F78843930D9A4B9 /* Pods-RapidsTests */ = {
@@ -354,90 +378,50 @@
 			path = "Target Support Files/Pods-RapidsTests";
 			sourceTree = "<group>";
 		};
-		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+		F49045C7B598F9638BF2FA7DFBBB57E5 /* EPCalendarPicker */ = {
 			isa = PBXGroup;
 			children = (
-				BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */,
+				5EDFFA2F9699D4976D8D96939BBA2D22 /* EPCalendarCell1.swift */,
+				61C96022729CB9260CEBBF6584928E9B /* EPCalendarConstants.swift */,
+				4FB05264D203B7C497F8395C4BA60CDF /* EPCalendarHeaderView.swift */,
+				D05A003AA3DA20186EEC032C60F3FBD9 /* EPCalendarPicker.swift */,
+				6691D946D596BCA560DB0D1D04603716 /* EPExtensions.swift */,
+				F543CA5B96D9888E9281D4A5F51FE638 /* Resources */,
+				8339B1F61806552FEFE15B94E5665EF5 /* Support Files */,
 			);
-			name = Frameworks;
+			path = EPCalendarPicker;
 			sourceTree = "<group>";
 		};
-		BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */ = {
+		F543CA5B96D9888E9281D4A5F51FE638 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */,
+				906BF77199FFE53611699AF732DBFBED /* EPCalendarCell1.xib */,
+				7E373A5747C450F9BAE9F14589FD080E /* EPCalendarHeaderView.xib */,
 			);
-			name = iOS;
+			name = Resources;
 			sourceTree = "<group>";
 		};
-		CC37D30C5B4EF5B69946119CBB5DE321 /* CVCalendar */ = {
+		FC874304A4547C3D94D3B71E3F67FF85 /* Alamofire */ = {
 			isa = PBXGroup;
 			children = (
-				1544BA9DF8D942732CA10D2868BEF495 /* CVAuxiliaryView.swift */,
-				F83FB4C9C183269F594C722A1523FF1B /* CVCalendarContentViewController.swift */,
-				10F20273D15A5F9B01FC35DC96CBA3AE /* CVCalendarDayView.swift */,
-				F544A1E2E55B1C7EC1C75FCF873070D8 /* CVCalendarDayViewControlCoordinator.swift */,
-				13B876F19C479DF4E79FF568DDB5E19A /* CVCalendarManager.swift */,
-				3921E6959FA10CCA64A84BF5E36FE8BC /* CVCalendarMenuView.swift */,
-				2BB686527D94998D10C838496AA1BC02 /* CVCalendarMenuViewDelegate.swift */,
-				35176886EDA7B59610AF3F4CCFE24691 /* CVCalendarMonthContentViewController.swift */,
-				924B9DDD03EEC81526A4200C41C74745 /* CVCalendarMonthView.swift */,
-				25FF54EA6EECDBBB8DBF777A14B2EABC /* CVCalendarTouchController.swift */,
-				F4BB69EE37EA868B111D849051B59A4B /* CVCalendarView.swift */,
-				1819D0F1F5CD172F338739EAA0972A7E /* CVCalendarViewAnimator.swift */,
-				F3DDB65D397B1DB0FC90C166D1D9C9A9 /* CVCalendarViewAnimatorDelegate.swift */,
-				6B467EFE422BAB93C50468AA27A30D25 /* CVCalendarViewAppearance.swift */,
-				4813BA63811CEDCD9B3E9B96C197E8F3 /* CVCalendarViewAppearanceDelegate.swift */,
-				45CAC8F006BB2A92B3C40D82849CD6C2 /* CVCalendarViewDelegate.swift */,
-				341E21F408ED0E1832BBBFEA62EC52D5 /* CVCalendarViewPresentationMode.swift */,
-				B03C7EF233063D20100EC56E69FEE02B /* CVCalendarWeekContentViewController.swift */,
-				875F2CEC3F76AE6F0D59C8022E4CDD24 /* CVCalendarWeekday.swift */,
-				0C5747D62316ABBCFFEBD104762E3EB9 /* CVCalendarWeekView.swift */,
-				62BC8293B9DCC09287476F2BF5435836 /* CVDate.swift */,
-				3995504B2F46181641ED5B74DD9A3A8F /* CVRange.swift */,
-				9679601F755DDDF84A870DB02F4ED565 /* CVScrollDirection.swift */,
-				35D135A8A7E7B5EF8ED671CF20E1960C /* CVSelectionType.swift */,
-				B072B73CB3165F12C329A141185A2713 /* CVSet.swift */,
-				2811FB0DD1373F3777982D0F4271038D /* CVShape.swift */,
-				2517920793AAD973D87576DD6FD41F70 /* CVWeekdaySymbolType.swift */,
-				A57F252560A951ACFD29A51C46419FFB /* Support Files */,
-			);
-			path = CVCalendar;
-			sourceTree = "<group>";
-		};
-		E09F4AE9D52D9C1D70BDAA4176EDFC8B /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				DA14D0D7D73937913EE9EA1F9ACF8F1A /* AEXML.framework */,
-				C60AFD2BBA7C8DDDE65D839D75E2F93D /* Alamofire.framework */,
-				DE09D47BC8490A769DF1E99461DAB531 /* CVCalendar.framework */,
-				AAD626840BBAC51DC704AA2E6F6B679D /* Pods_Rapids.framework */,
-				109F183488CB3E398BBB3792D67BC239 /* Pods_RapidsTests.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		E9FD32174B072368A6E9D5A848BCD154 /* Alamofire */ = {
-			isa = PBXGroup;
-			children = (
-				12AC3EF0CA0791D96719B1DF3C87C834 /* Alamofire.swift */,
-				38CA52BB32C905B7A8DDD88FC5838EE0 /* Download.swift */,
-				1388013BB1445809FDFFE9FC651B3057 /* Error.swift */,
-				7CE6D2D395CB1A117F15AEB906251822 /* Manager.swift */,
-				E161CA40EEC9CCEF1AC03F890851B803 /* MultipartFormData.swift */,
-				85EA1DEE6D5202F9DB3C8D3ED732E4C5 /* NetworkReachabilityManager.swift */,
-				944407E22C14A462469F641BA7754D2C /* Notifications.swift */,
-				5D69ED53058D11AFA7D590A1D66A136C /* ParameterEncoding.swift */,
-				28FEE7AD78CAF9FC3024D0ABAA620138 /* Request.swift */,
-				14D9ECE86F8286FA3A7704E073636B93 /* Response.swift */,
-				A3D741DF0F0563A5F064C510CA03FF8B /* ResponseSerialization.swift */,
-				5A4DB4B6311391FBF7562B5A095B4022 /* Result.swift */,
-				9F2CF5B5E82EFC0D85A44E039009C69C /* ServerTrustPolicy.swift */,
-				75FCD7E763A2B17522430C225D6F757A /* Stream.swift */,
-				61476F9065CDB9CD0CD04F35C2095C6A /* Timeline.swift */,
-				80865DE7EBE048286C26D07D681AD5EF /* Upload.swift */,
-				4F474A54CEA710A61E6246769C922BC7 /* Validation.swift */,
-				6207C87B4F9577CFD2C32E7C35A75592 /* Support Files */,
+				A50115597CC796CE8D2581A6A5362BF1 /* Alamofire.swift */,
+				49A373181BAA23233F3DC9906CB06EE7 /* Download.swift */,
+				24439ACB66A9524D5C12A952A15F2C22 /* Error.swift */,
+				8E948EA843C0D30882C4AE23C2E9FEC9 /* Manager.swift */,
+				200E2BF8F5DFB2961F5E73ABEB064F72 /* MultipartFormData.swift */,
+				7EC211AE76E571016264A13B1AC5BA1C /* NetworkReachabilityManager.swift */,
+				476C3506CBD4A966D2696C43B397BE33 /* Notifications.swift */,
+				FD5B84487A86E80193CC62F818EFD9A0 /* ParameterEncoding.swift */,
+				7BBFC64ED2A4CAD9CAFE43D270673D01 /* Request.swift */,
+				FF3938A534CAC70057054DB8F6ACF4A5 /* Response.swift */,
+				5F94E80B6DDC6E64FECE13120CF819DE /* ResponseSerialization.swift */,
+				B72FC3AF599946D8BFEA43FABFC059CF /* Result.swift */,
+				5D4683EC7C9BD42964642DB591523CE3 /* ServerTrustPolicy.swift */,
+				1692446E6B290A57CD43F79AC57A47E3 /* Stream.swift */,
+				34D880381315B58716182A243E25CC74 /* Timeline.swift */,
+				D188748694F67B5C97C5A1548DA42972 /* Upload.swift */,
+				745387C9CF8074AFEC52E25D8CB97B98 /* Validation.swift */,
+				0398BBD4D3A75AC4C5ADB60EA6A11393 /* Support Files */,
 			);
 			path = Alamofire;
 			sourceTree = "<group>";
@@ -445,6 +429,22 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		04557A2B394DD8D1C6CA5949622904F3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C95D0CDF0C9425DD2D8C1899F759E0B3 /* Pods-RapidsTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		125465DC4B199D891178A48463227CD8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC267F0D033BC68C6DC0391448ABB94E /* EPCalendarPicker-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		48AEA27116225B71FAED7900D193A195 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -453,27 +453,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BE3B61706866AD41A12B67A559DFB627 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D05AE7FA99ED4EF3966A6C64C6C05ACF /* Pods-Rapids-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BFE5273A42D113B90A60B33249BA1D1A /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A28551B81C776683877C518EB783F4C3 /* Pods-RapidsTests-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		CEE10F1B81EC5F9AF236789B9461A5E5 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D9A86BFF9617EE2BAF83EA6D36B50B96 /* CVCalendar-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EEB80A11E21FA7FA7D8D797E5324111F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5FBE09FEEEA3E1EB0A0A10D64514BB6 /* Pods-Rapids-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -488,42 +479,22 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		30A9BA4553D863F046F484B25C9938F5 /* Pods-Rapids */ = {
+		3F4ED3136065D01037865D960C84E133 /* EPCalendarPicker */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E573A005E0F5C512C8A3391600C913DB /* Build configuration list for PBXNativeTarget "Pods-Rapids" */;
+			buildConfigurationList = DF915CD625EFB50092D616DD93C1434E /* Build configuration list for PBXNativeTarget "EPCalendarPicker" */;
 			buildPhases = (
-				50F6CE215D856BEB7D47F84F1A567039 /* Sources */,
-				211255B4CEEA51DBD0686B86EBB15C4C /* Frameworks */,
-				BE3B61706866AD41A12B67A559DFB627 /* Headers */,
+				D54C4D9CB12848D4D38B61713BA35F23 /* Sources */,
+				5384D668EC2A3AE83D46FDBEA26A78BE /* Frameworks */,
+				D63811F941AB6504B885CDD4C396BAB6 /* Resources */,
+				125465DC4B199D891178A48463227CD8 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				173922B35C8D6026D75070103EDED57E /* PBXTargetDependency */,
-				671A28F38DB52DDD87D3EA3158398A5C /* PBXTargetDependency */,
-				DE9F62D49923849FF4790F4FB906ECAC /* PBXTargetDependency */,
 			);
-			name = "Pods-Rapids";
-			productName = "Pods-Rapids";
-			productReference = AAD626840BBAC51DC704AA2E6F6B679D /* Pods_Rapids.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		4151A0A8F2AD34F7749B6B1FF80BD8D2 /* Pods-RapidsTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 11665FC1E2F6593DD9F3FBDF1F018F37 /* Build configuration list for PBXNativeTarget "Pods-RapidsTests" */;
-			buildPhases = (
-				4557001E9D0BDD710267DE2633812C93 /* Sources */,
-				B8258630F2B1F827241DD61C806862EB /* Frameworks */,
-				BFE5273A42D113B90A60B33249BA1D1A /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				AA74365DA323D6D9346F8BA611553628 /* PBXTargetDependency */,
-			);
-			name = "Pods-RapidsTests";
-			productName = "Pods-RapidsTests";
-			productReference = 109F183488CB3E398BBB3792D67BC239 /* Pods_RapidsTests.framework */;
+			name = EPCalendarPicker;
+			productName = EPCalendarPicker;
+			productReference = 264129D011820C86F4298CF6ED566379 /* EPCalendarPicker.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		6B9813D7E7E5E2BAC2903B82EC58E643 /* AEXML */ = {
@@ -540,7 +511,27 @@
 			);
 			name = AEXML;
 			productName = AEXML;
-			productReference = DA14D0D7D73937913EE9EA1F9ACF8F1A /* AEXML.framework */;
+			productReference = EFD5E3BCDCBCC5BA5E9F032E0788CDD0 /* AEXML.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		749F33E9AEFEB83A49D716E93E100635 /* Pods-RapidsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5E1BA06CD27FA73FA176FC189F0381AB /* Build configuration list for PBXNativeTarget "Pods-RapidsTests" */;
+			buildPhases = (
+				B39DF8AE43EB2F268209819B0AACE250 /* Sources */,
+				4E9D3F8F2B8D53FEA05E0B6032817483 /* Frameworks */,
+				04557A2B394DD8D1C6CA5949622904F3 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9375DB0344C2D2BFBD3A5962F5B1381D /* PBXTargetDependency */,
+				3274E1392E95A0C42D24080EE772FCFC /* PBXTargetDependency */,
+				846D14CF270DF1B58F09E0E0C50B9B55 /* PBXTargetDependency */,
+			);
+			name = "Pods-RapidsTests";
+			productName = "Pods-RapidsTests";
+			productReference = F75398FA9C2DB56CC87F94BFE0D1B94D /* Pods_RapidsTests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		79C040AFDDCE1BCBF6D8B5EB0B85887F /* Alamofire */ = {
@@ -557,7 +548,7 @@
 			);
 			name = Alamofire;
 			productName = Alamofire;
-			productReference = C60AFD2BBA7C8DDDE65D839D75E2F93D /* Alamofire.framework */;
+			productReference = DF3165B877511BDA6F5468BBF3CFB967 /* Alamofire.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		BA14B622689766F6B8A4F42FD9DE552F /* CVCalendar */ = {
@@ -574,7 +565,28 @@
 			);
 			name = CVCalendar;
 			productName = CVCalendar;
-			productReference = DE09D47BC8490A769DF1E99461DAB531 /* CVCalendar.framework */;
+			productReference = 9BC4FCBEE7D53DF48022FA8465720AEA /* CVCalendar.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		DD13B57C593CBE9427E9D44B77920788 /* Pods-Rapids */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C1E9A48ACEBC7A7BCF41E546E4E28344 /* Build configuration list for PBXNativeTarget "Pods-Rapids" */;
+			buildPhases = (
+				84B29ACCE148C7D30ADA326E741ACC66 /* Sources */,
+				7B5808D392EE0B3145659ECFB5EB9329 /* Frameworks */,
+				EEB80A11E21FA7FA7D8D797E5324111F /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ECF8151AB0BA081AE48AA885B3B1EE59 /* PBXTargetDependency */,
+				4A3DB83F0E811D36B08146AD76E51F23 /* PBXTargetDependency */,
+				4E81C7848973FAC35B100A0C57B13C55 /* PBXTargetDependency */,
+				D606051C9BBF6E9F387D8F93B4EAAAAF /* PBXTargetDependency */,
+			);
+			name = "Pods-Rapids";
+			productName = "Pods-Rapids";
+			productReference = DA0F9E4AA1646BC6D57CEE34F47266FC /* Pods_Rapids.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -594,33 +606,38 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = E09F4AE9D52D9C1D70BDAA4176EDFC8B /* Products */;
+			productRefGroup = 434684D622481632668FB0DECF0EB6F3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				6B9813D7E7E5E2BAC2903B82EC58E643 /* AEXML */,
 				79C040AFDDCE1BCBF6D8B5EB0B85887F /* Alamofire */,
 				BA14B622689766F6B8A4F42FD9DE552F /* CVCalendar */,
-				30A9BA4553D863F046F484B25C9938F5 /* Pods-Rapids */,
-				4151A0A8F2AD34F7749B6B1FF80BD8D2 /* Pods-RapidsTests */,
+				3F4ED3136065D01037865D960C84E133 /* EPCalendarPicker */,
+				DD13B57C593CBE9427E9D44B77920788 /* Pods-Rapids */,
+				749F33E9AEFEB83A49D716E93E100635 /* Pods-RapidsTests */,
 			);
 		};
 /* End PBXProject section */
 
-/* Begin PBXSourcesBuildPhase section */
-		4557001E9D0BDD710267DE2633812C93 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
+/* Begin PBXResourcesBuildPhase section */
+		D63811F941AB6504B885CDD4C396BAB6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				930FF546793F64C7593928879FE96516 /* Pods-RapidsTests-dummy.m in Sources */,
+				1CCC8052793A03ED012B0C3F1D6A8546 /* EPCalendarCell1.xib in Resources */,
+				0B65591FD4EC9C080FBDC347EF476D49 /* EPCalendarHeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		50F6CE215D856BEB7D47F84F1A567039 /* Sources */ = {
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		84B29ACCE148C7D30ADA326E741ACC66 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE114C0BA0616DD8F7DA95F85B8D2E81 /* Pods-Rapids-dummy.m in Sources */,
+				81E68242737D1F57A52B901062158E9D /* Pods-Rapids-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -658,72 +675,83 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B39DF8AE43EB2F268209819B0AACE250 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D8457A67972E43390F9C569DF1C808F /* Pods-RapidsTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C61400E0ED753F02D457392692F8B35A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF021721AB2F970368E622EABFB9651F /* CVAuxiliaryView.swift in Sources */,
-				3B87DC7F8BDF75B46E61FA884B289577 /* CVCalendar-dummy.m in Sources */,
-				C68D88393AB99D8587329B61229CAA10 /* CVCalendarContentViewController.swift in Sources */,
-				C8F505E2C3284B4BA389F0B4C7377A12 /* CVCalendarDayView.swift in Sources */,
-				6216E52EED65FFA771AD682DE96BC3B2 /* CVCalendarDayViewControlCoordinator.swift in Sources */,
-				B218F1BF6AEF7D9295EC4850457C40C1 /* CVCalendarManager.swift in Sources */,
-				B3D4E56896D3187D07A37D1C0BB4463F /* CVCalendarMenuView.swift in Sources */,
-				461789AA9602F827AF415551B6EDE0B2 /* CVCalendarMenuViewDelegate.swift in Sources */,
-				3705C2AE52E45691AFF860C3CEDD7441 /* CVCalendarMonthContentViewController.swift in Sources */,
-				27EDCBA933ABC5D70ECF3F562A63D31D /* CVCalendarMonthView.swift in Sources */,
-				6CB822F35D76353193BFA86DD7BC2963 /* CVCalendarTouchController.swift in Sources */,
-				1473E95D20A8550117266D4493AF9C6C /* CVCalendarView.swift in Sources */,
-				95BBCAAE65C6668992593E20D80452DA /* CVCalendarViewAnimator.swift in Sources */,
-				33B12555139B2C0FAB72FF64E286A812 /* CVCalendarViewAnimatorDelegate.swift in Sources */,
-				F809213B24C125C576D1A8D28D242A4F /* CVCalendarViewAppearance.swift in Sources */,
-				6DA361F78BD4FE4C1D91F3B4888D2D48 /* CVCalendarViewAppearanceDelegate.swift in Sources */,
-				4E4F17DE924825CE5D480D0E8A05E3CD /* CVCalendarViewDelegate.swift in Sources */,
-				6637B96C6BD4B5532AA3B69133DE4055 /* CVCalendarViewPresentationMode.swift in Sources */,
-				9F596692858960FCDD3C7E648896FCFF /* CVCalendarWeekContentViewController.swift in Sources */,
-				5E4E07F5AA458FA65DF01816F721468A /* CVCalendarWeekday.swift in Sources */,
-				57A71A8F4D5FCC79FE401287E197E7B3 /* CVCalendarWeekView.swift in Sources */,
-				551E9EE718FB2628ECBA3954D837BCE5 /* CVDate.swift in Sources */,
-				2CD83CDD80950801E1E8E9A7854B795D /* CVRange.swift in Sources */,
-				62D9E7D63B75A2CD4A423744C9D29DB3 /* CVScrollDirection.swift in Sources */,
-				7FE567382B46982C01C4AF4F95A6093D /* CVSelectionType.swift in Sources */,
-				BA2171175CEB329626AC8C4287F870A9 /* CVSet.swift in Sources */,
-				6891101D8D1D37D2A990F6B398A992D3 /* CVShape.swift in Sources */,
-				40CB3875B30C9203B08807A16064A92A /* CVWeekdaySymbolType.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D54C4D9CB12848D4D38B61713BA35F23 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00CD87A4506139F0458E7D9F3B2AC919 /* EPCalendarCell1.swift in Sources */,
+				6E5876C4AB9AA8CC9F41D45547CE1564 /* EPCalendarConstants.swift in Sources */,
+				F2B833CA2C58782077AC3FC1ACCC5EE0 /* EPCalendarHeaderView.swift in Sources */,
+				486C627CFD70A24ABD6591AA944A6FC8 /* EPCalendarPicker-dummy.m in Sources */,
+				74F8D0F5FE5444B09C53313E7FA91A5D /* EPCalendarPicker.swift in Sources */,
+				BDE521933B317671B003EE364D8F16E7 /* EPExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		173922B35C8D6026D75070103EDED57E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = AEXML;
-			target = 6B9813D7E7E5E2BAC2903B82EC58E643 /* AEXML */;
-			targetProxy = 5A0C1F2E672E17D95720CBF4F54275AA /* PBXContainerItemProxy */;
-		};
-		671A28F38DB52DDD87D3EA3158398A5C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Alamofire;
-			target = 79C040AFDDCE1BCBF6D8B5EB0B85887F /* Alamofire */;
-			targetProxy = E3B4126A5345B1508D12A162E0851CF5 /* PBXContainerItemProxy */;
-		};
-		AA74365DA323D6D9346F8BA611553628 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Alamofire;
-			target = 79C040AFDDCE1BCBF6D8B5EB0B85887F /* Alamofire */;
-			targetProxy = 954320C5E9B2BD6DB9425CC5759925EF /* PBXContainerItemProxy */;
-		};
-		DE9F62D49923849FF4790F4FB906ECAC /* PBXTargetDependency */ = {
+		3274E1392E95A0C42D24080EE772FCFC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = CVCalendar;
 			target = BA14B622689766F6B8A4F42FD9DE552F /* CVCalendar */;
-			targetProxy = 4D7D83056409A455449F923DACACC715 /* PBXContainerItemProxy */;
+			targetProxy = E9AABF836570FF0B2488928ED573825A /* PBXContainerItemProxy */;
+		};
+		4A3DB83F0E811D36B08146AD76E51F23 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Alamofire;
+			target = 79C040AFDDCE1BCBF6D8B5EB0B85887F /* Alamofire */;
+			targetProxy = 7A4A0547DA69598FEC14F3B342056519 /* PBXContainerItemProxy */;
+		};
+		4E81C7848973FAC35B100A0C57B13C55 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CVCalendar;
+			target = BA14B622689766F6B8A4F42FD9DE552F /* CVCalendar */;
+			targetProxy = DDAC96A1AB7A872B56C8A6F3BA385453 /* PBXContainerItemProxy */;
+		};
+		846D14CF270DF1B58F09E0E0C50B9B55 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = EPCalendarPicker;
+			target = 3F4ED3136065D01037865D960C84E133 /* EPCalendarPicker */;
+			targetProxy = D878D7A45FBF51E3582BD74F6083B345 /* PBXContainerItemProxy */;
+		};
+		9375DB0344C2D2BFBD3A5962F5B1381D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Alamofire;
+			target = 79C040AFDDCE1BCBF6D8B5EB0B85887F /* Alamofire */;
+			targetProxy = FC682DEC2DF1B65E9628513AAD0DD084 /* PBXContainerItemProxy */;
+		};
+		D606051C9BBF6E9F387D8F93B4EAAAAF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = EPCalendarPicker;
+			target = 3F4ED3136065D01037865D960C84E133 /* EPCalendarPicker */;
+			targetProxy = E44283106F5FF16D0CE644BAFA2C9430 /* PBXContainerItemProxy */;
+		};
+		ECF8151AB0BA081AE48AA885B3B1EE59 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AEXML;
+			target = 6B9813D7E7E5E2BAC2903B82EC58E643 /* AEXML */;
+			targetProxy = 58B2CA0EDFC381952B5DE7C2F4804E18 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		1B4B5989E7ED0B1648B84DDB2B181050 /* Release */ = {
+		0A01D3CAF9E48B4AA191333562135CCD /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 56C1E097D29632136B6B770738FB975D /* Pods-Rapids.release.xcconfig */;
 			buildSettings = {
@@ -753,9 +781,38 @@
 			};
 			name = Release;
 		};
+		230E96170D484344E2A529E8332BC3BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 713D45DE24B943063BD5C676BF16CEED /* Pods-RapidsTests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-RapidsTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-RapidsTests/Pods-RapidsTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_RapidsTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		274854A633ACDAFE3BFA5D84DD067835 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4709C6A78C91C98CC37F69532AEC37DA /* CVCalendar.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -783,7 +840,7 @@
 		};
 		54E718014F51C09484CE1F72DC3A7227 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 170761A45963DDDB5458DB4BA0A7B3AF /* AEXML.xcconfig */;
+			baseConfigurationReference = 0908EEDD90EA4D52C9569670EFB0AE04 /* AEXML.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -808,40 +865,9 @@
 			};
 			name = Release;
 		};
-		670156ADF99836A2EF67B55CDE5AFB1A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 785C98F523CB1D1ADE2661E3C69CBF89 /* Pods-RapidsTests.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-RapidsTests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-RapidsTests/Pods-RapidsTests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods_RapidsTests;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		74F7FAC78E5CB4D327B99F47BF099326 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A7E964B9C89A6AAF193697BF9A31324C /* Alamofire.xcconfig */;
+			baseConfigurationReference = 883DA7BEE086465929FB5BF7B7AE065C /* Alamofire.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -866,9 +892,66 @@
 			};
 			name = Release;
 		};
+		8053BFEDEEB9A7D4BD32A49A244AA294 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0DA3BEAEE3EFCA65B51968502F024267 /* Pods-Rapids.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Rapids/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Rapids/Pods-Rapids.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_Rapids;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		875653AF2EB171D51E69BC53877ECD44 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF1FC5DEEA6527D5F65FBE0847572780 /* EPCalendarPicker.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/EPCalendarPicker/EPCalendarPicker-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/EPCalendarPicker/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/EPCalendarPicker/EPCalendarPicker.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = EPCalendarPicker;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		90E81E40A1EA7D14EC5B7DEA2EA0F618 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4709C6A78C91C98CC37F69532AEC37DA /* CVCalendar.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -895,7 +978,7 @@
 		};
 		A3BC5BE66D145B4493D6DD927D108360 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 170761A45963DDDB5458DB4BA0A7B3AF /* AEXML.xcconfig */;
+			baseConfigurationReference = 0908EEDD90EA4D52C9569670EFB0AE04 /* AEXML.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -962,7 +1045,7 @@
 		};
 		C3746E36F91278C40D0DCBA78D124E88 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A7E964B9C89A6AAF193697BF9A31324C /* Alamofire.xcconfig */;
+			baseConfigurationReference = 883DA7BEE086465929FB5BF7B7AE065C /* Alamofire.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -988,9 +1071,9 @@
 			};
 			name = Debug;
 		};
-		EFABE03DFF8D5D8B71C643B48BC5ADFE /* Release */ = {
+		C6A905BDBAFBF9020DC4AF20057EEA6E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 713D45DE24B943063BD5C676BF16CEED /* Pods-RapidsTests.release.xcconfig */;
+			baseConfigurationReference = 785C98F523CB1D1ADE2661E3C69CBF89 /* Pods-RapidsTests.debug.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -1005,18 +1088,47 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-RapidsTests/Pods-RapidsTests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_NAME = Pods_RapidsTests;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
+		};
+		CB41F54B53A984A098F189F685FFCA04 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF1FC5DEEA6527D5F65FBE0847572780 /* EPCalendarPicker.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/EPCalendarPicker/EPCalendarPicker-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/EPCalendarPicker/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/EPCalendarPicker/EPCalendarPicker.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = EPCalendarPicker;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 		FB45FFD90572718D82AB9092B750F0CA /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -1052,49 +1164,9 @@
 			};
 			name = Release;
 		};
-		FC5B2DFAE865E91FF7AA8F6F555CA37D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0DA3BEAEE3EFCA65B51968502F024267 /* Pods-Rapids.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-Rapids/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Rapids/Pods-Rapids.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods_Rapids;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		11665FC1E2F6593DD9F3FBDF1F018F37 /* Build configuration list for PBXNativeTarget "Pods-RapidsTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				670156ADF99836A2EF67B55CDE5AFB1A /* Debug */,
-				EFABE03DFF8D5D8B71C643B48BC5ADFE /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1113,11 +1185,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E573A005E0F5C512C8A3391600C913DB /* Build configuration list for PBXNativeTarget "Pods-Rapids" */ = {
+		5E1BA06CD27FA73FA176FC189F0381AB /* Build configuration list for PBXNativeTarget "Pods-RapidsTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FC5B2DFAE865E91FF7AA8F6F555CA37D /* Debug */,
-				1B4B5989E7ED0B1648B84DDB2B181050 /* Release */,
+				C6A905BDBAFBF9020DC4AF20057EEA6E /* Debug */,
+				230E96170D484344E2A529E8332BC3BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C1E9A48ACEBC7A7BCF41E546E4E28344 /* Build configuration list for PBXNativeTarget "Pods-Rapids" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8053BFEDEEB9A7D4BD32A49A244AA294 /* Debug */,
+				0A01D3CAF9E48B4AA191333562135CCD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DF915CD625EFB50092D616DD93C1434E /* Build configuration list for PBXNativeTarget "EPCalendarPicker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB41F54B53A984A098F189F685FFCA04 /* Debug */,
+				875653AF2EB171D51E69BC53877ECD44 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

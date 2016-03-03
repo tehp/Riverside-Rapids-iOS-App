@@ -12,8 +12,6 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    
-
 
     //Define custom green color
     let navColor = UIColor(red: 0/255, green: 69/255, blue: 41/255, alpha: 1)
@@ -24,25 +22,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
     //Set status bar text to white
     UIApplication.sharedApplication().statusBarStyle = .LightContent
-
         
-        
-        
-        // Customizations for Navigation Bar -Mac
-        UINavigationBar.appearance().barTintColor = navColor
-        
-        
-        //UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: navColor], forState:.Normal)
-        //UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: navColor], forState:.Selected)
-        
-        
-        
-        
-        
-        
-        //let navBgImage:UIImage = UIImage(named: "rapids_white_small.png")!
-        //UINavigationBar.appearance().setBackgroundImage(navBgImage, forBarMetrics: .Default)
-        
+    // Customizations for Navigation Bar -Mac
+    UINavigationBar.appearance().barTintColor = navColor
         
         
         // Override point for customization after application launch.

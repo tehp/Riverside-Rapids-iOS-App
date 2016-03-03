@@ -87,9 +87,11 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-Rapids/AEXML.framework"
   install_framework "Pods-Rapids/Alamofire.framework"
   install_framework "Pods-Rapids/CVCalendar.framework"
+  install_framework "Pods-Rapids/EPCalendarPicker.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-Rapids/AEXML.framework"
   install_framework "Pods-Rapids/Alamofire.framework"
   install_framework "Pods-Rapids/CVCalendar.framework"
+  install_framework "Pods-Rapids/EPCalendarPicker.framework"
 fi
