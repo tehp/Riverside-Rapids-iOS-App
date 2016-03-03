@@ -8,6 +8,8 @@
 
 import Foundation
 
+import Alamofire
+
 protocol SharePointRequestDelegate {
     typealias CacheType
     typealias ResponseType
@@ -56,7 +58,7 @@ class SharePointRequestManager {
         static let DAILY_ANNOUNCEMENTS = "dailyAnnouncements"
         static let CALENDAR = "calendar"
     }
-    
+
     private func generateCacheUrl(name: String) -> NSURL {
         return SharePointRequestManager.CachesDirectory.URLByAppendingPathComponent("sharepoint-\(name)")
     }
@@ -69,6 +71,25 @@ class SharePointRequestManager {
     private func loadFromCache<T: SoapResponseData>(name: String) -> T? {
         let url = generateCacheUrl(name)
         return NSKeyedUnarchiver.unarchiveObjectWithFile(url.path!) as? T
+    }
+    
+    func checkAuth<T: SharePointRequestDelegate where T.ResponseType == NSDictionary>(username: String, password: String, delegate: T) {
+        let credentialData = "\(username):\(password)".dataUsingEncoding(NSUTF8StringEncoding)!
+        let base64Credentials = credentialData.base64EncodedStringWithOptions([])
+        let authHeader = "Basic " + base64Credentials
+        
+        Alamofire.request(.GET, D.Proxy.SP.GET_USER_INFO, headers: ["Authorization": authHeader])
+            .responseJSON { response in
+                    switch response.result {
+                    case .Success(let json):
+                        let response = json as! NSDictionary
+                        delegate.didReceiveNetworkData(response)
+                
+                    case .Failure(let error):
+                        delegate.didReceiveNetworkError(error)
+                
+                }
+            }
     }
     
     func getDailyAnnouncements<T: SharePointRequestDelegate where T.CacheType == GetListItemsResponseData, T.ResponseType == GetListItemsResponse>(networkOnly: Bool, username: String, password: String, delegate: T) {

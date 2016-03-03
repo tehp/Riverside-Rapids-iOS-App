@@ -13,9 +13,6 @@ import CalendarView
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
-    
-    
-    
     var window: UIWindow?
 
     //Define custom green color
@@ -23,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     static let navColorLight = UIColor(red: 0/255, green: 120/255, blue: 41/255, alpha: 1)
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-    
+
         let navigationBarAppearace = UINavigationBar.appearance()
         
         navigationBarAppearace.tintColor = UIColor.whiteColor()  // Back buttons and such
@@ -41,21 +38,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         CalendarView.dayBackgroundColor = UIColor.clearColor()
         CalendarView.weekLabelTextColor = AppDelegate.navColor
         
+        // Sets title colour to white 
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+            
+        //Set status bar text to white
+        UIApplication.sharedApplication().statusBarStyle = .LightContent
         
-        
-        
-        
-    //Set status bar text to white
-    UIApplication.sharedApplication().statusBarStyle = .LightContent
-        
-    // Customizations for Navigation Bar -Mac
-    UINavigationBar.appearance().barTintColor = AppDelegate.navColor
-        
+        // Customizations for Navigation Bar -Mac
+        UINavigationBar.appearance().barTintColor = AppDelegate.navColor
         
         // Override point for customization after application launch.
         return true
     }
-    
 
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

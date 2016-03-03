@@ -37,12 +37,21 @@ class D {
         }
     }
     
+    struct Proxy {
+
+        struct SP {
+            static let GET_USER_INFO = "https://rssrapids-proxy.appspot.com/api/sp/GetUserInfo"
+        }
+        
+    }
+    
     struct SharePoint {
         //For Authentication
         static let DOMAIN = "sd43"
         static let WORKSTATION = ""
         
         //URLs
+        static let AUTH_URL = "https://my43.sd43.bc.ca/schools/Riverside/riversideapp/authentication/_vti_bin/authentication.asmx"
         static let INTRANET_LISTS_URL = "https://my43.sd43.bc.ca/schools/riverside/_vti_bin/lists.asmx"
         static let PUBLIC_LISTS_URL = "http://www.sd43.bc.ca/secondary/riverside/_vti_bin/lists.asmx"
         
