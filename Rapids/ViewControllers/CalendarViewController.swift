@@ -37,9 +37,10 @@ class CalendarViewController: UIViewController, EPCalendarPickerDelegate {
         calendarPicker.startDate = NSDate()
         calendarPicker.hightlightsToday = true
         calendarPicker.showsTodaysButton = true
+        calendarPicker.multiSelectEnabled = false
         calendarPicker.hideDaysFromOtherMonth = false
-        calendarPicker.tintColor = AppDelegate.navColor
-        //        calendarPicker.barTintColor = UIColor.greenColor()
+        calendarPicker.tintColor = UIColor.whiteColor()
+        calendarPicker.barTintColor = AppDelegate.navColor
         calendarPicker.dayDisabledTintColor = UIColor.grayColor()
         calendarPicker.title = "Riverside Calendar"
         
