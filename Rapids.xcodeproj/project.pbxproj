@@ -24,6 +24,8 @@
 		269689A61C76475A00845C1D /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2696899F1C76475A00845C1D /* SecondViewController.swift */; };
 		269689A81C76480400845C1D /* rapids_large.png in Resources */ = {isa = PBXBuildFile; fileRef = 269689A71C76480400845C1D /* rapids_large.png */; };
 		26A6B6581C881D1100629FDF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9D61991C643C4400CA406F /* AppDelegate.swift */; };
+		4F48E5B61C8B936900733382 /* BellScheduleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F48E5B51C8B936900733382 /* BellScheduleManager.swift */; };
+		4F69F3F71C8BA725003C11C5 /* SchoolDates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F69F3F61C8BA725003C11C5 /* SchoolDates.swift */; };
 		4F80D9D21C76E8610052496B /* SoapEnvelope.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F80D9D11C76E8610052496B /* SoapEnvelope.swift */; };
 		4F99D2111C7B99640031BCC0 /* BSCal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F99D2101C7B99640031BCC0 /* BSCal.swift */; };
 		4F99D2131C7B99720031BCC0 /* BSDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F99D2121C7B99720031BCC0 /* BSDay.swift */; };
@@ -81,6 +83,8 @@
 		2696899F1C76475A00845C1D /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		269689A71C76480400845C1D /* rapids_large.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rapids_large.png; sourceTree = "<group>"; };
 		2E85ADB8E6D35AFF697648B9 /* Pods-RapidsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RapidsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RapidsTests/Pods-RapidsTests.release.xcconfig"; sourceTree = "<group>"; };
+		4F48E5B51C8B936900733382 /* BellScheduleManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BellScheduleManager.swift; sourceTree = "<group>"; };
+		4F69F3F61C8BA725003C11C5 /* SchoolDates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchoolDates.swift; sourceTree = "<group>"; };
 		4F80D9D11C76E8610052496B /* SoapEnvelope.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoapEnvelope.swift; sourceTree = "<group>"; };
 		4F99D2101C7B99640031BCC0 /* BSCal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BSCal.swift; sourceTree = "<group>"; };
 		4F99D2121C7B99720031BCC0 /* BSDay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BSDay.swift; sourceTree = "<group>"; };
@@ -168,12 +172,21 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
+		4F69F3F51C8BA718003C11C5 /* School */ = {
+			isa = PBXGroup;
+			children = (
+				4F69F3F61C8BA725003C11C5 /* SchoolDates.swift */,
+			);
+			path = School;
+			sourceTree = "<group>";
+		};
 		4F99D20E1C7B99450031BCC0 /* BellSchedule */ = {
 			isa = PBXGroup;
 			children = (
 				4F99D2101C7B99640031BCC0 /* BSCal.swift */,
 				4F99D2121C7B99720031BCC0 /* BSDay.swift */,
 				4F99D2141C7B997C0031BCC0 /* BSBlock.swift */,
+				4F48E5B51C8B936900733382 /* BellScheduleManager.swift */,
 			);
 			path = BellSchedule;
 			sourceTree = "<group>";
@@ -210,6 +223,7 @@
 		4F9D61981C643C4400CA406F /* Rapids */ = {
 			isa = PBXGroup;
 			children = (
+				4F69F3F51C8BA718003C11C5 /* School */,
 				4FC6578C1C7CE27500635111 /* Views */,
 				4F99D20E1C7B99450031BCC0 /* BellSchedule */,
 				4FE47E461C76A82400CBBE85 /* Network */,
@@ -547,6 +561,8 @@
 				269689A61C76475A00845C1D /* SecondViewController.swift in Sources */,
 				4FE47E591C76A82400CBBE85 /* GetListItemsRequest.swift in Sources */,
 				269689A51C76475A00845C1D /* MoreViewController.swift in Sources */,
+				4F48E5B61C8B936900733382 /* BellScheduleManager.swift in Sources */,
+				4F69F3F71C8BA725003C11C5 /* SchoolDates.swift in Sources */,
 				4FD9EA571C7A414D002D6FD1 /* GetListItemsResponse.swift in Sources */,
 				269689A31C76475A00845C1D /* FirstViewController.swift in Sources */,
 				269689A21C76475A00845C1D /* CalendarViewController.swift in Sources */,
