@@ -11,10 +11,10 @@ import Foundation
 class BSCal: NSObject, NSCoding {
     
     struct Schedule {
-        static let NORMAL = 1
-        static let ADVISORY = 2
-        static let EXTENDED_ADVISORY = 3
-        static let CUSTOM = 4
+        static let NORMAL = 0
+        static let ADVISORY = 1
+        static let EXTENDED_ADVISORY = 2
+        static let CUSTOM = 3
     }
     
     struct Block {
