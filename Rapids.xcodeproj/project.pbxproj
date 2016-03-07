@@ -27,6 +27,7 @@
 		4F48E5B61C8B936900733382 /* BellScheduleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F48E5B51C8B936900733382 /* BellScheduleManager.swift */; };
 		4F69F3F71C8BA725003C11C5 /* SchoolDates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F69F3F61C8BA725003C11C5 /* SchoolDates.swift */; };
 		4F80D9D21C76E8610052496B /* SoapEnvelope.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F80D9D11C76E8610052496B /* SoapEnvelope.swift */; };
+		4F8B63241C8CECD200161A75 /* SharePointRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8B63231C8CECD200161A75 /* SharePointRequestManager.swift */; };
 		4F99D2111C7B99640031BCC0 /* BSCal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F99D2101C7B99640031BCC0 /* BSCal.swift */; };
 		4F99D2131C7B99720031BCC0 /* BSDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F99D2121C7B99720031BCC0 /* BSDay.swift */; };
 		4F99D2151C7B997C0031BCC0 /* BSBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F99D2141C7B997C0031BCC0 /* BSBlock.swift */; };
@@ -86,6 +87,7 @@
 		4F48E5B51C8B936900733382 /* BellScheduleManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BellScheduleManager.swift; sourceTree = "<group>"; };
 		4F69F3F61C8BA725003C11C5 /* SchoolDates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchoolDates.swift; sourceTree = "<group>"; };
 		4F80D9D11C76E8610052496B /* SoapEnvelope.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoapEnvelope.swift; sourceTree = "<group>"; };
+		4F8B63231C8CECD200161A75 /* SharePointRequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharePointRequestManager.swift; sourceTree = "<group>"; };
 		4F99D2101C7B99640031BCC0 /* BSCal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BSCal.swift; sourceTree = "<group>"; };
 		4F99D2121C7B99720031BCC0 /* BSDay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BSDay.swift; sourceTree = "<group>"; };
 		4F99D2141C7B997C0031BCC0 /* BSBlock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BSBlock.swift; sourceTree = "<group>"; };
@@ -282,6 +284,7 @@
 			isa = PBXGroup;
 			children = (
 				4FE47E481C76A82400CBBE85 /* SOAP */,
+				4F8B63231C8CECD200161A75 /* SharePointRequestManager.swift */,
 			);
 			path = SharePoint;
 			sourceTree = "<group>";
@@ -576,6 +579,7 @@
 				4F80D9D21C76E8610052496B /* SoapEnvelope.swift in Sources */,
 				269689A01C76475A00845C1D /* AnnouncementsViewController.swift in Sources */,
 				4FE47E5C1C76A82400CBBE85 /* SoapPrimitive.swift in Sources */,
+				4F8B63241C8CECD200161A75 /* SharePointRequestManager.swift in Sources */,
 				4FD9EA551C78D92F002D6FD1 /* SoapResponseDelegate.swift in Sources */,
 				4F99D2131C7B99720031BCC0 /* BSDay.swift in Sources */,
 				4FE47E551C76A82400CBBE85 /* SoapCamlBuilder.swift in Sources */,

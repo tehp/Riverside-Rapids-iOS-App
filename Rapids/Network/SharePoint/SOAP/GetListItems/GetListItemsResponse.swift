@@ -8,12 +8,38 @@
 
 import Foundation
 
+class GetListItemsResponseData: SoapResponseData {
+    
+    struct PropertyKey {
+        static let rowsKey = "rows"
+    }
+    
+    var rows: [[String: String]]
+    
+    init(timestamp: NSDate, rows: [[String: String]]) {
+        self.rows = rows
+        
+        super.init(timestamp: timestamp)
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        self.rows = aDecoder.decodeObjectForKey(PropertyKey.rowsKey) as! [[String: String]]
+        super.init(coder: aDecoder)
+    }
+    
+    override func encodeWithCoder(aCoder: NSCoder) {
+        super.encodeWithCoder(aCoder)
+        aCoder.encodeObject(rows, forKey: PropertyKey.rowsKey)
+    }
+    
+}
+
 class GetListItemsResponse: SoapResponse {
     
     var rows: [[String: String]]!
     
-    override init(responseData: NSData?) throws {
-        try super.init(responseData: responseData)
+    override init(responseData: NSData?, timestamp: NSDate) throws {
+        try super.init(responseData: responseData, timestamp: timestamp)
         
         rows = [[String: String]]()
         
@@ -26,6 +52,10 @@ class GetListItemsResponse: SoapResponse {
             }
             rows.append(attributes)
         }
+    }
+    
+    override func generateSoapResponseData() -> GetListItemsResponseData {
+        return GetListItemsResponseData(timestamp: timestamp, rows: rows)
     }
     
 }

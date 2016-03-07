@@ -21,7 +21,7 @@ class SoapRequest<ResponseType:SoapResponse, DelegateType:SoapResponseDelegate w
     var password: String?
     
     var request: SoapObject! = nil
-    weak var responseDelegate: DelegateType?
+    var responseDelegate: DelegateType?
     
     init(methodName: String, url: String, username: String?, password: String?, responseDelegate: DelegateType?) {
         self.methodName = methodName
@@ -73,7 +73,6 @@ class SoapRequest<ResponseType:SoapResponse, DelegateType:SoapResponseDelegate w
             .authenticate(user: username!, password: password!)
             .response(completionHandler: { (request, response, data, responseError) in
                 if let actualDelegate = self.responseDelegate {
-                    
                     // Check for network error
                     guard responseError == nil && data != nil else {
                         actualDelegate.didReceiveError(responseError!)
