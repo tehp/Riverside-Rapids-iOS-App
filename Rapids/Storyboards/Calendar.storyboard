@@ -18,28 +18,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Ep6-2k-Hva">
-                                <rect key="frame" x="180" y="321" width="240" height="128"/>
+                            <containerView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L11-h3-zR3">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="241"/>
+                                <connections>
+                                    <segue destination="dnz-zO-oOy" kind="embed" id="zlo-gh-YSq"/>
+                                </connections>
+                            </containerView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Ep6-2k-Hva">
+                                <rect key="frame" x="180" y="376" width="240" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dRj-4I-fvM">
-                                <rect key="frame" x="170" y="155" width="260" height="66"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dRj-4I-fvM">
+                                <rect key="frame" x="170" y="291" width="260" height="66"/>
                                 <state key="normal" title="Select some days to view events."/>
                                 <connections>
                                     <action selector="onTouchShowMeCalendarButton:" destination="dB4-lU-pge" eventType="touchUpInside" id="WZF-Xr-5Ji"/>
+                                    <action selector="onTouchShowMeCalendarButton:" destination="dnz-zO-oOy" eventType="touchUpInside" id="cCa-hK-a3C"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Ep6-2k-Hva" firstAttribute="top" secondItem="dRj-4I-fvM" secondAttribute="bottom" constant="200" id="7Se-f4-s2S"/>
-                            <constraint firstItem="Ep6-2k-Hva" firstAttribute="leading" secondItem="2zR-Qk-FfR" secondAttribute="leadingMargin" id="LQr-UE-sCl"/>
-                            <constraint firstItem="dRj-4I-fvM" firstAttribute="top" secondItem="LGB-bg-l1h" secondAttribute="bottom" constant="100" id="Rhs-Ka-AgQ"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Ep6-2k-Hva" secondAttribute="trailing" id="TK3-y7-4tf"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="dRj-4I-fvM" secondAttribute="trailing" id="tia-Z7-uIa"/>
-                            <constraint firstItem="dRj-4I-fvM" firstAttribute="leading" secondItem="2zR-Qk-FfR" secondAttribute="leadingMargin" id="wXV-yo-zLc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="L11-h3-zR3" secondAttribute="trailing" id="6tx-Fv-L7g"/>
+                            <constraint firstItem="L11-h3-zR3" firstAttribute="leading" secondItem="2zR-Qk-FfR" secondAttribute="leadingMargin" id="egk-L7-dog"/>
+                            <constraint firstItem="L11-h3-zR3" firstAttribute="top" secondItem="2zR-Qk-FfR" secondAttribute="topMargin" id="fMq-mX-zer"/>
                         </constraints>
                     </view>
                     <connections>
@@ -49,7 +53,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xRq-Vh-1X4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="62" y="333"/>
+            <point key="canvasLocation" x="60" y="245"/>
+        </scene>
+        <!--Calendar Container View Controller-->
+        <scene sceneID="xRW-Is-VqV">
+            <objects>
+                <viewController id="dnz-zO-oOy" customClass="CalendarContainerViewController" customModule="Rapids" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="utp-vC-Em7">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="241"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="btnShowMeCalendar" destination="dRj-4I-fvM" id="TLB-YA-BjY"/>
+                        <outlet property="txtViewDetail" destination="Ep6-2k-Hva" id="V9S-j2-aXx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3w1-6j-aoI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="60" y="837.5"/>
         </scene>
     </scenes>
 </document>
