@@ -16,12 +16,47 @@ enum SoapResponseError: ErrorType {
     case ParseError
 }
 
-class SoapResponse {
+class SoapResponseData: NSObject, NSCoding {
     
+    struct PropertyKey {
+        static let timestampKey = "timestamp"
+    }
+    
+    var timestamp: NSDate
+    
+    init(timestamp: NSDate) {
+        self.timestamp = timestamp
+        
+        super.init()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        self.timestamp = aDecoder.decodeObjectForKey(PropertyKey.timestampKey) as! NSDate
+    }
+    
+    func encodeWithCoder(aCoder: NSCoder) {
+        aCoder.encodeObject(timestamp, forKey: PropertyKey.timestampKey)
+    }
+    
+}
+
+class SoapResponse: NSObject, NSCoding {
+    
+    struct PropertyKey {
+        static let responseDataKey = "responseData"
+        static let timestampKey = "timestamp"
+    }
+    
+    private var responseData: NSData?
     private var document: AEXMLDocument!
     var contentRoot: AEXMLElement!
+    var timestamp: NSDate
     
-    init(responseData: NSData?) throws {
+    init(responseData: NSData?, timestamp: NSDate) throws {
+        self.responseData = responseData
+        self.timestamp = timestamp
+        super.init()
+        
         if let actualResponseData = responseData {
             do {
                 try document = AEXMLDocument(xmlData: actualResponseData)
@@ -45,6 +80,26 @@ class SoapResponse {
             }
         }
         return theChild
+    }
+    
+    required convenience init?(coder aDecoder: NSCoder) {
+        let responseData = aDecoder.decodeObjectForKey(PropertyKey.responseDataKey) as? NSData
+        let timestamp = aDecoder.decodeObjectForKey(PropertyKey.timestampKey) as! NSDate
+        
+        do {
+            try self.init(responseData: responseData, timestamp: timestamp)
+        } catch {
+            return nil
+        }
+    }
+    
+    func encodeWithCoder(aCoder: NSCoder) {
+        aCoder.encodeObject(responseData, forKey: PropertyKey.responseDataKey)
+        aCoder.encodeObject(timestamp, forKey: PropertyKey.timestampKey)
+    }
+    
+    func generateSoapResponseData() -> SoapResponseData {
+        preconditionFailure("Subclasses must override")
     }
     
 }

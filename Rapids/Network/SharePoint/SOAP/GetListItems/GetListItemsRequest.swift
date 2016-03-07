@@ -62,7 +62,7 @@ class GetListItemsRequest<DelegateType:SoapResponseDelegate where DelegateType.R
     }
     
     override func generateResponse(responseData: NSData?) throws -> GetListItemsResponse {
-        return try GetListItemsResponse(responseData: responseData)
+        return try GetListItemsResponse(responseData: responseData, timestamp: NSDate())
     }
     
 }

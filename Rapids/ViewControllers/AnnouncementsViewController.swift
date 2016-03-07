@@ -12,7 +12,7 @@ import UIKit
 
 import Alamofire
 
-class AnnouncementsViewController: UITableViewController, SoapResponseDelegate {
+class AnnouncementsViewController: UITableViewController, SharePointRequestDelegate {
     
     struct Announcement {
         var title: String
@@ -27,15 +27,13 @@ class AnnouncementsViewController: UITableViewController, SoapResponseDelegate {
     let CATEGORY_ALTHLETICS = "Athletics"
     let CATEGORY_GRAD = "Grad"
     
+    // UI
     let cellIdentifier = "AnnouncementTableViewCell"
+    var showPopupError: Bool = false
     
-    //MARK Properties
+    // Model
     var announcements = [Announcement]()
-    
-    
-    func loadSampleAnnouncments() {
-            
-    }
+    var lastUpdated: NSDate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,55 +43,10 @@ class AnnouncementsViewController: UITableViewController, SoapResponseDelegate {
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 120.0
         
-        // Set the fields we want to retrieve
-        let viewFields = SoapViewFieldsBuilder()
-        viewFields
-            .fieldRef("LinkTitle")
+        // Setup Pull to Refresh
+        self.refreshControl?.addTarget(self, action: "refresh:", forControlEvents: UIControlEvents.ValueChanged)
         
-        // Only retrieve announcements that are not expired or have no expiry date
-        let today = NSDate()
-        let dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd"
-        let dateStr = dateFormatter.stringFromDate(today)
-        
-        let query = SoapQueryBuilder()
-        query
-            .orderBy(nil)
-                .fieldRef("Categories", attributes: ["Ascending": SoapCamlBuilder.BOOL_TRUE])
-                .fieldRef("Created", attributes: ["Ascending": SoapCamlBuilder.BOOL_TRUE])
-                .up()
-            ._where()
-                .or()
-                    .isNull()
-                    .fieldRef("Expires", attributes: nil)
-                    .up()
-                .geq()
-                    .fieldRef("Expires", attributes: nil)
-                    .value("DateTime", value: dateStr, attributes: ["IncludeTimeValue": SoapCamlBuilder.BOOL_FALSE])
-        
-        // Other parameters for the SOAP request
-        let url = "https://my43.sd43.bc.ca/schools/riverside/_vti_bin/lists.asmx"
-        let listName = "{6B015937-2798-4C8F-B654-F49E28A71851}"
-        let username = "132-ntajwar"
-        let password = "steer323"
-        
-        // Create the request
-        let request = GetListItemsRequest(
-            url: url,
-            username: username,
-            password: password,
-            listName: listName,
-            viewName: nil,
-            query: query.complete(),
-            viewFields: viewFields.complete(),
-            rowLimit: "50",
-            queryOptions: nil,
-            webID: nil,
-            responseDelegate: self)
-        
-        // Send the request
-        request.sendRequest()
-        
+        loadData(false)
     }
     
     override func didReceiveMemoryWarning() {
@@ -101,7 +54,12 @@ class AnnouncementsViewController: UITableViewController, SoapResponseDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    func refresh(sender: AnyObject) {
+        loadData(true)
+    }
+    
     // MARK: UITableViewDataSource
+    
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
@@ -137,21 +95,87 @@ class AnnouncementsViewController: UITableViewController, SoapResponseDelegate {
         }
     }
     
-    // MARK: SoapResponseDelegate
-    typealias ResponseType = GetListItemsResponse
-    func didReceiveResponse(response: GetListItemsResponse) {
-        print(response.rows.count)
-        for row in response.rows {
+    // MARK: Soap Request / Response
+    
+    private func loadData(networkOnly: Bool) {
+        SharePointRequestManager.sharedInstance.requestDailyAnnouncements(networkOnly, username: "132-ntajwar", password: "steer323", delegate: self)
+    }
+    
+    func updateList(rows: [[String: String]]) {
+        // Update data
+        for row in rows {
             let title = row[ATTR_TITLE]
             let category = row[ATTR_CATEGORIES]
             let announcement = Announcement(title: title!, category: category!)
             announcements.append(announcement)
         };
+        
+        // Update table
+        self.tableView.separatorStyle = UITableViewCellSeparatorStyle.SingleLine
         self.tableView.reloadData()
+        
+        // Update refresh control
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "MMM. d 'at' h:mm a"
+        self.refreshControl?.attributedTitle = NSAttributedString(string: "Last updated: \(dateFormatter.stringFromDate(lastUpdated!))")
     }
     
-    func didReceiveError(error: ErrorType) {
-        print("SoapResponseError")
+    typealias CacheType = GetListItemsResponseData
+    typealias ResponseType = GetListItemsResponse
+    
+    func didFindCachedData(cachedData: CacheType) {
+        lastUpdated = cachedData.timestamp
+        updateList(cachedData.rows)
+    }
+    
+    func willStartNetworkLoad() {
+        if let actualRefreshControl = self.refreshControl {
+            if !actualRefreshControl.refreshing {
+                self.tableView.contentOffset = CGPointMake(0, -actualRefreshControl.frame.size.height)
+                actualRefreshControl.beginRefreshing()
+            }
+        }
+    }
+    
+    func didReceiveNetworkData(networkData: ResponseType) {
+        lastUpdated = NSDate()
+        updateList(networkData.rows)
+    }
+    
+    func didReceiveNetworkError(error: ErrorType) {
+        print(error)
+        
+        let errMsgRetrieve = "Unable to retrieve announcements.\nPull down to refresh."
+        let errMsgUpdate = "Unable to update announcements.\nPlease check your internet connection."
+        
+        if(announcements.count == 0) {
+            // Create error message label
+            let messageLabel = UILabel(frame: CGRect(x: 0, y: 0, width: self.view.bounds.size.width, height: self.view.bounds.size.height))
+            messageLabel.text = errMsgRetrieve
+            messageLabel.textColor = UIColor.blackColor()
+            messageLabel.textAlignment = NSTextAlignment.Center
+            messageLabel.numberOfLines = 0
+            messageLabel.sizeToFit()
+        
+            // Display the error message label
+            self.tableView.backgroundView = messageLabel
+            self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
+        } else if showPopupError {
+            let alertController = UIAlertController(title: "Network Error", message: errMsgUpdate, preferredStyle: UIAlertControllerStyle.Alert)
+            alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Cancel, handler: nil))
+            alertController.addAction(UIAlertAction(title: "Try Again", style: UIAlertActionStyle.Default, handler: { (alertAction) in
+                self.loadData(true)
+            }))
+            self.presentViewController(alertController, animated: true, completion: nil)
+        }
+    }
+    
+    func didFinishNetworkLoad() {
+        // Hide the refreshing indicator
+        self.refreshControl?.endRefreshing()
+        
+        // After the first network request we want to show popup errors
+        showPopupError = true
     }
 }
 
