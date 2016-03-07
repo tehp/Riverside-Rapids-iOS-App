@@ -47,7 +47,7 @@ class D {
         static let PUBLIC_LISTS_URL = "http://www.sd43.bc.ca/secondary/riverside/_vti_bin/lists.asmx"
         
         //GUIDs
-        static let ANNOUNCEMENTS_GUID = "{6B015937-2798-4C8F-B654-F49E28A71851}"
+        static let DAILY_ANNOUNCEMENTS_GUID = "{6B015937-2798-4C8F-B654-F49E28A71851}"
         static let CALENDAR_GUID = "{7ECB811F-B879-4507-A91F-3CFAE71FC576}"
         static let PUBLICATIONS_GUID = "{7611B87A-F409-4D8B-92A9-42BE7CD410DE}"
         static let STAFF_DIRECTORY_GUID = "{06082896-5AF7-4675-8123-2809342477F6}"

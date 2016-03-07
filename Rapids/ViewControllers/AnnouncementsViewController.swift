@@ -116,7 +116,7 @@ class AnnouncementsViewController: UITableViewController, SharePointRequestDeleg
         
         // Update refresh control
         let dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = "MMM d, h:mm a"
+        dateFormatter.dateFormat = "MMM. d 'at' h:mm a"
         self.refreshControl?.attributedTitle = NSAttributedString(string: "Last updated: \(dateFormatter.stringFromDate(lastUpdated!))")
     }
     

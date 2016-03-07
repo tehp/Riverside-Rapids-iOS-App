@@ -21,14 +21,16 @@ protocol SharePointRequestDelegate {
 
 class SharePointSoapResponseHandler<ResponseType:SoapResponse, DelegateType:SharePointRequestDelegate where DelegateType.ResponseType == ResponseType>: SoapResponseDelegate {
     
+    var cacheName: String
     var delegate: DelegateType?
     
-    init(delegate: DelegateType?) {
+    init(cacheName: String, delegate: DelegateType?) {
+        self.cacheName = cacheName
         self.delegate = delegate
     }
     
     func didReceiveResponse(response: ResponseType) {
-        SharePointRequestManager.sharedInstance.saveToCache(response.generateSoapResponseData(), name: SharePointRequestManager.CacheNames.DAILY_ANNOUNCEMENTS)
+        SharePointRequestManager.sharedInstance.saveToCache(response.generateSoapResponseData(), name: cacheName)
         if let actualDelegate = delegate {
             actualDelegate.didReceiveNetworkData(response)
             actualDelegate.didFinishNetworkLoad()
@@ -48,14 +50,15 @@ class SharePointRequestManager {
     
     static let sharedInstance = SharePointRequestManager()
     
-    static let DocumentsDirectory = NSFileManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask).first!
+    static let CachesDirectory = NSFileManager().URLsForDirectory(.CachesDirectory, inDomains: .UserDomainMask).first!
 
     struct CacheNames {
         static let DAILY_ANNOUNCEMENTS = "dailyAnnouncements"
+        static let CALENDAR = "calendar"
     }
     
     private func generateCacheUrl(name: String) -> NSURL {
-        return SharePointRequestManager.DocumentsDirectory.URLByAppendingPathComponent("sharepointcache-\(name)")
+        return SharePointRequestManager.CachesDirectory.URLByAppendingPathComponent("sharepoint-\(name)")
     }
     
     private func saveToCache<T: SoapResponseData>(data: T, name: String) -> Bool {
@@ -105,12 +108,12 @@ class SharePointRequestManager {
                         .value("DateTime", value: dateStr, attributes: ["IncludeTimeValue": SoapCamlBuilder.BOOL_FALSE])
         
         // Other parameters for the SOAP request
-        let url = "https://my43.sd43.bc.ca/schools/riverside/_vti_bin/lists.asmx"
-        let listName = "{6B015937-2798-4C8F-B654-F49E28A71851}"
+        let url = D.SharePoint.INTRANET_LISTS_URL
+        let listName = D.SharePoint.DAILY_ANNOUNCEMENTS_GUID
         let rowLimit = "50"
         
         // For handling the response
-        let responseHandler: SharePointSoapResponseHandler<GetListItemsResponse, T> = SharePointSoapResponseHandler(delegate: delegate)
+        let responseHandler: SharePointSoapResponseHandler<GetListItemsResponse, T> = SharePointSoapResponseHandler(cacheName: CacheNames.DAILY_ANNOUNCEMENTS, delegate: delegate)
         
         // Create the request
         let request = GetListItemsRequest(
@@ -126,11 +129,15 @@ class SharePointRequestManager {
             webID: nil,
             responseDelegate: responseHandler)
         
-        // Notify delegating that we are starting a network request
+        // Notify delegate that we are starting a network request
         delegate.willStartNetworkLoad()
         
         // Send the request
         request.sendRequest()
+    }
+    
+    func requestCalendar<T: SharePointRequestDelegate where T.CacheType == GetListItemsResponseData, T.ResponseType == GetListItemsResponse>(networkOnly: Bool, username: String, password: String, delegate: T) {
+        
     }
     
 }
