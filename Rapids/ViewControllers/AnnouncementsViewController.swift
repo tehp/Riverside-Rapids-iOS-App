@@ -98,7 +98,7 @@ class AnnouncementsViewController: UITableViewController, SharePointRequestDeleg
     // MARK: Soap Request / Response
     
     private func loadData(networkOnly: Bool) {
-        SharePointRequestManager.sharedInstance.requestDailyAnnouncements(networkOnly, username: "132-ntajwar", password: "steer323", delegate: self)
+        SharePointRequestManager.sharedInstance.getDailyAnnouncements(networkOnly, username: "132-ntajwar", password: "steer323", delegate: self)
     }
     
     func updateList(rows: [[String: String]]) {

@@ -71,7 +71,7 @@ class SharePointRequestManager {
         return NSKeyedUnarchiver.unarchiveObjectWithFile(url.path!) as? T
     }
     
-    func requestDailyAnnouncements<T: SharePointRequestDelegate where T.CacheType == GetListItemsResponseData, T.ResponseType == GetListItemsResponse>(networkOnly: Bool, username: String, password: String, delegate: T) {
+    func getDailyAnnouncements<T: SharePointRequestDelegate where T.CacheType == GetListItemsResponseData, T.ResponseType == GetListItemsResponse>(networkOnly: Bool, username: String, password: String, delegate: T) {
         
         if !networkOnly {
             // Attempt to load from cache first
@@ -136,7 +136,7 @@ class SharePointRequestManager {
         request.sendRequest()
     }
     
-    func requestCalendar<T: SharePointRequestDelegate where T.CacheType == GetListItemsResponseData, T.ResponseType == GetListItemsResponse>(networkOnly: Bool, username: String, password: String, delegate: T) {
+    func getCalendar<T: SharePointRequestDelegate where T.CacheType == GetListItemsResponseData, T.ResponseType == GetListItemsResponse>(networkOnly: Bool, username: String, password: String, delegate: T) {
         
         if !networkOnly {
             // Attempt to load from cache first
@@ -171,11 +171,11 @@ class SharePointRequestManager {
             ._where()
                 .and()
                     .geq()
-                        .fieldRef("EventDate")
+                        .fieldRef("EventDate", attributes: nil)
                         .value("DateTime", value: schoolStartStr, attributes: ["IncludeTimeValue": SoapCamlBuilder.BOOL_FALSE])
                         .up()
                     .leq()
-                        .fieldRef("EventDate")
+                        .fieldRef("EventDate", attributes: nil)
                         .value("DateTime", value: schoolEndStr, attributes: ["IncludeTimeValue": SoapCamlBuilder.BOOL_FALSE])
         
         let queryOptions = SoapQueryOptionsBuilder().includeAttachmentUrls(true)
@@ -207,7 +207,6 @@ class SharePointRequestManager {
         
         // Send the request
         request.sendRequest()
-        
     }
     
 }
