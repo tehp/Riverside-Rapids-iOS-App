@@ -29,4 +29,13 @@ class SchoolDates {
         }
     }
     
+    static func getLatestSchoolEnd() -> NSDateComponents {
+        let schoolStart = getEarliestSchoolStart()
+        let date = NSCalendar.currentCalendar().components([NSCalendarUnit.Day, NSCalendarUnit.Month, NSCalendarUnit.Year], fromDate: schoolStart.date!)
+        date.year = date.year + 1
+        date.month = 7
+        date.day = 31
+        return date
+    }
+    
 }

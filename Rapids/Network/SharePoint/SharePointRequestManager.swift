@@ -138,6 +138,76 @@ class SharePointRequestManager {
     
     func requestCalendar<T: SharePointRequestDelegate where T.CacheType == GetListItemsResponseData, T.ResponseType == GetListItemsResponse>(networkOnly: Bool, username: String, password: String, delegate: T) {
         
+        if !networkOnly {
+            // Attempt to load from cache first
+            if let actualCachedData: GetListItemsResponseData = loadFromCache(CacheNames.CALENDAR) {
+                delegate.didFindCachedData(actualCachedData)
+            }
+        }
+        
+        // Prepare SOAP Request
+        // Set the fields we want to retrieve
+        let viewFields = SoapViewFieldsBuilder()
+        viewFields
+            .fieldRef("Title")
+            .fieldRef("EventDate")
+            .fieldRef("EndDate")
+            .fieldRef("Location")
+            .fieldRef("Description")
+            .fieldRef("fAllDayEvent")
+            .fieldRef("fRecurrence")
+            .fieldRef("Attachments")
+        
+        // Only retrieve announcements that are not expired or have no expiry date
+        let schoolStart = SchoolDates.getEarliestSchoolStart()
+        let schoolEnd = SchoolDates.getLatestSchoolEnd()
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        let schoolStartStr = dateFormatter.stringFromDate(schoolStart.date!)
+        let schoolEndStr = dateFormatter.stringFromDate(schoolEnd.date!)
+        
+        let query = SoapQueryBuilder()
+        query
+            ._where()
+                .and()
+                    .geq()
+                        .fieldRef("EventDate")
+                        .value("DateTime", value: schoolStartStr, attributes: ["IncludeTimeValue": SoapCamlBuilder.BOOL_FALSE])
+                        .up()
+                    .leq()
+                        .fieldRef("EventDate")
+                        .value("DateTime", value: schoolEndStr, attributes: ["IncludeTimeValue": SoapCamlBuilder.BOOL_FALSE])
+        
+        let queryOptions = SoapQueryOptionsBuilder().includeAttachmentUrls(true)
+        
+        // Other parameters for the SOAP request
+        let url = D.SharePoint.PUBLIC_LISTS_URL
+        let listName = D.SharePoint.CALENDAR_GUID
+        let rowLimit = "1000"
+        
+        // For handling the response
+        let responseHandler: SharePointSoapResponseHandler<GetListItemsResponse, T> = SharePointSoapResponseHandler(cacheName: CacheNames.CALENDAR, delegate: delegate)
+        
+        // Create the request
+        let request = GetListItemsRequest(
+            url: url,
+            username: username,
+            password: password,
+            listName: listName,
+            viewName: nil,
+            query: query.complete(),
+            viewFields: viewFields.complete(),
+            rowLimit: rowLimit,
+            queryOptions: queryOptions.complete(),
+            webID: nil,
+            responseDelegate: responseHandler)
+        
+        // Notify delegate that we are starting a network request
+        delegate.willStartNetworkLoad()
+        
+        // Send the request
+        request.sendRequest()
+        
     }
     
 }
