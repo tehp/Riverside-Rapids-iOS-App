@@ -7,60 +7,35 @@
 //
 
 import UIKit
+import CalendarView
+import SwiftMoment
 
-import EPCalendarPicker
-
-class CalendarViewController: UIViewController, EPCalendarPickerDelegate {
-
+class CalendarViewController: UIViewController {
     
-    @IBOutlet weak var txtViewDetail: UITextView!
-    @IBOutlet weak var btnShowMeCalendar: UIButton!
+    @IBOutlet weak var calendar: CalendarView!
+    
+    var date: Moment! {
+        didSet {
+            title = date.format("MMMM d, yyyy")
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view, typically from a nib.
+        date = moment()
+        calendar.delegate = self
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+}
+
+extension CalendarViewController: CalendarViewDelegate {
+    
+    func calendarDidSelectDate(date: Moment) {
+        self.date = date
     }
     
-    @IBAction func onTouchShowMeCalendarButton(sender: AnyObject) {
-        let calendarPicker = EPCalendarPicker(startYear: 2016, endYear: 2017, multiSelection: true, selectedDates: [])
-        calendarPicker.weekdayTintColor = AppDelegate.navColor
-        calendarPicker.weekendTintColor = AppDelegate.navColor
-        calendarPicker.monthTitleColor = AppDelegate.navColor
-        calendarPicker.todayTintColor = AppDelegate.navColor
-        calendarPicker.dateSelectionColor = AppDelegate.navColorLight
-        calendarPicker.calendarDelegate = self
-        calendarPicker.startDate = NSDate()
-        calendarPicker.hightlightsToday = true
-        calendarPicker.showsTodaysButton = true
-        calendarPicker.multiSelectEnabled = false
-        calendarPicker.hideDaysFromOtherMonth = false
-        calendarPicker.tintColor = UIColor.whiteColor()
-        calendarPicker.barTintColor = AppDelegate.navColor
-        calendarPicker.dayDisabledTintColor = UIColor.grayColor()
-        calendarPicker.title = "Riverside Calendar"
-        
-        //        calendarPicker.backgroundImage = UIImage(named: "background_image")
-        //        calendarPicker.backgroundColor = UIColor.blueColor()
-        
-        let navigationController = UINavigationController(rootViewController: calendarPicker)
-        self.presentViewController(navigationController, animated: true, completion: nil)
-    }
-    
-    func epCalendarPicker(_: EPCalendarPicker, didCancel error : NSError) {
-        txtViewDetail.text = "User cancelled selection"
-        
-    }
-    func epCalendarPicker(_: EPCalendarPicker, didSelectDate date : NSDate) {
-        txtViewDetail.text = "User selected date: \n\(date)"
-        
-    }
-    func epCalendarPicker(_: EPCalendarPicker, didSelectMultipleDate dates : [NSDate]) {
-        txtViewDetail.text = "User selected dates: \n\(dates)"
+    func calendarDidPageToDate(date: Moment) {
+        self.date = date
     }
     
 }
