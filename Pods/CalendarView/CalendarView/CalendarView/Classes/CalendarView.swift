@@ -26,7 +26,7 @@ public class CalendarView: UIView {
     static var otherMonthTextColor = UIColor.lightGrayColor()
     static var otherMonthBackgroundColor = UIColor.clearColor()
     static var weekLabelTextColor = UIColor.blackColor()
-    static var dayFont = UIFont.systemFontOfSize(15)
+    static var dayFont = UIFont.systemFontOfSize(16)
   }
 
   public class var dayBackgroundColor: UIColor {
