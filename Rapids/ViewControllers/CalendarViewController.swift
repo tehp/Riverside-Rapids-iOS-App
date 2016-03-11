@@ -10,6 +10,8 @@ import UIKit
 import CalendarView
 import SwiftMoment
 
+public var selectedDayOnPaged: Int? = nil
+
 class CalendarViewController: UIViewController {
     
     @IBOutlet weak var calendar: CalendarView!
@@ -37,5 +39,5 @@ extension CalendarViewController: CalendarViewDelegate {
     func calendarDidPageToDate(date: Moment) {
         self.date = date
     }
-    
 }
+
