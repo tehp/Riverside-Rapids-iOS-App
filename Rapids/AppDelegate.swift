@@ -7,10 +7,15 @@
 //
 
 import UIKit
+import CalendarView
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    
+    
+    
+    
     var window: UIWindow?
 
     //Define custom green color
@@ -19,6 +24,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
     
+        var navigationBarAppearace = UINavigationBar.appearance()
+        
+        navigationBarAppearace.tintColor = UIColor.whiteColor()  // Back buttons and such
+        navigationBarAppearace.barTintColor = AppDelegate.navColor  // Bar's background color
+        
+        navigationBarAppearace.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.whiteColor()]  // Title's text color
+        
+        CalendarView.daySelectedBackgroundColor = AppDelegate.navColor
+        CalendarView.daySelectedTextColor = UIColor.whiteColor()
+        CalendarView.todayBackgroundColor = UIColor(white: 0.0, alpha: 0.3)
+        CalendarView.todayTextColor = UIColor.whiteColor()
+        CalendarView.otherMonthBackgroundColor = UIColor.clearColor()
+        CalendarView.otherMonthTextColor = AppDelegate.navColor
+        CalendarView.dayTextColor = AppDelegate.navColor
+        CalendarView.dayBackgroundColor = UIColor.clearColor()
+        CalendarView.weekLabelTextColor = AppDelegate.navColor
+        
+        
+        
+        
         
     //Set status bar text to white
     UIApplication.sharedApplication().statusBarStyle = .LightContent
