@@ -14,8 +14,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     //Define custom green color
-    let navColor = UIColor(red: 0/255, green: 69/255, blue: 41/255, alpha: 1)
-    
+    static let navColor = UIColor(red: 0/255, green: 69/255, blue: 41/255, alpha: 1)
+    static let navColorLight = UIColor(red: 0/255, green: 120/255, blue: 41/255, alpha: 1)
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
     
@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     UIApplication.sharedApplication().statusBarStyle = .LightContent
         
     // Customizations for Navigation Bar -Mac
-    UINavigationBar.appearance().barTintColor = navColor
+    UINavigationBar.appearance().barTintColor = AppDelegate.navColor
         
         
         // Override point for customization after application launch.
