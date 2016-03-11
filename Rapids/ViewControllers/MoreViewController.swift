@@ -27,7 +27,8 @@ class MoreViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
         if CredentialsManager.sharedInstance.signedIn {
             signinButton.setTitle(CredentialsManager.sharedInstance.userDisplayName, forState: .Normal)
         } else {
@@ -51,7 +52,7 @@ class MoreViewController: UIViewController {
             let vc = storyboard.instantiateViewControllerWithIdentifier("signInNavVC")
             self.presentViewController(vc, animated: true, completion: nil)
         } else {
-            let signOutAlert = UIAlertController(title: "Sign out", message: "Are you sure you want to sign out?", preferredStyle: UIAlertControllerStyle.Alert)
+            let signOutAlert = UIAlertController(title: "Sign out", message: "Do you want to sign out?", preferredStyle: UIAlertControllerStyle.Alert)
             
             signOutAlert.addAction(UIAlertAction(title: "Sign out", style: .Default, handler: { (action: UIAlertAction!) in
                 CredentialsManager.sharedInstance.signOut()

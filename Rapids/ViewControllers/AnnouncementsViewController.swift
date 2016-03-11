@@ -35,6 +35,9 @@ class AnnouncementsViewController: UITableViewController, SharePointRequestDeleg
     var announcements = [Announcement]()
     var lastUpdated: NSDate?
     
+    // State
+    var lastSignedInState: Bool!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -46,7 +49,20 @@ class AnnouncementsViewController: UITableViewController, SharePointRequestDeleg
         // Setup Pull to Refresh
         self.refreshControl?.addTarget(self, action: "refresh:", forControlEvents: UIControlEvents.ValueChanged)
         
+        // Initialize state
+        lastSignedInState = CredentialsManager.sharedInstance.signedIn
+        
+        // Do initial load
         loadData(false)
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        let currentSignedInState = CredentialsManager.sharedInstance.signedIn
+        if currentSignedInState != lastSignedInState {
+            lastSignedInState = currentSignedInState
+            loadData(true)
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -106,6 +122,9 @@ class AnnouncementsViewController: UITableViewController, SharePointRequestDeleg
     }
     
     func updateList(rows: [[String: String]]) {
+        // Clear current data
+        announcements.removeAll()
+        
         // Update data
         for row in rows {
             let title = row[ATTR_TITLE]
@@ -122,10 +141,23 @@ class AnnouncementsViewController: UITableViewController, SharePointRequestDeleg
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "MMM. d 'at' h:mm a"
         self.refreshControl?.attributedTitle = NSAttributedString(string: "Last updated: \(dateFormatter.stringFromDate(lastUpdated!))")
+        
+        // Hide error messgae
+        self.tableView.backgroundView = nil
     }
     
     typealias CacheType = GetListItemsResponseData
     typealias ResponseType = GetListItemsResponse
+    
+    func didFailPreConditions(error: Int) {
+        // Hide the refreshing indicator
+        self.refreshControl?.endRefreshing()
+        
+        // Handle the error
+        if error == SharePointRequestErrors.ERROR_PRE_NOT_SIGNED_IN {
+            showAuthError()
+        }
+    }
     
     func didFindCachedData(cachedData: CacheType) {
         lastUpdated = cachedData.timestamp
@@ -177,6 +209,10 @@ class AnnouncementsViewController: UITableViewController, SharePointRequestDeleg
             messageLabel.numberOfLines = 0
             messageLabel.sizeToFit()
             
+            // Hide the table contents
+            announcements.removeAll()
+            self.tableView.reloadData()
+            
             // Display the error message label
             self.tableView.backgroundView = messageLabel
             self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
@@ -188,6 +224,10 @@ class AnnouncementsViewController: UITableViewController, SharePointRequestDeleg
             }))
             self.presentViewController(alertController, animated: true, completion: nil)
         }
+    }
+    
+    func showAuthError() {
+        showErrorMessage(false, errorMessage: "You must be signed in to use this feature")
     }
 }
 

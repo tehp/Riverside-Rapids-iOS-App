@@ -18,8 +18,6 @@ class CalendarViewController: UIViewController, SharePointRequestDelegate, UITab
     let ATTR_LOCATION = "ows_Location"
     let ATTR_DESCRIPTION = "ows_Description"
 
-    
-    
     // UI
     let cellIdentifier = "CalendarTableViewCell"
     var showPopupError: Bool = false
@@ -51,8 +49,6 @@ class CalendarViewController: UIViewController, SharePointRequestDelegate, UITab
         
         date = moment()
         
-
-        
         tableView.dataSource = self
         tableView.delegate = self
     
@@ -74,6 +70,10 @@ class CalendarViewController: UIViewController, SharePointRequestDelegate, UITab
         var end: String
     }
    
+    func didFailPreConditions(error: Int) {
+        
+    }
+    
     func didFindCachedData(cachedData: CacheType) {
 
     }
@@ -99,10 +99,8 @@ class CalendarViewController: UIViewController, SharePointRequestDelegate, UITab
     // MARK: Soap Requests
     
     private func loadData(networkOnly: Bool) {
-        SharePointRequestManager.sharedInstance.getCalendar(
+        SharePointRequestManager.sharedInstance.getSchoolCalendar(
             networkOnly,
-            username: CredentialsManager.sharedInstance.username,
-            password: CredentialsManager.sharedInstance.password,
             delegate: self)
     }
     

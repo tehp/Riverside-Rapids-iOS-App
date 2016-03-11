@@ -9,7 +9,6 @@
 import UIKit
 
 class SignInViewController: UIViewController, SharePointRequestDelegate {
-
     
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var usernameField: UITextField!
@@ -31,8 +30,6 @@ class SignInViewController: UIViewController, SharePointRequestDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-
-    
     // MARK: Navigation
 
     @IBAction func cancel(sender: UIBarButtonItem) {
@@ -43,11 +40,17 @@ class SignInViewController: UIViewController, SharePointRequestDelegate {
         username = usernameField.text!
         password = passwordField.text!
        
-        SharePointRequestManager.sharedInstance.checkAuth(username!, password: password!, delegate: self)
+        SharePointRequestManager.sharedInstance.getUserInfo(username!, password: password!, delegate: self)
     }
+    
+    // MARK: SharePointRequestManager
     
     typealias CacheType = AnyObject
     typealias ResponseType = NSDictionary
+    
+    func didFailPreConditions(error: Int) {
+        // not needed
+    }
     
     func didFindCachedData(cachedData: CacheType) {
         // not needed

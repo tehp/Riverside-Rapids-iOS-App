@@ -58,6 +58,8 @@
 		99F92AE51C88C32E00F2D7D7 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F92AE41C88C32E00F2D7D7 /* SignInViewController.swift */; };
 		B044DA70F6CEE20B97EE761D /* Pods_RapidsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF00632CDD4356C2FEF56A07 /* Pods_RapidsTests.framework */; };
 		D5CD8E8D1C7F8D1A00E4FC34 /* D.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CD8E8C1C7F8D1A00E4FC34 /* D.swift */; };
+		D5D2920B1C93468D00FC6F21 /* GetListCollectionRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D2920A1C93468D00FC6F21 /* GetListCollectionRequest.swift */; };
+		D5D2920D1C9346B700FC6F21 /* GetListCollectionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D2920C1C9346B700FC6F21 /* GetListCollectionResponse.swift */; };
 		D5EFC8381C84CF91009FCD94 /* BlockTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EFC8371C84CF91009FCD94 /* BlockTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -127,6 +129,8 @@
 		99F92AE21C88C26900F2D7D7 /* SignIn.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SignIn.storyboard; sourceTree = "<group>"; };
 		99F92AE41C88C32E00F2D7D7 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		D5CD8E8C1C7F8D1A00E4FC34 /* D.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = D.swift; sourceTree = "<group>"; };
+		D5D2920A1C93468D00FC6F21 /* GetListCollectionRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetListCollectionRequest.swift; sourceTree = "<group>"; };
+		D5D2920C1C9346B700FC6F21 /* GetListCollectionResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetListCollectionResponse.swift; sourceTree = "<group>"; };
 		D5EFC8371C84CF91009FCD94 /* BlockTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlockTableViewCell.swift; sourceTree = "<group>"; };
 		ED83042674159A794ECC7F77 /* Pods-Rapids.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rapids.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Rapids/Pods-Rapids.debug.xcconfig"; sourceTree = "<group>"; };
 		FF00632CDD4356C2FEF56A07 /* Pods_RapidsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RapidsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -301,6 +305,7 @@
 		4FE47E481C76A82400CBBE85 /* SOAP */ = {
 			isa = PBXGroup;
 			children = (
+				D5D292091C93466000FC6F21 /* GetListCollection */,
 				4FD9EA4F1C78D8A3002D6FD1 /* Transport */,
 				4FE47E491C76A82400CBBE85 /* CAML */,
 				4FE47E4E1C76A82400CBBE85 /* GetListItems */,
@@ -358,6 +363,15 @@
 				2E85ADB8E6D35AFF697648B9 /* Pods-RapidsTests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		D5D292091C93466000FC6F21 /* GetListCollection */ = {
+			isa = PBXGroup;
+			children = (
+				D5D2920A1C93468D00FC6F21 /* GetListCollectionRequest.swift */,
+				D5D2920C1C9346B700FC6F21 /* GetListCollectionResponse.swift */,
+			);
+			path = GetListCollection;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -591,6 +605,7 @@
 				269689A01C76475A00845C1D /* AnnouncementsViewController.swift in Sources */,
 				4FE47E5C1C76A82400CBBE85 /* SoapPrimitive.swift in Sources */,
 				4F8B63241C8CECD200161A75 /* SharePointRequestManager.swift in Sources */,
+				D5D2920D1C9346B700FC6F21 /* GetListCollectionResponse.swift in Sources */,
 				4FD9EA551C78D92F002D6FD1 /* SoapResponseDelegate.swift in Sources */,
 				4F99D2131C7B99720031BCC0 /* BSDay.swift in Sources */,
 				4FE47E551C76A82400CBBE85 /* SoapCamlBuilder.swift in Sources */,
@@ -600,6 +615,7 @@
 				4FE47E5B1C76A82400CBBE85 /* SoapObject.swift in Sources */,
 				D5CD8E8D1C7F8D1A00E4FC34 /* D.swift in Sources */,
 				4FE47E5A1C76A82400CBBE85 /* SoapNode.swift in Sources */,
+				D5D2920B1C93468D00FC6F21 /* GetListCollectionRequest.swift in Sources */,
 				4F99D2111C7B99640031BCC0 /* BSCal.swift in Sources */,
 				99DC0D091CAEF6A800C5EC03 /* CredentialsManager.swift in Sources */,
 				D5EFC8381C84CF91009FCD94 /* BlockTableViewCell.swift in Sources */,
