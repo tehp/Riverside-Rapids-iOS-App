@@ -14,19 +14,24 @@ public var selectedDayOnPaged: Int? = nil
 
 class CalendarViewController: UIViewController {
     
+    
+    @IBOutlet weak var dateLabel: UILabel!
+    
     @IBOutlet weak var calendar: CalendarView!
     
     var date: Moment! {
         didSet {
-            //sets nav bar title to the selected date
-            //title = date.format("MMMM d, yyyy")
+            print(date)
+    dateLabel.text = String(date)
         }
     }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         date = moment()
         calendar.delegate = self
+        
     }
 
     
