@@ -18,7 +18,8 @@ class CalendarViewController: UIViewController {
     
     var date: Moment! {
         didSet {
-            title = date.format("MMMM d, yyyy")
+            //sets nav bar title to the selected date
+            //title = date.format("MMMM d, yyyy")
         }
     }
     
