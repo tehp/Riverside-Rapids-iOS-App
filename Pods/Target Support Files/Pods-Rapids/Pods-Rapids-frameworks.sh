@@ -87,11 +87,13 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-Rapids/AEXML.framework"
   install_framework "Pods-Rapids/Alamofire.framework"
   install_framework "Pods-Rapids/CalendarView.framework"
+  install_framework "Pods-Rapids/KeychainSwift.framework"
   install_framework "Pods-Rapids/SwiftMoment.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-Rapids/AEXML.framework"
   install_framework "Pods-Rapids/Alamofire.framework"
   install_framework "Pods-Rapids/CalendarView.framework"
+  install_framework "Pods-Rapids/KeychainSwift.framework"
   install_framework "Pods-Rapids/SwiftMoment.framework"
 fi
