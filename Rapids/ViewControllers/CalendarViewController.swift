@@ -12,8 +12,7 @@ import SwiftMoment
 
 public var selectedDayOnPaged: Int? = nil
 
-class CalendarViewController: UIViewController {
-    
+class CalendarViewController: UIViewController, SharePointRequestDelegate {
     
     @IBOutlet weak var dateLabel: UILabel!
     
@@ -33,8 +32,25 @@ class CalendarViewController: UIViewController {
         calendar.delegate = self
         
     }
-
     
+    typealias CacheType = GetListItemsResponseData
+    typealias ResponseType = GetListItemsResponse
+    
+    func didFindCachedData(cachedData: CacheType) {
+        
+    }
+    func willStartNetworkLoad() {
+        
+    }
+    func didReceiveNetworkData(networkData: ResponseType) {
+        
+    }
+    func didReceiveNetworkError(error: ErrorType) {
+        
+    }
+    func didFinishNetworkLoad() {
+        
+    }
 }
 
 extension CalendarViewController: CalendarViewDelegate {
@@ -47,4 +63,3 @@ extension CalendarViewController: CalendarViewDelegate {
         self.date = date
     }
 }
-
