@@ -25,6 +25,14 @@ class MoreViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func schoolMapClicked(sender: UIButton) {
+    }
+    
+    @IBAction func aboutClicked(sender: UIButton) {
+    }
+    
+    @IBAction func signinClicked(sender: UIButton) {
+    }
     
 }
 
