@@ -7,6 +7,7 @@ target 'Rapids' do
     pod 'Alamofire', '~> 3.0'
     pod 'AEXML'
     pod "CalendarView"
+    pod 'KeychainSwift', '~> 3.0'
 end
 
 target 'RapidsTests' do

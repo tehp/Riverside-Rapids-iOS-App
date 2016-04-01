@@ -3,17 +3,20 @@ PODS:
   - Alamofire (3.2.0)
   - CalendarView (1.1.2):
     - SwiftMoment (~> 0.1)
+  - KeychainSwift (3.0.11)
   - SwiftMoment (0.4)
 
 DEPENDENCIES:
   - AEXML
   - Alamofire (~> 3.0)
   - CalendarView
+  - KeychainSwift (~> 3.0)
 
 SPEC CHECKSUMS:
   AEXML: 0e2f657fdc67e17905682a06d55583a863d80803
   Alamofire: 4da478599fccddff361205c8929333d7fe18dceb
   CalendarView: 35d51b70586213604edec22a585d105273f6e191
+  KeychainSwift: 0a4214c910423543a42b0f30f25987d46178b6a5
   SwiftMoment: e751c44be03a183fa6c949426d9473d26a66ef29
 
 COCOAPODS: 0.39.0
