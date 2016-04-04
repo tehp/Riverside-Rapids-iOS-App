@@ -100,6 +100,9 @@
                             <constraint firstItem="d03-tS-XDV" firstAttribute="leading" secondItem="Cbt-zM-Z7G" secondAttribute="leadingMargin" constant="30" id="z3w-6F-RIu"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="signinButton" destination="1My-e3-Kv5" id="bXs-Pm-fXe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ece-t3-9x4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
