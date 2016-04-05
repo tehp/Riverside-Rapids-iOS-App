@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import KeychainSwift
 
 class SignInViewController: UIViewController, SharePointRequestDelegate {
 
@@ -23,8 +22,6 @@ class SignInViewController: UIViewController, SharePointRequestDelegate {
         super.viewDidLoad()
         scrollView.contentSize = CGSize(width: 0, height: 700)
         // Do any additional setup after loading the view.
-    
-        
     }
     
     override func didReceiveMemoryWarning() {
@@ -59,13 +56,8 @@ class SignInViewController: UIViewController, SharePointRequestDelegate {
     }
     
     func didReceiveNetworkData(networkData: ResponseType) {
-        let keychain = KeychainSwift()
-        keychain.set(username!, forKey: "ca.bc.sd43.riverside.sp.auth.Username")
-        keychain.set(password!, forKey: "ca.bc.sd43.riverside.sp.auth.Password")
-        keychain.set(networkData["Name"]! as! String, forKey: "ca.bc.sd43.riverside.sp.auth.UserDisplayName")
-        
+        CredentialsManager.sharedInstance.signIn(username!, password: password!, userDisplayName: networkData["Name"]! as! String)
         dismissViewControllerAnimated(true, completion: nil)
-        
     }
     
     func didReceiveNetworkError(error: ErrorType) {

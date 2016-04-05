@@ -49,6 +49,7 @@
 		4FE47E5A1C76A82400CBBE85 /* SoapNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE47E511C76A82400CBBE85 /* SoapNode.swift */; };
 		4FE47E5B1C76A82400CBBE85 /* SoapObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE47E521C76A82400CBBE85 /* SoapObject.swift */; };
 		4FE47E5C1C76A82400CBBE85 /* SoapPrimitive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE47E531C76A82400CBBE85 /* SoapPrimitive.swift */; };
+		99DC0D091CAEF6A800C5EC03 /* CredentialsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DC0D081CAEF6A800C5EC03 /* CredentialsManager.swift */; };
 		99F92AE31C88C26900F2D7D7 /* SignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99F92AE21C88C26900F2D7D7 /* SignIn.storyboard */; };
 		99F92AE51C88C32E00F2D7D7 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F92AE41C88C32E00F2D7D7 /* SignInViewController.swift */; };
 		B044DA70F6CEE20B97EE761D /* Pods_RapidsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF00632CDD4356C2FEF56A07 /* Pods_RapidsTests.framework */; };
@@ -114,6 +115,7 @@
 		5BA7F3A4B6426F26585F34A6 /* Pods-Rapids.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rapids.release.xcconfig"; path = "Pods/Target Support Files/Pods-Rapids/Pods-Rapids.release.xcconfig"; sourceTree = "<group>"; };
 		84D59BBB7AC39BC0B377D6E6 /* Pods_Rapids.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rapids.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9960CA7554EF199872A65C2E /* Pods-RapidsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RapidsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RapidsTests/Pods-RapidsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		99DC0D081CAEF6A800C5EC03 /* CredentialsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CredentialsManager.swift; sourceTree = "<group>"; };
 		99F92AE21C88C26900F2D7D7 /* SignIn.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SignIn.storyboard; sourceTree = "<group>"; };
 		99F92AE41C88C32E00F2D7D7 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		D5CD8E8C1C7F8D1A00E4FC34 /* D.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = D.swift; sourceTree = "<group>"; };
@@ -270,6 +272,7 @@
 			children = (
 				4F99D20F1C7B99520031BCC0 /* BellSchedule */,
 				4FE47E471C76A82400CBBE85 /* SharePoint */,
+				99DC0D081CAEF6A800C5EC03 /* CredentialsManager.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -582,6 +585,7 @@
 				D5CD8E8D1C7F8D1A00E4FC34 /* D.swift in Sources */,
 				4FE47E5A1C76A82400CBBE85 /* SoapNode.swift in Sources */,
 				4F99D2111C7B99640031BCC0 /* BSCal.swift in Sources */,
+				99DC0D091CAEF6A800C5EC03 /* CredentialsManager.swift in Sources */,
 				D5EFC8381C84CF91009FCD94 /* BlockTableViewCell.swift in Sources */,
 				4FD9EA531C78D90A002D6FD1 /* SoapResponse.swift in Sources */,
 				4FE47E571C76A82400CBBE85 /* SoapQueryOptionsBuilder.swift in Sources */,

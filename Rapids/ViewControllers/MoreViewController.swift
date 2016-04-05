@@ -12,6 +12,8 @@ import UIKit
 
 class MoreViewController: UIViewController {
     
+    @IBOutlet weak var signinButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -25,6 +27,14 @@ class MoreViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewDidAppear(animated: Bool) {
+        if CredentialsManager.sharedInstance.signedIn {
+            signinButton.setTitle(CredentialsManager.sharedInstance.userDisplayName, forState: .Normal)
+        } else {
+            signinButton.setTitle("Sign In", forState: .Normal)
+        }
+    }
+    
     @IBAction func schoolMapClicked(sender: UIButton) {
     }
     
@@ -32,6 +42,25 @@ class MoreViewController: UIViewController {
     }
     
     @IBAction func signinClicked(sender: UIButton) {
+        if !CredentialsManager.sharedInstance.signedIn {
+            let storyboard = UIStoryboard(name: "SignIn", bundle: nil)
+            let vc = storyboard.instantiateViewControllerWithIdentifier("signInNavVC")
+            self.presentViewController(vc, animated: true, completion: nil)
+        } else {
+            let signOutAlert = UIAlertController(title: "Sign out", message: "Are you sure you want to sign out?", preferredStyle: UIAlertControllerStyle.Alert)
+            
+            signOutAlert.addAction(UIAlertAction(title: "Sign out", style: .Default, handler: { (action: UIAlertAction!) in
+                CredentialsManager.sharedInstance.signOut()
+                self.signinButton.setTitle("Sign In" , forState: .Normal)
+            }))
+            
+            signOutAlert.addAction(UIAlertAction(title: "Cancel", style: .Default, handler: { (action: UIAlertAction!) in
+                print("User Canceled")
+            }))
+            
+            
+            presentViewController(signOutAlert, animated: true, completion: nil)
+        }
     }
     
 }
