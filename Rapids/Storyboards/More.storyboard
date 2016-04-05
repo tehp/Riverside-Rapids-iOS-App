@@ -79,7 +79,6 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="signinClicked:" destination="7sp-0s-eu9" eventType="touchUpInside" id="lE7-MA-AmM"/>
-                                    <segue destination="USW-uH-JQG" kind="presentation" id="TEw-F9-gDV"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -106,7 +105,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ece-t3-9x4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="207" y="388"/>
+            <point key="canvasLocation" x="205" y="388"/>
         </scene>
         <!--SignIn-->
         <scene sceneID="ThN-Mb-qcl">

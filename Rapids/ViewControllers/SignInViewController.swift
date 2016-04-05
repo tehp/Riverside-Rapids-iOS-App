@@ -22,8 +22,6 @@ class SignInViewController: UIViewController, SharePointRequestDelegate {
         super.viewDidLoad()
         scrollView.contentSize = CGSize(width: 0, height: 700)
         // Do any additional setup after loading the view.
-    
-        
     }
     
     override func didReceiveMemoryWarning() {
