@@ -10,9 +10,9 @@ import UIKit
 import CalendarView
 import SwiftMoment
 
-public var selectedDayOnPaged: Int? = nil
-
 class CalendarViewController: UIViewController, SharePointRequestDelegate {
+    
+    // MARK: Table View Data
     
     @IBOutlet weak var dateLabel: UILabel!
     
@@ -21,7 +21,7 @@ class CalendarViewController: UIViewController, SharePointRequestDelegate {
     var date: Moment! {
         didSet {
             print(date)
-    dateLabel.text = String(date)
+            dateLabel.text = String(date)
         }
     }
     
@@ -36,6 +36,19 @@ class CalendarViewController: UIViewController, SharePointRequestDelegate {
     typealias CacheType = GetListItemsResponseData
     typealias ResponseType = GetListItemsResponse
     
+    struct CalendarEvent {
+        var title: String
+        var category: String
+    }
+    
+    // UI
+    let cellIdentifier = "AnnouncementTableViewCell"
+    var showPopupError: Bool = false
+    
+    // Model
+    var calendarTable = [CalendarEvent]()
+    var lastUpdated: NSDate?
+    
     func didFindCachedData(cachedData: CacheType) {
         
     }
@@ -47,9 +60,34 @@ class CalendarViewController: UIViewController, SharePointRequestDelegate {
     }
     func didReceiveNetworkError(error: ErrorType) {
         
+        let errMsgRetrieve = "Unable to retrieve announcements.\nPull down to refresh."
+        let errMsgUpdate = "Unable to update announcements.\nPlease check your internet connection."
+        
+        if(calendarTable.count == 0) {
+            // Create error message label
+            let messageLabel = UILabel(frame: CGRect(x: 0, y: 0, width: self.view.bounds.size.width, height: self.view.bounds.size.height))
+            messageLabel.text = errMsgRetrieve
+            messageLabel.textColor = UIColor.blackColor()
+            messageLabel.textAlignment = NSTextAlignment.Center
+            messageLabel.numberOfLines = 0
+            messageLabel.sizeToFit()
+            
+            // Display the error message label
+            //self.tableView.backgroundView = messageLabel
+            //self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
+        } else if showPopupError {
+            let alertController = UIAlertController(title: "Network Error", message: errMsgUpdate, preferredStyle: UIAlertControllerStyle.Alert)
+            alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Cancel, handler: nil))
+            alertController.addAction(UIAlertAction(title: "Try Again", style: UIAlertActionStyle.Default, handler: { (alertAction) in
+                //self.loadData(true)
+            }))
+            self.presentViewController(alertController, animated: true, completion: nil)
+        }
+
     }
     func didFinishNetworkLoad() {
-        
+        // After the first network request we want to show popup errors
+        showPopupError = true
     }
 }
 
