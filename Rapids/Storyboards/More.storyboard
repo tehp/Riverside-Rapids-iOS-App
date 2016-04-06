@@ -79,7 +79,6 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="signinClicked:" destination="7sp-0s-eu9" eventType="touchUpInside" id="lE7-MA-AmM"/>
-                                    <segue destination="USW-uH-JQG" kind="presentation" id="TEw-F9-gDV"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -100,10 +99,13 @@
                             <constraint firstItem="d03-tS-XDV" firstAttribute="leading" secondItem="Cbt-zM-Z7G" secondAttribute="leadingMargin" constant="30" id="z3w-6F-RIu"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="signinButton" destination="1My-e3-Kv5" id="bXs-Pm-fXe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ece-t3-9x4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="207" y="388"/>
+            <point key="canvasLocation" x="205" y="388"/>
         </scene>
         <!--SignIn-->
         <scene sceneID="ThN-Mb-qcl">

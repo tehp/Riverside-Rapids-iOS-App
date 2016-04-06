@@ -8,7 +8,7 @@
         <!--Sign In-->
         <scene sceneID="Zkg-Ud-Ai3">
             <objects>
-                <viewController storyboardIdentifier="signinVC" id="tqy-aP-4LH" customClass="SignInViewController" customModule="Rapids" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="signinVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="tqy-aP-4LH" customClass="SignInViewController" customModule="Rapids" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="YTt-V3-fFg"/>
                         <viewControllerLayoutGuide type="bottom" id="r7i-H9-ZrH"/>
@@ -86,7 +86,7 @@
         <!--Navigation Controller-->
         <scene sceneID="MK9-CG-5g9">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PZx-1Y-7TV" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="signInNavVC" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="PZx-1Y-7TV" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="wvc-hK-9JO">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
