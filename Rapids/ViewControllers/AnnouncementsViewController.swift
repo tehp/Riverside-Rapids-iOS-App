@@ -98,7 +98,11 @@ class AnnouncementsViewController: UITableViewController, SharePointRequestDeleg
     // MARK: Soap Request / Response
     
     private func loadData(networkOnly: Bool) {
-        SharePointRequestManager.sharedInstance.getDailyAnnouncements(networkOnly, username: "132-ntajwar", password: "steer323", delegate: self)
+        SharePointRequestManager.sharedInstance.getDailyAnnouncements(
+            networkOnly,
+            username: CredentialsManager.sharedInstance.username,
+            password: CredentialsManager.sharedInstance.password,
+            delegate: self)
     }
     
     func updateList(rows: [[String: String]]) {
@@ -148,25 +152,10 @@ class AnnouncementsViewController: UITableViewController, SharePointRequestDeleg
         let errMsgRetrieve = "Unable to retrieve announcements.\nPull down to refresh."
         let errMsgUpdate = "Unable to update announcements.\nPlease check your internet connection."
         
-        if(announcements.count == 0) {
-            // Create error message label
-            let messageLabel = UILabel(frame: CGRect(x: 0, y: 0, width: self.view.bounds.size.width, height: self.view.bounds.size.height))
-            messageLabel.text = errMsgRetrieve
-            messageLabel.textColor = UIColor.blackColor()
-            messageLabel.textAlignment = NSTextAlignment.Center
-            messageLabel.numberOfLines = 0
-            messageLabel.sizeToFit()
-        
-            // Display the error message label
-            self.tableView.backgroundView = messageLabel
-            self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
+        if announcements.count == 0 {
+            showErrorMessage(false, errorMessage: errMsgRetrieve)
         } else if showPopupError {
-            let alertController = UIAlertController(title: "Network Error", message: errMsgUpdate, preferredStyle: UIAlertControllerStyle.Alert)
-            alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Cancel, handler: nil))
-            alertController.addAction(UIAlertAction(title: "Try Again", style: UIAlertActionStyle.Default, handler: { (alertAction) in
-                self.loadData(true)
-            }))
-            self.presentViewController(alertController, animated: true, completion: nil)
+            showErrorMessage(true, errorMessage: errMsgUpdate)
         }
     }
     
@@ -176,6 +165,29 @@ class AnnouncementsViewController: UITableViewController, SharePointRequestDeleg
         
         // After the first network request we want to show popup errors
         showPopupError = true
+    }
+    
+    func showErrorMessage(popup: Bool, errorMessage: String) {
+        if !popup {
+            // Create error message label
+            let messageLabel = UILabel(frame: CGRect(x: 0, y: 0, width: self.view.bounds.size.width, height: self.view.bounds.size.height))
+            messageLabel.text = errorMessage
+            messageLabel.textColor = UIColor.blackColor()
+            messageLabel.textAlignment = NSTextAlignment.Center
+            messageLabel.numberOfLines = 0
+            messageLabel.sizeToFit()
+            
+            // Display the error message label
+            self.tableView.backgroundView = messageLabel
+            self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
+        } else if showPopupError {
+            let alertController = UIAlertController(title: "Network Error", message: errorMessage, preferredStyle: UIAlertControllerStyle.Alert)
+            alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Cancel, handler: nil))
+            alertController.addAction(UIAlertAction(title: "Try Again", style: UIAlertActionStyle.Default, handler: { (alertAction) in
+                self.loadData(true)
+            }))
+            self.presentViewController(alertController, animated: true, completion: nil)
+        }
     }
 }
 

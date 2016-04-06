@@ -15,6 +15,8 @@ class SignInViewController: UIViewController, SharePointRequestDelegate {
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     
+    var progressView: UIActivityIndicatorView!
+    
     var username: String?
     var password: String?
     
@@ -52,7 +54,10 @@ class SignInViewController: UIViewController, SharePointRequestDelegate {
     }
     
     func willStartNetworkLoad() {
-        //not needed
+        progressView = UIActivityIndicatorView(activityIndicatorStyle: .White)
+        progressView.hidesWhenStopped = true
+        progressView.startAnimating()
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: progressView)
     }
     
     func didReceiveNetworkData(networkData: ResponseType) {
@@ -61,7 +66,19 @@ class SignInViewController: UIViewController, SharePointRequestDelegate {
     }
     
     func didReceiveNetworkError(error: ErrorType) {
-        print(error)
+        progressView.stopAnimating()
+        let doneButton = UIBarButtonItem(title: "Done", style: .Done, target: self, action: "signIn:")
+        self.navigationItem.rightBarButtonItem = doneButton
+    
+        let signInFailedAlert = UIAlertController(title: "Sign In Error", message: "There was an error verifying your credentials", preferredStyle: UIAlertControllerStyle.Alert)
+        
+        signInFailedAlert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: { (action: UIAlertAction!) in
+            CredentialsManager.sharedInstance.signOut()
+    
+            
+            }))
+        presentViewController(signInFailedAlert, animated: true, completion: nil)
+        
     }
     
     func didFinishNetworkLoad() {

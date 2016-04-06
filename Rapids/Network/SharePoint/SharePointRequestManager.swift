@@ -78,17 +78,20 @@ class SharePointRequestManager {
         let base64Credentials = credentialData.base64EncodedStringWithOptions([])
         let authHeader = "Basic " + base64Credentials
         
+        delegate.willStartNetworkLoad()
+        
         Alamofire.request(.GET, D.Proxy.SP.GET_USER_INFO, headers: ["Authorization": authHeader])
             .responseJSON { response in
-                    switch response.result {
-                    case .Success(let json):
-                        let response = json as! NSDictionary
-                        delegate.didReceiveNetworkData(response)
-                
-                    case .Failure(let error):
-                        delegate.didReceiveNetworkError(error)
-                
+                switch response.result {
+                case .Success(let json):
+                    let response = json as! NSDictionary
+                    delegate.didReceiveNetworkData(response)
+            
+                case .Failure(let error):
+                    delegate.didReceiveNetworkError(error)
                 }
+                
+                delegate.didFinishNetworkLoad()
             }
     }
     

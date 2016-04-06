@@ -57,7 +57,7 @@ class MoreViewController: UIViewController {
             signOutAlert.addAction(UIAlertAction(title: "Cancel", style: .Default, handler: { (action: UIAlertAction!) in
                 print("User Canceled")
             }))
-            
+
             
             presentViewController(signOutAlert, animated: true, completion: nil)
         }
