@@ -22,6 +22,7 @@
 		269689A51C76475A00845C1D /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2696899E1C76475A00845C1D /* MoreViewController.swift */; };
 		269689A81C76480400845C1D /* rapids_large.png in Resources */ = {isa = PBXBuildFile; fileRef = 269689A71C76480400845C1D /* rapids_large.png */; };
 		26A6B6581C881D1100629FDF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9D61991C643C4400CA406F /* AppDelegate.swift */; };
+		26C394771CB58C0A00F26DA0 /* CalendarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C394761CB58C0A00F26DA0 /* CalendarTableViewCell.swift */; };
 		4F48E5B61C8B936900733382 /* BellScheduleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F48E5B51C8B936900733382 /* BellScheduleManager.swift */; };
 		4F69F3F71C8BA725003C11C5 /* SchoolDates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F69F3F61C8BA725003C11C5 /* SchoolDates.swift */; };
 		4F80D9D21C76E8610052496B /* SoapEnvelope.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F80D9D11C76E8610052496B /* SoapEnvelope.swift */; };
@@ -80,6 +81,7 @@
 		2696899D1C76475A00845C1D /* HomeworkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeworkViewController.swift; sourceTree = "<group>"; };
 		2696899E1C76475A00845C1D /* MoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		269689A71C76480400845C1D /* rapids_large.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rapids_large.png; sourceTree = "<group>"; };
+		26C394761CB58C0A00F26DA0 /* CalendarTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarTableViewCell.swift; sourceTree = "<group>"; };
 		2E85ADB8E6D35AFF697648B9 /* Pods-RapidsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RapidsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RapidsTests/Pods-RapidsTests.release.xcconfig"; sourceTree = "<group>"; };
 		4F48E5B51C8B936900733382 /* BellScheduleManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BellScheduleManager.swift; sourceTree = "<group>"; };
 		4F69F3F61C8BA725003C11C5 /* SchoolDates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchoolDates.swift; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 		269689981C76475A00845C1D /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				26C394761CB58C0A00F26DA0 /* CalendarTableViewCell.swift */,
 				269689991C76475A00845C1D /* AnnouncementsViewController.swift */,
 				2696899A1C76475A00845C1D /* BellScheduleViewController.swift */,
 				2696899B1C76475A00845C1D /* CalendarViewController.swift */,
@@ -565,6 +568,7 @@
 				4FD9EA571C7A414D002D6FD1 /* GetListItemsResponse.swift in Sources */,
 				269689A21C76475A00845C1D /* CalendarViewController.swift in Sources */,
 				269689A41C76475A00845C1D /* HomeworkViewController.swift in Sources */,
+				26C394771CB58C0A00F26DA0 /* CalendarTableViewCell.swift in Sources */,
 				99F92AE51C88C32E00F2D7D7 /* SignInViewController.swift in Sources */,
 				4F9D619A1C643C4400CA406F /* AppDelegate.swift in Sources */,
 				269689A11C76475A00845C1D /* BellScheduleViewController.swift in Sources */,

@@ -26,13 +26,27 @@
                                 <rect key="frame" x="0.0" y="380" width="600" height="177"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="fen-tn-4ka">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="fen-tn-4ka" customClass="CalendarTableViewCell" customModule="Rapids" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fen-tn-4ka" id="Otq-Tf-9ia">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="event text" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ji-Px-klT">
+                                                    <rect key="frame" x="8" y="11" width="91" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="eventLabel" destination="9Ji-Px-klT" id="dOR-3j-zgt"/>
+                                            <outlet property="itemLabel" destination="9Ji-Px-klT" id="lge-fY-f06"/>
+                                            <outlet property="nameLabel" destination="9Ji-Px-klT" id="8Tk-kL-8Ys"/>
+                                            <outlet property="textLabel" destination="9Ji-Px-klT" id="Ye0-f4-Rtx"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
