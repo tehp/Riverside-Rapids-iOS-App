@@ -12,6 +12,10 @@ import SwiftMoment
 
 class CalendarViewController: UIViewController, SharePointRequestDelegate {
     
+    // UI
+    let cellIdentifier = "CalendarTableViewCell"
+    var showPopupError: Bool = false
+    
     // MARK: Table View Data
     
     @IBOutlet weak var dateLabel: UILabel!
@@ -24,6 +28,20 @@ class CalendarViewController: UIViewController, SharePointRequestDelegate {
             dateLabel.text = String(date)
         }
     }
+    
+
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+
+    //func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    //    return announcements.count
+    //}
+
+
+    
+    
     
     
     override func viewDidLoad() {
@@ -41,9 +59,6 @@ class CalendarViewController: UIViewController, SharePointRequestDelegate {
         var category: String
     }
     
-    // UI
-    let cellIdentifier = "AnnouncementTableViewCell"
-    var showPopupError: Bool = false
     
     // Model
     var calendarTable = [CalendarEvent]()

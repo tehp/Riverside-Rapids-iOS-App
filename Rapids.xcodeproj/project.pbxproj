@@ -81,7 +81,7 @@
 		2696899D1C76475A00845C1D /* HomeworkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeworkViewController.swift; sourceTree = "<group>"; };
 		2696899E1C76475A00845C1D /* MoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		269689A71C76480400845C1D /* rapids_large.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rapids_large.png; sourceTree = "<group>"; };
-		26C394761CB58C0A00F26DA0 /* CalendarTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarTableViewCell.swift; sourceTree = "<group>"; };
+		26C394761CB58C0A00F26DA0 /* CalendarTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CalendarTableViewCell.swift; path = ../ViewControllers/CalendarTableViewCell.swift; sourceTree = "<group>"; };
 		2E85ADB8E6D35AFF697648B9 /* Pods-RapidsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RapidsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RapidsTests/Pods-RapidsTests.release.xcconfig"; sourceTree = "<group>"; };
 		4F48E5B51C8B936900733382 /* BellScheduleManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BellScheduleManager.swift; sourceTree = "<group>"; };
 		4F69F3F61C8BA725003C11C5 /* SchoolDates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchoolDates.swift; sourceTree = "<group>"; };
@@ -162,7 +162,6 @@
 		269689981C76475A00845C1D /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				26C394761CB58C0A00F26DA0 /* CalendarTableViewCell.swift */,
 				269689991C76475A00845C1D /* AnnouncementsViewController.swift */,
 				2696899A1C76475A00845C1D /* BellScheduleViewController.swift */,
 				2696899B1C76475A00845C1D /* CalendarViewController.swift */,
@@ -256,6 +255,7 @@
 			children = (
 				4FC6578D1C7CE2E500635111 /* AnnouncementTableViewCell.swift */,
 				D5EFC8371C84CF91009FCD94 /* BlockTableViewCell.swift */,
+				26C394761CB58C0A00F26DA0 /* CalendarTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
