@@ -19,8 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     static var firstLaunch: Bool = false
     
     //Define custom green color
-    static let navColor = UIColor(red: 0/255, green: 69/255, blue: 41/255, alpha: 1)
-    static let navColorLight = UIColor(red: 0/255, green: 120/255, blue: 41/255, alpha: 1)
+    static let navColor = UIColor(red: 0.0/255.0, green: 141.0/255.0, blue: 65.0/255.0, alpha: 1)
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 
@@ -46,9 +45,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
         //Set status bar text to white
         UIApplication.sharedApplication().statusBarStyle = .LightContent
-        
-        // Customizations for Navigation Bar -Mac
-        UINavigationBar.appearance().barTintColor = AppDelegate.navColor
         
         let launchedBefore = NSUserDefaults.standardUserDefaults().boolForKey(PREF_FIRST_LAUNCH)
         if launchedBefore  {

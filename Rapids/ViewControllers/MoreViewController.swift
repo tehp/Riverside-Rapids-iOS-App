@@ -36,6 +36,10 @@ class MoreViewController: UIViewController {
     }
     
     @IBAction func schoolMapClicked(sender: UIButton) {
+        let storyboard = UIStoryboard(name: "Map", bundle: nil)
+        let vc = storyboard.instantiateViewControllerWithIdentifier("mapNavVC")
+        self.presentViewController(vc, animated: true, completion: nil)
+        
     }
     
     @IBAction func aboutClicked(sender: UIButton) {

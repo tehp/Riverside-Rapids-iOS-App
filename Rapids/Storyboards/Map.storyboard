@@ -1,27 +1,112 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="yn7-gm-xb6">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
-        <!--Map View Controller-->
-        <scene sceneID="ChL-iq-i47">
+        <!--School Map-->
+        <scene sceneID="pPU-Cc-DUk">
             <objects>
-                <viewController id="erc-eI-NMi" customClass="MapViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="mapVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Xfb-Wh-Tp4" customClass="MapViewController" customModule="Rapids" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="ima-r2-NCt"/>
-                        <viewControllerLayoutGuide type="bottom" id="Oal-1n-j2f"/>
+                        <viewControllerLayoutGuide type="top" id="I8H-QZ-Wbl"/>
+                        <viewControllerLayoutGuide type="bottom" id="5id-Mi-z5s"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="a0r-1y-DGE">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <view key="view" contentMode="scaleToFill" id="Enk-go-Y7x">
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <toolbar contentMode="scaleToFill" misplaced="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xEE-G0-m40">
+                                <rect key="frame" x="0.0" y="64" width="600" height="44"/>
+                                <color key="backgroundColor" red="0.1068653547" green="0.26262626259999999" blue="0.12535350049999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="3ec-0M-1N4"/>
+                                    <barButtonItem style="plain" id="55g-Ja-nrq">
+                                        <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="Yvq-bU-i0Y">
+                                            <rect key="frame" x="239" y="7" width="121" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <segments>
+                                                <segment title="Floor 1"/>
+                                                <segment title="Floor 2"/>
+                                            </segments>
+                                            <connections>
+                                                <action selector="floorSelected:" destination="Xfb-Wh-Tp4" eventType="valueChanged" id="dLo-r8-2z4"/>
+                                            </connections>
+                                        </segmentedControl>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="bOO-zx-aeG"/>
+                                </items>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </toolbar>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FaU-JX-N7n">
+                                <rect key="frame" x="20" y="108" width="560" height="492"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Floor1" translatesAutoresizingMaskIntoConstraints="NO" id="obM-HJ-Hvj">
+                                        <rect key="frame" x="120" y="38" width="320" height="480"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="obM-HJ-Hvj" secondAttribute="bottom" id="79W-1s-gj5"/>
+                                    <constraint firstItem="obM-HJ-Hvj" firstAttribute="top" secondItem="FaU-JX-N7n" secondAttribute="top" id="PM0-LE-Mwg"/>
+                                    <constraint firstItem="obM-HJ-Hvj" firstAttribute="leading" secondItem="FaU-JX-N7n" secondAttribute="leading" id="Pbh-j4-wBE"/>
+                                    <constraint firstAttribute="trailing" secondItem="obM-HJ-Hvj" secondAttribute="trailing" id="TCT-co-Hdg"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="FaU-JX-N7n" firstAttribute="leading" secondItem="Enk-go-Y7x" secondAttribute="leading" id="3LO-75-ILD"/>
+                            <constraint firstAttribute="trailing" secondItem="xEE-G0-m40" secondAttribute="trailing" id="6Ex-bP-gln"/>
+                            <constraint firstItem="FaU-JX-N7n" firstAttribute="top" secondItem="xEE-G0-m40" secondAttribute="bottom" id="6PG-Jj-NyZ"/>
+                            <constraint firstItem="5id-Mi-z5s" firstAttribute="top" secondItem="FaU-JX-N7n" secondAttribute="bottom" id="Ax7-ao-dv4"/>
+                            <constraint firstAttribute="trailing" secondItem="FaU-JX-N7n" secondAttribute="trailing" id="MCG-Js-erq"/>
+                            <constraint firstItem="xEE-G0-m40" firstAttribute="top" secondItem="I8H-QZ-Wbl" secondAttribute="bottom" id="WMZ-eC-cki"/>
+                            <constraint firstItem="xEE-G0-m40" firstAttribute="leading" secondItem="Enk-go-Y7x" secondAttribute="leading" id="hps-X7-4bD"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="School Map" id="9wN-F8-WiU">
+                        <barButtonItem key="leftBarButtonItem" title="Close" id="csm-8W-E4c">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="backButtonClicked:" destination="Xfb-Wh-Tp4" id="EaC-lD-56c"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="imageView" destination="obM-HJ-Hvj" id="Ayc-ef-YTu"/>
+                        <outlet property="imageViewBottomConstraint" destination="79W-1s-gj5" id="kKZ-eD-LfA"/>
+                        <outlet property="imageViewLeadingConstraint" destination="Pbh-j4-wBE" id="UDj-c0-QQV"/>
+                        <outlet property="imageViewTopConstraint" destination="PM0-LE-Mwg" id="YEr-ow-fMM"/>
+                        <outlet property="imageViewTrailingConstraint" destination="TCT-co-Hdg" id="vFa-Dr-TCW"/>
+                        <outlet property="scrollView" destination="FaU-JX-N7n" id="YXi-oA-RQE"/>
+                        <outlet property="toolbar" destination="xEE-G0-m40" id="6ka-Lo-Jfg"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Yke-IS-mkZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mYC-bb-LLL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="371" y="373"/>
+            <point key="canvasLocation" x="2220" y="360"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="myi-f1-5gP">
+            <objects>
+                <navigationController storyboardIdentifier="mapNavVC" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="yn7-gm-xb6" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="X56-Ng-F49">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Xfb-Wh-Tp4" kind="relationship" relationship="rootViewController" id="r4L-4b-e2D"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TZq-Y5-9ns" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1407" y="360"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Floor1" width="368" height="908"/>
+    </resources>
 </document>
