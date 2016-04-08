@@ -12,45 +12,54 @@ import SwiftMoment
 
 class CalendarViewController: UIViewController, SharePointRequestDelegate {
     
+    let ATTR_TITLE = "ows_LinkTitle"
+    let ATTR_CATEGORIES = "ows_Categories"
+    
+    let CATEGORY_GENERAL = "General"
+    let CATEGORY_STUDENT_ALERT = "Student Alert"
+    let CATEGORY_ALTHLETICS = "Athletics"
+    let CATEGORY_GRAD = "Grad"
+    
     // UI
     let cellIdentifier = "CalendarTableViewCell"
     var showPopupError: Bool = false
     
-    // MARK: Table View Data
+    // Model
+    var calendarTable = [CalendarEvent]()
+    var lastUpdated: NSDate?
     
-    @IBOutlet weak var dateLabel: UILabel!
+  
+    // MARK: Table View Data
     
     @IBOutlet weak var calendar: CalendarView!
     
     var date: Moment! {
         didSet {
             print(date)
-            dateLabel.text = String(date)
         }
     }
     
-
-    
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
-    }
-
-    //func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    //    return announcements.count
-    //}
-
-
-    
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Setup TableView
+        //tableView.rowHeight = UITableViewAutomaticDimension
+        //tableView.estimatedRowHeight = 120.0
+        
         date = moment()
         calendar.delegate = self
         
     }
     
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    
+    
+ 
     typealias CacheType = GetListItemsResponseData
     typealias ResponseType = GetListItemsResponse
     
@@ -58,52 +67,30 @@ class CalendarViewController: UIViewController, SharePointRequestDelegate {
         var title: String
         var category: String
     }
-    
-    
-    // Model
-    var calendarTable = [CalendarEvent]()
-    var lastUpdated: NSDate?
-    
+   
     func didFindCachedData(cachedData: CacheType) {
-        
-    }
-    func willStartNetworkLoad() {
-        
-    }
-    func didReceiveNetworkData(networkData: ResponseType) {
-        
-    }
-    func didReceiveNetworkError(error: ErrorType) {
-        
-        let errMsgRetrieve = "Unable to retrieve announcements.\nPull down to refresh."
-        let errMsgUpdate = "Unable to update announcements.\nPlease check your internet connection."
-        
-        if(calendarTable.count == 0) {
-            // Create error message label
-            let messageLabel = UILabel(frame: CGRect(x: 0, y: 0, width: self.view.bounds.size.width, height: self.view.bounds.size.height))
-            messageLabel.text = errMsgRetrieve
-            messageLabel.textColor = UIColor.blackColor()
-            messageLabel.textAlignment = NSTextAlignment.Center
-            messageLabel.numberOfLines = 0
-            messageLabel.sizeToFit()
-            
-            // Display the error message label
-            //self.tableView.backgroundView = messageLabel
-            //self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
-        } else if showPopupError {
-            let alertController = UIAlertController(title: "Network Error", message: errMsgUpdate, preferredStyle: UIAlertControllerStyle.Alert)
-            alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Cancel, handler: nil))
-            alertController.addAction(UIAlertAction(title: "Try Again", style: UIAlertActionStyle.Default, handler: { (alertAction) in
-                //self.loadData(true)
-            }))
-            self.presentViewController(alertController, animated: true, completion: nil)
-        }
 
     }
-    func didFinishNetworkLoad() {
-        // After the first network request we want to show popup errors
-        showPopupError = true
+    
+    func willStartNetworkLoad() {
+
     }
+    
+    func didReceiveNetworkData(networkData: ResponseType) {
+
+    }
+    
+    func didReceiveNetworkError(error: ErrorType) {
+   
+    }
+    
+    func didFinishNetworkLoad() {
+        // Hide the refreshing indicator
+
+    }
+
+    
+
 }
 
 extension CalendarViewController: CalendarViewDelegate {
