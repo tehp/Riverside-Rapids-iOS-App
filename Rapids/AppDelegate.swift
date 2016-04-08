@@ -14,7 +14,10 @@ import CalendarView
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
-
+    
+    let PREF_FIRST_LAUNCH = "launchedBefore"
+    static var firstLaunch: Bool = false
+    
     //Define custom green color
     static let navColor = UIColor(red: 0/255, green: 69/255, blue: 41/255, alpha: 1)
     static let navColorLight = UIColor(red: 0/255, green: 120/255, blue: 41/255, alpha: 1)
@@ -46,6 +49,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Customizations for Navigation Bar -Mac
         UINavigationBar.appearance().barTintColor = AppDelegate.navColor
+        
+        let launchedBefore = NSUserDefaults.standardUserDefaults().boolForKey(PREF_FIRST_LAUNCH)
+        if launchedBefore  {
+            AppDelegate.firstLaunch = false
+        }
+        else {
+            AppDelegate.firstLaunch = true
+            NSUserDefaults.standardUserDefaults().setBool(true, forKey: PREF_FIRST_LAUNCH)
+        }
         
         // Override point for customization after application launch.
         return true

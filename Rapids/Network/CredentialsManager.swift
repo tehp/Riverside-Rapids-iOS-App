@@ -57,7 +57,9 @@ class CredentialsManager {
         let loadedUsername = keychain.get(KeychainKeys.USERNAME)
         let loadedPassword = keychain.get(KeychainKeys.PASSWORD)
         let loadedUserDisplayName = keychain.get(KeychainKeys.USER_DISPLAY_NAME)
-        if loadedUsername != nil && loadedPassword != nil && loadedUserDisplayName != nil {
+        if loadedUsername != nil && loadedUsername != "" &&
+            loadedPassword != nil && loadedPassword != "" &&
+            loadedUserDisplayName != nil && loadedUserDisplayName != "" {
             username = loadedUsername!
             password = loadedPassword!
             userDisplayName = loadedUserDisplayName!
