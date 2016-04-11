@@ -51,6 +51,9 @@
 		4FE47E5B1C76A82400CBBE85 /* SoapObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE47E521C76A82400CBBE85 /* SoapObject.swift */; };
 		4FE47E5C1C76A82400CBBE85 /* SoapPrimitive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE47E531C76A82400CBBE85 /* SoapPrimitive.swift */; };
 		99DC0D091CAEF6A800C5EC03 /* CredentialsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DC0D081CAEF6A800C5EC03 /* CredentialsManager.swift */; };
+		99E24E5D1CB6D6C700D86DCD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E24E5C1CB6D6C700D86DCD /* MainViewController.swift */; };
+		99EC16DA1CB825820090DADA /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99EC16D91CB825820090DADA /* Map.storyboard */; };
+		99EC16DC1CB825FF0090DADA /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EC16DB1CB825FF0090DADA /* MapViewController.swift */; };
 		99F92AE31C88C26900F2D7D7 /* SignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99F92AE21C88C26900F2D7D7 /* SignIn.storyboard */; };
 		99F92AE51C88C32E00F2D7D7 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F92AE41C88C32E00F2D7D7 /* SignInViewController.swift */; };
 		B044DA70F6CEE20B97EE761D /* Pods_RapidsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF00632CDD4356C2FEF56A07 /* Pods_RapidsTests.framework */; };
@@ -118,6 +121,9 @@
 		84D59BBB7AC39BC0B377D6E6 /* Pods_Rapids.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rapids.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9960CA7554EF199872A65C2E /* Pods-RapidsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RapidsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RapidsTests/Pods-RapidsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		99DC0D081CAEF6A800C5EC03 /* CredentialsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CredentialsManager.swift; sourceTree = "<group>"; };
+		99E24E5C1CB6D6C700D86DCD /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		99EC16D91CB825820090DADA /* Map.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
+		99EC16DB1CB825FF0090DADA /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		99F92AE21C88C26900F2D7D7 /* SignIn.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SignIn.storyboard; sourceTree = "<group>"; };
 		99F92AE41C88C32E00F2D7D7 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		D5CD8E8C1C7F8D1A00E4FC34 /* D.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = D.swift; sourceTree = "<group>"; };
@@ -155,6 +161,7 @@
 				269689911C76472E00845C1D /* Homework.storyboard */,
 				269689921C76472E00845C1D /* More.storyboard */,
 				99F92AE21C88C26900F2D7D7 /* SignIn.storyboard */,
+				99EC16D91CB825820090DADA /* Map.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -168,6 +175,7 @@
 				2696899D1C76475A00845C1D /* HomeworkViewController.swift */,
 				2696899E1C76475A00845C1D /* MoreViewController.swift */,
 				99F92AE41C88C32E00F2D7D7 /* SignInViewController.swift */,
+				99EC16DB1CB825FF0090DADA /* MapViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -230,6 +238,7 @@
 				269689981C76475A00845C1D /* ViewControllers */,
 				2696898D1C76472E00845C1D /* Storyboards */,
 				4F9D619F1C643C4500CA406F /* Main.storyboard */,
+				99E24E5C1CB6D6C700D86DCD /* MainViewController.swift */,
 				4F9D61991C643C4400CA406F /* AppDelegate.swift */,
 				4F9D61A21C643C4500CA406F /* Assets.xcassets */,
 				4F9D61A41C643C4500CA406F /* LaunchScreen.storyboard */,
@@ -450,6 +459,7 @@
 				4F9D61A11C643C4500CA406F /* Main.storyboard in Resources */,
 				269689A81C76480400845C1D /* rapids_large.png in Resources */,
 				269689971C76472E00845C1D /* More.storyboard in Resources */,
+				99EC16DA1CB825820090DADA /* Map.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -573,6 +583,8 @@
 				4F9D619A1C643C4400CA406F /* AppDelegate.swift in Sources */,
 				269689A11C76475A00845C1D /* BellScheduleViewController.swift in Sources */,
 				4FE47E561C76A82400CBBE85 /* SoapQueryBuilder.swift in Sources */,
+				99EC16DC1CB825FF0090DADA /* MapViewController.swift in Sources */,
+				99E24E5D1CB6D6C700D86DCD /* MainViewController.swift in Sources */,
 				4FC6578E1C7CE2E500635111 /* AnnouncementTableViewCell.swift in Sources */,
 				4FC945041C8B6532002C7F52 /* GetBellScheduleResponseDelegate.swift in Sources */,
 				4F80D9D21C76E8610052496B /* SoapEnvelope.swift in Sources */,

@@ -28,6 +28,11 @@ class BSCal: NSObject, NSCoding {
         static let LUNCH = 8
     }
     
+    struct DayType {
+        static let DAY_1 = "day1"
+        static let DAY_2 = "day2"
+    }
+    
     struct PropertyKey {
         static let schoolStartKey = "schoolStart"
         static let schoolEndKey = "schoolEnd"
