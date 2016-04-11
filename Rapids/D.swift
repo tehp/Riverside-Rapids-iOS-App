@@ -69,7 +69,8 @@ class D {
     }
     
     struct BellSchedule {
-        static let GET_URL = D.getRoot(ROOT_APP_SERVER) + "bellschedule/v2/get_bs_cal"
+        //static let GET_URL = D.getRoot(ROOT_APP_SERVER) + "bellschedule/v2/get_bs_cal"
+        static let GET_URL = "https://rssrapids-bellschedule.appspot.com/api/bscal/v2/get_bs_cal"
         static let GET_URL_PARAM_START_YEAR = "startYear"
     }
     
