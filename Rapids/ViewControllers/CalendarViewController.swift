@@ -13,12 +13,10 @@ import SwiftMoment
 class CalendarViewController: UIViewController, SharePointRequestDelegate {
     
     let ATTR_TITLE = "ows_LinkTitle"
-    let ATTR_CATEGORIES = "ows_Categories"
+    let ATTR_START = "ows_EventDate"
+    let ATTR_END = "ows_EndDate"
     
-    let CATEGORY_GENERAL = "General"
-    let CATEGORY_STUDENT_ALERT = "Student Alert"
-    let CATEGORY_ALTHLETICS = "Athletics"
-    let CATEGORY_GRAD = "Grad"
+    
     
     // UI
     let cellIdentifier = "CalendarTableViewCell"
@@ -56,9 +54,6 @@ class CalendarViewController: UIViewController, SharePointRequestDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
-    
  
     typealias CacheType = GetListItemsResponseData
     typealias ResponseType = GetListItemsResponse
@@ -88,7 +83,31 @@ class CalendarViewController: UIViewController, SharePointRequestDelegate {
         // Hide the refreshing indicator
 
     }
+    
+    
+    // MARK: Soap Requests
+    
+    private func loadData(networkOnly: Bool) {
+        SharePointRequestManager.sharedInstance.getCalendar(
+            networkOnly,
+            username: CredentialsManager.sharedInstance.username,
+            password: CredentialsManager.sharedInstance.password,
+            delegate: self)
+    }
+    
+    func updateList(rows: [[String: String]]) {
+        // Update data
+        for row in rows {
+            let title = row[ATTR_TITLE]
 
+
+        };
+        
+        // Update table
+        //self.tableView.separatorStyle = UITableViewCellSeparatorStyle.SingleLine
+        //self.tableView.reloadData()
+    }
+    
     
 
 }
