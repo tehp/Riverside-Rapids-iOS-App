@@ -12,10 +12,12 @@ import SwiftMoment
 
 class CalendarViewController: UIViewController, SharePointRequestDelegate {
     
-    let ATTR_TITLE = "ows_LinkTitle"
+    let ATTR_TITLE = "ows_Title"
     let ATTR_START = "ows_EventDate"
     let ATTR_END = "ows_EndDate"
-    
+    let ATTR_LOCATION = "ows_Location"
+    let ATTR_DESCRIPTION = "ows_Description"
+
     
     
     // UI
