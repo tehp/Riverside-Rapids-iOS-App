@@ -10,7 +10,7 @@ import UIKit
 import CalendarView
 import SwiftMoment
 
-class CalendarViewController: UIViewController, SharePointRequestDelegate {
+class CalendarViewController: UIViewController, SharePointRequestDelegate, UITableViewDelegate, UITableViewDataSource {
     
     let ATTR_TITLE = "ows_Title"
     let ATTR_START = "ows_EventDate"
@@ -32,6 +32,7 @@ class CalendarViewController: UIViewController, SharePointRequestDelegate {
     // MARK: Table View Data
     
     @IBOutlet weak var calendar: CalendarView!
+    @IBOutlet weak var tableView: UITableView!
     
     var date: Moment! {
         didSet {
@@ -43,11 +44,16 @@ class CalendarViewController: UIViewController, SharePointRequestDelegate {
         super.viewDidLoad()
         
         // Setup TableView
-        //tableView.rowHeight = UITableViewAutomaticDimension
-        //tableView.estimatedRowHeight = 120.0
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 120.0
         
         date = moment()
-        calendar.delegate = self
+        
+
+        
+        tableView.dataSource = self
+        tableView.delegate = self
+    
         
     }
     
@@ -62,7 +68,8 @@ class CalendarViewController: UIViewController, SharePointRequestDelegate {
     
     struct CalendarEvent {
         var title: String
-        var category: String
+        var start: String
+        var end: String
     }
    
     func didFindCachedData(cachedData: CacheType) {
@@ -101,16 +108,39 @@ class CalendarViewController: UIViewController, SharePointRequestDelegate {
         // Update data
         for row in rows {
             let title = row[ATTR_TITLE]
-
-
+            let start = row[ATTR_START]
+            let end = row[ATTR_END]
+            let event = CalendarEvent(title: title!, start: start!, end: end!)
+            calendarTable.append(event)
         };
         
         // Update table
-        //self.tableView.separatorStyle = UITableViewCellSeparatorStyle.SingleLine
-        //self.tableView.reloadData()
+        self.tableView.separatorStyle = UITableViewCellSeparatorStyle.SingleLine
+        self.tableView.reloadData()
+        
     }
     
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
     
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return calendarTable.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+         let cellIdentifier = "CalendarTableViewCell"
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! CalendarTableViewCell
+        
+        
+        let event = calendarTable[indexPath.row]
+        cell.eventLabel.text = event.title
+
+        
+        return cell
+        
+    }
+
 
 }
 
