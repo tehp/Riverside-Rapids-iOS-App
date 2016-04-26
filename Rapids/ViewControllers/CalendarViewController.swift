@@ -37,6 +37,8 @@ class CalendarViewController: UIViewController, SharePointRequestDelegate, UITab
     var date: Moment! {
         didSet {
             print(date)
+            print(calendarTable)
+            
         }
     }
     
@@ -54,7 +56,7 @@ class CalendarViewController: UIViewController, SharePointRequestDelegate, UITab
         tableView.dataSource = self
         tableView.delegate = self
     
-        
+        calendar.delegate = self
     }
     
     
