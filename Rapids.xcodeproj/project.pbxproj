@@ -24,6 +24,7 @@
 		26A6B6581C881D1100629FDF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9D61991C643C4400CA406F /* AppDelegate.swift */; };
 		26C394771CB58C0A00F26DA0 /* CalendarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C394761CB58C0A00F26DA0 /* CalendarTableViewCell.swift */; };
 		4F48E5B61C8B936900733382 /* BellScheduleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F48E5B51C8B936900733382 /* BellScheduleManager.swift */; };
+		4F60CD741CD857E900FD4F34 /* ViewControllerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F60CD731CD857E900FD4F34 /* ViewControllerHelper.swift */; };
 		4F69F3F71C8BA725003C11C5 /* SchoolDates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F69F3F61C8BA725003C11C5 /* SchoolDates.swift */; };
 		4F80D9D21C76E8610052496B /* SoapEnvelope.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F80D9D11C76E8610052496B /* SoapEnvelope.swift */; };
 		4F8B63241C8CECD200161A75 /* SharePointRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8B63231C8CECD200161A75 /* SharePointRequestManager.swift */; };
@@ -51,6 +52,7 @@
 		4FE47E5B1C76A82400CBBE85 /* SoapObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE47E521C76A82400CBBE85 /* SoapObject.swift */; };
 		4FE47E5C1C76A82400CBBE85 /* SoapPrimitive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE47E531C76A82400CBBE85 /* SoapPrimitive.swift */; };
 		99DC0D091CAEF6A800C5EC03 /* CredentialsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DC0D081CAEF6A800C5EC03 /* CredentialsManager.swift */; };
+		99DDB8611CD7D4A300FE61FB /* BaseNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DDB8601CD7D4A300FE61FB /* BaseNavViewController.swift */; };
 		99E24E5D1CB6D6C700D86DCD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E24E5C1CB6D6C700D86DCD /* MainViewController.swift */; };
 		99EC16DA1CB825820090DADA /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99EC16D91CB825820090DADA /* Map.storyboard */; };
 		99EC16DC1CB825FF0090DADA /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EC16DB1CB825FF0090DADA /* MapViewController.swift */; };
@@ -89,6 +91,7 @@
 		26C394761CB58C0A00F26DA0 /* CalendarTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CalendarTableViewCell.swift; path = ../ViewControllers/CalendarTableViewCell.swift; sourceTree = "<group>"; };
 		2E85ADB8E6D35AFF697648B9 /* Pods-RapidsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RapidsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RapidsTests/Pods-RapidsTests.release.xcconfig"; sourceTree = "<group>"; };
 		4F48E5B51C8B936900733382 /* BellScheduleManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BellScheduleManager.swift; sourceTree = "<group>"; };
+		4F60CD731CD857E900FD4F34 /* ViewControllerHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerHelper.swift; sourceTree = "<group>"; };
 		4F69F3F61C8BA725003C11C5 /* SchoolDates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchoolDates.swift; sourceTree = "<group>"; };
 		4F80D9D11C76E8610052496B /* SoapEnvelope.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoapEnvelope.swift; sourceTree = "<group>"; };
 		4F8B63231C8CECD200161A75 /* SharePointRequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharePointRequestManager.swift; sourceTree = "<group>"; };
@@ -123,6 +126,7 @@
 		84D59BBB7AC39BC0B377D6E6 /* Pods_Rapids.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rapids.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9960CA7554EF199872A65C2E /* Pods-RapidsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RapidsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RapidsTests/Pods-RapidsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		99DC0D081CAEF6A800C5EC03 /* CredentialsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CredentialsManager.swift; sourceTree = "<group>"; };
+		99DDB8601CD7D4A300FE61FB /* BaseNavViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavViewController.swift; sourceTree = "<group>"; };
 		99E24E5C1CB6D6C700D86DCD /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		99EC16D91CB825820090DADA /* Map.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
 		99EC16DB1CB825FF0090DADA /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -180,6 +184,8 @@
 				2696899E1C76475A00845C1D /* MoreViewController.swift */,
 				99F92AE41C88C32E00F2D7D7 /* SignInViewController.swift */,
 				99EC16DB1CB825FF0090DADA /* MapViewController.swift */,
+				99DDB8601CD7D4A300FE61FB /* BaseNavViewController.swift */,
+				4F60CD731CD857E900FD4F34 /* ViewControllerHelper.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -607,8 +613,10 @@
 				4F8B63241C8CECD200161A75 /* SharePointRequestManager.swift in Sources */,
 				D5D2920D1C9346B700FC6F21 /* GetListCollectionResponse.swift in Sources */,
 				4FD9EA551C78D92F002D6FD1 /* SoapResponseDelegate.swift in Sources */,
+				4F60CD741CD857E900FD4F34 /* ViewControllerHelper.swift in Sources */,
 				4F99D2131C7B99720031BCC0 /* BSDay.swift in Sources */,
 				4FE47E551C76A82400CBBE85 /* SoapCamlBuilder.swift in Sources */,
+				99DDB8611CD7D4A300FE61FB /* BaseNavViewController.swift in Sources */,
 				4F99D2171C7B99900031BCC0 /* GetBellScheduleRequest.swift in Sources */,
 				4FE47E581C76A82400CBBE85 /* SoapViewFieldsBuilder.swift in Sources */,
 				4FD9EA511C78D8E0002D6FD1 /* SoapRequest.swift in Sources */,

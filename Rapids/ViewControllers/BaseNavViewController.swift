@@ -1,39 +1,26 @@
 //
-//  MainViewController.swift
+//  BaseNavViewController.swift
 //  Rapids
 //
-//  Created by Programming 12 on 2016-04-07.
+//  Created by Programming 12 on 2016-05-02.
 //  Copyright © 2016 Riverside Secondary School. All rights reserved.
 //
 
 import UIKit
 
-class MainViewController: UITabBarController {
+class BaseNavViewController: UINavigationController {
 
-    var showedSignIn: Bool = false
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
 
         // Do any additional setup after loading the view.
-        
+        ViewControllerHelper.showRapidsLogo(self.visibleViewController!.navigationItem)
     }
 
-    override func viewDidAppear(animated: Bool) {
-        if AppDelegate.firstLaunch && !showedSignIn {
-            let storyboard = UIStoryboard(name: "SignIn", bundle: nil)
-            let vc = storyboard.instantiateViewControllerWithIdentifier("signInNavVC")
-            self.presentViewController(vc, animated: true, completion: nil)
-            showedSignIn = true
-        }
-    }
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
     /*
     // MARK: - Navigation

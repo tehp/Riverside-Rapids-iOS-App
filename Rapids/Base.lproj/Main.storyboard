@@ -63,7 +63,7 @@
         <!--Homework-->
         <scene sceneID="WJP-gJ-GhR">
             <objects>
-                <navigationController id="I2P-vS-tmu" sceneMemberID="viewController">
+                <navigationController id="I2P-vS-tmu" customClass="BaseNavViewController" customModule="Rapids" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Homework" image="Exam-50" selectedImage="Exam-50" id="Bs7-uF-V43">
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
@@ -87,7 +87,7 @@
         <!--Announcements-->
         <scene sceneID="CQo-oJ-K1k">
             <objects>
-                <navigationController id="kRh-Yd-jAw" sceneMemberID="viewController">
+                <navigationController id="kRh-Yd-jAw" customClass="BaseNavViewController" customModule="Rapids" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Announcements" image="Podium With Speaker-50.png" selectedImage="Podium With Speaker-50.png" id="djI-cY-a68">
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
@@ -112,7 +112,7 @@
         <!--More-->
         <scene sceneID="UnV-dg-Gt6">
             <objects>
-                <navigationController id="5ZE-tV-L5V" sceneMemberID="viewController">
+                <navigationController id="5ZE-tV-L5V" customClass="BaseNavViewController" customModule="Rapids" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="More" image="Maintenance-50" selectedImage="Maintenance-50" id="tnx-qu-NYt">
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
@@ -136,7 +136,7 @@
         <!--Calendar-->
         <scene sceneID="e5w-Zd-eGW">
             <objects>
-                <navigationController id="cQV-jC-VNc" sceneMemberID="viewController">
+                <navigationController id="cQV-jC-VNc" customClass="BaseNavViewController" customModule="Rapids" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Calendar" image="Overtime-50" selectedImage="Overtime-50.png" id="QyF-Iv-62s">
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
@@ -160,7 +160,7 @@
         <!--Schedule-->
         <scene sceneID="2FD-hj-c4k">
             <objects>
-                <navigationController id="VNe-BX-0jq" sceneMemberID="viewController">
+                <navigationController id="VNe-BX-0jq" customClass="BaseNavViewController" customModule="Rapids" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Schedule" image="Report Card-50" selectedImage="Report Card-50" id="cVy-6Z-Nz7">
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
@@ -184,7 +184,7 @@
         <!--main-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
-                <tabBarController id="49e-Tb-3d3" userLabel="main" customClass="MainViewController" customModule="Rapids" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="mainVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="49e-Tb-3d3" userLabel="main" customClass="MainViewController" customModule="Rapids" customModuleProvider="target" sceneMemberID="viewController">
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" itemPositioning="centered" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
