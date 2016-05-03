@@ -62,6 +62,8 @@
 		99F92AE31C88C26900F2D7D7 /* SignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99F92AE21C88C26900F2D7D7 /* SignIn.storyboard */; };
 		99F92AE51C88C32E00F2D7D7 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F92AE41C88C32E00F2D7D7 /* SignInViewController.swift */; };
 		B044DA70F6CEE20B97EE761D /* Pods_RapidsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF00632CDD4356C2FEF56A07 /* Pods_RapidsTests.framework */; };
+		D52063791CD91E3A00904111 /* About.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D52063781CD91E3A00904111 /* About.storyboard */; };
+		D520637B1CD91E8700904111 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D520637A1CD91E8700904111 /* AboutViewController.swift */; };
 		D5CD8E8D1C7F8D1A00E4FC34 /* D.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CD8E8C1C7F8D1A00E4FC34 /* D.swift */; };
 		D5D2920B1C93468D00FC6F21 /* GetListCollectionRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D2920A1C93468D00FC6F21 /* GetListCollectionRequest.swift */; };
 		D5D2920D1C9346B700FC6F21 /* GetListCollectionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D2920C1C9346B700FC6F21 /* GetListCollectionResponse.swift */; };
@@ -138,6 +140,8 @@
 		99EC16DB1CB825FF0090DADA /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		99F92AE21C88C26900F2D7D7 /* SignIn.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SignIn.storyboard; sourceTree = "<group>"; };
 		99F92AE41C88C32E00F2D7D7 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		D52063781CD91E3A00904111 /* About.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = About.storyboard; sourceTree = "<group>"; };
+		D520637A1CD91E8700904111 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		D5CD8E8C1C7F8D1A00E4FC34 /* D.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = D.swift; sourceTree = "<group>"; };
 		D5D2920A1C93468D00FC6F21 /* GetListCollectionRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetListCollectionRequest.swift; sourceTree = "<group>"; };
 		D5D2920C1C9346B700FC6F21 /* GetListCollectionResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetListCollectionResponse.swift; sourceTree = "<group>"; };
@@ -176,6 +180,7 @@
 				269689921C76472E00845C1D /* More.storyboard */,
 				99F92AE21C88C26900F2D7D7 /* SignIn.storyboard */,
 				99EC16D91CB825820090DADA /* Map.storyboard */,
+				D52063781CD91E3A00904111 /* About.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -192,6 +197,7 @@
 				99EC16DB1CB825FF0090DADA /* MapViewController.swift */,
 				99DDB8601CD7D4A300FE61FB /* BaseNavViewController.swift */,
 				4F60CD731CD857E900FD4F34 /* ViewControllerHelper.swift */,
+				D520637A1CD91E8700904111 /* AboutViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -490,6 +496,7 @@
 				269689931C76472E00845C1D /* Announcements.storyboard in Resources */,
 				269689941C76472E00845C1D /* BellSchedule.storyboard in Resources */,
 				269689961C76472E00845C1D /* Homework.storyboard in Resources */,
+				D52063791CD91E3A00904111 /* About.storyboard in Resources */,
 				4F9D61A31C643C4500CA406F /* Assets.xcassets in Resources */,
 				99F92AE31C88C26900F2D7D7 /* SignIn.storyboard in Resources */,
 				269689851C763C4A00845C1D /* icons in Resources */,
@@ -644,6 +651,7 @@
 				D5CD8E8D1C7F8D1A00E4FC34 /* D.swift in Sources */,
 				4FE47E5A1C76A82400CBBE85 /* SoapNode.swift in Sources */,
 				D5D2920B1C93468D00FC6F21 /* GetListCollectionRequest.swift in Sources */,
+				D520637B1CD91E8700904111 /* AboutViewController.swift in Sources */,
 				4F99D2111C7B99640031BCC0 /* BSCal.swift in Sources */,
 				99DC0D091CAEF6A800C5EC03 /* CredentialsManager.swift in Sources */,
 				D5EFC8381C84CF91009FCD94 /* BlockTableViewCell.swift in Sources */,

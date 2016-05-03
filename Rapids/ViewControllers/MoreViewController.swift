@@ -44,6 +44,9 @@ class MoreViewController: UIViewController {
     }
     
     @IBAction func aboutClicked(sender: UIButton) {
+        let storyboard = UIStoryboard(name: "About", bundle: nil)
+        let vc = storyboard.instantiateViewControllerWithIdentifier("aboutNavVC")
+        self.presentViewController(vc, animated: true, completion: nil)
     }
     
     @IBAction func signinClicked(sender: UIButton) {
