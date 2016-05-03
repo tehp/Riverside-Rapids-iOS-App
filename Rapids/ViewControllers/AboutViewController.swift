@@ -24,7 +24,7 @@ class AboutViewController: UIViewController {
     @IBAction func backButtonClicked(sender: UIBarButtonItem) {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
-
+    
     /*
     // MARK: - Navigation
 

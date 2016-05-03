@@ -69,6 +69,8 @@
 		4FE47E5C1C76A82400CBBE85 /* SoapPrimitive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE47E531C76A82400CBBE85 /* SoapPrimitive.swift */; };
 		99DC0D091CAEF6A800C5EC03 /* CredentialsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DC0D081CAEF6A800C5EC03 /* CredentialsManager.swift */; };
 		99DDB8611CD7D4A300FE61FB /* BaseNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DDB8601CD7D4A300FE61FB /* BaseNavViewController.swift */; };
+		99E087DC1CFCBA5400E99967 /* LinkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E087DB1CFCBA5400E99967 /* LinkTableViewCell.swift */; };
+		99E087DE1CFCBBE000E99967 /* LinksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E087DD1CFCBBE000E99967 /* LinksTableViewController.swift */; };
 		99E24E5D1CB6D6C700D86DCD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E24E5C1CB6D6C700D86DCD /* MainViewController.swift */; };
 		99EC16DA1CB825820090DADA /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99EC16D91CB825820090DADA /* Map.storyboard */; };
 		99EC16DC1CB825FF0090DADA /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EC16DB1CB825FF0090DADA /* MapViewController.swift */; };
@@ -162,6 +164,8 @@
 		9960CA7554EF199872A65C2E /* Pods-RapidsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RapidsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RapidsTests/Pods-RapidsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		99DC0D081CAEF6A800C5EC03 /* CredentialsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CredentialsManager.swift; sourceTree = "<group>"; };
 		99DDB8601CD7D4A300FE61FB /* BaseNavViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavViewController.swift; sourceTree = "<group>"; };
+		99E087DB1CFCBA5400E99967 /* LinkTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkTableViewCell.swift; sourceTree = "<group>"; };
+		99E087DD1CFCBBE000E99967 /* LinksTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinksTableViewController.swift; sourceTree = "<group>"; };
 		99E24E5C1CB6D6C700D86DCD /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		99EC16D91CB825820090DADA /* Map.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
 		99EC16DB1CB825FF0090DADA /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -232,6 +236,7 @@
 				4F023E8F1CE3E63900F0C257 /* SPListCollectionViewController.swift */,
 				4F2DABBC1CE6796C007AFF26 /* SPDocumentsViewController.swift */,
 				4FC754691CF5246000250226 /* SPAnnouncementsViewController.swift */,
+				99E087DD1CFCBBE000E99967 /* LinksTableViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -337,6 +342,7 @@
 				4F2DABBE1CE67A5C007AFF26 /* SPDocumentsTableViewCell.swift */,
 				4FC7546D1CF5280400250226 /* SPAnnouncementTableViewCell.swift */,
 				4F2DABB81CE676EB007AFF26 /* CardView.swift */,
+				99E087DB1CFCBA5400E99967 /* LinkTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -693,6 +699,7 @@
 				4F4B80D31CD98F7300643E51 /* NetworkUtils.swift in Sources */,
 				99DDB8611CD7D4A300FE61FB /* BaseNavViewController.swift in Sources */,
 				4F5467C21CE2589A0064B931 /* TeacherSPSiteTableViewCell.swift in Sources */,
+				99E087DC1CFCBA5400E99967 /* LinkTableViewCell.swift in Sources */,
 				4F60CD7D1CD8651700FD4F34 /* TeacherSPSitesResponse.swift in Sources */,
 				4F99D2171C7B99900031BCC0 /* GetBellScheduleRequest.swift in Sources */,
 				4FE47E581C76A82400CBBE85 /* SoapViewFieldsBuilder.swift in Sources */,
@@ -701,6 +708,7 @@
 				D5CDCB171CDBC2CB00B0CE7E /* AnnouncementsViewController.swift in Sources */,
 				4F4B80DF1CD9AC7600643E51 /* SharePointDataViewer.swift in Sources */,
 				D5CD8E8D1C7F8D1A00E4FC34 /* D.swift in Sources */,
+				99E087DE1CFCBBE000E99967 /* LinksTableViewController.swift in Sources */,
 				4FE47E5A1C76A82400CBBE85 /* SoapNode.swift in Sources */,
 				4F023E901CE3E63900F0C257 /* SPListCollectionViewController.swift in Sources */,
 				D5D2920B1C93468D00FC6F21 /* GetListCollectionRequest.swift in Sources */,
