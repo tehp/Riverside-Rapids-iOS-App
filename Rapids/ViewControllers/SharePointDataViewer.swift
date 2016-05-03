@@ -1,0 +1,179 @@
+//
+//  SharePointTableViewController.swift
+//  Rapids
+//
+//  Created by Noah on 2016-05-03.
+//  Copyright © 2016 Riverside Secondary School. All rights reserved.
+//
+
+import UIKit
+
+protocol SharePointDataViewer: class, SharePointRequestDelegate {
+    
+    typealias CacheType
+    typealias ResponseType
+    typealias ListDataType
+    
+    var showPopupError: Bool {get set}
+    var lastUpdated: NSDate? {get set}
+    var lastSignedInState: Bool {get set}
+    
+    func handleViewDidLoad()
+    func handleViewWillAppear()
+    func getSectionCount() -> Int
+    
+    func getDataCount() -> Int
+    func extractLastUpdated(cachedData: CacheType) -> NSDate
+    func extractListDataFromCache(cachedData: CacheType) -> ListDataType
+    func extractListDataFromResponse(networkData: ResponseType) -> ListDataType
+    func clearListData()
+    func parseListData(listData: ListDataType)
+    
+    func refresh(sender: AnyObject)
+    func loadData(networkOnly: Bool)
+    func showErrorMessage(popup: Bool, errorMessage: String)
+    func showAuthError()
+}
+
+extension SharePointDataViewer where Self: UITableViewController {
+    
+    // MARK: - Lifecycle callbacks
+    
+    func handleViewDidLoad() {
+        // Setup TableView
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 120.0
+        
+        // Setup Pull to Refresh
+        self.refreshControl?.addTarget(self, action: "refresh:", forControlEvents: UIControlEvents.ValueChanged)
+        
+        // Initialize state
+        lastSignedInState = CredentialsManager.sharedInstance.signedIn
+        
+        // Do initial load
+        loadData(false)
+    }
+    
+    func handleViewWillAppear() {
+        // If the signed in state changed we need to reload the data
+        let currentSignedInState = CredentialsManager.sharedInstance.signedIn
+        if currentSignedInState != lastSignedInState {
+            lastSignedInState = currentSignedInState
+            loadData(true)
+        }
+    }
+    
+    // MARK: - Table view data source
+    
+    func getSectionCount() -> Int {
+        return 1
+    }
+    
+    
+    // MARK: - Network methods
+    
+    func didFailPreConditions(error: Int) {
+        // Hide the refreshing indicator
+        self.refreshControl?.endRefreshing()
+        
+        // Handle the error
+        if error == SharePointRequestErrors.ERROR_PRE_NOT_SIGNED_IN {
+            showAuthError()
+        }
+    }
+    
+    func didFindCachedData(cachedData: CacheType) {
+        lastUpdated = extractLastUpdated(cachedData)
+        updateList(extractListDataFromCache(cachedData))
+    }
+    
+    func willStartNetworkLoad() {
+        if let actualRefreshControl = self.refreshControl {
+            if !actualRefreshControl.refreshing {
+                self.tableView.contentOffset = CGPointMake(0, -actualRefreshControl.frame.size.height)
+                actualRefreshControl.beginRefreshing()
+            }
+        }
+    }
+    
+    func didReceiveNetworkData(networkData: ResponseType) {
+        lastUpdated = NSDate()
+        updateList(extractListDataFromResponse(networkData))
+    }
+    
+    func didReceiveNetworkError(error: ErrorType) {
+        print(error)
+        
+        let errMsgRetrieve = "Unable to retrieve announcements.\nPull down to refresh."
+        let errMsgUpdate = "Unable to update announcements.\nPlease check your internet connection."
+        
+        if getDataCount() == 0 {
+            showErrorMessage(false, errorMessage: errMsgRetrieve)
+        } else if showPopupError {
+            showErrorMessage(true, errorMessage: errMsgUpdate)
+        }
+    }
+    
+    func didFinishNetworkLoad() {
+        // Hide the refreshing indicator
+        self.refreshControl?.endRefreshing()
+        
+        // After the first network request we want to show popup errors
+        showPopupError = true
+    }
+    
+    
+    // MARK: - Displaying data
+    
+    func updateList(listData: ListDataType) {
+        // Clear current data
+        clearListData()
+        
+        // Update data
+        parseListData(listData)
+        
+        // Update table
+        self.tableView.separatorStyle = UITableViewCellSeparatorStyle.SingleLine
+        self.tableView.reloadData()
+        
+        // Update refresh control
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "MMM. d 'at' h:mm a"
+        self.refreshControl?.attributedTitle = NSAttributedString(string: "Last updated: \(dateFormatter.stringFromDate(lastUpdated!))")
+        
+        // Hide error messgae
+        self.tableView.backgroundView = nil
+    }
+    
+    func showErrorMessage(popup: Bool, errorMessage: String) {
+        if !popup {
+            // Create error message label
+            let messageLabel = UILabel(frame: CGRect(x: 0, y: 0, width: self.view.bounds.size.width, height: self.view.bounds.size.height))
+            messageLabel.text = errorMessage
+            messageLabel.textColor = UIColor.blackColor()
+            messageLabel.textAlignment = NSTextAlignment.Center
+            messageLabel.numberOfLines = 0
+            messageLabel.sizeToFit()
+            
+            // Hide the table contents
+            clearListData()
+            self.tableView.reloadData()
+            
+            // Display the error message label
+            self.tableView.backgroundView = messageLabel
+            self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
+        } else if showPopupError {
+            let alertController = UIAlertController(title: "Network Error", message: errorMessage, preferredStyle: UIAlertControllerStyle.Alert)
+            alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Cancel, handler: nil))
+            alertController.addAction(UIAlertAction(title: "Try Again", style: UIAlertActionStyle.Default, handler: { (alertAction) in
+                self.loadData(true)
+            }))
+            self.presentViewController(alertController, animated: true, completion: nil)
+        }
+    }
+    
+    func showAuthError() {
+        showErrorMessage(false, errorMessage: "You must be signed in to use this feature")
+    }
+
+}

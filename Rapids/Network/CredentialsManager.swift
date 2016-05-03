@@ -17,7 +17,6 @@ class CredentialsManager {
         static let USERNAME = "ca.bc.sd43.riverside.sp.auth.Username"
         static let PASSWORD = "ca.bc.sd43.riverside.sp.auth.Password"
         static let USER_DISPLAY_NAME = "ca.bc.sd43.riverside.sp.auth.UserDisplayName"
-        
     }
     
     var username: String = ""
@@ -70,6 +69,5 @@ class CredentialsManager {
             userDisplayName = ""
             signedIn = false
         }
-
     }
 }

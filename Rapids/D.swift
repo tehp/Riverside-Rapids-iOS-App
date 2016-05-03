@@ -65,7 +65,7 @@ class D {
         static let PUBLICATIONS_ROOT_FOLDER_PATH = "/secondary/riverside/Publications"
         
         //Teacher SharePoint Sites Index
-        static let GET_TEACHER_SP_SITES_URL = D.getRoot(ROOT_TEACHER_SP) + "teacherSP/siteindex/GetTeacherSPSites"
+        static let GET_TEACHER_SP_SITES_URL = "https:/rssrapids-teachersp.appspot.com/api/siteindex/GetTeacherSPSites"
     }
     
     struct BellSchedule {

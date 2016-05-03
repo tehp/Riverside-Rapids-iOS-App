@@ -54,6 +54,33 @@ class SharePointSoapResponseHandler<ResponseType:SoapResponse, DelegateType:Shar
     
 }
 
+class TeacherSPSitesResponseHandler<DelegateType:SharePointRequestDelegate where DelegateType.ResponseType == TeacherSPSitesResponse>: TeacherSPSitesResponseDelegate {
+    
+    var cacheName: String
+    var delegate: DelegateType?
+    
+    init(cacheName: String, delegate: DelegateType?) {
+        self.cacheName = cacheName
+        self.delegate = delegate
+    }
+    
+    func didReceiveResponse(responseData: TeacherSPSitesResponse) {
+        SharePointRequestManager.sharedInstance.saveToCache(responseData, name: cacheName)
+        if let actualDelegate = delegate {
+            actualDelegate.didReceiveNetworkData(responseData)
+            actualDelegate.didFinishNetworkLoad()
+        }
+    }
+    
+    func didReceiveError(error: ErrorType) {
+        if let actualDelegate = delegate {
+            actualDelegate.didReceiveNetworkError(error)
+            actualDelegate.didFinishNetworkLoad()
+        }
+    }
+    
+}
+
 class SharePointRequestManager {
     
     static let sharedInstance = SharePointRequestManager()
@@ -64,6 +91,8 @@ class SharePointRequestManager {
         static let DAILY_ANNOUNCEMENTS = "dailyAnnouncements"
         static let SCHOOL_CALENDAR = "schoolCalendar"
         static let PUBLICATIONS = "publications"
+        
+        static let TEACHER_SP_SITES = "teacherSPSites"
     }
     
     let credentialsManager: CredentialsManager!
@@ -316,7 +345,7 @@ class SharePointRequestManager {
         )
     }
     
-    func getDailyAnnouncements<T: SharePointRequestDelegate where T.CacheType == GetListItemsResponseData, T.ResponseType == GetListItemsResponse>(networkOnly: Bool, username: String, password: String, delegate: T) {
+    func getDailyAnnouncements<T: SharePointRequestDelegate where T.CacheType == GetListItemsResponseData, T.ResponseType == GetListItemsResponse>(networkOnly: Bool, delegate: T) {
         
         // Prepare SOAP Request
         // Set the fields we want to retrieve
@@ -376,15 +405,45 @@ class SharePointRequestManager {
         getDocumentsList(networkOnly, requiresAuth: false, requestId: RequestIDs.PUBLICATIONS, listsUrl: D.SharePoint.PUBLIC_LISTS_URL, listGUID: D.SharePoint.PUBLICATIONS_GUID, folder: D.SharePoint.PUBLICATIONS_ROOT_FOLDER_PATH, delegate: delegate)
     }
     
-    func getTeacherSPSites<T: SharePointRequestDelegate where T.CacheType == TeacherSPSitesResponseData, T.ResponseType == TeacherSPSitesResponse>(networkOnly: Bool, delegate: T) {
+    func getTeacherSPSites<T: SharePointRequestDelegate where T.CacheType == TeacherSPSitesResponse, T.ResponseType == TeacherSPSitesResponse>(networkOnly: Bool, delegate: T) {
         
+        let requestId = RequestIDs.TEACHER_SP_SITES
         
+        if !checkAuth(true) {
+            deleteCache(requestId)
+            delegate.didFailPreConditions(SharePointRequestErrors.ERROR_PRE_NOT_SIGNED_IN)
+            return
+        }
+        
+        if !networkOnly {
+            // Attempt to load from cache first
+            if let actualCachedData: TeacherSPSitesResponse = loadFromCache(requestId) {
+                delegate.didFindCachedData(actualCachedData)
+            }
+        }
+        
+        // For handling the response
+        let responseHandler: TeacherSPSitesResponseHandler<T> = TeacherSPSitesResponseHandler(cacheName: requestId, delegate: delegate)
+        
+        // Create the request
+        let request = TeacherSPSitesRequest(
+            username: credentialsManager.username,
+            password: credentialsManager.password,
+            responseDelegate: responseHandler
+        )
+        
+        // Notify delegate that we are starting a network request
+        delegate.willStartNetworkLoad()
+        
+        // Send the request
+        request.sendRequest()
     }
     
     func getUserInfo<T: SharePointRequestDelegate where T.ResponseType == NSDictionary>(username: String, password: String, delegate: T) {
-        let credentialData = "\(username):\(password)".dataUsingEncoding(NSUTF8StringEncoding)!
-        let base64Credentials = credentialData.base64EncodedStringWithOptions([])
-        let authHeader = "Basic " + base64Credentials
+
+        let authHeader = NetworkUtils.generateBasicAuthHeader(username, password: password)
+        
+        delegate.willStartNetworkLoad()
         
         Alamofire.request(.GET, D.Proxy.SP.GET_USER_INFO, headers: ["Authorization": authHeader])
             .responseJSON { response in
@@ -397,6 +456,8 @@ class SharePointRequestManager {
                     delegate.didReceiveNetworkError(error)
                     
                 }
+                
+                delegate.didFinishNetworkLoad()
         }
     }
     

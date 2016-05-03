@@ -7,7 +7,58 @@
 //
 
 import Foundation
+import Alamofire
+
+protocol TeacherSPSitesResponseDelegate: class {
+    func didReceiveResponse(responseData: TeacherSPSitesResponse)
+    func didReceiveError(error: ErrorType)
+}
 
 class TeacherSPSitesRequest {
     
+    var username: String
+    var password: String
+    var responseDelegate: TeacherSPSitesResponseDelegate?
+    
+    init(username: String, password: String, responseDelegate: TeacherSPSitesResponseDelegate?) {
+        self.username = username
+        self.password = password
+        self.responseDelegate = responseDelegate
+    }
+    
+    func sendRequest() {
+        let authHeader = NetworkUtils.generateBasicAuthHeader(username, password: password)
+        
+        Alamofire.request(.GET, D.BellSchedule.GET_URL, headers: ["Authorization": authHeader])
+            .responseJSON { response in
+                if let actualDelegate = self.responseDelegate {
+                    switch response.result {
+                        
+                    case .Success(let json):
+                        let response = json as! NSDictionary
+                        actualDelegate.didReceiveResponse(self.parseResponse(response))
+                        
+                    case .Failure(let error):
+                        actualDelegate.didReceiveError(error)
+                        
+                    }
+                }
+        }
+    }
+    
+    private func parseResponse(json: NSDictionary) -> TeacherSPSitesResponse {
+        var sites = [TeacherSPSite]()
+        
+        for site in json["teacherSPSites"]! as! [NSDictionary] {
+            let id = site["id"]! as! Int64
+            let teacherSalutation = site["teacherSalutation"]! as! String
+            let teacherLastName = site["teacherLastName"]! as! String
+            let course = site["course"]! as! String
+            let websiteUrl = site["websiteUrl"]! as! String
+            
+            sites.append(TeacherSPSite(id: id, teacherSalutation: teacherSalutation, teacherLastName: teacherLastName, course: course, websiteUrl: websiteUrl))
+        }
+        
+        return TeacherSPSitesResponse(timestamp: NSDate(), sites: sites)
+    }
 }
