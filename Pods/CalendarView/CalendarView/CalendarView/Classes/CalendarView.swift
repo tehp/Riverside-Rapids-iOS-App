@@ -81,8 +81,8 @@ public class CalendarView: UIView {
       delegate?.calendarDidPageToDate(contentView.currentMonth().date)
     }
   }
-  public var selectedDayOnPaged: Int? = nil
-
+  public var selectedDayOnPaged: Int? = 1
+    
   required public init?(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)
     setup()

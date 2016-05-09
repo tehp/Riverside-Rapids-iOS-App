@@ -10,14 +10,23 @@ import UIKit
 import CalendarView
 import SwiftMoment
 
-class CalendarViewController: UIViewController, SharePointRequestDelegate, UITableViewDelegate, UITableViewDataSource {
+class CalendarViewController: UIViewController, SharePointRequestDelegate, UITableViewDelegate, UITableViewDataSource, CalendarViewDelegate {
+    
+    
+    func calendarDidSelectDate(date: Moment) {
+        self.date = date
+    }
+    
+    func calendarDidPageToDate(date: Moment) {
+        self.date = date
+    }
     
     let ATTR_TITLE = "ows_Title"
     let ATTR_START = "ows_EventDate"
     let ATTR_END = "ows_EndDate"
     let ATTR_LOCATION = "ows_Location"
     let ATTR_DESCRIPTION = "ows_Description"
-
+    
     // UI
     let cellIdentifier = "CalendarTableViewCell"
     var showPopupError: Bool = false
@@ -32,6 +41,7 @@ class CalendarViewController: UIViewController, SharePointRequestDelegate, UITab
     @IBOutlet weak var calendar: CalendarView!
     @IBOutlet weak var tableView: UITableView!
     
+    
     var date: Moment! {
         didSet {
             print(date)
@@ -40,20 +50,21 @@ class CalendarViewController: UIViewController, SharePointRequestDelegate, UITab
         }
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        // Setup TableView
+    override func viewDidAppear(animated: Bool) {
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 120.0
-        
-        date = moment()
         
         tableView.dataSource = self
         tableView.delegate = self
     
         calendar.delegate = self
+        
+        tableView.reloadData()
+        
+        print("viewDidAppear Called")
+        
     }
+
     
     
     override func didReceiveMemoryWarning() {
@@ -144,13 +155,3 @@ class CalendarViewController: UIViewController, SharePointRequestDelegate, UITab
 
 }
 
-extension CalendarViewController: CalendarViewDelegate {
-    
-    func calendarDidSelectDate(date: Moment) {
-        self.date = date
-    }
-    
-    func calendarDidPageToDate(date: Moment) {
-        self.date = date
-    }
-}
