@@ -80,6 +80,10 @@ class AnnouncementsViewController: UITableViewController, SharePointDataViewer {
         }
     }
     
+    func signInClicked(sender: AnyObject) {
+        showSignInPage()
+    }
+    
     typealias CacheType = GetListItemsResponseData
     typealias ResponseType = GetListItemsResponse
     typealias ListDataType = [[String: String]]

@@ -33,6 +33,8 @@ protocol SharePointDataViewer: class, SharePointRequestDelegate {
     func loadData(networkOnly: Bool)
     func showErrorMessage(popup: Bool, errorMessage: String)
     func showAuthError()
+    func signInClicked(sender: AnyObject)
+    func showSignInPage()
 }
 
 extension SharePointDataViewer where Self: UITableViewController {
@@ -173,7 +175,46 @@ extension SharePointDataViewer where Self: UITableViewController {
     }
     
     func showAuthError() {
-        showErrorMessage(false, errorMessage: "You must be signed in to use this feature")
+        // Create a view to hold our error message/button
+        let container = UIView()
+        
+        // Create the sign in button
+        let button = UIButton(type: UIButtonType.System) as UIButton
+        button.frame = CGRectMake(100, 100, 100, 50)
+        button.tintColor = UIColor.whiteColor()
+        button.backgroundColor = AppDelegate.navColor
+        button.setTitle("Sign In", forState: UIControlState.Normal)
+        button.addTarget(self, action: "signInClicked:", forControlEvents: UIControlEvents.TouchUpInside)
+        
+        container.addSubview(button)
+        
+        // Create the error message label
+        let label = UILabel(frame: CGRectMake(0, 0, 400, 21))
+        label.center = CGPointMake(160, 284)
+        label.textAlignment = NSTextAlignment.Center
+        label.text = "Please sign in to view announcements"
+        container.addSubview(label)
+        
+        // Center everything
+        let centerButtonOnY = self.view.frame.height / 2
+        let centerButtonOnX = self.view.frame.width / 2
+        
+        button.center = CGPointMake(centerButtonOnX,centerButtonOnY);
+        label.center = CGPointMake(centerButtonOnX,centerButtonOnY - 69)
+        
+        // Hide the table contents
+        clearListData()
+        self.tableView.reloadData()
+        
+        // Display the container
+        self.tableView.backgroundView = container
+        self.tableView.separatorStyle = .None
+    }
+    
+    func showSignInPage() {
+        let storyboard = UIStoryboard(name: "SignIn", bundle: nil)
+        let vc = storyboard.instantiateViewControllerWithIdentifier("signInNavVC")
+        self.presentViewController(vc, animated: true, completion: nil)
     }
 
 }
