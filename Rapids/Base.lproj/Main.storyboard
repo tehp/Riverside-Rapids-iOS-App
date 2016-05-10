@@ -60,11 +60,11 @@
             </objects>
             <point key="canvasLocation" x="1655.5" y="1382"/>
         </scene>
-        <!--Homework-->
+        <!--SharePoint-->
         <scene sceneID="WJP-gJ-GhR">
             <objects>
                 <navigationController id="I2P-vS-tmu" customClass="BaseNavViewController" customModule="Rapids" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Homework" image="Exam-50" selectedImage="Exam-50" id="Bs7-uF-V43">
+                    <tabBarItem key="tabBarItem" title="SharePoint" image="SharePoint-50" selectedImage="SharePoint-50" id="Bs7-uF-V43">
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
                                 <color key="value" red="0.0" green="0.27058823529411763" blue="0.16078431372549018" alpha="1" colorSpace="calibratedRGB"/>
@@ -210,12 +210,12 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Exam-50" width="25" height="25"/>
         <image name="Maintenance-50" width="25" height="25"/>
         <image name="Overtime-50" width="25" height="25"/>
         <image name="Overtime-50.png" width="25" height="25"/>
         <image name="Podium With Speaker-50.png" width="25" height="25"/>
         <image name="Report Card-50" width="25" height="25"/>
+        <image name="SharePoint-50" width="25" height="25"/>
     </resources>
     <color key="tintColor" red="0.0" green="0.27058823529999998" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
 </document>

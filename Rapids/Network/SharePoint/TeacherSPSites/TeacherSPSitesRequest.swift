@@ -29,14 +29,16 @@ class TeacherSPSitesRequest {
     func sendRequest() {
         let authHeader = NetworkUtils.generateBasicAuthHeader(username, password: password)
         
-        Alamofire.request(.GET, D.BellSchedule.GET_URL, headers: ["Authorization": authHeader])
+        Alamofire.request(.GET, D.SharePoint.GET_TEACHER_SP_SITES_URL, headers: ["Authorization": authHeader])
             .responseJSON { response in
                 if let actualDelegate = self.responseDelegate {
                     switch response.result {
                         
                     case .Success(let json):
-                        let response = json as! NSDictionary
-                        actualDelegate.didReceiveResponse(self.parseResponse(response))
+                        let responseData = json as! NSDictionary
+                        print(responseData)
+                        print(json)
+                        actualDelegate.didReceiveResponse(self.parseResponse(responseData))
                         
                     case .Failure(let error):
                         actualDelegate.didReceiveError(error)
@@ -50,13 +52,13 @@ class TeacherSPSitesRequest {
         var sites = [TeacherSPSite]()
         
         for site in json["teacherSPSites"]! as! [NSDictionary] {
-            let id = site["id"]! as! Int64
+            //let id = site["id"]! as! Int64
             let teacherSalutation = site["teacherSalutation"]! as! String
             let teacherLastName = site["teacherLastName"]! as! String
             let course = site["course"]! as! String
             let websiteUrl = site["websiteUrl"]! as! String
             
-            sites.append(TeacherSPSite(id: id, teacherSalutation: teacherSalutation, teacherLastName: teacherLastName, course: course, websiteUrl: websiteUrl))
+            sites.append(TeacherSPSite(id: 0, teacherSalutation: teacherSalutation, teacherLastName: teacherLastName, course: course, websiteUrl: websiteUrl))
         }
         
         return TeacherSPSitesResponse(timestamp: NSDate(), sites: sites)

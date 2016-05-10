@@ -29,6 +29,13 @@ class AnnouncementsViewController: UITableViewController, SharePointDataViewer {
     var lastUpdated: NSDate?
     var lastSignedInState: Bool = false
     
+    var spTableView: UITableView {
+        return self.tableView
+    }
+    var spRefreshControl: UIRefreshControl {
+        return self.refreshControl!
+    }
+    
     // UI
     let cellIdentifier = "AnnouncementTableViewCell"
     
@@ -54,8 +61,6 @@ class AnnouncementsViewController: UITableViewController, SharePointDataViewer {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        // Table view vells are reused and should be dequeued using a cell identifier.
-        
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! AnnouncementTableViewCell
         configureCell(cell, row: indexPath.row)
         return cell
@@ -118,7 +123,7 @@ class AnnouncementsViewController: UITableViewController, SharePointDataViewer {
         announcements.removeAll()
     }
     
-    func parseListData(listData: [[String: String]]) {
+    func parseListData(listData: ListDataType) {
         for row in listData {
             let title = row[ATTR_TITLE]
             let category = row[ATTR_CATEGORIES]

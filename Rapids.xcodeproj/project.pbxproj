@@ -25,6 +25,7 @@
 		4F4B80D71CD9A9A900643E51 /* TeacherSPSitesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4B80D61CD9A9A900643E51 /* TeacherSPSitesViewController.swift */; };
 		4F4B80D91CD9A9BF00643E51 /* TeacherSPSites.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F4B80D81CD9A9BF00643E51 /* TeacherSPSites.storyboard */; };
 		4F4B80DF1CD9AC7600643E51 /* SharePointDataViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4B80DE1CD9AC7600643E51 /* SharePointDataViewer.swift */; };
+		4F5467C21CE2589A0064B931 /* TeacherSPSiteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5467C11CE2589A0064B931 /* TeacherSPSiteTableViewCell.swift */; };
 		4F60CD741CD857E900FD4F34 /* ViewControllerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F60CD731CD857E900FD4F34 /* ViewControllerHelper.swift */; };
 		4F60CD771CD85D0700FD4F34 /* TeacherSPSite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F60CD761CD85D0700FD4F34 /* TeacherSPSite.swift */; };
 		4F60CD7B1CD8650C00FD4F34 /* TeacherSPSitesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F60CD7A1CD8650C00FD4F34 /* TeacherSPSitesRequest.swift */; };
@@ -99,6 +100,7 @@
 		4F4B80D61CD9A9A900643E51 /* TeacherSPSitesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeacherSPSitesViewController.swift; sourceTree = "<group>"; };
 		4F4B80D81CD9A9BF00643E51 /* TeacherSPSites.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TeacherSPSites.storyboard; sourceTree = "<group>"; };
 		4F4B80DE1CD9AC7600643E51 /* SharePointDataViewer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharePointDataViewer.swift; sourceTree = "<group>"; };
+		4F5467C11CE2589A0064B931 /* TeacherSPSiteTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeacherSPSiteTableViewCell.swift; sourceTree = "<group>"; };
 		4F60CD731CD857E900FD4F34 /* ViewControllerHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerHelper.swift; sourceTree = "<group>"; };
 		4F60CD761CD85D0700FD4F34 /* TeacherSPSite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeacherSPSite.swift; sourceTree = "<group>"; };
 		4F60CD7A1CD8650C00FD4F34 /* TeacherSPSitesRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeacherSPSitesRequest.swift; sourceTree = "<group>"; };
@@ -302,6 +304,7 @@
 				4FC6578D1C7CE2E500635111 /* AnnouncementTableViewCell.swift */,
 				D5EFC8371C84CF91009FCD94 /* BlockTableViewCell.swift */,
 				26C394761CB58C0A00F26DA0 /* CalendarTableViewCell.swift */,
+				4F5467C11CE2589A0064B931 /* TeacherSPSiteTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -648,6 +651,7 @@
 				4F60CD771CD85D0700FD4F34 /* TeacherSPSite.swift in Sources */,
 				4F4B80D31CD98F7300643E51 /* NetworkUtils.swift in Sources */,
 				99DDB8611CD7D4A300FE61FB /* BaseNavViewController.swift in Sources */,
+				4F5467C21CE2589A0064B931 /* TeacherSPSiteTableViewCell.swift in Sources */,
 				4F60CD7D1CD8651700FD4F34 /* TeacherSPSitesResponse.swift in Sources */,
 				4F99D2171C7B99900031BCC0 /* GetBellScheduleRequest.swift in Sources */,
 				4FE47E581C76A82400CBBE85 /* SoapViewFieldsBuilder.swift in Sources */,

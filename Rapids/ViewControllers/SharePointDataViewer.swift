@@ -18,6 +18,9 @@ protocol SharePointDataViewer: class, SharePointRequestDelegate {
     var lastUpdated: NSDate? {get set}
     var lastSignedInState: Bool {get set}
     
+    var spTableView: UITableView {get}
+    var spRefreshControl: UIRefreshControl {get}
+    
     func handleViewDidLoad()
     func handleViewWillAppear()
     func getSectionCount() -> Int
@@ -37,17 +40,17 @@ protocol SharePointDataViewer: class, SharePointRequestDelegate {
     func showSignInPage()
 }
 
-extension SharePointDataViewer where Self: UITableViewController {
+extension SharePointDataViewer where Self: UIViewController {
     
     // MARK: - Lifecycle callbacks
     
     func handleViewDidLoad() {
         // Setup TableView
-        tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.estimatedRowHeight = 120.0
+        spTableView.rowHeight = UITableViewAutomaticDimension
+        spTableView.estimatedRowHeight = 120.0
         
         // Setup Pull to Refresh
-        self.refreshControl?.addTarget(self, action: "refresh:", forControlEvents: UIControlEvents.ValueChanged)
+        spRefreshControl.addTarget(self, action: "refresh:", forControlEvents: UIControlEvents.ValueChanged)
         
         // Initialize state
         lastSignedInState = CredentialsManager.sharedInstance.signedIn
@@ -76,7 +79,7 @@ extension SharePointDataViewer where Self: UITableViewController {
     
     func didFailPreConditions(error: Int) {
         // Hide the refreshing indicator
-        self.refreshControl?.endRefreshing()
+        spRefreshControl.endRefreshing()
         
         // Handle the error
         if error == SharePointRequestErrors.ERROR_PRE_NOT_SIGNED_IN {
@@ -90,11 +93,9 @@ extension SharePointDataViewer where Self: UITableViewController {
     }
     
     func willStartNetworkLoad() {
-        if let actualRefreshControl = self.refreshControl {
-            if !actualRefreshControl.refreshing {
-                self.tableView.contentOffset = CGPointMake(0, -actualRefreshControl.frame.size.height)
-                actualRefreshControl.beginRefreshing()
-            }
+        if !spRefreshControl.refreshing {
+            spTableView.contentOffset = CGPointMake(0, -spRefreshControl.frame.size.height)
+            spRefreshControl.beginRefreshing()
         }
     }
     
@@ -118,7 +119,7 @@ extension SharePointDataViewer where Self: UITableViewController {
     
     func didFinishNetworkLoad() {
         // Hide the refreshing indicator
-        self.refreshControl?.endRefreshing()
+        spRefreshControl.endRefreshing()
         
         // After the first network request we want to show popup errors
         showPopupError = true
@@ -135,16 +136,16 @@ extension SharePointDataViewer where Self: UITableViewController {
         parseListData(listData)
         
         // Update table
-        self.tableView.separatorStyle = UITableViewCellSeparatorStyle.SingleLine
-        self.tableView.reloadData()
+        spTableView.separatorStyle = UITableViewCellSeparatorStyle.SingleLine
+        spTableView.reloadData()
         
         // Update refresh control
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "MMM. d 'at' h:mm a"
-        self.refreshControl?.attributedTitle = NSAttributedString(string: "Last updated: \(dateFormatter.stringFromDate(lastUpdated!))")
+        spRefreshControl.attributedTitle = NSAttributedString(string: "Last updated: \(dateFormatter.stringFromDate(lastUpdated!))")
         
         // Hide error messgae
-        self.tableView.backgroundView = nil
+        spTableView.backgroundView = nil
     }
     
     func showErrorMessage(popup: Bool, errorMessage: String) {
@@ -159,11 +160,11 @@ extension SharePointDataViewer where Self: UITableViewController {
             
             // Hide the table contents
             clearListData()
-            self.tableView.reloadData()
+            spTableView.reloadData()
             
             // Display the error message label
-            self.tableView.backgroundView = messageLabel
-            self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
+            spTableView.backgroundView = messageLabel
+            spTableView.separatorStyle = UITableViewCellSeparatorStyle.None
         } else if showPopupError {
             let alertController = UIAlertController(title: "Network Error", message: errorMessage, preferredStyle: UIAlertControllerStyle.Alert)
             alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Cancel, handler: nil))
@@ -204,11 +205,11 @@ extension SharePointDataViewer where Self: UITableViewController {
         
         // Hide the table contents
         clearListData()
-        self.tableView.reloadData()
+        spTableView.reloadData()
         
         // Display the container
-        self.tableView.backgroundView = container
-        self.tableView.separatorStyle = .None
+        spTableView.backgroundView = container
+        spTableView.separatorStyle = .None
     }
     
     func showSignInPage() {
