@@ -59,8 +59,6 @@ class CalendarViewController: UIViewController, SharePointRequestDelegate, UITab
     
         calendar.delegate = self
         
-        tableView.reloadData()
-        
         print("viewDidAppear Called")
         
     }
