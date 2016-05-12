@@ -35,10 +35,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         CalendarView.todayBackgroundColor = UIColor(white: 0.0, alpha: 0.3)
         CalendarView.todayTextColor = UIColor.whiteColor()
         CalendarView.otherMonthBackgroundColor = UIColor.clearColor()
-        CalendarView.otherMonthTextColor = AppDelegate.navColor
         CalendarView.dayTextColor = AppDelegate.navColor
         CalendarView.dayBackgroundColor = UIColor.clearColor()
         CalendarView.weekLabelTextColor = AppDelegate.navColor
+        CalendarView.otherMonthTextColor = UIColor.lightGrayColor()
         
         // Sets title colour to white 
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
