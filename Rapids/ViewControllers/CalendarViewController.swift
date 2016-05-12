@@ -14,12 +14,18 @@ class CalendarViewController: UIViewController, SharePointRequestDelegate, UITab
     
     
     func calendarDidSelectDate(date: Moment) {
-        self.date = date
+        var selected = "error"
+        selected = date.format("yyyy-MM-dd")
+        print(selected)
     }
     
     func calendarDidPageToDate(date: Moment) {
-        self.date = date
+        var headline = "error"
+        headline = date.format("MMMM yyyy")
+        print(headline)
+        calendarTitle.text = headline
     }
+
     
     let ATTR_TITLE = "ows_Title"
     let ATTR_START = "ows_EventDate"
@@ -31,20 +37,22 @@ class CalendarViewController: UIViewController, SharePointRequestDelegate, UITab
     let cellIdentifier = "CalendarTableViewCell"
     var showPopupError: Bool = false
     
+    
     // Model
     var calendarTable = [CalendarEvent]()
     var lastUpdated: NSDate?
     
   
     // MARK: Table View Data
-    
     @IBOutlet weak var calendar: CalendarView!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var calendarTitle: UILabel!
+    
     
     
     var date: Moment! {
         didSet {
-            print(date)
+            //print(date)
             print(calendarTable)
             
         }
@@ -60,6 +68,7 @@ class CalendarViewController: UIViewController, SharePointRequestDelegate, UITab
         calendar.delegate = self
         
         print("viewDidAppear Called")
+        
         
     }
 
@@ -145,7 +154,6 @@ class CalendarViewController: UIViewController, SharePointRequestDelegate, UITab
         let event = calendarTable[indexPath.row]
         cell.eventLabel.text = event.title
 
-        
         return cell
         
     }

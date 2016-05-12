@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I2y-j8-BOg" customClass="CalendarView" customModule="CalendarView">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="343"/>
+                                <rect key="frame" x="0.0" y="67" width="600" height="276"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eoG-GR-DoM">
@@ -50,20 +50,30 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="akG-yO-E7J">
+                                <rect key="frame" x="279" y="20" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <color key="textColor" red="0.0" green="0.55294117647058827" blue="0.25490196078431371" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="I2y-j8-BOg" firstAttribute="top" secondItem="2zR-Qk-FfR" secondAttribute="topMargin" constant="45" id="6oz-rB-agH"/>
                             <constraint firstAttribute="trailingMargin" secondItem="eoG-GR-DoM" secondAttribute="trailing" id="74e-Q4-lgU"/>
+                            <constraint firstItem="akG-yO-E7J" firstAttribute="centerX" secondItem="2zR-Qk-FfR" secondAttribute="centerX" id="LXi-Cj-qPE"/>
                             <constraint firstItem="eoG-GR-DoM" firstAttribute="leading" secondItem="2zR-Qk-FfR" secondAttribute="leadingMargin" id="TTd-NS-xSA"/>
                             <constraint firstItem="aKc-Pt-hE8" firstAttribute="top" secondItem="eoG-GR-DoM" secondAttribute="bottom" id="Uxe-q4-bwv"/>
                             <constraint firstAttribute="trailingMargin" secondItem="I2y-j8-BOg" secondAttribute="trailing" id="VcL-Cf-4ef"/>
-                            <constraint firstItem="I2y-j8-BOg" firstAttribute="top" secondItem="2zR-Qk-FfR" secondAttribute="topMargin" id="d7f-xM-Cqq"/>
-                            <constraint firstItem="eoG-GR-DoM" firstAttribute="top" secondItem="I2y-j8-BOg" secondAttribute="bottom" constant="20" id="q9c-NA-Uq1"/>
+                            <constraint firstItem="akG-yO-E7J" firstAttribute="top" secondItem="LGB-bg-l1h" secondAttribute="bottom" constant="5" id="njU-zP-3qf"/>
+                            <constraint firstItem="eoG-GR-DoM" firstAttribute="top" secondItem="I2y-j8-BOg" secondAttribute="bottom" id="q9c-NA-Uq1"/>
+                            <constraint firstItem="I2y-j8-BOg" firstAttribute="top" secondItem="akG-yO-E7J" secondAttribute="bottom" id="yMS-Ql-se3"/>
                             <constraint firstItem="I2y-j8-BOg" firstAttribute="leading" secondItem="2zR-Qk-FfR" secondAttribute="leadingMargin" id="yVU-u6-8gY"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="calendar" destination="I2y-j8-BOg" id="Fi4-A3-liH"/>
+                        <outlet property="calendarTitle" destination="akG-yO-E7J" id="shW-Dq-zvV"/>
                         <outlet property="tableView" destination="eoG-GR-DoM" id="R7d-IT-ARW"/>
                     </connections>
                 </viewController>
