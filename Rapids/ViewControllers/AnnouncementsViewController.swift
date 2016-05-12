@@ -25,6 +25,10 @@ class AnnouncementsViewController: UITableViewController, SharePointDataViewer {
     let CATEGORY_GRAD = "Grad"
     
     // Protocol requirements
+    var errMsgRetrieve = "Unable to retrieve announcements.\nPull down to refresh."
+    var errMsgUpdate = "Unable to update announcements.\nPlease check your internet connection."
+    var errMsgAuth = "Please sign in to view announcements"
+    
     var showPopupError: Bool = false
     var lastUpdated: NSDate?
     var lastSignedInState: Bool = false
@@ -73,15 +77,15 @@ class AnnouncementsViewController: UITableViewController, SharePointDataViewer {
         cell.nameLabel.text = announcement.title
         switch announcement.category {
         case CATEGORY_ALTHLETICS:
-            cell.photoImageView.image = UIImage(named: "Basketball-50")
+            cell.photoImageView.image = UIImage(named: "Basketball")
         case CATEGORY_STUDENT_ALERT:
-            cell.photoImageView.image = UIImage(named: "Megaphone-50")
+            cell.photoImageView.image = UIImage(named: "Megaphone")
         case CATEGORY_GRAD:
-            cell.photoImageView.image = UIImage(named: "Student-50")
+            cell.photoImageView.image = UIImage(named: "Student")
         case CATEGORY_GENERAL:
             fallthrough
         default:
-            cell.photoImageView.image = UIImage(named: "Info-50")
+            cell.photoImageView.image = UIImage(named: "Info")
         }
     }
     

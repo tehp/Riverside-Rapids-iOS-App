@@ -19,4 +19,10 @@ class ViewControllerHelper {
         navigationItem.titleView = imageView
     }
     
+    static func setNextVCBackButtonText(currentVC: UIViewController, text: String) {
+        let backItem = UIBarButtonItem()
+        backItem.title = text
+        currentVC.navigationItem.backBarButtonItem = backItem
+    }
+    
 }

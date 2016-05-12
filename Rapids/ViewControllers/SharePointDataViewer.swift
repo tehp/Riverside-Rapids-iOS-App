@@ -14,6 +14,10 @@ protocol SharePointDataViewer: class, SharePointRequestDelegate {
     typealias ResponseType
     typealias ListDataType
     
+    var errMsgRetrieve: String {get}
+    var errMsgUpdate: String {get}
+    var errMsgAuth: String {get}
+    
     var showPopupError: Bool {get set}
     var lastUpdated: NSDate? {get set}
     var lastSignedInState: Bool {get set}
@@ -55,6 +59,11 @@ extension SharePointDataViewer where Self: UIViewController {
         // Initialize state
         lastSignedInState = CredentialsManager.sharedInstance.signedIn
         
+        // Clear any leftover data
+        clearListData()
+        spTableView.reloadData()
+        spTableView.backgroundView = nil
+        
         // Do initial load
         loadData(false)
     }
@@ -94,7 +103,7 @@ extension SharePointDataViewer where Self: UIViewController {
     
     func willStartNetworkLoad() {
         if !spRefreshControl.refreshing {
-            spTableView.contentOffset = CGPointMake(0, -spRefreshControl.frame.size.height)
+            //spTableView.contentOffset = CGPointMake(0, -spRefreshControl.frame.size.height)
             spRefreshControl.beginRefreshing()
         }
     }
@@ -106,9 +115,6 @@ extension SharePointDataViewer where Self: UIViewController {
     
     func didReceiveNetworkError(error: ErrorType) {
         print(error)
-        
-        let errMsgRetrieve = "Unable to retrieve announcements.\nPull down to refresh."
-        let errMsgUpdate = "Unable to update announcements.\nPlease check your internet connection."
         
         if getDataCount() == 0 {
             showErrorMessage(false, errorMessage: errMsgRetrieve)
@@ -193,7 +199,7 @@ extension SharePointDataViewer where Self: UIViewController {
         let label = UILabel(frame: CGRectMake(0, 0, 400, 21))
         label.center = CGPointMake(160, 284)
         label.textAlignment = NSTextAlignment.Center
-        label.text = "Please sign in to view announcements"
+        label.text = errMsgAuth
         container.addSubview(label)
         
         // Center everything

@@ -43,7 +43,15 @@ class GetListCollectionResponse: SoapResponse {
         
         lists = [[String: String]]()
         
+        let listsObj = try getNthFirstChild(contentRoot, n: 2)
         
+        for row in listsObj.children {
+            var attributes = [String: String]()
+            for (name, value) in row.attributes {
+                attributes[name] = value
+            }
+            lists.append(attributes)
+        }
     }
     
     override func generateSoapResponseData() -> SoapResponseData {

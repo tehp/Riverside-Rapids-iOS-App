@@ -36,8 +36,6 @@ class TeacherSPSitesRequest {
                         
                     case .Success(let json):
                         let responseData = json as! NSDictionary
-                        print(responseData)
-                        print(json)
                         actualDelegate.didReceiveResponse(self.parseResponse(responseData))
                         
                     case .Failure(let error):

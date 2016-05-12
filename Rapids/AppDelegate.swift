@@ -9,7 +9,6 @@
 import UIKit
 import CalendarView
 
-
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
@@ -18,11 +17,36 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let PREF_FIRST_LAUNCH = "launchedBefore"
     static var firstLaunch: Bool = false
     
-    //Define custom green color
+    // Define custom green color
     static let navColor = UIColor(red: 0.0/255.0, green: 141.0/255.0, blue: 65.0/255.0, alpha: 1)
+    
+    // Folders
+    static let documentsFolder = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask).first!
+    static let tempFolder = documentsFolder.URLByAppendingPathComponent("temp", isDirectory: true)
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 
+        let fileManager = NSFileManager.defaultManager()
+        let tempFolderPath = AppDelegate.tempFolder.path!
+        if fileManager.fileExistsAtPath(tempFolderPath) {
+            // Empty temp folder
+            let enumerator = fileManager.enumeratorAtPath(tempFolderPath)
+            while let file = enumerator?.nextObject() as? String {
+                do {
+                    try fileManager.removeItemAtURL(AppDelegate.tempFolder.URLByAppendingPathComponent(file))
+                } catch let error as NSError {
+                    print(error.localizedDescription)
+                }
+            }
+        } else {
+            // Create temp folder
+            do {
+                try fileManager.createDirectoryAtPath(tempFolderPath, withIntermediateDirectories: false, attributes: nil)
+            } catch let error as NSError {
+                print(error.localizedDescription)
+            }
+        }
+        
         let navigationBarAppearace = UINavigationBar.appearance()
         
         navigationBarAppearace.tintColor = UIColor.whiteColor()  // Back buttons and such

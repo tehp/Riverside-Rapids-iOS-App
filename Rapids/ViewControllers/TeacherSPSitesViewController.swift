@@ -11,6 +11,10 @@ import UIKit
 class TeacherSPSitesViewController: UITableViewController, UISearchResultsUpdating, SharePointDataViewer {
 
     // Protocol requirements
+    var errMsgRetrieve = "Unable to retrieve teacher SharePoint sites.\nPull down to refresh."
+    var errMsgUpdate = "Unable to update teacher SharePoint sites.\nPlease check your internet connection."
+    var errMsgAuth = "Please sign in to view teacher SharePoint sites"
+    
     var showPopupError: Bool = false
     var lastUpdated: NSDate?
     var lastSignedInState: Bool = false
@@ -25,6 +29,7 @@ class TeacherSPSitesViewController: UITableViewController, UISearchResultsUpdati
     // UI
     let cellIdentifier = "TeacherSPSiteTableViewCell"
     var searchController: UISearchController!
+    var selectedTableIndex: Int = 0
     
     // Model
     var teacherSPSites = [TeacherSPSite]()
@@ -62,17 +67,25 @@ class TeacherSPSitesViewController: UITableViewController, UISearchResultsUpdati
         return cell
     }
     
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        selectedTableIndex = indexPath.row
+        performSegueWithIdentifier("showSPListCollection", sender: self)
+    }
+    
+    private func getModelObjectArray() -> [TeacherSPSite] {
+        if searchController.active && searchController.searchBar.text != "" {
+            return filteredTeacherSPSites
+        } else {
+            return teacherSPSites
+        }
+    }
+    
     private func configureCell(cell: TeacherSPSiteTableViewCell, row: Int) {
         // Fetches the appropriate TeacherSPSite for the data source layout
-        let teacherSPSite: TeacherSPSite
-        if searchController.active && searchController.searchBar.text != "" {
-            teacherSPSite = filteredTeacherSPSites[row]
-        } else {
-            teacherSPSite = teacherSPSites[row]
-        }
+        let teacherSPSite = getModelObjectArray()[row]
         
         cell.teacherLabel.text = teacherSPSite.teacherSalutation + " " + teacherSPSite.teacherLastName
-        cell.courseLabel.text = teacherSPSite.course == "" ? "Home" : teacherSPSite.course
+        cell.courseLabel.text = SPUtils.getTeacherSPSitesCourse(teacherSPSite.course)
     }
     
     func signInClicked(sender: AnyObject) {
@@ -94,10 +107,7 @@ class TeacherSPSitesViewController: UITableViewController, UISearchResultsUpdati
     }
     
     func getDataCount() -> Int {
-        if searchController.active && searchController.searchBar.text != "" {
-            return filteredTeacherSPSites.count
-        }
-        return teacherSPSites.count
+        return getModelObjectArray().count
     }
     
     func extractLastUpdated(cachedData: CacheType) -> NSDate {
@@ -139,6 +149,13 @@ class TeacherSPSitesViewController: UITableViewController, UISearchResultsUpdati
     
     func updateSearchResultsForSearchController(searchController: UISearchController) {
         filterContentForSearchText(searchController.searchBar.text!)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "showSPListCollection" {
+            let viewController = segue.destinationViewController as! SPListCollectionViewController
+            viewController.teacherSPSite = getModelObjectArray()[selectedTableIndex]
+        }
     }
     
 }

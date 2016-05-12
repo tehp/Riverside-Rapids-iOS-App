@@ -39,15 +39,14 @@
             <point key="canvasLocation" x="1655.5" y="-92"/>
         </scene>
         <!--TeacherSPSites-->
-        <scene sceneID="zEw-Al-pTF">
+        <scene sceneID="WhA-dD-WjJ">
             <objects>
-                <viewControllerPlaceholder storyboardName="TeacherSPSites" id="VpF-s6-IoX" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Eha-k5-3tF"/>
-                    <navigationItem key="navigationItem" id="Tf9-0d-l9W"/>
+                <viewControllerPlaceholder storyboardName="TeacherSPSites" id="cGw-6W-uLK" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="e9e-hh-o8g"/>
                 </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8aC-fG-pAI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hBu-xc-dA0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1683.5" y="611"/>
+            <point key="canvasLocation" x="741" y="503"/>
         </scene>
         <!--More-->
         <scene sceneID="wNG-yp-eMy">
@@ -60,38 +59,14 @@
             </objects>
             <point key="canvasLocation" x="1655.5" y="1382"/>
         </scene>
-        <!--SharePoint-->
-        <scene sceneID="WJP-gJ-GhR">
-            <objects>
-                <navigationController id="I2P-vS-tmu" customClass="BaseNavViewController" customModule="Rapids" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="SharePoint" image="SharePoint-50" selectedImage="SharePoint-50" id="Bs7-uF-V43">
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
-                                <color key="value" red="0.0" green="0.27058823529411763" blue="0.16078431372549018" alpha="1" colorSpace="calibratedRGB"/>
-                            </userDefinedRuntimeAttribute>
-                        </userDefinedRuntimeAttributes>
-                    </tabBarItem>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="fQP-pX-MmX">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="VpF-s6-IoX" kind="relationship" relationship="rootViewController" id="95d-fB-RHf"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="PpG-ru-uDQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="663" y="560"/>
-        </scene>
         <!--Announcements-->
         <scene sceneID="CQo-oJ-K1k">
             <objects>
                 <navigationController id="kRh-Yd-jAw" customClass="BaseNavViewController" customModule="Rapids" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Announcements" image="Podium With Speaker-50.png" selectedImage="Podium With Speaker-50.png" id="djI-cY-a68">
+                    <tabBarItem key="tabBarItem" title="Announcements" image="Announcement" selectedImage="Announcement" id="djI-cY-a68">
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
-                                <color key="value" red="0.0" green="0.27058823529411763" blue="0.16078431372549018" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="value" red="0.0" green="0.55294117647058827" blue="0.25490196078431371" alpha="1" colorSpace="calibratedRGB"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </tabBarItem>
@@ -113,10 +88,10 @@
         <scene sceneID="UnV-dg-Gt6">
             <objects>
                 <navigationController id="5ZE-tV-L5V" customClass="BaseNavViewController" customModule="Rapids" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="More" image="Maintenance-50" selectedImage="Maintenance-50" id="tnx-qu-NYt">
+                    <tabBarItem key="tabBarItem" title="More" image="More" selectedImage="More" id="tnx-qu-NYt">
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
-                                <color key="value" red="0.0" green="0.38823529411764707" blue="0.16078431372549018" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="value" red="0.0" green="0.55294117647058827" blue="0.25490196078431371" alpha="1" colorSpace="calibratedRGB"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </tabBarItem>
@@ -137,10 +112,10 @@
         <scene sceneID="e5w-Zd-eGW">
             <objects>
                 <navigationController id="cQV-jC-VNc" customClass="BaseNavViewController" customModule="Rapids" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Calendar" image="Overtime-50" selectedImage="Overtime-50.png" id="QyF-Iv-62s">
+                    <tabBarItem key="tabBarItem" title="Calendar" image="Calendar" selectedImage="Calendar" id="QyF-Iv-62s">
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
-                                <color key="value" red="0.0" green="0.27058823529411763" blue="0.16078431372549018" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="value" red="0.0" green="0.55294117647058827" blue="0.25490196078431371" alpha="1" colorSpace="calibratedRGB"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </tabBarItem>
@@ -161,10 +136,10 @@
         <scene sceneID="2FD-hj-c4k">
             <objects>
                 <navigationController id="VNe-BX-0jq" customClass="BaseNavViewController" customModule="Rapids" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Schedule" image="Report Card-50" selectedImage="Report Card-50" id="cVy-6Z-Nz7">
+                    <tabBarItem key="tabBarItem" title="Schedule" image="BellSchedule" selectedImage="BellSchedule" id="cVy-6Z-Nz7">
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
-                                <color key="value" red="0.0" green="0.27058823529411763" blue="0.16078431372549018" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="value" red="0.0" green="0.55294117647058827" blue="0.25490196078431371" alpha="1" colorSpace="calibratedRGB"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </tabBarItem>
@@ -200,7 +175,7 @@
                         <segue destination="kRh-Yd-jAw" kind="relationship" relationship="viewControllers" id="ctb-15-1LN"/>
                         <segue destination="cQV-jC-VNc" kind="relationship" relationship="viewControllers" id="dcx-Tl-0Ps"/>
                         <segue destination="VNe-BX-0jq" kind="relationship" relationship="viewControllers" id="yd9-dF-SyK"/>
-                        <segue destination="I2P-vS-tmu" kind="relationship" relationship="viewControllers" id="wnL-Wc-gLH"/>
+                        <segue destination="cGw-6W-uLK" kind="relationship" relationship="viewControllers" id="6Bq-la-tWf"/>
                         <segue destination="5ZE-tV-L5V" kind="relationship" relationship="viewControllers" id="0sN-Gy-0pP"/>
                     </connections>
                 </tabBarController>
@@ -210,12 +185,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Maintenance-50" width="25" height="25"/>
-        <image name="Overtime-50" width="25" height="25"/>
-        <image name="Overtime-50.png" width="25" height="25"/>
-        <image name="Podium With Speaker-50.png" width="25" height="25"/>
-        <image name="Report Card-50" width="25" height="25"/>
-        <image name="SharePoint-50" width="25" height="25"/>
+        <image name="Announcement" width="25" height="25"/>
+        <image name="BellSchedule" width="25" height="25"/>
+        <image name="Calendar" width="25" height="25"/>
+        <image name="More" width="25" height="25"/>
     </resources>
     <color key="tintColor" red="0.0" green="0.27058823529999998" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
 </document>

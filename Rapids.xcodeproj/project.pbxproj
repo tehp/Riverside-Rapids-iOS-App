@@ -20,6 +20,14 @@
 		269689A81C76480400845C1D /* rapids_large.png in Resources */ = {isa = PBXBuildFile; fileRef = 269689A71C76480400845C1D /* rapids_large.png */; };
 		26A6B6581C881D1100629FDF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9D61991C643C4400CA406F /* AppDelegate.swift */; };
 		26C394771CB58C0A00F26DA0 /* CalendarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C394761CB58C0A00F26DA0 /* CalendarTableViewCell.swift */; };
+		4F023E901CE3E63900F0C257 /* SPListCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F023E8F1CE3E63900F0C257 /* SPListCollectionViewController.swift */; };
+		4F023E921CE3E6B600F0C257 /* SPListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F023E911CE3E6B600F0C257 /* SPListTableViewCell.swift */; };
+		4F023E941CE3E99000F0C257 /* SPList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F023E931CE3E99000F0C257 /* SPList.swift */; };
+		4F023E961CE3F6DC00F0C257 /* SPUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F023E951CE3F6DC00F0C257 /* SPUtils.swift */; };
+		4F2DABB91CE676EC007AFF26 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2DABB81CE676EB007AFF26 /* CardView.swift */; };
+		4F2DABBB1CE67926007AFF26 /* SPDocuments.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F2DABBA1CE67926007AFF26 /* SPDocuments.storyboard */; };
+		4F2DABBD1CE6796C007AFF26 /* SPDocumentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2DABBC1CE6796C007AFF26 /* SPDocumentsViewController.swift */; };
+		4F2DABBF1CE67A5C007AFF26 /* SPDocumentsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2DABBE1CE67A5C007AFF26 /* SPDocumentsTableViewCell.swift */; };
 		4F48E5B61C8B936900733382 /* BellScheduleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F48E5B51C8B936900733382 /* BellScheduleManager.swift */; };
 		4F4B80D31CD98F7300643E51 /* NetworkUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4B80D21CD98F7300643E51 /* NetworkUtils.swift */; };
 		4F4B80D71CD9A9A900643E51 /* TeacherSPSitesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4B80D61CD9A9A900643E51 /* TeacherSPSitesViewController.swift */; };
@@ -95,6 +103,14 @@
 		269689A71C76480400845C1D /* rapids_large.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rapids_large.png; sourceTree = "<group>"; };
 		26C394761CB58C0A00F26DA0 /* CalendarTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CalendarTableViewCell.swift; path = ../ViewControllers/CalendarTableViewCell.swift; sourceTree = "<group>"; };
 		2E85ADB8E6D35AFF697648B9 /* Pods-RapidsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RapidsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RapidsTests/Pods-RapidsTests.release.xcconfig"; sourceTree = "<group>"; };
+		4F023E8F1CE3E63900F0C257 /* SPListCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPListCollectionViewController.swift; sourceTree = "<group>"; };
+		4F023E911CE3E6B600F0C257 /* SPListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPListTableViewCell.swift; sourceTree = "<group>"; };
+		4F023E931CE3E99000F0C257 /* SPList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPList.swift; sourceTree = "<group>"; };
+		4F023E951CE3F6DC00F0C257 /* SPUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPUtils.swift; sourceTree = "<group>"; };
+		4F2DABB81CE676EB007AFF26 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		4F2DABBA1CE67926007AFF26 /* SPDocuments.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SPDocuments.storyboard; sourceTree = "<group>"; };
+		4F2DABBC1CE6796C007AFF26 /* SPDocumentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPDocumentsViewController.swift; sourceTree = "<group>"; };
+		4F2DABBE1CE67A5C007AFF26 /* SPDocumentsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPDocumentsTableViewCell.swift; sourceTree = "<group>"; };
 		4F48E5B51C8B936900733382 /* BellScheduleManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BellScheduleManager.swift; sourceTree = "<group>"; };
 		4F4B80D21CD98F7300643E51 /* NetworkUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkUtils.swift; sourceTree = "<group>"; };
 		4F4B80D61CD9A9A900643E51 /* TeacherSPSitesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeacherSPSitesViewController.swift; sourceTree = "<group>"; };
@@ -187,6 +203,7 @@
 				99EC16D91CB825820090DADA /* Map.storyboard */,
 				D52063781CD91E3A00904111 /* About.storyboard */,
 				4F4B80D81CD9A9BF00643E51 /* TeacherSPSites.storyboard */,
+				4F2DABBA1CE67926007AFF26 /* SPDocuments.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -194,6 +211,7 @@
 		269689981C76475A00845C1D /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				4F4B80DE1CD9AC7600643E51 /* SharePointDataViewer.swift */,
 				D5CDCB161CDBC2CB00B0CE7E /* AnnouncementsViewController.swift */,
 				2696899A1C76475A00845C1D /* BellScheduleViewController.swift */,
 				2696899B1C76475A00845C1D /* CalendarViewController.swift */,
@@ -204,7 +222,8 @@
 				4F60CD731CD857E900FD4F34 /* ViewControllerHelper.swift */,
 				D520637A1CD91E8700904111 /* AboutViewController.swift */,
 				4F4B80D61CD9A9A900643E51 /* TeacherSPSitesViewController.swift */,
-				4F4B80DE1CD9AC7600643E51 /* SharePointDataViewer.swift */,
+				4F023E8F1CE3E63900F0C257 /* SPListCollectionViewController.swift */,
+				4F2DABBC1CE6796C007AFF26 /* SPDocumentsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -215,6 +234,7 @@
 				4F60CD761CD85D0700FD4F34 /* TeacherSPSite.swift */,
 				4F60CD7A1CD8650C00FD4F34 /* TeacherSPSitesRequest.swift */,
 				4F60CD7C1CD8651700FD4F34 /* TeacherSPSitesResponse.swift */,
+				4F023E931CE3E99000F0C257 /* SPList.swift */,
 			);
 			path = TeacherSPSites;
 			sourceTree = "<group>";
@@ -305,6 +325,9 @@
 				D5EFC8371C84CF91009FCD94 /* BlockTableViewCell.swift */,
 				26C394761CB58C0A00F26DA0 /* CalendarTableViewCell.swift */,
 				4F5467C11CE2589A0064B931 /* TeacherSPSiteTableViewCell.swift */,
+				4F023E911CE3E6B600F0C257 /* SPListTableViewCell.swift */,
+				4F2DABBE1CE67A5C007AFF26 /* SPDocumentsTableViewCell.swift */,
+				4F2DABB81CE676EB007AFF26 /* CardView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -336,6 +359,7 @@
 				4F60CD751CD85CFB00FD4F34 /* TeacherSPSites */,
 				4FE47E481C76A82400CBBE85 /* SOAP */,
 				4F8B63231C8CECD200161A75 /* SharePointRequestManager.swift */,
+				4F023E951CE3F6DC00F0C257 /* SPUtils.swift */,
 			);
 			path = SharePoint;
 			sourceTree = "<group>";
@@ -500,6 +524,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F2DABBB1CE67926007AFF26 /* SPDocuments.storyboard in Resources */,
 				269689951C76472E00845C1D /* Calendar.storyboard in Resources */,
 				4F9D61A61C643C4500CA406F /* LaunchScreen.storyboard in Resources */,
 				269689931C76472E00845C1D /* Announcements.storyboard in Resources */,
@@ -629,7 +654,9 @@
 				4F48E5B61C8B936900733382 /* BellScheduleManager.swift in Sources */,
 				4F69F3F71C8BA725003C11C5 /* SchoolDates.swift in Sources */,
 				4FD9EA571C7A414D002D6FD1 /* GetListItemsResponse.swift in Sources */,
+				4F2DABBD1CE6796C007AFF26 /* SPDocumentsViewController.swift in Sources */,
 				269689A21C76475A00845C1D /* CalendarViewController.swift in Sources */,
+				4F2DABBF1CE67A5C007AFF26 /* SPDocumentsTableViewCell.swift in Sources */,
 				26C394771CB58C0A00F26DA0 /* CalendarTableViewCell.swift in Sources */,
 				99F92AE51C88C32E00F2D7D7 /* SignInViewController.swift in Sources */,
 				4F9D619A1C643C4400CA406F /* AppDelegate.swift in Sources */,
@@ -637,6 +664,7 @@
 				4FE47E561C76A82400CBBE85 /* SoapQueryBuilder.swift in Sources */,
 				99EC16DC1CB825FF0090DADA /* MapViewController.swift in Sources */,
 				99E24E5D1CB6D6C700D86DCD /* MainViewController.swift in Sources */,
+				4F023E941CE3E99000F0C257 /* SPList.swift in Sources */,
 				4F60CD7B1CD8650C00FD4F34 /* TeacherSPSitesRequest.swift in Sources */,
 				4FC6578E1C7CE2E500635111 /* AnnouncementTableViewCell.swift in Sources */,
 				4FC945041C8B6532002C7F52 /* GetBellScheduleResponseDelegate.swift in Sources */,
@@ -645,6 +673,7 @@
 				4F8B63241C8CECD200161A75 /* SharePointRequestManager.swift in Sources */,
 				D5D2920D1C9346B700FC6F21 /* GetListCollectionResponse.swift in Sources */,
 				4FD9EA551C78D92F002D6FD1 /* SoapResponseDelegate.swift in Sources */,
+				4F023E921CE3E6B600F0C257 /* SPListTableViewCell.swift in Sources */,
 				4F60CD741CD857E900FD4F34 /* ViewControllerHelper.swift in Sources */,
 				4F99D2131C7B99720031BCC0 /* BSDay.swift in Sources */,
 				4FE47E551C76A82400CBBE85 /* SoapCamlBuilder.swift in Sources */,
@@ -661,13 +690,16 @@
 				4F4B80DF1CD9AC7600643E51 /* SharePointDataViewer.swift in Sources */,
 				D5CD8E8D1C7F8D1A00E4FC34 /* D.swift in Sources */,
 				4FE47E5A1C76A82400CBBE85 /* SoapNode.swift in Sources */,
+				4F023E901CE3E63900F0C257 /* SPListCollectionViewController.swift in Sources */,
 				D5D2920B1C93468D00FC6F21 /* GetListCollectionRequest.swift in Sources */,
 				D520637B1CD91E8700904111 /* AboutViewController.swift in Sources */,
 				4F99D2111C7B99640031BCC0 /* BSCal.swift in Sources */,
+				4F023E961CE3F6DC00F0C257 /* SPUtils.swift in Sources */,
 				4F4B80D71CD9A9A900643E51 /* TeacherSPSitesViewController.swift in Sources */,
 				99DC0D091CAEF6A800C5EC03 /* CredentialsManager.swift in Sources */,
 				D5EFC8381C84CF91009FCD94 /* BlockTableViewCell.swift in Sources */,
 				4FD9EA531C78D90A002D6FD1 /* SoapResponse.swift in Sources */,
+				4F2DABB91CE676EC007AFF26 /* CardView.swift in Sources */,
 				4FE47E571C76A82400CBBE85 /* SoapQueryOptionsBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
