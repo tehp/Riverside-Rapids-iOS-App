@@ -16,6 +16,7 @@ protocol SharePointDataViewer: class, SharePointRequestDelegate {
     
     var errMsgRetrieve: String {get}
     var errMsgUpdate: String {get}
+    var errMsgEmpty: String {get}
     var errMsgAuth: String {get}
     
     var showPopupError: Bool {get set}
@@ -24,6 +25,8 @@ protocol SharePointDataViewer: class, SharePointRequestDelegate {
     
     var spTableView: UITableView {get}
     var spRefreshControl: UIRefreshControl {get}
+    
+    var defaultTableViewCellSeparator: UITableViewCellSeparatorStyle {get}
     
     func handleViewDidLoad()
     func handleViewWillAppear()
@@ -141,17 +144,22 @@ extension SharePointDataViewer where Self: UIViewController {
         // Update data
         parseListData(listData)
         
-        // Update table
-        spTableView.separatorStyle = UITableViewCellSeparatorStyle.SingleLine
-        spTableView.reloadData()
-        
         // Update refresh control
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "MMM. d 'at' h:mm a"
         spRefreshControl.attributedTitle = NSAttributedString(string: "Last updated: \(dateFormatter.stringFromDate(lastUpdated!))")
         
-        // Hide error messgae
+        // Update table
+        spTableView.separatorStyle = defaultTableViewCellSeparator
+        spTableView.reloadData()
+        
+        // Hide error message
         spTableView.backgroundView = nil
+        
+        // Check for empty data set
+        if getDataCount() == 0 {
+            showErrorMessage(false, errorMessage: errMsgEmpty)
+        }
     }
     
     func showErrorMessage(popup: Bool, errorMessage: String) {

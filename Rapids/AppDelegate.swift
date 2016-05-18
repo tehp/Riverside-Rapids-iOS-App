@@ -26,6 +26,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 
+        print("App Documents Folder Location: \(AppDelegate.documentsFolder.path!)")
+        
         let fileManager = NSFileManager.defaultManager()
         let tempFolderPath = AppDelegate.tempFolder.path!
         if fileManager.fileExistsAtPath(tempFolderPath) {

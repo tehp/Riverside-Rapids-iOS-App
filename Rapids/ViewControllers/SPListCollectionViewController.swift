@@ -20,6 +20,7 @@ class SPListCollectionViewController: UITableViewController, SharePointDataViewe
     // Protocol requirements
     var errMsgRetrieve = "Unable to retrieve lists.\nPull down to refresh."
     var errMsgUpdate = "Unable to update lists.\nPlease check your internet connection."
+    var errMsgEmpty = "No SharePoint lists"
     var errMsgAuth = "Please sign in to view SharePoint lists"
     
     var showPopupError: Bool = false
@@ -32,6 +33,7 @@ class SPListCollectionViewController: UITableViewController, SharePointDataViewe
     var spRefreshControl: UIRefreshControl {
         return self.refreshControl!
     }
+    var defaultTableViewCellSeparator: UITableViewCellSeparatorStyle = .SingleLine
     
     // UI
     let cellIdentifier = "SPListTableViewCell"
@@ -92,6 +94,10 @@ class SPListCollectionViewController: UITableViewController, SharePointDataViewe
         let list = lists[indexPath.row]
         switch list.type {
         case .Announcements:
+            let storyboard = UIStoryboard(name: "SPAnnouncements", bundle: nil)
+            let vc = storyboard.instantiateViewControllerWithIdentifier("spAnnouncementsVC") as! SPAnnouncementsViewController
+            vc.annList = list
+            self.showViewController(vc, sender: self)
             break
         case .Calendar:
             break

@@ -29,16 +29,19 @@ struct SharePointRequestErrors {
 
 class SharePointSoapResponseHandler<ResponseType:SoapResponse, DelegateType:SharePointRequestDelegate where DelegateType.ResponseType == ResponseType>: SoapResponseDelegate {
     
-    var cacheName: String
+    var cacheName: String?
     var delegate: DelegateType?
     
-    init(cacheName: String, delegate: DelegateType?) {
+    init(cacheName: String?, delegate: DelegateType?) {
         self.cacheName = cacheName
         self.delegate = delegate
     }
     
     func didReceiveResponse(response: ResponseType) {
-        SharePointRequestManager.sharedInstance.saveToCache(response.generateSoapResponseData(), name: cacheName)
+        if let cacheName = cacheName {
+            SharePointRequestManager.sharedInstance.saveToCache(response.generateSoapResponseData(), name: cacheName)
+        }
+        
         if let actualDelegate = delegate {
             actualDelegate.didReceiveNetworkData(response)
             actualDelegate.didFinishNetworkLoad()
@@ -129,17 +132,21 @@ class SharePointRequestManager {
         return !requiresAuth || credentialsManager.signedIn
     }
     
-    func getSPListItems<T: SharePointRequestDelegate where T.CacheType == GetListItemsResponseData, T.ResponseType == GetListItemsResponse>(networkOnly: Bool, requiresAuth: Bool, requestId: String, url: String, listGUID: String, viewName: String?, query: SoapObject?, viewFields: SoapObject?, rowLimit: String?, queryOptions: SoapObject?, webID: String?, delegate: T) {
+    func getSPListItems<T: SharePointRequestDelegate where T.CacheType == GetListItemsResponseData, T.ResponseType == GetListItemsResponse>(networkOnly: Bool, requiresAuth: Bool, requestId: String?, url: String, listGUID: String, viewName: String?, query: SoapObject?, viewFields: SoapObject?, rowLimit: String?, queryOptions: SoapObject?, webID: String?, delegate: T) {
+        
+        let cacheEnabled = requestId != nil
         
         if !checkAuth(requiresAuth) {
-            deleteCache(requestId)
+            if cacheEnabled {
+                deleteCache(requestId!)
+            }
             delegate.didFailPreConditions(SharePointRequestErrors.ERROR_PRE_NOT_SIGNED_IN)
             return
         }
         
-        if !networkOnly {
+        if !networkOnly && cacheEnabled {
             // Attempt to load from cache first
-            if let actualCachedData: GetListItemsResponseData = loadFromCache(requestId) {
+            if let actualCachedData: GetListItemsResponseData = loadFromCache(requestId!) {
                 delegate.didFindCachedData(actualCachedData)
             }
         }
@@ -168,17 +175,21 @@ class SharePointRequestManager {
         request.sendRequest()
     }
     
-    func getSPListCollection<T: SharePointRequestDelegate where T.CacheType == GetListCollectionResponseData, T.ResponseType == GetListCollectionResponse>(networkOnly: Bool, requiresAuth: Bool, requestId: String, listsUrl: String, delegate: T) {
+    func getSPListCollection<T: SharePointRequestDelegate where T.CacheType == GetListCollectionResponseData, T.ResponseType == GetListCollectionResponse>(networkOnly: Bool, requiresAuth: Bool, requestId: String?, listsUrl: String, delegate: T) {
+        
+        let cacheEnabled = requestId != nil
         
         if !checkAuth(requiresAuth) {
-            deleteCache(requestId)
+            if cacheEnabled {
+                deleteCache(requestId!)
+            }
             delegate.didFailPreConditions(SharePointRequestErrors.ERROR_PRE_NOT_SIGNED_IN)
             return
         }
         
-        if !networkOnly {
+        if !networkOnly && cacheEnabled {
             // Attempt to load from cache first
-            if let actualCachedData: GetListCollectionResponseData = loadFromCache(requestId) {
+            if let actualCachedData: GetListCollectionResponseData = loadFromCache(requestId!) {
                 delegate.didFindCachedData(actualCachedData)
             }
         }
@@ -316,7 +327,7 @@ class SharePointRequestManager {
         )
     }
     
-    func getDocumentsList<T: SharePointRequestDelegate where T.CacheType == GetListItemsResponseData, T.ResponseType == GetListItemsResponse>(networkOnly: Bool, requiresAuth: Bool, requestId: String, listsUrl: String, listGUID: String, folder: String, delegate: T) {
+    func getDocumentsList<T: SharePointRequestDelegate where T.CacheType == GetListItemsResponseData, T.ResponseType == GetListItemsResponse>(networkOnly: Bool, requiresAuth: Bool, requestId: String?, listsUrl: String, listGUID: String, folder: String, delegate: T) {
         
         let viewFields = SoapViewFieldsBuilder()
             .fieldRef("LinkFilename")

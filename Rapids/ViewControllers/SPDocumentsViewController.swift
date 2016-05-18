@@ -28,6 +28,7 @@ class SPDocumentsViewController: UITableViewController, SharePointDataViewer, UI
     // Protocol requirements
     var errMsgRetrieve = "Unable to retrieve documents.\nPull down to refresh."
     var errMsgUpdate = "Unable to update documents.\nPlease check your internet connection."
+    var errMsgEmpty = "This folder is empty"
     var errMsgAuth = "Please sign in to view this document library"
     
     var showPopupError: Bool = false
@@ -40,6 +41,7 @@ class SPDocumentsViewController: UITableViewController, SharePointDataViewer, UI
     var spRefreshControl: UIRefreshControl {
         return self.refreshControl!
     }
+    var defaultTableViewCellSeparator: UITableViewCellSeparatorStyle = .SingleLine
     
     // UI
     let cellIdentifier = "SPDocumentsTableViewCell"
@@ -155,9 +157,9 @@ class SPDocumentsViewController: UITableViewController, SharePointDataViewer, UI
     
     func loadData(networkOnly: Bool) {
         SharePointRequestManager.sharedInstance.getDocumentsList(
-            true, // Effectively disables the cache by forcing all requests to be network only
+            true, // Always do network only requests, since we're never using the cache
             requiresAuth: true,
-            requestId: SPUtils.generateRequestId(docList),
+            requestId: nil, // Disables the cache
             listsUrl: docList.url,
             listGUID: docList.guid,
             folder: nextFolder,

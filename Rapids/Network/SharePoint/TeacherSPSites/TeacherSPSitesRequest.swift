@@ -50,13 +50,13 @@ class TeacherSPSitesRequest {
         var sites = [TeacherSPSite]()
         
         for site in json["teacherSPSites"]! as! [NSDictionary] {
-            //let id = site["id"]! as! Int64
+            let id = (site["id"] as! NSNumber).longLongValue
             let teacherSalutation = site["teacherSalutation"]! as! String
             let teacherLastName = site["teacherLastName"]! as! String
             let course = site["course"]! as! String
             let websiteUrl = site["websiteUrl"]! as! String
             
-            sites.append(TeacherSPSite(id: 0, teacherSalutation: teacherSalutation, teacherLastName: teacherLastName, course: course, websiteUrl: websiteUrl))
+            sites.append(TeacherSPSite(id: id, teacherSalutation: teacherSalutation, teacherLastName: teacherLastName, course: course, websiteUrl: websiteUrl))
         }
         
         return TeacherSPSitesResponse(timestamp: NSDate(), sites: sites)

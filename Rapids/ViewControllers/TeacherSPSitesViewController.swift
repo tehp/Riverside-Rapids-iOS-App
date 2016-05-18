@@ -13,6 +13,7 @@ class TeacherSPSitesViewController: UITableViewController, UISearchResultsUpdati
     // Protocol requirements
     var errMsgRetrieve = "Unable to retrieve teacher SharePoint sites.\nPull down to refresh."
     var errMsgUpdate = "Unable to update teacher SharePoint sites.\nPlease check your internet connection."
+    var errMsgEmpty = "No teacher SharePoint sites"
     var errMsgAuth = "Please sign in to view teacher SharePoint sites"
     
     var showPopupError: Bool = false
@@ -25,6 +26,7 @@ class TeacherSPSitesViewController: UITableViewController, UISearchResultsUpdati
     var spRefreshControl: UIRefreshControl {
         return self.refreshControl!
     }
+    var defaultTableViewCellSeparator: UITableViewCellSeparatorStyle = .SingleLine
     
     // UI
     let cellIdentifier = "TeacherSPSiteTableViewCell"
