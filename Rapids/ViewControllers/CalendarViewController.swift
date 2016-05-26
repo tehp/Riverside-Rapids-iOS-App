@@ -10,19 +10,19 @@ import UIKit
 import CalendarView
 import SwiftMoment
 
+var selectedDate = "asdf"
+var selectedMoment = "asdf"
+
 class CalendarViewController: UIViewController, SharePointRequestDelegate, UITableViewDelegate, UITableViewDataSource, CalendarViewDelegate {
     
-    
     func calendarDidSelectDate(date: Moment) {
-        var selected = "error"
-        selected = date.format("yyyy-MM-dd")
-        print(selected)
+        selectedDate = date.format("yyyy-MM-dd")
+        updateSelectedList()
     }
     
     func calendarDidPageToDate(date: Moment) {
         var headline = "error"
         headline = date.format("MMMM yyyy")
-        print(headline)
         calendarTitle.text = headline
     }
 
@@ -39,6 +39,7 @@ class CalendarViewController: UIViewController, SharePointRequestDelegate, UITab
     
     
     // Model
+    var selectedTable = [CalendarEvent]()
     var calendarTable = [CalendarEvent]()
     var lastUpdated: NSDate?
     
@@ -48,12 +49,8 @@ class CalendarViewController: UIViewController, SharePointRequestDelegate, UITab
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var calendarTitle: UILabel!
     
-    
-    
     var date: Moment! {
         didSet {
-            //print(date)
-            print(calendarTable)
             
         }
     }
@@ -68,11 +65,16 @@ class CalendarViewController: UIViewController, SharePointRequestDelegate, UITab
         calendar.delegate = self
         
         print("viewDidAppear Called")
-        
-        
     }
-
     
+    override func viewDidLoad() {
+        loadData(false)
+        let now = moment()
+        let nowString = String(now)
+        let nowCut = String(nowString.characters.prefix(10))
+        selectedDate = nowCut
+        updateSelectedList()
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -93,7 +95,7 @@ class CalendarViewController: UIViewController, SharePointRequestDelegate, UITab
     }
     
     func didFindCachedData(cachedData: CacheType) {
-
+        updateList(cachedData.rows)
     }
     
     func willStartNetworkLoad() {
@@ -101,7 +103,7 @@ class CalendarViewController: UIViewController, SharePointRequestDelegate, UITab
     }
     
     func didReceiveNetworkData(networkData: ResponseType) {
-
+        //updateList(networkData.rows)
     }
     
     func didReceiveNetworkError(error: ErrorType) {
@@ -123,19 +125,30 @@ class CalendarViewController: UIViewController, SharePointRequestDelegate, UITab
     }
     
     func updateList(rows: [[String: String]]) {
-        // Update data
         for row in rows {
             let title = row[ATTR_TITLE]
             let start = row[ATTR_START]
             let end = row[ATTR_END]
+            
             let event = CalendarEvent(title: title!, start: start!, end: end!)
             calendarTable.append(event)
-        };
-        
+            
+        }
+    }
+    
+    func updateSelectedList() {
+        selectedTable.removeAll()
+        for event in calendarTable {
+            let listOfEventDates = event.start
+            let cutDate = String(listOfEventDates.characters.prefix(10))
+            if cutDate == selectedDate {
+            selectedTable.append(event)
+            }
+        }
+    
         // Update table
         self.tableView.separatorStyle = UITableViewCellSeparatorStyle.SingleLine
         self.tableView.reloadData()
-        
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -143,15 +156,15 @@ class CalendarViewController: UIViewController, SharePointRequestDelegate, UITab
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return calendarTable.count
+        return selectedTable.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-         let cellIdentifier = "CalendarTableViewCell"
+        let cellIdentifier = "CalendarTableViewCell"
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! CalendarTableViewCell
         
         
-        let event = calendarTable[indexPath.row]
+        let event = selectedTable[indexPath.row]
         cell.eventLabel.text = event.title
 
         return cell
