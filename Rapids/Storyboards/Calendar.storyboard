@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="dB4-lU-pge">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Q47-N9-8uk">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -15,15 +15,15 @@
                         <viewControllerLayoutGuide type="bottom" id="aKc-Pt-hE8"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="2zR-Qk-FfR">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I2y-j8-BOg" customClass="CalendarView" customModule="CalendarView">
-                                <rect key="frame" x="20" y="45" width="560" height="378"/>
+                                <rect key="frame" x="20" y="92" width="560" height="282"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eoG-GR-DoM">
-                                <rect key="frame" x="20" y="423" width="560" height="177"/>
+                                <rect key="frame" x="20" y="374" width="560" height="177"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="177" id="4HR-mM-oFK"/>
@@ -62,7 +62,7 @@
                                 </prototypes>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="akG-yO-E7J">
-                                <rect key="frame" x="277" y="25" width="47" height="20"/>
+                                <rect key="frame" x="277" y="69" width="47" height="23"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <color key="textColor" red="0.0" green="0.55294117647058827" blue="0.25490196078431371" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -81,7 +81,13 @@
                             <constraint firstItem="I2y-j8-BOg" firstAttribute="top" secondItem="akG-yO-E7J" secondAttribute="bottom" id="yMS-Ql-se3"/>
                             <constraint firstItem="I2y-j8-BOg" firstAttribute="leading" secondItem="2zR-Qk-FfR" secondAttribute="leadingMargin" id="yVU-u6-8gY"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="6oz-rB-agH"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <navigationItem key="navigationItem" id="qd3-PA-0yS"/>
                     <connections>
                         <outlet property="calendar" destination="I2y-j8-BOg" id="Fi4-A3-liH"/>
                         <outlet property="calendarTitle" destination="akG-yO-E7J" id="shW-Dq-zvV"/>
@@ -90,7 +96,30 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xRq-Vh-1X4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="870" y="245"/>
+        </scene>
+        <!--Calendar-->
+        <scene sceneID="WkS-Bw-izn">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Q47-N9-8uk" customClass="BaseNavViewController" customModule="Rapids" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Calendar" image="Calendar" selectedImage="Calendar" id="FFs-Wl-E9F"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="N3B-kq-D9H">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="dB4-lU-pge" kind="relationship" relationship="rootViewController" id="i57-Wt-liV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sgh-u7-RLX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
             <point key="canvasLocation" x="58" y="245"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Calendar" width="25" height="25"/>
+    </resources>
 </document>

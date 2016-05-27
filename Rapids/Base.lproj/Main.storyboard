@@ -25,7 +25,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DJh-P7-1dY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1667.5" y="-907"/>
+            <point key="canvasLocation" x="539.5" y="-832"/>
         </scene>
         <!--BellSchedule-->
         <scene sceneID="A2I-0x-CsR">
@@ -108,30 +108,6 @@
             </objects>
             <point key="canvasLocation" x="646" y="1501"/>
         </scene>
-        <!--Calendar-->
-        <scene sceneID="e5w-Zd-eGW">
-            <objects>
-                <navigationController id="cQV-jC-VNc" customClass="BaseNavViewController" customModule="Rapids" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Calendar" image="Calendar" selectedImage="Calendar" id="QyF-Iv-62s">
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
-                                <color key="value" red="0.0" green="0.55294117647058827" blue="0.25490196078431371" alpha="1" colorSpace="calibratedRGB"/>
-                            </userDefinedRuntimeAttribute>
-                        </userDefinedRuntimeAttributes>
-                    </tabBarItem>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="cqa-6B-mWI">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="XsK-RG-1W5" kind="relationship" relationship="rootViewController" id="1dZ-T5-sCQ"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="G1z-GV-c8Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="658" y="-955"/>
-        </scene>
         <!--Schedule-->
         <scene sceneID="2FD-hj-c4k">
             <objects>
@@ -173,7 +149,7 @@
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <segue destination="kRh-Yd-jAw" kind="relationship" relationship="viewControllers" id="ctb-15-1LN"/>
-                        <segue destination="cQV-jC-VNc" kind="relationship" relationship="viewControllers" id="dcx-Tl-0Ps"/>
+                        <segue destination="XsK-RG-1W5" kind="relationship" relationship="viewControllers" id="TGv-Wc-6gj"/>
                         <segue destination="VNe-BX-0jq" kind="relationship" relationship="viewControllers" id="yd9-dF-SyK"/>
                         <segue destination="cGw-6W-uLK" kind="relationship" relationship="viewControllers" id="6Bq-la-tWf"/>
                         <segue destination="5ZE-tV-L5V" kind="relationship" relationship="viewControllers" id="0sN-Gy-0pP"/>
@@ -187,7 +163,6 @@
     <resources>
         <image name="Announcement" width="25" height="25"/>
         <image name="BellSchedule" width="25" height="25"/>
-        <image name="Calendar" width="25" height="25"/>
         <image name="More" width="25" height="25"/>
     </resources>
     <color key="tintColor" red="0.0" green="0.27058823529999998" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
