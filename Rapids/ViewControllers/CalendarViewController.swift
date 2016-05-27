@@ -10,8 +10,6 @@ import UIKit
 import CalendarView
 import SwiftMoment
 
-var selectedDate = "selectedDate"
-
 class CalendarViewController: UIViewController, SharePointRequestDelegate, UITableViewDelegate, UITableViewDataSource, CalendarViewDelegate {
     
     func calendarDidSelectDate(date: Moment) {
@@ -26,7 +24,6 @@ class CalendarViewController: UIViewController, SharePointRequestDelegate, UITab
         updateSelectedList()
     }
 
-    
     let ATTR_TITLE = "ows_Title"
     let ATTR_START = "ows_EventDate"
     let ATTR_END = "ows_EndDate"
@@ -42,6 +39,8 @@ class CalendarViewController: UIViewController, SharePointRequestDelegate, UITab
     var selectedTable = [CalendarEvent]()
     var calendarTable = [CalendarEvent]()
     var lastUpdated: NSDate?
+    
+    var selectedDate = "selectedDate"
     
   
     // MARK: Table View Data
@@ -103,7 +102,7 @@ class CalendarViewController: UIViewController, SharePointRequestDelegate, UITab
     }
     
     func didReceiveNetworkData(networkData: ResponseType) {
-        //updateList(networkData.rows)
+        updateList(networkData.rows)
     }
     
     func didReceiveNetworkError(error: ErrorType) {
@@ -125,6 +124,7 @@ class CalendarViewController: UIViewController, SharePointRequestDelegate, UITab
     }
     
     func updateList(rows: [[String: String]]) {
+        calendarTable.removeAll()
         for row in rows {
             let title = row[ATTR_TITLE]
             let start = row[ATTR_START]
@@ -132,7 +132,6 @@ class CalendarViewController: UIViewController, SharePointRequestDelegate, UITab
             
             let event = CalendarEvent(title: title!, start: start!, end: end!)
             calendarTable.append(event)
-            
         }
     }
     
@@ -142,7 +141,7 @@ class CalendarViewController: UIViewController, SharePointRequestDelegate, UITab
             let listOfEventDates = event.start
             let cutDate = String(listOfEventDates.characters.prefix(10))
             if cutDate == selectedDate {
-            selectedTable.append(event)
+                selectedTable.append(event)
             }
         }
     
@@ -163,12 +162,10 @@ class CalendarViewController: UIViewController, SharePointRequestDelegate, UITab
         let cellIdentifier = "CalendarTableViewCell"
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! CalendarTableViewCell
         
-        
         let event = selectedTable[indexPath.row]
         cell.eventLabel.text = event.title
 
         return cell
-        
     }
 
 
