@@ -11,18 +11,6 @@ import CalendarView
 import SwiftMoment
 
 class CalendarViewController: UIViewController, SharePointRequestDelegate, UITableViewDelegate, UITableViewDataSource, CalendarViewDelegate {
-    
-    func calendarDidSelectDate(date: Moment) {
-        selectedDate = date.format("yyyy-MM-dd")
-        updateSelectedList()
-    }
-    
-    func calendarDidPageToDate(date: Moment) {
-        var headline = "error"
-        headline = date.format("MMMM yyyy")
-        calendarTitle.text = headline
-        updateSelectedList()
-    }
 
     let ATTR_TITLE = "ows_Title"
     let ATTR_START = "ows_EventDate"
@@ -40,19 +28,14 @@ class CalendarViewController: UIViewController, SharePointRequestDelegate, UITab
     var calendarTable = [CalendarEvent]()
     var lastUpdated: NSDate?
     
-    var selectedDate = "selectedDate"
+    var selectedDate: String = ""
     
   
     // MARK: Table View Data
+    
     @IBOutlet weak var calendar: CalendarView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var calendarTitle: UILabel!
-    
-    var date: Moment! {
-        didSet {
-            
-        }
-    }
     
     override func viewDidAppear(animated: Bool) {
         tableView.rowHeight = UITableViewAutomaticDimension
@@ -62,8 +45,6 @@ class CalendarViewController: UIViewController, SharePointRequestDelegate, UITab
         tableView.delegate = self
     
         calendar.delegate = self
-        
-        print("viewDidAppear Called")
     }
     
     override func viewDidLoad() {
@@ -79,7 +60,25 @@ class CalendarViewController: UIViewController, SharePointRequestDelegate, UITab
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
- 
+    
+    
+    // MARK: CalendarViewDelegate
+    
+    func calendarDidSelectDate(date: Moment) {
+        selectedDate = date.format("yyyy-MM-dd")
+        updateSelectedList()
+    }
+    
+    func calendarDidPageToDate(date: Moment) {
+        var headline = "error"
+        headline = date.format("MMMM yyyy")
+        calendarTitle.text = headline
+        updateSelectedList()
+    }
+    
+    
+    // MARK: SharePointRequestDelegate
+    
     typealias CacheType = GetListItemsResponseData
     typealias ResponseType = GetListItemsResponse
     
@@ -111,11 +110,9 @@ class CalendarViewController: UIViewController, SharePointRequestDelegate, UITab
     
     func didFinishNetworkLoad() {
         // Hide the refreshing indicator
-
     }
     
-    
-    // MARK: Soap Requests
+    // MARK: Displaying Data
     
     private func loadData(networkOnly: Bool) {
         SharePointRequestManager.sharedInstance.getSchoolCalendar(
@@ -146,8 +143,10 @@ class CalendarViewController: UIViewController, SharePointRequestDelegate, UITab
         }
     
         // Update table
-        self.tableView.separatorStyle = UITableViewCellSeparatorStyle.SingleLine
-        self.tableView.reloadData()
+        dispatch_async(dispatch_get_main_queue()) {
+            self.tableView.separatorStyle = UITableViewCellSeparatorStyle.SingleLine
+            self.tableView.reloadData()
+        }
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -167,7 +166,5 @@ class CalendarViewController: UIViewController, SharePointRequestDelegate, UITab
 
         return cell
     }
-
-
 }
 
