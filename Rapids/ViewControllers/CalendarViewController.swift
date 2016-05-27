@@ -10,8 +10,7 @@ import UIKit
 import CalendarView
 import SwiftMoment
 
-var selectedDate = "asdf"
-var selectedMoment = "asdf"
+var selectedDate = "selectedDate"
 
 class CalendarViewController: UIViewController, SharePointRequestDelegate, UITableViewDelegate, UITableViewDataSource, CalendarViewDelegate {
     
@@ -24,6 +23,7 @@ class CalendarViewController: UIViewController, SharePointRequestDelegate, UITab
         var headline = "error"
         headline = date.format("MMMM yyyy")
         calendarTitle.text = headline
+        updateSelectedList()
     }
 
     
