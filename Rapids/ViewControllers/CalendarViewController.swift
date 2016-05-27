@@ -37,6 +37,8 @@ class CalendarViewController: UIViewController, SharePointRequestDelegate, UITab
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var calendarTitle: UILabel!
     
+    var progressView: UIActivityIndicatorView!
+    
     override func viewDidAppear(animated: Bool) {
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 120.0
@@ -97,7 +99,10 @@ class CalendarViewController: UIViewController, SharePointRequestDelegate, UITab
     }
     
     func willStartNetworkLoad() {
-
+        progressView = UIActivityIndicatorView(activityIndicatorStyle: .White)
+        progressView.hidesWhenStopped = true
+        progressView.startAnimating()
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: progressView)
     }
     
     func didReceiveNetworkData(networkData: ResponseType) {
@@ -105,11 +110,12 @@ class CalendarViewController: UIViewController, SharePointRequestDelegate, UITab
     }
     
     func didReceiveNetworkError(error: ErrorType) {
-   
+        progressView.stopAnimating()
     }
     
     func didFinishNetworkLoad() {
         // Hide the refreshing indicator
+        progressView.stopAnimating()
     }
     
     // MARK: Displaying Data
