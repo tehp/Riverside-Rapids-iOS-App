@@ -15,15 +15,15 @@
                         <viewControllerLayoutGuide type="bottom" id="aKc-Pt-hE8"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="2zR-Qk-FfR">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                        <rect key="frame" x="0.0" y="64" width="600" height="487"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I2y-j8-BOg" customClass="CalendarView" customModule="CalendarView">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I2y-j8-BOg" customClass="CalendarView" customModule="CalendarView">
                                 <rect key="frame" x="20" y="92" width="560" height="282"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eoG-GR-DoM">
-                                <rect key="frame" x="20" y="374" width="560" height="177"/>
+                                <rect key="frame" x="20" y="310" width="560" height="177"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="177" id="4HR-mM-oFK"/>
@@ -61,7 +61,7 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="akG-yO-E7J">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="akG-yO-E7J">
                                 <rect key="frame" x="277" y="69" width="47" height="23"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <color key="textColor" red="0.0" green="0.55294117647058827" blue="0.25490196078431371" alpha="1" colorSpace="calibratedRGB"/>
@@ -104,8 +104,9 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Q47-N9-8uk" customClass="BaseNavViewController" customModule="Rapids" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Calendar" image="Calendar" selectedImage="Calendar" id="FFs-Wl-E9F"/>
                     <toolbarItems/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="N3B-kq-D9H">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="N3B-kq-D9H">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
