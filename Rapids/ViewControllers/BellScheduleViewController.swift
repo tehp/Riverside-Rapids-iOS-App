@@ -16,22 +16,25 @@ class BellScheduleViewController: UIViewController, BellScheduleLoaderDelegate, 
         var blockName: String
         var startTime: String
         var endTime: String
-        
     }
 
     var blocks = [Block]()
-    
     
     @IBOutlet weak var dayOfWeekLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var dayLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
+    var progressView: UIActivityIndicatorView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        BellScheduleManager.sharedInstance.loadBSCal(true, loaderDelegate: self)
         
+        // Setup table view
+        tableView.delegate = self
+        tableView.dataSource = self
+        
+        // Display today's date
         let today = NSDate()
         
         let dateFormatter = NSDateFormatter()
@@ -44,8 +47,11 @@ class BellScheduleViewController: UIViewController, BellScheduleLoaderDelegate, 
         let dayOfWeekString = dateFormatter.stringFromDate(today)
         dayOfWeekLabel.text = dayOfWeekString
         
-        tableView.delegate = self
-        tableView.dataSource = self
+        // Load updated bell schedule
+        progressView = UIActivityIndicatorView(activityIndicatorStyle: .White)
+        progressView.hidesWhenStopped = true
+        
+        BellScheduleManager.sharedInstance.loadBSCal(true, loaderDelegate: self)
     }
     
     override func didReceiveMemoryWarning() {
@@ -100,8 +106,12 @@ class BellScheduleViewController: UIViewController, BellScheduleLoaderDelegate, 
         return timeString
     }
     
+    func willStartNetworkLoad() {
+        progressView.startAnimating()
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: progressView)
+    }
+    
     func bellScheduleLoaded(bellSchedule: BSCal) {
-        
         blocks.removeAll()
         
         let today = NSDate()
@@ -125,10 +135,16 @@ class BellScheduleViewController: UIViewController, BellScheduleLoaderDelegate, 
                 blocks.append(Block(blockName: blockName, startTime: startTime, endTime: endTime))
             }
         }
+        
+        tableView.reloadData()
     }
     
     func errorLoadingBellSchedule(error: ErrorType) {
-        
+        progressView.stopAnimating()
+    }
+    
+    func didFinishNetworkLoad() {
+        progressView.stopAnimating()
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -149,8 +165,5 @@ class BellScheduleViewController: UIViewController, BellScheduleLoaderDelegate, 
         cell.endLabel.text = block.endTime
         
         return cell
-        
     }
-    
-    
 }

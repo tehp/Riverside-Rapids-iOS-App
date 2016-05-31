@@ -9,8 +9,10 @@
 import Foundation
 
 protocol BellScheduleLoaderDelegate {
+    func willStartNetworkLoad()
     func bellScheduleLoaded(bellSchedule: BSCal)
     func errorLoadingBellSchedule(error: ErrorType)
+    func didFinishNetworkLoad()
 }
 
 private class BellScheduleRequestHandler: GetBellScheduleResponseDelegate {
@@ -26,12 +28,14 @@ private class BellScheduleRequestHandler: GetBellScheduleResponseDelegate {
         
         if let actualDelegate = loaderDelegate {
             actualDelegate.bellScheduleLoaded(bellSchedule)
+            actualDelegate.didFinishNetworkLoad()
         }
     }
     
     func didReceiveError(error: ErrorType) {
         if let actualDelegate = loaderDelegate {
             actualDelegate.errorLoadingBellSchedule(error)
+            actualDelegate.didFinishNetworkLoad()
         }
     }
 }
@@ -65,6 +69,9 @@ class BellScheduleManager {
         }
         
         // Then try to load from the network
+        if let actualDelegate = loaderDelegate {
+            actualDelegate.willStartNetworkLoad()
+        }
         let startYear = SchoolDates.getEarliestSchoolStart().year
         let requestHandler = BellScheduleRequestHandler(loaderDelegate: loaderDelegate)
         let request = GetBellScheduleRequest(startYear: String(startYear), responseDelegate: requestHandler)

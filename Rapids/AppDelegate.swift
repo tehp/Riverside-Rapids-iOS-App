@@ -26,6 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 
+        // SETUP FOLDER STRUCTURES
         print("App Documents Folder Location: \(AppDelegate.documentsFolder.path!)")
         
         let fileManager = NSFileManager.defaultManager()
@@ -49,6 +50,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
         
+        
+        // SETUP NAVIGATION BAR
         let navigationBarAppearace = UINavigationBar.appearance()
         
         navigationBarAppearace.tintColor = UIColor.whiteColor()  // Back buttons and such
@@ -56,6 +59,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         navigationBarAppearace.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.whiteColor()]  // Title's text color
         
+        // Sets title colour to white
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+        
+        //Set status bar text to white
+        UIApplication.sharedApplication().statusBarStyle = .LightContent
+        
+        
+        // SETUP CALENDARVIEW
         CalendarView.daySelectedBackgroundColor = AppDelegate.navColor
         CalendarView.daySelectedTextColor = UIColor.whiteColor()
         CalendarView.todayBackgroundColor = UIColor(white: 0.0, alpha: 0.3)
@@ -66,12 +77,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         CalendarView.weekLabelTextColor = AppDelegate.navColor
         CalendarView.otherMonthTextColor = UIColor.lightGrayColor()
         
-        // Sets title colour to white 
-        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
-            
-        //Set status bar text to white
-        UIApplication.sharedApplication().statusBarStyle = .LightContent
-        
+        // HANDLE FIRST LAUNCH
         let launchedBefore = NSUserDefaults.standardUserDefaults().boolForKey(PREF_FIRST_LAUNCH)
         if launchedBefore  {
             AppDelegate.firstLaunch = false
@@ -79,9 +85,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         else {
             AppDelegate.firstLaunch = true
             NSUserDefaults.standardUserDefaults().setBool(true, forKey: PREF_FIRST_LAUNCH)
+            CredentialsManager.sharedInstance.signOut()
         }
         
-        // Override point for customization after application launch.
         return true
     }
 
@@ -106,7 +112,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
-
 }
 
