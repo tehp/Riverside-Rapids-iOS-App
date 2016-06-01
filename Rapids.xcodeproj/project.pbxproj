@@ -79,6 +79,7 @@
 		B044DA70F6CEE20B97EE761D /* Pods_RapidsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF00632CDD4356C2FEF56A07 /* Pods_RapidsTests.framework */; };
 		D52063791CD91E3A00904111 /* About.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D52063781CD91E3A00904111 /* About.storyboard */; };
 		D520637B1CD91E8700904111 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D520637A1CD91E8700904111 /* AboutViewController.swift */; };
+		D5B2D4221CFF56E7009C9D0A /* SPAnnouncementDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B2D4211CFF56E7009C9D0A /* SPAnnouncementDetailsViewController.swift */; };
 		D5CD8E8D1C7F8D1A00E4FC34 /* D.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CD8E8C1C7F8D1A00E4FC34 /* D.swift */; };
 		D5CDCB171CDBC2CB00B0CE7E /* AnnouncementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CDCB161CDBC2CB00B0CE7E /* AnnouncementsViewController.swift */; };
 		D5D2920B1C93468D00FC6F21 /* GetListCollectionRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D2920A1C93468D00FC6F21 /* GetListCollectionRequest.swift */; };
@@ -173,6 +174,7 @@
 		99F92AE41C88C32E00F2D7D7 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		D52063781CD91E3A00904111 /* About.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = About.storyboard; sourceTree = "<group>"; };
 		D520637A1CD91E8700904111 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		D5B2D4211CFF56E7009C9D0A /* SPAnnouncementDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPAnnouncementDetailsViewController.swift; sourceTree = "<group>"; };
 		D5CD8E8C1C7F8D1A00E4FC34 /* D.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = D.swift; sourceTree = "<group>"; };
 		D5CDCB161CDBC2CB00B0CE7E /* AnnouncementsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnnouncementsViewController.swift; sourceTree = "<group>"; };
 		D5D2920A1C93468D00FC6F21 /* GetListCollectionRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetListCollectionRequest.swift; sourceTree = "<group>"; };
@@ -232,11 +234,12 @@
 				99DDB8601CD7D4A300FE61FB /* BaseNavViewController.swift */,
 				4F60CD731CD857E900FD4F34 /* ViewControllerHelper.swift */,
 				D520637A1CD91E8700904111 /* AboutViewController.swift */,
+				99E087DD1CFCBBE000E99967 /* LinksTableViewController.swift */,
 				4F4B80D61CD9A9A900643E51 /* TeacherSPSitesViewController.swift */,
 				4F023E8F1CE3E63900F0C257 /* SPListCollectionViewController.swift */,
 				4F2DABBC1CE6796C007AFF26 /* SPDocumentsViewController.swift */,
 				4FC754691CF5246000250226 /* SPAnnouncementsViewController.swift */,
-				99E087DD1CFCBBE000E99967 /* LinksTableViewController.swift */,
+				D5B2D4211CFF56E7009C9D0A /* SPAnnouncementDetailsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -691,6 +694,7 @@
 				4F8B63241C8CECD200161A75 /* SharePointRequestManager.swift in Sources */,
 				D5D2920D1C9346B700FC6F21 /* GetListCollectionResponse.swift in Sources */,
 				4FD9EA551C78D92F002D6FD1 /* SoapResponseDelegate.swift in Sources */,
+				D5B2D4221CFF56E7009C9D0A /* SPAnnouncementDetailsViewController.swift in Sources */,
 				4F023E921CE3E6B600F0C257 /* SPListTableViewCell.swift in Sources */,
 				4F60CD741CD857E900FD4F34 /* ViewControllerHelper.swift in Sources */,
 				4F99D2131C7B99720031BCC0 /* BSDay.swift in Sources */,

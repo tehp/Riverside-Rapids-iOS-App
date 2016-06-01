@@ -237,7 +237,7 @@ class SharePointRequestManager {
             
             query = SoapQueryBuilder()
                 .orderBy(nil)
-                    .fieldRef("Modified", attributes: ["Ascending": SoapCamlBuilder.BOOL_TRUE])
+                    .fieldRef("Modified", attributes: ["Ascending": SoapCamlBuilder.BOOL_FALSE])
                     .up()
                 ._where()
                     .or()

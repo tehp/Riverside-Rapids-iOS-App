@@ -40,8 +40,10 @@ class SPAnnouncementsViewController: UITableViewController, SharePointDataViewer
     
     // UI
     let cellIdentifier = "SPAnnouncementTableViewCell"
+    var selectedTableIndex: Int!
     
     // Model
+    var rawData: [[String: String]]!
     var annList: SPList!
     var announcements = [SPAnnouncement]()
     
@@ -96,6 +98,11 @@ class SPAnnouncementsViewController: UITableViewController, SharePointDataViewer
         cell.bodyLabel.text = decodedBodyString
     }
     
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        selectedTableIndex = indexPath.row
+        performSegueWithIdentifier("showAnnouncementDetails", sender: self)
+    }
+    
     func signInClicked(sender: AnyObject) {
         showSignInPage()
     }
@@ -140,6 +147,7 @@ class SPAnnouncementsViewController: UITableViewController, SharePointDataViewer
     }
     
     func parseListData(listData: ListDataType) {
+        rawData = listData
         for row in listData {
             let title = row[ATTR_TITLE]
             let body = row[ATTR_BODY] ?? ""
@@ -147,5 +155,13 @@ class SPAnnouncementsViewController: UITableViewController, SharePointDataViewer
             let announcement = SPAnnouncement(title: title!, body: body, modifiedDate: modifiedDate!)
             announcements.append(announcement)
         };
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "showAnnouncementDetails" {
+            let viewController = segue.destinationViewController as! SPAnnouncementDetailsViewController
+            viewController.announcement = rawData[selectedTableIndex]
+            viewController.baseUrl = SPUtils.getBaseUrl(annList.url)
+        }
     }
 }
