@@ -67,6 +67,7 @@
 		4FE47E5A1C76A82400CBBE85 /* SoapNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE47E511C76A82400CBBE85 /* SoapNode.swift */; };
 		4FE47E5B1C76A82400CBBE85 /* SoapObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE47E521C76A82400CBBE85 /* SoapObject.swift */; };
 		4FE47E5C1C76A82400CBBE85 /* SoapPrimitive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE47E531C76A82400CBBE85 /* SoapPrimitive.swift */; };
+		99364C3C1D0203D600E7653F /* AboutAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99364C3B1D0203D600E7653F /* AboutAppViewController.swift */; };
 		99DC0D091CAEF6A800C5EC03 /* CredentialsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DC0D081CAEF6A800C5EC03 /* CredentialsManager.swift */; };
 		99DDB8611CD7D4A300FE61FB /* BaseNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DDB8601CD7D4A300FE61FB /* BaseNavViewController.swift */; };
 		99E087DC1CFCBA5400E99967 /* LinkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E087DB1CFCBA5400E99967 /* LinkTableViewCell.swift */; };
@@ -162,6 +163,7 @@
 		4FE47E531C76A82400CBBE85 /* SoapPrimitive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoapPrimitive.swift; sourceTree = "<group>"; };
 		5BA7F3A4B6426F26585F34A6 /* Pods-Rapids.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rapids.release.xcconfig"; path = "Pods/Target Support Files/Pods-Rapids/Pods-Rapids.release.xcconfig"; sourceTree = "<group>"; };
 		84D59BBB7AC39BC0B377D6E6 /* Pods_Rapids.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rapids.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		99364C3B1D0203D600E7653F /* AboutAppViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutAppViewController.swift; sourceTree = "<group>"; };
 		9960CA7554EF199872A65C2E /* Pods-RapidsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RapidsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RapidsTests/Pods-RapidsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		99DC0D081CAEF6A800C5EC03 /* CredentialsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CredentialsManager.swift; sourceTree = "<group>"; };
 		99DDB8601CD7D4A300FE61FB /* BaseNavViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavViewController.swift; sourceTree = "<group>"; };
@@ -240,6 +242,7 @@
 				D5B2D4211CFF56E7009C9D0A /* SPAnnouncementDetailsViewController.swift */,
 				2696899B1C76475A00845C1D /* SPCalendarViewController.swift */,
 				4F2DABBC1CE6796C007AFF26 /* SPDocumentsViewController.swift */,
+				99364C3B1D0203D600E7653F /* AboutAppViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -669,6 +672,7 @@
 			files = (
 				4F99D2151C7B997C0031BCC0 /* BSBlock.swift in Sources */,
 				4FE47E591C76A82400CBBE85 /* GetListItemsRequest.swift in Sources */,
+				99364C3C1D0203D600E7653F /* AboutAppViewController.swift in Sources */,
 				269689A51C76475A00845C1D /* MoreViewController.swift in Sources */,
 				4F48E5B61C8B936900733382 /* BellScheduleManager.swift in Sources */,
 				4F69F3F71C8BA725003C11C5 /* SchoolDates.swift in Sources */,

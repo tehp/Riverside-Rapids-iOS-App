@@ -11,7 +11,6 @@ import UIKit
 class LinkTableViewCell: UITableViewCell {
 
     @IBOutlet weak var linkNameLabel: UILabel!
-    
     @IBOutlet weak var linkUrlLabel: UILabel!
     
     override func awakeFromNib() {
