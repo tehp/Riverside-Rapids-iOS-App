@@ -141,31 +141,40 @@
         <!--Links-->
         <scene sceneID="WAE-pU-8UV">
             <objects>
-                <tableViewController title="Links" id="ixX-7R-3Z4" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="55" sectionHeaderHeight="28" sectionFooterHeight="28" id="5NX-kl-eFM">
+                <tableViewController title="Links" id="ixX-7R-3Z4" customClass="LinksTableViewController" customModule="Rapids" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="95" sectionHeaderHeight="28" sectionFooterHeight="28" id="5NX-kl-eFM">
                         <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LinkTableViewCell" rowHeight="55" id="1Nw-kp-S5h" customClass="LinkTableViewCell" customModule="Rapids" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="600" height="55"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LinkTableViewCell" rowHeight="95" id="1Nw-kp-S5h" customClass="LinkTableViewCell" customModule="Rapids" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="600" height="95"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1Nw-kp-S5h" id="8iH-l1-q1o">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="54"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="94"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Udb-71-mBE">
-                                            <rect key="frame" x="15" y="0.0" width="79" height="21"/>
-                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Udb-71-mBE">
+                                            <rect key="frame" x="18" y="13" width="564" height="47"/>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dfu-Bv-A3w">
-                                            <rect key="frame" x="15" y="25" width="42" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dfu-Bv-A3w">
+                                            <rect key="frame" x="18" y="65" width="564" height="16"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <color key="textColor" red="0.42352941176470588" green="0.42352941176470588" blue="0.42352941176470588" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Udb-71-mBE" firstAttribute="leading" secondItem="8iH-l1-q1o" secondAttribute="leadingMargin" constant="10" id="J4k-tc-g7h"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="dfu-Bv-A3w" secondAttribute="bottom" constant="5" id="Sxf-kP-Ks1"/>
+                                        <constraint firstItem="dfu-Bv-A3w" firstAttribute="leading" secondItem="8iH-l1-q1o" secondAttribute="leadingMargin" constant="10" id="d4Q-eV-03s"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="dfu-Bv-A3w" secondAttribute="trailing" constant="10" id="dtN-9h-huK"/>
+                                        <constraint firstItem="Udb-71-mBE" firstAttribute="top" secondItem="8iH-l1-q1o" secondAttribute="topMargin" constant="5" id="sTK-IQ-sbe"/>
+                                        <constraint firstItem="dfu-Bv-A3w" firstAttribute="top" secondItem="Udb-71-mBE" secondAttribute="bottom" constant="5" id="xEK-Zo-5Ud"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Udb-71-mBE" secondAttribute="trailing" constant="10" id="yGg-dh-JR1"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="linkNameLabel" destination="Udb-71-mBE" id="U8S-eF-CV4"/>
