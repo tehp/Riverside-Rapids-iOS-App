@@ -9,8 +9,9 @@
 import UIKit
 import CalendarView
 import SwiftMoment
+import Foundation
 
-class CalendarViewController: UIViewController, SharePointRequestDelegate, UITableViewDelegate, UITableViewDataSource, CalendarViewDelegate {
+    class CalendarViewController: UIViewController, SharePointRequestDelegate, UITableViewDelegate, UITableViewDataSource, CalendarViewDelegate {
 
     let ATTR_TITLE = "ows_Title"
     let ATTR_START = "ows_EventDate"
@@ -42,7 +43,6 @@ class CalendarViewController: UIViewController, SharePointRequestDelegate, UITab
     override func viewDidAppear(animated: Bool) {
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 120.0
-        
         tableView.dataSource = self
         tableView.delegate = self
     
@@ -125,15 +125,27 @@ class CalendarViewController: UIViewController, SharePointRequestDelegate, UITab
             networkOnly,
             delegate: self)
     }
+
+  
     
     func updateList(rows: [[String: String]]) {
         calendarTable.removeAll()
         for row in rows {
-            let title = row[ATTR_TITLE]
-            let start = row[ATTR_START]
-            let end = row[ATTR_END]
+            let title = row[ATTR_TITLE]!
+            let start = row[ATTR_START]!
+            let end = row[ATTR_END]!
             
-            let event = CalendarEvent(title: title!, start: start!, end: end!)
+            do {
+                let regex = try NSRegularExpression(pattern: "([dD][aA][yY] *[12])", options: NSRegularExpressionOptions.CaseInsensitive)
+                if regex.matchesInString(title, options: .Anchored, range: NSRange(location: 0, length: title.utf16.count)).count == 1 {
+                    continue
+                }
+            } catch {
+                // Ignore
+            }
+            
+            
+            let event = CalendarEvent(title: title, start: start, end: end)
             calendarTable.append(event)
         }
     }
@@ -173,4 +185,3 @@ class CalendarViewController: UIViewController, SharePointRequestDelegate, UITab
         return cell
     }
 }
-
