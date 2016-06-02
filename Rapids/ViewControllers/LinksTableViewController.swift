@@ -37,6 +37,11 @@ class LinksTableViewController: UITableViewController {
         return 6
     }
     
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let clickedUrl = linkUrls[indexPath.row]
+        UIApplication.sharedApplication().openURL(NSURL(string: clickedUrl)!)
+    }
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("LinkTableViewCell", forIndexPath: indexPath) as! LinkTableViewCell
         
