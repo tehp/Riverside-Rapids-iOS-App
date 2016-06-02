@@ -18,8 +18,8 @@
                         <rect key="frame" x="0.0" y="64" width="600" height="487"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I2y-j8-BOg" customClass="CalendarView" customModule="CalendarView">
-                                <rect key="frame" x="20" y="92" width="560" height="282"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I2y-j8-BOg" customClass="CalendarView" customModule="CalendarView">
+                                <rect key="frame" x="20" y="28" width="560" height="282"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eoG-GR-DoM">
@@ -36,8 +36,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="560" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="event text" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.59999999999999998" adjustsLetterSpacingToFitWidth="YES" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Ji-Px-klT">
-                                                    <rect key="frame" x="18" y="18" width="524" height="7"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="event text" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ji-Px-klT">
+                                                    <rect key="frame" x="18" y="16" width="524" height="11"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                                     <color key="textColor" red="0.0" green="0.55294117649999996" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -46,8 +46,8 @@
                                             <constraints>
                                                 <constraint firstAttribute="trailingMargin" secondItem="9Ji-Px-klT" secondAttribute="trailing" constant="10" id="0oD-Vy-Wkw"/>
                                                 <constraint firstItem="9Ji-Px-klT" firstAttribute="leading" secondItem="Otq-Tf-9ia" secondAttribute="leadingMargin" constant="10" id="FXA-Px-k6O"/>
-                                                <constraint firstItem="9Ji-Px-klT" firstAttribute="top" secondItem="Otq-Tf-9ia" secondAttribute="topMargin" constant="10" id="jV2-qC-qi4"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="9Ji-Px-klT" secondAttribute="bottom" constant="10" id="uTa-4g-rqv"/>
+                                                <constraint firstItem="9Ji-Px-klT" firstAttribute="top" secondItem="Otq-Tf-9ia" secondAttribute="topMargin" constant="8" id="jV2-qC-qi4"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="9Ji-Px-klT" secondAttribute="bottom" constant="8" id="uTa-4g-rqv"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <userDefinedRuntimeAttributes>
@@ -61,8 +61,8 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="akG-yO-E7J">
-                                <rect key="frame" x="277" y="69" width="47" height="23"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="akG-yO-E7J">
+                                <rect key="frame" x="277" y="5" width="47" height="23"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <color key="textColor" red="0.0" green="0.55294117647058827" blue="0.25490196078431371" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>

@@ -18,18 +18,20 @@ import Foundation
     let ATTR_END = "ows_EndDate"
     let ATTR_LOCATION = "ows_Location"
     let ATTR_DESCRIPTION = "ows_Description"
+        
+    var selectedMoment = moment()
     
     // UI
     let cellIdentifier = "CalendarTableViewCell"
     var showPopupError: Bool = false
-    
+
     
     // Model
     var selectedTable = [CalendarEvent]()
     var calendarTable = [CalendarEvent]()
     var lastUpdated: NSDate?
     
-    var selectedDate: String = ""
+
     
   
     // MARK: Table View Data
@@ -41,21 +43,23 @@ import Foundation
     var progressView: UIActivityIndicatorView!
     
     override func viewDidAppear(animated: Bool) {
-        tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.estimatedRowHeight = 120.0
-        tableView.dataSource = self
-        tableView.delegate = self
-    
         calendar.delegate = self
+        updateSelectedList()
     }
     
     override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 100.0
+        tableView.dataSource = self
+        tableView.delegate = self
+        
+        let headline = moment().format("MMMM yyyy")
+        calendarTitle.text = headline
+        
         loadData(false)
-        let now = moment()
-        let nowString = String(now)
-        let nowCut = String(nowString.characters.prefix(10))
-        selectedDate = nowCut
-        updateSelectedList()
+        selectedMoment = moment()
     }
     
     override func didReceiveMemoryWarning() {
@@ -67,14 +71,17 @@ import Foundation
     // MARK: CalendarViewDelegate
     
     func calendarDidSelectDate(date: Moment) {
-        selectedDate = date.format("yyyy-MM-dd")
+        selectedMoment = moment(date)
         updateSelectedList()
+    
     }
     
     func calendarDidPageToDate(date: Moment) {
         var headline = "error"
         headline = date.format("MMMM yyyy")
         calendarTitle.text = headline
+        
+        selectedMoment = moment(date)
         updateSelectedList()
     }
     
@@ -131,7 +138,7 @@ import Foundation
     func updateList(rows: [[String: String]]) {
         calendarTable.removeAll()
         for row in rows {
-            let title = row[ATTR_TITLE]!
+            var title = row[ATTR_TITLE]!
             let start = row[ATTR_START]!
             let end = row[ATTR_END]!
             
@@ -144,18 +151,21 @@ import Foundation
                 // Ignore
             }
             
-            
+            title = title.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
             let event = CalendarEvent(title: title, start: start, end: end)
             calendarTable.append(event)
+            
+            
         }
     }
     
     func updateSelectedList() {
         selectedTable.removeAll()
         for event in calendarTable {
-            let listOfEventDates = event.start
-            let cutDate = String(listOfEventDates.characters.prefix(10))
-            if cutDate == selectedDate {
+            let eventStartMoment = moment(String(event.start.characters.prefix(10)))!
+            let eventEndMoment = moment(String(event.end.characters.prefix(10)))!
+            
+            if selectedMoment >= eventStartMoment && selectedMoment <= eventEndMoment {
                 selectedTable.append(event)
             }
         }
