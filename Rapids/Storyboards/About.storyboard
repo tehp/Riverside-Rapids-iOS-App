@@ -88,7 +88,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Riverside Secondary School" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OoM-Xu-8f9">
                                         <rect key="frame" x="0.0" y="0.0" width="274" height="27"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CxN-na-yJW">
@@ -196,10 +196,10 @@
             </objects>
             <point key="canvasLocation" x="2136" y="842"/>
         </scene>
-        <!--View Controller-->
+        <!--About the App-->
         <scene sceneID="qZ6-Xq-tGd">
             <objects>
-                <viewController id="N8M-Uw-sj2" sceneMemberID="viewController">
+                <viewController title="About the App" id="N8M-Uw-sj2" customClass="AboutAppViewController" customModule="Rapids" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="O20-Vk-0xE"/>
                         <viewControllerLayoutGuide type="bottom" id="9bN-VQ-KIh"/>
@@ -208,57 +208,79 @@
                         <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rapids_large.png" translatesAutoresizingMaskIntoConstraints="NO" id="sf2-z3-eL4">
-                                <rect key="frame" x="211" y="43" width="179" height="179"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Copyright © 2016 Noah, Mac, Shaun, Tora" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kwd-91-9l9">
-                                <rect key="frame" x="137" y="265" width="327" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.62745098039215685" green="0.62745098039215685" blue="0.62745098039215685" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Contact" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Mp-5L-2um">
-                                <rect key="frame" x="111" y="365" width="63" height="22"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                <color key="textColor" red="0.62745098039215685" green="0.62745098039215685" blue="0.62745098039215685" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iy3-2a-KYg">
-                                <rect key="frame" x="279" y="417" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lbw-de-pVr">
-                                <rect key="frame" x="279" y="446" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Riverside Rapids App" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZUn-7Z-flb">
-                                <rect key="frame" x="204" y="230" width="191" height="27"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="All logos, text, schedules,and other information used with permission of © Riverside Secondary School." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Rq-4Q-k4o">
-                                <rect key="frame" x="111" y="294" width="378" height="71"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.62745098039215685" green="0.62745098039215685" blue="0.62745098039215685" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GYg-E1-BPY">
-                                <rect key="frame" x="175" y="361" width="180" height="30"/>
-                                <state key="normal" title="riversidesd43@gmail.com"/>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="to provide feedback or report bugs." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HEd-80-qnh">
-                                <rect key="frame" x="353" y="367" width="247" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="4J2-3d-IXP">
+                                <rect key="frame" x="30" y="54" width="540" height="429"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AppIcon-large" translatesAutoresizingMaskIntoConstraints="NO" id="sf2-z3-eL4">
+                                        <rect key="frame" x="174" y="0.0" width="192" height="192"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="192" id="dcv-KM-DFy"/>
+                                            <constraint firstAttribute="height" constant="192" id="rlt-gi-Qyw"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Riverside Rapids App" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZUn-7Z-flb">
+                                        <rect key="frame" x="175" y="217" width="190" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copyright © 2016 Noah, Mac, Shaun, Tora" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kwd-91-9l9">
+                                        <rect key="frame" x="108" y="266" width="324" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.62745098039215685" green="0.62745098039215685" blue="0.62745098039215685" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="All logos, text, schedules,and other information used with permission of © Riverside Secondary School." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Rq-4Q-k4o">
+                                        <rect key="frame" x="5" y="312" width="531" height="41"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.62745098039215685" green="0.62745098039215685" blue="0.62745098039215685" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gJa-tY-Qdj">
+                                        <rect key="frame" x="134" y="378" width="272" height="51"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GYg-E1-BPY">
+                                                <rect key="frame" x="66" y="0.0" width="178" height="30"/>
+                                                <state key="normal" title="riversidesd43@gmail.com"/>
+                                                <connections>
+                                                    <action selector="emailClicked:" destination="N8M-Uw-sj2" eventType="touchUpInside" id="Qcb-vt-nFl"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contact" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Mp-5L-2um">
+                                                <rect key="frame" x="0.0" y="0.0" width="61" height="30"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                <color key="textColor" red="0.62745098039215685" green="0.62745098039215685" blue="0.62745098039215685" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="to provide feedback or report bugs." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HEd-80-qnh">
+                                                <rect key="frame" x="0.0" y="30" width="272" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.5607843137254902" green="0.5607843137254902" blue="0.5607843137254902" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="HEd-80-qnh" firstAttribute="top" secondItem="1Mp-5L-2um" secondAttribute="bottom" id="6hw-9Q-4Wb"/>
+                                            <constraint firstItem="GYg-E1-BPY" firstAttribute="leading" secondItem="1Mp-5L-2um" secondAttribute="trailing" constant="5" id="8T0-g2-0fM"/>
+                                            <constraint firstItem="HEd-80-qnh" firstAttribute="top" secondItem="GYg-E1-BPY" secondAttribute="bottom" id="Aaq-Q2-A49"/>
+                                            <constraint firstAttribute="bottom" secondItem="HEd-80-qnh" secondAttribute="bottom" id="FRg-kx-jT6"/>
+                                            <constraint firstItem="GYg-E1-BPY" firstAttribute="top" secondItem="gJa-tY-Qdj" secondAttribute="top" id="GMK-ZX-bzB"/>
+                                            <constraint firstItem="1Mp-5L-2um" firstAttribute="leading" secondItem="gJa-tY-Qdj" secondAttribute="leading" id="HtW-Ky-lVh"/>
+                                            <constraint firstItem="HEd-80-qnh" firstAttribute="leading" secondItem="gJa-tY-Qdj" secondAttribute="leading" id="b8V-Uy-NKF"/>
+                                            <constraint firstItem="1Mp-5L-2um" firstAttribute="top" secondItem="gJa-tY-Qdj" secondAttribute="top" id="onU-Cj-Pd0"/>
+                                            <constraint firstAttribute="trailing" secondItem="HEd-80-qnh" secondAttribute="trailing" id="wj8-6H-MEc"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="4J2-3d-IXP" secondAttribute="trailing" constant="10" id="T1Y-OU-OSm"/>
+                            <constraint firstItem="4J2-3d-IXP" firstAttribute="leading" secondItem="Bkm-fK-785" secondAttribute="leadingMargin" constant="10" id="W1h-a4-m7P"/>
+                            <constraint firstItem="4J2-3d-IXP" firstAttribute="centerY" secondItem="Bkm-fK-785" secondAttribute="centerY" id="dtO-a6-Zjt"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QSD-hO-ZMh" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -286,6 +308,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="AppIcon-large" width="1175" height="1175"/>
         <image name="rapids_large.png" width="2350" height="2350"/>
     </resources>
 </document>
