@@ -12,14 +12,6 @@ import Alamofire
 
 class SPDocumentsViewController: UITableViewController, SharePointDataViewer, UIDocumentInteractionControllerDelegate {
 
-    struct SPFile {
-        var isFolder: Bool
-        var title: String
-        var encodedFullUrl: String
-        var soapUrl: String
-        var lastModified: String
-    }
-    
     let ATTR_TITLE = "ows_LinkFilename"
     let ATTR_FILE = "ows_FileRef"
     let ATTR_FS_OBJ_TYPE = "ows_FSObjType"
@@ -123,23 +115,7 @@ class SPDocumentsViewController: UITableViewController, SharePointDataViewer, UI
             vc.docList = nextFolderDocList
             self.showViewController(vc, sender: self)
         } else {
-            downloadFile(file)
-        }
-    }
-    
-    private func downloadFile(file: SPFile) {
-        var localPath: NSURL?
-        Alamofire.download(.GET, file.encodedFullUrl, destination: { (temporaryURL, response) in
-            let directoryURL = AppDelegate.tempFolder
-            let pathComponent = response.suggestedFilename
-            localPath = directoryURL.URLByAppendingPathComponent(pathComponent!)
-            return localPath!
-        })
-            .authenticate(user: CredentialsManager.sharedInstance.username, password: CredentialsManager.sharedInstance.password)
-            .response { (request, response, data, error) in
-                let docController = UIDocumentInteractionController(URL: localPath!)
-                docController.delegate = self
-                docController.presentPreviewAnimated(true)
+            SPUtils.downloadAndDisplayFile(file, docControllerDelegate: self)
         }
     }
     

@@ -7,6 +7,15 @@
 //
 
 import Foundation
+import Alamofire
+
+struct SPFile {
+    var isFolder: Bool
+    var title: String
+    var encodedFullUrl: String
+    var soapUrl: String
+    var lastModified: String
+}
 
 class SPUtils {
     
@@ -43,6 +52,26 @@ class SPUtils {
             return "File-IMG"
         } else {
             return "File-Unknown"
+        }
+    }
+    
+    static func downloadAndDisplayFile(file: SPFile, docControllerDelegate: UIDocumentInteractionControllerDelegate) {
+        downloadAndDisplayFile(file.encodedFullUrl, docControllerDelegate: docControllerDelegate)
+    }
+    
+    static func downloadAndDisplayFile(url: URLStringConvertible, docControllerDelegate: UIDocumentInteractionControllerDelegate) {
+        var localPath: NSURL?
+        Alamofire.download(.GET, url, destination: { (temporaryURL, response) in
+            let directoryURL = AppDelegate.tempFolder
+            let pathComponent = response.suggestedFilename
+            localPath = directoryURL.URLByAppendingPathComponent(pathComponent!)
+            return localPath!
+        })
+            .authenticate(user: CredentialsManager.sharedInstance.username, password: CredentialsManager.sharedInstance.password)
+            .response { (request, response, data, error) in
+                let docController = UIDocumentInteractionController(URL: localPath!)
+                docController.delegate = docControllerDelegate
+                docController.presentPreviewAnimated(true)
         }
     }
 }

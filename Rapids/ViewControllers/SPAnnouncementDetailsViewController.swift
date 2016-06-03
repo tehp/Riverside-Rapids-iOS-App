@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SPAnnouncementDetailsViewController: UIViewController {
+class SPAnnouncementDetailsViewController: UIViewController, UIWebViewDelegate, UIDocumentInteractionControllerDelegate {
     
     let ATTR_TITLE = "ows_Title"
     let ATTR_BODY = "ows_Body"
@@ -30,6 +30,8 @@ class SPAnnouncementDetailsViewController: UIViewController {
         let announcementTitle = announcement[ATTR_TITLE]!
         titleLabel.text = announcementTitle
         
+        bodyWebView.delegate = self
+        
         if let rawBody = announcement[ATTR_BODY] {
             bodyWebView.loadHTMLString(rawBody, baseURL: NSURL(string: baseUrl)!)
         }
@@ -39,15 +41,40 @@ class SPAnnouncementDetailsViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    func showDownloadOptions(url: NSURL) {
+        let optionsMenu = UIAlertController(title: nil, message: nil, preferredStyle: .ActionSheet)
+        let downloadAction = UIAlertAction(title: "Download", style: .Default, handler: { (alert: UIAlertAction!) -> Void in
+            SPUtils.downloadAndDisplayFile(url, docControllerDelegate: self)
+        })
+        let openLinkAction = UIAlertAction(title: "Open Link in Browser", style: .Default, handler: { (alert: UIAlertAction!) -> Void in
+            UIApplication.sharedApplication().openURL(url)
+        })
+        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: { (alert: UIAlertAction!) -> Void in
+            // Do nothing
+        })
+        
+        optionsMenu.addAction(downloadAction)
+        optionsMenu.addAction(openLinkAction)
+        optionsMenu.addAction(cancelAction)
+        
+        self.presentViewController(optionsMenu, animated: true, completion: nil)
     }
-    */
+    
+    func webView(webView: UIWebView, shouldStartLoadWithRequest request: NSURLRequest, navigationType: UIWebViewNavigationType) -> Bool {
+        switch navigationType {
+        case .LinkClicked:
+            // Open links in Safari
+            showDownloadOptions(request.URL!)
+            return false
+        default:
+            // Handle other navigation types...
+            return true
+        }
+    }
+    
+    func documentInteractionControllerViewControllerForPreview(controller: UIDocumentInteractionController) -> UIViewController {
+        return self
+    }
 
 }
