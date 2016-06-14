@@ -8,10 +8,11 @@
 
 import UIKit
 
-class CalendarTableViewCell: UITableViewCell {
+class SPCalendarTableViewCell: UITableViewCell {
     
     // MARK: Properties
     @IBOutlet weak var eventLabel: UILabel!
+    @IBOutlet weak var timeLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

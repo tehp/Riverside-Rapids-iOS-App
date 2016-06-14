@@ -286,14 +286,12 @@ class SharePointRequestManager {
             .fieldRef("Attachments")
         
         // Only retrieve announcements that are not expired or have no expiry date
-        /*let schoolStart = SchoolDates.getEarliestSchoolStart()
+        let schoolStart = SchoolDates.getEarliestSchoolStart()
         let schoolEnd = SchoolDates.getLatestSchoolEnd()
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd"
-        let schoolStartStr = dateFormatter.stringFromDate(schoolStart.date!)
-        let schoolEndStr = dateFormatter.stringFromDate(schoolEnd.date!)*/
-        let schoolStartStr = "2015-08-01"
-        let schoolEndStr = "2016-07-31"
+        let schoolStartStr = dateFormatter.stringFromDate(schoolStart)
+        let schoolEndStr = dateFormatter.stringFromDate(schoolEnd)
         
         let query = SoapQueryBuilder()
         query

@@ -8,18 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		1A266A3DEE779FE65CEA599D /* Pods_Rapids.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D59BBB7AC39BC0B377D6E6 /* Pods_Rapids.framework */; };
-		2692A4A51C877873001BA69D /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2696899B1C76475A00845C1D /* CalendarViewController.swift */; };
+		2692A4A51C877873001BA69D /* SPCalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2696899B1C76475A00845C1D /* SPCalendarViewController.swift */; };
 		269689851C763C4A00845C1D /* icons in Resources */ = {isa = PBXBuildFile; fileRef = 269689841C763C4A00845C1D /* icons */; };
 		269689931C76472E00845C1D /* Announcements.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2696898E1C76472E00845C1D /* Announcements.storyboard */; };
 		269689941C76472E00845C1D /* BellSchedule.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2696898F1C76472E00845C1D /* BellSchedule.storyboard */; };
-		269689951C76472E00845C1D /* Calendar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 269689901C76472E00845C1D /* Calendar.storyboard */; };
+		269689951C76472E00845C1D /* SPCalendar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 269689901C76472E00845C1D /* SPCalendar.storyboard */; };
 		269689971C76472E00845C1D /* More.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 269689921C76472E00845C1D /* More.storyboard */; };
 		269689A11C76475A00845C1D /* BellScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2696899A1C76475A00845C1D /* BellScheduleViewController.swift */; };
-		269689A21C76475A00845C1D /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2696899B1C76475A00845C1D /* CalendarViewController.swift */; };
+		269689A21C76475A00845C1D /* SPCalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2696899B1C76475A00845C1D /* SPCalendarViewController.swift */; };
 		269689A51C76475A00845C1D /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2696899E1C76475A00845C1D /* MoreViewController.swift */; };
 		269689A81C76480400845C1D /* rapids_large.png in Resources */ = {isa = PBXBuildFile; fileRef = 269689A71C76480400845C1D /* rapids_large.png */; };
 		26A6B6581C881D1100629FDF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9D61991C643C4400CA406F /* AppDelegate.swift */; };
-		26C394771CB58C0A00F26DA0 /* CalendarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C394761CB58C0A00F26DA0 /* CalendarTableViewCell.swift */; };
+		26C394771CB58C0A00F26DA0 /* SPCalendarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C394761CB58C0A00F26DA0 /* SPCalendarTableViewCell.swift */; };
 		4F023E901CE3E63900F0C257 /* SPListCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F023E8F1CE3E63900F0C257 /* SPListCollectionViewController.swift */; };
 		4F023E921CE3E6B600F0C257 /* SPListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F023E911CE3E6B600F0C257 /* SPListTableViewCell.swift */; };
 		4F023E941CE3E99000F0C257 /* SPList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F023E931CE3E99000F0C257 /* SPList.swift */; };
@@ -101,13 +101,13 @@
 		269689841C763C4A00845C1D /* icons */ = {isa = PBXFileReference; lastKnownFileType = folder; name = icons; path = assets/icons; sourceTree = SOURCE_ROOT; };
 		2696898E1C76472E00845C1D /* Announcements.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Announcements.storyboard; sourceTree = "<group>"; };
 		2696898F1C76472E00845C1D /* BellSchedule.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BellSchedule.storyboard; sourceTree = "<group>"; };
-		269689901C76472E00845C1D /* Calendar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Calendar.storyboard; sourceTree = "<group>"; };
+		269689901C76472E00845C1D /* SPCalendar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SPCalendar.storyboard; sourceTree = "<group>"; };
 		269689921C76472E00845C1D /* More.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = More.storyboard; sourceTree = "<group>"; };
 		2696899A1C76475A00845C1D /* BellScheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BellScheduleViewController.swift; sourceTree = "<group>"; usesTabs = 0; };
-		2696899B1C76475A00845C1D /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		2696899B1C76475A00845C1D /* SPCalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPCalendarViewController.swift; sourceTree = "<group>"; };
 		2696899E1C76475A00845C1D /* MoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		269689A71C76480400845C1D /* rapids_large.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rapids_large.png; sourceTree = "<group>"; };
-		26C394761CB58C0A00F26DA0 /* CalendarTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CalendarTableViewCell.swift; path = ../ViewControllers/CalendarTableViewCell.swift; sourceTree = "<group>"; };
+		26C394761CB58C0A00F26DA0 /* SPCalendarTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SPCalendarTableViewCell.swift; path = ../ViewControllers/SPCalendarTableViewCell.swift; sourceTree = "<group>"; };
 		2E85ADB8E6D35AFF697648B9 /* Pods-RapidsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RapidsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RapidsTests/Pods-RapidsTests.release.xcconfig"; sourceTree = "<group>"; };
 		4F023E8F1CE3E63900F0C257 /* SPListCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPListCollectionViewController.swift; sourceTree = "<group>"; };
 		4F023E911CE3E6B600F0C257 /* SPListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPListTableViewCell.swift; sourceTree = "<group>"; };
@@ -209,14 +209,14 @@
 			children = (
 				2696898E1C76472E00845C1D /* Announcements.storyboard */,
 				2696898F1C76472E00845C1D /* BellSchedule.storyboard */,
-				269689901C76472E00845C1D /* Calendar.storyboard */,
 				269689921C76472E00845C1D /* More.storyboard */,
 				99F92AE21C88C26900F2D7D7 /* SignIn.storyboard */,
 				99EC16D91CB825820090DADA /* Map.storyboard */,
 				D52063781CD91E3A00904111 /* About.storyboard */,
 				4F4B80D81CD9A9BF00643E51 /* TeacherSPSites.storyboard */,
-				4F2DABBA1CE67926007AFF26 /* SPDocuments.storyboard */,
 				4FC7546B1CF526D100250226 /* SPAnnouncements.storyboard */,
+				269689901C76472E00845C1D /* SPCalendar.storyboard */,
+				4F2DABBA1CE67926007AFF26 /* SPDocuments.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -227,7 +227,6 @@
 				4F4B80DE1CD9AC7600643E51 /* SharePointDataViewer.swift */,
 				D5CDCB161CDBC2CB00B0CE7E /* AnnouncementsViewController.swift */,
 				2696899A1C76475A00845C1D /* BellScheduleViewController.swift */,
-				2696899B1C76475A00845C1D /* CalendarViewController.swift */,
 				2696899E1C76475A00845C1D /* MoreViewController.swift */,
 				99F92AE41C88C32E00F2D7D7 /* SignInViewController.swift */,
 				99EC16DB1CB825FF0090DADA /* MapViewController.swift */,
@@ -237,9 +236,10 @@
 				99E087DD1CFCBBE000E99967 /* LinksTableViewController.swift */,
 				4F4B80D61CD9A9A900643E51 /* TeacherSPSitesViewController.swift */,
 				4F023E8F1CE3E63900F0C257 /* SPListCollectionViewController.swift */,
-				4F2DABBC1CE6796C007AFF26 /* SPDocumentsViewController.swift */,
 				4FC754691CF5246000250226 /* SPAnnouncementsViewController.swift */,
 				D5B2D4211CFF56E7009C9D0A /* SPAnnouncementDetailsViewController.swift */,
+				2696899B1C76475A00845C1D /* SPCalendarViewController.swift */,
+				4F2DABBC1CE6796C007AFF26 /* SPDocumentsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -339,11 +339,11 @@
 			children = (
 				4FC6578D1C7CE2E500635111 /* AnnouncementTableViewCell.swift */,
 				D5EFC8371C84CF91009FCD94 /* BlockTableViewCell.swift */,
-				26C394761CB58C0A00F26DA0 /* CalendarTableViewCell.swift */,
 				4F5467C11CE2589A0064B931 /* TeacherSPSiteTableViewCell.swift */,
 				4F023E911CE3E6B600F0C257 /* SPListTableViewCell.swift */,
-				4F2DABBE1CE67A5C007AFF26 /* SPDocumentsTableViewCell.swift */,
 				4FC7546D1CF5280400250226 /* SPAnnouncementTableViewCell.swift */,
+				26C394761CB58C0A00F26DA0 /* SPCalendarTableViewCell.swift */,
+				4F2DABBE1CE67A5C007AFF26 /* SPDocumentsTableViewCell.swift */,
 				4F2DABB81CE676EB007AFF26 /* CardView.swift */,
 				99E087DB1CFCBA5400E99967 /* LinkTableViewCell.swift */,
 			);
@@ -543,7 +543,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F2DABBB1CE67926007AFF26 /* SPDocuments.storyboard in Resources */,
-				269689951C76472E00845C1D /* Calendar.storyboard in Resources */,
+				269689951C76472E00845C1D /* SPCalendar.storyboard in Resources */,
 				4F9D61A61C643C4500CA406F /* LaunchScreen.storyboard in Resources */,
 				269689931C76472E00845C1D /* Announcements.storyboard in Resources */,
 				269689941C76472E00845C1D /* BellSchedule.storyboard in Resources */,
@@ -674,9 +674,9 @@
 				4F69F3F71C8BA725003C11C5 /* SchoolDates.swift in Sources */,
 				4FD9EA571C7A414D002D6FD1 /* GetListItemsResponse.swift in Sources */,
 				4F2DABBD1CE6796C007AFF26 /* SPDocumentsViewController.swift in Sources */,
-				269689A21C76475A00845C1D /* CalendarViewController.swift in Sources */,
+				269689A21C76475A00845C1D /* SPCalendarViewController.swift in Sources */,
 				4F2DABBF1CE67A5C007AFF26 /* SPDocumentsTableViewCell.swift in Sources */,
-				26C394771CB58C0A00F26DA0 /* CalendarTableViewCell.swift in Sources */,
+				26C394771CB58C0A00F26DA0 /* SPCalendarTableViewCell.swift in Sources */,
 				4FC7546A1CF5246000250226 /* SPAnnouncementsViewController.swift in Sources */,
 				99F92AE51C88C32E00F2D7D7 /* SignInViewController.swift in Sources */,
 				4F9D619A1C643C4400CA406F /* AppDelegate.swift in Sources */,
@@ -733,7 +733,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				26A6B6581C881D1100629FDF /* AppDelegate.swift in Sources */,
-				2692A4A51C877873001BA69D /* CalendarViewController.swift in Sources */,
+				2692A4A51C877873001BA69D /* SPCalendarViewController.swift in Sources */,
 				4F9D61B11C643C4500CA406F /* RapidsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

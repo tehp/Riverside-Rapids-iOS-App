@@ -10,7 +10,7 @@ import Foundation
 
 class SchoolDates {
     
-    static func getEarliestSchoolStart() -> NSDateComponents {
+    static func getEarliestSchoolStartComponents() -> NSDateComponents {
         let date = NSCalendar.currentCalendar().components([NSCalendarUnit.Day, NSCalendarUnit.Month, NSCalendarUnit.Year], fromDate: NSDate())
         
         if date.month >= 8 {
@@ -29,13 +29,18 @@ class SchoolDates {
         }
     }
     
-    static func getLatestSchoolEnd() -> NSDateComponents {
-        let schoolStart = getEarliestSchoolStart()
-        let date = NSCalendar.currentCalendar().components([NSCalendarUnit.Day, NSCalendarUnit.Month, NSCalendarUnit.Year], fromDate: schoolStart.date!)
-        date.year = date.year + 1
+    static func getEarliestSchoolStart() -> NSDate {
+        return NSCalendar.currentCalendar().dateFromComponents(getEarliestSchoolStartComponents())!
+    }
+    
+    static func getLatestSchoolEnd() -> NSDate {
+        let cal = NSCalendar.currentCalendar()
+        let schoolStart = getEarliestSchoolStartComponents()
+        let date = cal.components([NSCalendarUnit.Day, NSCalendarUnit.Month, NSCalendarUnit.Year], fromDate: NSDate())
+        date.year = schoolStart.year + 1
         date.month = 7
         date.day = 31
-        return date
+        return cal.dateFromComponents(date)!
     }
     
 }

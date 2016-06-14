@@ -100,6 +100,11 @@ class SPListCollectionViewController: UITableViewController, SharePointDataViewe
             self.showViewController(vc, sender: self)
             break
         case .Calendar:
+            let storyboard = UIStoryboard(name: "SPCalendar", bundle: nil)
+            let vc = storyboard.instantiateViewControllerWithIdentifier("spCalendarVC") as! SPCalendarViewController
+            vc.calList = list
+            vc.requiresAuth = true
+            self.showViewController(vc, sender: self)
             break
         case .Documents:
             let storyboard = UIStoryboard(name: "SPDocuments", bundle: nil)

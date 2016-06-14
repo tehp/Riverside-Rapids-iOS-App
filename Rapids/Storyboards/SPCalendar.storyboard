@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Q47-N9-8uk">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Q47-N9-8uk">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -9,7 +9,7 @@
         <!--Calendar View Controller-->
         <scene sceneID="q6A-8x-WG7">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="dB4-lU-pge" customClass="CalendarViewController" customModule="Rapids" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="spCalendarVC" automaticallyAdjustsScrollViewInsets="NO" id="dB4-lU-pge" customClass="SPCalendarViewController" customModule="Rapids" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LGB-bg-l1h"/>
                         <viewControllerLayoutGuide type="bottom" id="aKc-Pt-hE8"/>
@@ -22,32 +22,47 @@
                                 <rect key="frame" x="20" y="28" width="560" height="282"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eoG-GR-DoM">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="akG-yO-E7J">
+                                <rect key="frame" x="277" y="5" width="47" height="23"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="82" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eoG-GR-DoM">
                                 <rect key="frame" x="20" y="310" width="560" height="177"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="177" id="4HR-mM-oFK"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CalendarTableViewCell" id="fen-tn-4ka" customClass="CalendarTableViewCell" customModule="Rapids" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="560" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SPCalendarTableViewCell" rowHeight="82" id="fen-tn-4ka" customClass="SPCalendarTableViewCell" customModule="Rapids" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="560" height="82"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fen-tn-4ka" id="Otq-Tf-9ia">
-                                            <rect key="frame" x="0.0" y="0.0" width="560" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="560" height="81"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="event text" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ji-Px-klT">
-                                                    <rect key="frame" x="18" y="16" width="524" height="11"/>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
-                                                    <color key="textColor" red="0.0" green="0.55294117649999996" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="747" text="Event Name" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ji-Px-klT">
+                                                    <rect key="frame" x="18" y="16" width="524" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="All Day" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eeu-Le-y7g">
+                                                    <rect key="frame" x="18" y="45" width="524" height="20"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailingMargin" secondItem="9Ji-Px-klT" secondAttribute="trailing" constant="10" id="0oD-Vy-Wkw"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="eeu-Le-y7g" secondAttribute="trailing" constant="10" id="F8W-cH-QoX"/>
                                                 <constraint firstItem="9Ji-Px-klT" firstAttribute="leading" secondItem="Otq-Tf-9ia" secondAttribute="leadingMargin" constant="10" id="FXA-Px-k6O"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="eeu-Le-y7g" secondAttribute="bottom" constant="8" id="f0U-gX-LeE"/>
+                                                <constraint firstItem="eeu-Le-y7g" firstAttribute="leading" secondItem="Otq-Tf-9ia" secondAttribute="leadingMargin" constant="10" id="fEu-8q-BU4"/>
+                                                <constraint firstItem="eeu-Le-y7g" firstAttribute="top" secondItem="9Ji-Px-klT" secondAttribute="bottom" constant="8" id="hvI-QI-jTp"/>
                                                 <constraint firstItem="9Ji-Px-klT" firstAttribute="top" secondItem="Otq-Tf-9ia" secondAttribute="topMargin" constant="8" id="jV2-qC-qi4"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="9Ji-Px-klT" secondAttribute="bottom" constant="8" id="uTa-4g-rqv"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <userDefinedRuntimeAttributes>
@@ -57,16 +72,11 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <outlet property="eventLabel" destination="9Ji-Px-klT" id="dOR-3j-zgt"/>
+                                            <outlet property="timeLabel" destination="eeu-Le-y7g" id="dVz-ZE-VlY"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="akG-yO-E7J">
-                                <rect key="frame" x="277" y="5" width="47" height="23"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <color key="textColor" red="0.0" green="0.55294117647058827" blue="0.25490196078431371" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>

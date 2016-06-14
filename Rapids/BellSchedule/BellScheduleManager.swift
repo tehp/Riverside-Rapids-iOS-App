@@ -72,7 +72,7 @@ class BellScheduleManager {
         if let actualDelegate = loaderDelegate {
             actualDelegate.willStartNetworkLoad()
         }
-        let startYear = SchoolDates.getEarliestSchoolStart().year
+        let startYear = SchoolDates.getEarliestSchoolStartComponents().year
         let requestHandler = BellScheduleRequestHandler(loaderDelegate: loaderDelegate)
         let request = GetBellScheduleRequest(startYear: String(startYear), responseDelegate: requestHandler)
         request.sendRequest()

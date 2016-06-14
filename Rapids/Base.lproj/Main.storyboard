@@ -16,10 +16,10 @@
             </objects>
             <point key="canvasLocation" x="1694.5" y="-1701"/>
         </scene>
-        <!--Calendar-->
+        <!--SPCalendar-->
         <scene sceneID="Th4-43-UhC">
             <objects>
-                <viewControllerPlaceholder storyboardName="Calendar" id="XsK-RG-1W5" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="SPCalendar" id="XsK-RG-1W5" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="Cm8-9x-Sgg"/>
                     <navigationItem key="navigationItem" id="f4p-sG-jHQ"/>
                 </viewControllerPlaceholder>
